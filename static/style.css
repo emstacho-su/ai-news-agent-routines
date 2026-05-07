@@ -1,0 +1,531 @@
+/* AI News Agent — terminal/CRT aesthetic.
+ *
+ * Palette is intentionally tight: near-black background, off-white text,
+ * single accent (amber). Monospace everywhere. Subtle scanline overlay
+ * via a fixed-position pseudo-element so it doesn't scroll. CRT glow
+ * on headings via text-shadow.
+ *
+ * No build step, no preprocessor, no framework -- vanilla CSS so the
+ * file stays auditable and the CRT vibe is one glance away from
+ * readable.
+ */
+
+:root {
+  --bg:        #0c0c0e;
+  --bg-soft:   #14141a;
+  --fg:        #d8d4c2;
+  --fg-muted:  #6e6e72;
+  --accent:    #e8b04b;
+  --accent-dim:#7a5d28;
+  --warn:      #e26c4a;
+  --rule:      #2a2a32;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "Cascadia Mono",
+               ui-monospace, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Scanlines: fixed overlay so it doesn't scroll with content. */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 9999;
+}
+
+/* CRT glow on headings. */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px rgba(232, 176, 75, 0.18);
+}
+
+/* ----- top bar ------------------------------------------------------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 22px;
+  background: var(--bg-soft);
+}
+.brand {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.brand a { color: inherit; }
+
+.status {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.cell {
+  border: 1px solid var(--rule);
+  padding: 4px 9px;
+  background: var(--bg);
+}
+
+/* ----- main ---------------------------------------------------------- */
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 22px 56px;
+}
+
+.section-title {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+  margin: 28px 0 12px;
+  border-bottom: 1px dashed var(--rule);
+  padding-bottom: 4px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+.btn {
+  font: inherit;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 16px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+.btn:hover { background: rgba(232, 176, 75, 0.08); }
+.btn:disabled { color: var(--fg-muted); border-color: var(--fg-muted); cursor: not-allowed; }
+
+.muted { color: var(--fg-muted); font-size: 12px; }
+
+.briefings { list-style: none; margin: 0; padding: 0; }
+.briefings li { margin: 0; padding: 0; }
+.briefings a {
+  display: flex;
+  gap: 14px;
+  padding: 8px 6px;
+  border-bottom: 1px dotted var(--rule);
+  color: var(--fg);
+}
+.briefings a:hover { background: rgba(232, 176, 75, 0.05); text-decoration: none; }
+.briefings .date {
+  color: var(--accent-dim);
+  width: 90px;
+  flex-shrink: 0;
+}
+.briefings .title { flex: 1; }
+
+.empty {
+  border: 1px dashed var(--rule);
+  padding: 22px;
+  color: var(--fg-muted);
+  text-align: center;
+}
+
+/* ----- activity log (Phase 6 SSE stream) ----------------------------- */
+.activity-log {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  color: var(--fg-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  max-height: 320px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.activity-log .ts { color: var(--accent-dim); }
+.activity-log .msg { color: var(--fg); }
+.activity-log .args { color: var(--fg-muted); }
+
+/* ----- run progress indicator ---------------------------------------- */
+/* Independent of SSE events: ticks once per second so the UI never looks
+   frozen while a server-side tool (web_search, code_execution) is in
+   flight. Iteration 1 typically goes 60-90s with no events. */
+.run-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  margin-bottom: 6px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.run-progress .pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.run-progress-text {
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.run-progress-hint {
+  color: var(--fg-muted);
+  font-style: italic;
+  margin-left: auto;
+  text-align: right;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%      { opacity: 1.0;  transform: scale(1.0); }
+}
+
+/* ----- profile editor (Phase 7) ------------------------------------- */
+.profile-form { display: flex; flex-direction: column; }
+.profile-textarea {
+  width: 100%;
+  min-height: 380px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  color: var(--fg);
+  border: 1px solid var(--rule);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+}
+.profile-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
+/* ----- per-item save / read toggles (Phase 7) ----------------------- */
+.briefing .item-toolbar {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 10px;
+  font-size: 11px;
+  vertical-align: middle;
+}
+.briefing .item-toolbar button {
+  font: inherit;
+  font-size: 11px;
+  background: transparent;
+  color: var(--fg-muted);
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+.briefing .item-toolbar button:hover { color: var(--fg); border-color: var(--fg-muted); }
+.briefing .item-toolbar button.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(232, 176, 75, 0.08);
+}
+.briefing .item-toolbar button[disabled] { opacity: 0.5; cursor: wait; }
+
+.briefing h3.item-read { color: var(--fg-muted); }
+.briefing h3.item-read::after {
+  content: " ✓";
+  color: var(--accent-dim);
+}
+
+/* ----- filters and tag pills (Phase 8) ------------------------------ */
+.filters { margin-top: 6px; }
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.filter-input {
+  font: inherit;
+  font-size: 12px;
+  background: var(--bg-soft);
+  color: var(--fg);
+  border: 1px solid var(--rule);
+  padding: 6px 9px;
+}
+.filter-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.search-input { flex: 1 1 220px; min-width: 180px; }
+
+.filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--fg-muted);
+}
+.clear-link { margin-left: auto; padding: 0 6px; }
+
+.tag-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.tag-pill {
+  font-size: 11px;
+  padding: 3px 9px;
+  border: 1px solid var(--rule);
+  color: var(--fg-muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.tag-pill:hover { color: var(--fg); border-color: var(--fg-muted); }
+.tag-pill.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(232, 176, 75, 0.08);
+}
+.tag-pill .count {
+  margin-left: 6px;
+  color: var(--accent-dim);
+}
+
+.briefings .snippet {
+  display: block;
+  width: 100%;
+  flex-basis: 100%;
+  color: var(--fg-muted);
+  font-size: 11px;
+  margin-top: 4px;
+  padding-left: 104px;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .briefings .snippet { padding-left: 0; }
+}
+
+/* ----- briefing rendered body --------------------------------------- */
+.briefing h1 { font-size: 20px; margin-top: 4px; }
+.briefing h2 { font-size: 15px; color: var(--accent); margin-top: 28px; }
+.briefing h3 { font-size: 14px; margin-top: 18px; }
+.briefing strong { color: var(--accent); }
+.briefing p { margin: 8px 0; }
+.briefing ul { padding-left: 18px; }
+.briefing a { word-break: break-all; }
+.briefing code {
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border: 1px solid var(--rule);
+  font-size: 0.95em;
+}
+.briefing pre {
+  background: var(--bg-soft);
+  padding: 10px;
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+}
+
+/* ----- follow-up panel (Phase 9) ----------------------------------- */
+.follow-up {
+  margin: 14px 0 22px;
+  padding: 12px 14px;
+  border: 1px dashed var(--rule);
+  background: var(--bg-soft);
+}
+.follow-up[hidden] { display: none; }
+
+.follow-up-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+.follow-up-thread[data-empty="true"] {
+  margin-bottom: 8px;
+}
+
+.follow-up-message {
+  border-left: 2px solid var(--rule);
+  padding: 4px 10px;
+}
+.follow-up-message.role-user { border-left-color: var(--accent-dim); }
+.follow-up-message.role-assistant { border-left-color: var(--accent); }
+
+.follow-up-role {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+  margin-bottom: 2px;
+}
+.follow-up-body {
+  margin: 0;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--fg);
+}
+
+.follow-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.follow-up-input {
+  font: inherit;
+  font-size: 13px;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--rule);
+  padding: 8px 10px;
+  resize: vertical;
+}
+.follow-up-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.follow-up-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.follow-up-submit { padding: 4px 14px; font-size: 12px; }
+.follow-up-status { font-size: 11px; }
+
+/* ----- budget warning banner (Phase 12) ---------------------------- */
+.budget-banner {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  background: rgba(232, 176, 75, 0.08);
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.budget-banner.danger {
+  border-color: var(--warn);
+  background: rgba(226, 108, 74, 0.12);
+  color: var(--warn);
+}
+
+/* ----- version tag on briefing list entries (Phase 12) ------------- */
+.briefings .version-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 6px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+}
+
+/* ----- custom briefing modal (Phase 10) ---------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal[hidden] { display: none; }
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+.modal-panel {
+  position: relative;
+  width: min(560px, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+  padding: 20px 22px;
+  background: var(--bg-soft);
+  border: 1px solid var(--accent-dim);
+  box-shadow: 0 0 24px rgba(232, 176, 75, 0.18);
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.custom-focus {
+  font: inherit;
+  font-size: 13px;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--rule);
+  padding: 10px 12px;
+  resize: vertical;
+}
+.custom-focus:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.btn.ghost {
+  color: var(--fg-muted);
+  border-color: var(--rule);
+}
+.btn.ghost:hover {
+  color: var(--fg);
+  border-color: var(--fg-muted);
+  background: transparent;
+}
+
+/* ----- bottom bar --------------------------------------------------- */
+.bottombar {
+  border-top: 1px solid var(--rule);
+  padding: 10px 22px;
+  background: var(--bg-soft);
+  font-size: 11px;
+  color: var(--fg-muted);
+  text-align: center;
+}
+
+/* ----- mobile -------------------------------------------------------- */
+@media (max-width: 600px) {
+  .topbar { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .briefings .date { width: auto; }
+}

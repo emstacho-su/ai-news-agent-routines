@@ -1,0 +1,2 @@
+# Local scratch directory for dev. The primary store is the GitHub data branch.
+# Anything written here at runtime is gitignored (.gitignore: data/).

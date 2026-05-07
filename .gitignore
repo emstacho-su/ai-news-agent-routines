@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtualenv (uv-managed)
+.venv/
+
+# Runtime data — primary store is the GitHub data branch in v1-routines.
+# The local data/ dir is only used during dev for ad-hoc reads/writes.
+data/*
+!data/.gitkeep
+
+# Routines product-internal cache (per planning doc R0)
+.routines/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,38 @@
+.git/
+.gitignore
+.github/
+.venv/
+.env
+.env.local
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Tests aren't needed in the runtime image. CI runs them before deploy.
+tests/
+
+# Local data isn't shipped — Fly mounts a volume at /app/data.
+data/
+
+# Editor/OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Documentation that doesn't need to ship
+SPEC.md
+BUILD_ORDER.md
+V2_VISION.md
+CLAUDE.md
+README.md

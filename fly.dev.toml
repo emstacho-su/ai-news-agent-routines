@@ -1,0 +1,53 @@
+# fly.toml app configuration for ai-news-agent-routines-dev.
+#
+# Differs from v1's fly.dev.toml in two ways:
+#   1. App name is `ai-news-agent-routines-dev` so it can run in parallel
+#      with v1's `ai-news-agent-dev` during the cutover window.
+#   2. No persistent volume. The data branch on GitHub is the primary
+#      store. The dashboard reads briefings via the GitHub raw URL and
+#      caches in process memory (rebuilt on container restart).
+#
+# Provisioned in Phase R7. Until then this file is a planning artifact.
+
+app = 'ai-news-agent-routines-dev'
+primary_region = 'iad'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  DASHBOARD_BASE_URL = 'https://ai-news-agent-routines-dev.fly.dev'
+  PYTHONUNBUFFERED = '1'
+  GITHUB_REPO_SLUG = 'emstacho-su/ai-news-agent-routines'
+  GITHUB_DATA_BRANCH = 'data'
+
+[processes]
+  app = 'uvicorn dashboard:app --host 0.0.0.0 --port 8080'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # Always-on so HTTP triggers (POST /follow-up, POST /trigger/custom)
+  # land on a warm process. No in-process scheduler in v1-routines —
+  # the daily cron is owned by the Routine itself.
+  auto_stop_machines = 'off'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+  [http_service.concurrency]
+    type = 'requests'
+    hard_limit = 50
+    soft_limit = 25
+
+  [[http_service.checks]]
+    interval = '30s'
+    timeout = '5s'
+    grace_period = '10s'
+    method = 'GET'
+    path = '/static/style.css'
+
+[[vm]]
+  memory = '256mb'
+  cpus = 1
+  memory_mb = 256

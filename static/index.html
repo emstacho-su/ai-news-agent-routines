@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI News Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="crt">
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <h1 class="brand">AI NEWS AGENT</h1>
+    <div class="status">
+      <a href="/custom" class="cell">custom</a>
+      <a href="/saved" class="cell">saved</a>
+      <a href="/profile" class="cell">profile</a>
+      <span id="budget-cell" class="cell" title="Monthly budget">--</span>
+      <span id="run-status" class="cell"></span>
+    </div>
+  </header>
+
+  <main>
+    {{budget_banner}}
+    <section class="actions">
+      <button id="trigger-daily" class="btn">RUN DAILY BRIEFING</button>
+      <span class="muted">Briefings stored: {{briefing_count}} / {{total_briefings}}</span>
+    </section>
+
+    <section class="activity" id="activity-section" hidden>
+      <h2 class="section-title">// ACTIVITY</h2>
+      <div id="run-progress" class="run-progress" hidden>
+        <span class="pulse" aria-hidden="true"></span>
+        <span class="run-progress-text" id="run-progress-text">running…</span>
+        <span class="run-progress-hint" id="run-progress-hint"></span>
+      </div>
+      <pre id="activity-log" class="activity-log"></pre>
+    </section>
+
+    <section class="filters">
+      <h2 class="section-title">// FILTERS</h2>
+      <form class="filter-form" method="get" action="/">
+        <input
+          type="text"
+          name="q"
+          value="{{search_value}}"
+          placeholder="search briefing text..."
+          class="filter-input search-input"
+          autocomplete="off"
+        >
+        <label class="filter-label">
+          <span>from</span>
+          <input type="date" name="since" value="{{since_value}}" class="filter-input">
+        </label>
+        <label class="filter-label">
+          <span>to</span>
+          <input type="date" name="until" value="{{until_value}}" class="filter-input">
+        </label>
+        {{category_select}}
+        <button type="submit" class="btn">APPLY</button>
+        <a href="/" class="muted clear-link">clear</a>
+      </form>
+      {{tag_links}}
+    </section>
+
+    <section class="list-wrap">
+      <h2 class="section-title">// BRIEFINGS</h2>
+      {{briefings_list}}
+    </section>
+  </main>
+
+  <footer class="bottombar">
+    <span class="muted">v1 dashboard &middot; data persists on Fly volume</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

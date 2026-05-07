@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing {{briefing_date}} | AI News Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="crt">
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <h1 class="brand"><a href="/">AI NEWS AGENT</a></h1>
+    <div class="status">
+      <a href="/" class="cell">&laquo; back</a>
+      <a href="/custom" class="cell">custom</a>
+      <a href="/saved" class="cell">saved</a>
+      <span id="budget-cell" class="cell">--</span>
+    </div>
+  </header>
+
+  <main>
+    <article class="briefing" data-briefing-date="{{briefing_date}}">
+      {{briefing_html}}
+    </article>
+  </main>
+
+  <footer class="bottombar">
+    <span class="muted">briefing/{{briefing_date}}</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

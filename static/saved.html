@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saved | AI News Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="crt">
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <h1 class="brand"><a href="/">AI NEWS AGENT</a></h1>
+    <div class="status">
+      <a href="/" class="cell">briefings</a>
+      <a href="/custom" class="cell">custom</a>
+      <a href="/profile" class="cell">profile</a>
+      <span id="budget-cell" class="cell">--</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="actions">
+      <h2 class="section-title" style="margin-top:0;">// SAVED ({{saved_count}})</h2>
+    </section>
+
+    {{saved_list}}
+  </main>
+
+  <footer class="bottombar">
+    <span class="muted">data/saved_items.json</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
