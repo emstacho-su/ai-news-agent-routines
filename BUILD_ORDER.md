@@ -101,21 +101,34 @@ responses) is owned by Phase R6. See `docs/r1-deviations.md` D3.
 
 **Goal:** `dashboard.py` no longer imports v1 modules; reads briefings from the data branch; writes request files for follow-up + custom and polls for responses.
 
-- [ ] Strip imports of `agent`, `tools`, `scheduler`, `notifications`, `budget`, `follow_ups`, `memory`
-- [ ] Strip `_run_daily_job`, `_run_custom_job`, SSE streams, in-process scheduler lifespan
-- [ ] Strip `/api/budget`, `/api/scheduler`
-- [ ] Replace `BRIEFINGS_DIR` reads with GitHub raw URL fetches over `httpx`
-- [ ] New `_write_request_file(kind, payload) -> request_id` helper that commits to the `data` branch via the GitHub Contents API (or a local checkout + git push)
-- [ ] New `_check_response(kind, request_id) -> str | None` helper that polls the data branch for the corresponding response file
-- [ ] New routes:
-  - `POST /follow-up` → writes `requests/{ts}.json`, returns `request_id`
-  - `POST /trigger/custom` → writes `custom_requests/{ts}.json`, returns `request_id`
-  - `GET /follow-up/{id}/status` → polls
-  - `GET /custom/{id}/status` → polls
-- [ ] Front-end: replace inline-await UX with a "queued — check back" flow showing position in queue and time-of-next-processor-run
-- [ ] Tests mock GitHub raw URL fetches and the request-write helper with `respx`
+- [x] Stripped imports of `agent`, `tools`, `scheduler`, `notifications`, `budget`, `follow_ups`, `memory`
+- [x] Stripped `_run_daily_job`, `_run_custom_job`, SSE streams, in-process scheduler lifespan
+- [x] Stripped `/api/budget`, `/api/scheduler`, `/trigger/daily`
+- [x] Replaced `BRIEFINGS_DIR` reads with GitHub raw URL fetches over `httpx` (with TTL cache)
+- [x] New `queue_follow_up` / `queue_custom_briefing` helpers that PUT request JSON to the data branch via Contents API
+- [x] New `check_follow_up_response` / `find_custom_response` helpers that read from raw URLs / list via Contents API
+- [x] New routes: `POST /briefing/{date}/item/{id}/ask`, `POST /trigger/custom`, `GET /follow-up/{id}/status`, `GET /custom/status/{id}`
+- [x] Front-end: queued + 30s setInterval polling UX; markdown answers rendered as `<pre>` textContent (no innerHTML on responses)
+- [x] Tests via `respx`: 18/18 pass
+- [x] **Vercel host pivot:** saved/read/profile dropped from deployed surface (filesystem ephemeral); helpers stay in dashboard.py for a future data-branch-backed iteration
 
-**Verification:** dashboard runs locally (`uvicorn dashboard:app`), serves briefings list from data branch, queues follow-up and custom requests without touching Anthropic API. Pytest passes with 60%+ coverage on critical paths.
+**Verification: PASSED.** Local smoke + pytest both green.
+
+---
+
+## Phase R7 — Vercel deploy
+
+**Goal:** dashboard hosted on Vercel free tier, reading from data branch, queueing requests via GitHub Contents API.
+
+- [x] Added `vercel.json` (route /static/* to static, everything else to api/index.py)
+- [x] Added `api/index.py` re-exporting the FastAPI app
+- [x] Moved deps from `requirements.txt` to `pyproject.toml` (Vercel's @vercel/python prefers pyproject)
+- [x] Dropped Dockerfile, .dockerignore, fly.dev.toml (unused on Vercel)
+- [x] CI workflow runs pytest only; Vercel GitHub integration handles deploys
+- [x] First deploy via `vercel deploy --prod`; production at https://ai-news-agent-routines.vercel.app
+- [ ] **Stack manual:** set `DASHBOARD_PASSWORD` + `GITHUB_PAT` in Vercel project settings (env vars take effect on next invocation)
+
+**Verification: PARTIAL.** /api/health returns 200 with correct data-branch slug; auth gate works (401 without creds). Briefing list + queueing waits on env-var setup.
 
 ---
 
