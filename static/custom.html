@@ -13,27 +13,24 @@
     <h1 class="brand"><a href="/">AI NEWS AGENT</a></h1>
     <div class="status">
       <a href="/" class="cell">briefings</a>
-      <a href="/saved" class="cell">saved</a>
-      <a href="/profile" class="cell">profile</a>
-      <span id="budget-cell" class="cell">--</span>
       <span id="run-status" class="cell"></span>
     </div>
   </header>
 
   <main>
     <section class="actions">
-      <button id="trigger-custom" class="btn">RUN CUSTOM BRIEFING</button>
+      <button id="trigger-custom" class="btn">REQUEST CUSTOM BRIEFING</button>
       <span class="muted">Custom briefings stored: {{custom_count}}</span>
     </section>
 
-    <section class="activity" id="activity-section" hidden>
-      <h2 class="section-title">// ACTIVITY</h2>
-      <div id="run-progress" class="run-progress" hidden>
-        <span class="pulse" aria-hidden="true"></span>
-        <span class="run-progress-text" id="run-progress-text">running…</span>
-        <span class="run-progress-hint" id="run-progress-hint"></span>
-      </div>
-      <pre id="activity-log" class="activity-log"></pre>
+    <section id="queue-section" class="activity" hidden>
+      <h2 class="section-title">// QUEUED</h2>
+      <p id="queue-msg" class="muted">
+        Request queued. The processor routine fires hourly at minute 0 UTC and writes the briefing back. Polling every 30 seconds.
+      </p>
+      <p class="muted">
+        Request id: <code id="queue-id">--</code>
+      </p>
     </section>
 
     <section class="list-wrap">
@@ -47,8 +44,7 @@
     <div class="modal-panel">
       <h2 id="custom-modal-title" class="section-title" style="margin-top:0;">// FOCUS AREA</h2>
       <p class="muted" style="margin:0 0 12px 0;">
-        e.g. "MCP this week", "agent frameworks since I last looked",
-        "what's new in Claude Code in the last 14 days"
+        e.g. "MCP this week", "agent frameworks since I last looked", "what's new in Claude Code in the last 14 days"
       </p>
       <form id="custom-form" class="custom-form">
         <textarea
@@ -63,7 +59,7 @@
         ></textarea>
         <div class="modal-actions">
           <button type="button" class="btn ghost" data-modal-close>CANCEL</button>
-          <button type="submit" class="btn">RUN</button>
+          <button type="submit" class="btn">QUEUE</button>
         </div>
         <span id="custom-status" class="muted"></span>
       </form>
@@ -71,7 +67,7 @@
   </div>
 
   <footer class="bottombar">
-    <span class="muted">data/custom_briefings/</span>
+    <span class="muted">processor routine fires hourly &middot; up to 1hr latency</span>
   </footer>
 
   <script src="/static/app.js"></script>
