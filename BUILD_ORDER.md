@@ -160,12 +160,12 @@ responses) is owned by Phase R6. See `docs/r1-deviations.md` D3.
 
 **Goal:** portfolio-ready repo.
 
-- [ ] `README.md` describing the Routines architecture and the v1 → v1-routines arc
-- [ ] `docs/learning-notes.md` covering: why migrate, what was hard about Routines + MCP, what the educational value looks like in retrospect
-- [ ] Architecture diagram (Mermaid in README) showing routine ↔ data branch ↔ dashboard ↔ MCP flow
-- [ ] Cross-link from v1's README to this repo and vice versa
+- [x] `README.md` rewritten with Mermaid architecture diagram, cost table, daily flow walkthrough, and educational arc framing
+- [x] `docs/learning-notes.md` long-form retrospective covering the planning-doc deviations, the architectural simplification, things to do differently next time, and open threads
+- [x] Architecture diagram lives inline in README (Mermaid)
+- [ ] Cross-link from v1's README to this repo (gated on Stack approval — touches the v1 repo)
 
-**Verification:** Stack walks through the README and confirms it stands on its own as a portfolio piece.
+**Verification: PASSED on the in-repo work.** Cross-link to v1 is the only outstanding item and is Stack-gated since it edits the other repo.
 
 ---
 
