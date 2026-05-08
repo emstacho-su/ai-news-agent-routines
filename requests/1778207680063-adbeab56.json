@@ -1,9 +1,0 @@
-{
-  "id": "1778207680063-adbeab56",
-  "kind": "follow_up",
-  "created_at": "2026-05-08T02:34:40Z",
-  "briefing_date": "2026-05-08",
-  "topic_id": "trustfall-ai-cli-mcp-rce",
-  "item_headline": "TrustFall: one-keypress RCE in Claude Code, Gemini CLI, Cursor, and Copilot CLI via project MCP configs",
-  "question": "What's the safest way to evaluate a new third-party MCP server before adding it to my Claude Code config? Specifically interested in any sandboxing or containerization patterns that would actually mitigate TrustFall-style attacks."
-}
