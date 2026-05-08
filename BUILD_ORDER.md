@@ -63,13 +63,13 @@ the **Gmail connector** (`connector_uuid`
 - [x] Port `prompts/daily_briefing.txt` into `routines/daily.prompt.md` and install on the routine
 - [x] First run: briefing composed correctly, memory updated correctly, push failed (env had no git write creds)
 - [x] Drop email step from prompt + remove Gmail connector from routine (revised D1 + G2.5)
-- [ ] Stack installs Claude GitHub App on `emstacho-su/ai-news-agent-routines` with Contents: Read+Write
-- [ ] Re-fire routine via `RemoteTrigger {action: "run", trigger_id: "trig_01SEgjfz9XX5nN5BDC9bKe5i"}` (Stack-gated; uses Max quota)
-- [ ] Verify new commit appears on data branch with `briefings/{date}.md` + updated `memory.json`
-- [ ] Smoke-read the briefing for quality
-- [ ] Re-enable cron: `RemoteTrigger {action: "update", trigger_id: ..., body: {"enabled": true}}`
+- [x] Stack installed Claude GitHub App on `emstacho-su/ai-news-agent-routines` with Contents: Read+Write
+- [x] Re-fired routine 2026-05-08T01:55Z; ~7 min runtime; commit `903addd` on data branch
+- [x] Verified `briefings/2026-05-08.md` (10 stories, 5 sections) + `memory.json` (10 topics) committed by `emstacho-su` (GitHub App)
+- [x] Smoke-read briefing — quality bar met (TrustFall, Routines preview, Colossus deal all caught)
+- [x] Re-enabled cron; next auto-fire 2026-05-08T12:04:51 UTC
 
-**Verification:** manual run produces a briefing on the data branch readable via `https://raw.githubusercontent.com/emstacho-su/ai-news-agent-routines/data/briefings/{date}.md`. Cron schedule visible and routine `enabled: true`.
+**Verification: PASSED.** Briefing readable at `https://raw.githubusercontent.com/emstacho-su/ai-news-agent-routines/data/briefings/2026-05-08.md`. Routine `enabled: true`, cron `0 12 * * *` UTC.
 
 ---
 
