@@ -126,9 +126,9 @@ responses) is owned by Phase R6. See `docs/r1-deviations.md` D3.
 - [x] Dropped Dockerfile, .dockerignore, fly.dev.toml (unused on Vercel)
 - [x] CI workflow runs pytest only; Vercel GitHub integration handles deploys
 - [x] First deploy via `vercel deploy --prod`; production at https://ai-news-agent-routines.vercel.app
-- [ ] **Stack manual:** set `DASHBOARD_PASSWORD` + `GITHUB_PAT` in Vercel project settings (env vars take effect on next invocation)
+- [x] Stack set `DASHBOARD_PASSWORD` + `GITHUB_PAT` in Vercel project settings; redeployed to pick them up
 
-**Verification: PARTIAL.** /api/health returns 200 with correct data-branch slug; auth gate works (401 without creds). Briefing list + queueing waits on env-var setup.
+**Verification: PASSED.** /api/health reports `write_enabled: true`; auth gate accepts the password. Briefing list, follow-up queueing, and custom queueing all live at https://ai-news-agent-routines.vercel.app .
 
 ---
 
