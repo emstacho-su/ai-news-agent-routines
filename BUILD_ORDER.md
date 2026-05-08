@@ -58,17 +58,18 @@ the **Gmail connector** (`connector_uuid`
 
 ## Phase R3 — Daily routine end-to-end
 
-**Goal:** daily routine produces a briefing, writes to the data branch, and emails Stack via Gmail.
+**Goal:** daily routine produces a briefing and writes it to the data branch. (Email step dropped per `docs/r1-deviations.md` G2.5 and revised D1; the dashboard is the read surface.)
 
-- [ ] Port `prompts/daily_briefing.txt` into the daily routine's prompt
-- [ ] Routine clones the repo, checks out `data` branch (or fetches it as a second source), reads existing `memory.json`
-- [ ] Routine uses WebSearch to fetch news; produces briefing markdown
-- [ ] Routine writes `briefings/{date}.md` + updated `memory.json` back to `data` branch and pushes
-- [ ] Routine attaches Gmail connector and sends the briefing as email
-- [ ] Manual run via `RemoteTrigger {action: "run", trigger_id: ...}` (Stack-gated; uses Max quota)
-- [ ] Confirm cron `0 12 * * *` UTC is set
+- [x] Port `prompts/daily_briefing.txt` into `routines/daily.prompt.md` and install on the routine
+- [x] First run: briefing composed correctly, memory updated correctly, push failed (env had no git write creds)
+- [x] Drop email step from prompt + remove Gmail connector from routine (revised D1 + G2.5)
+- [ ] Stack installs Claude GitHub App on `emstacho-su/ai-news-agent-routines` with Contents: Read+Write
+- [ ] Re-fire routine via `RemoteTrigger {action: "run", trigger_id: "trig_01SEgjfz9XX5nN5BDC9bKe5i"}` (Stack-gated; uses Max quota)
+- [ ] Verify new commit appears on data branch with `briefings/{date}.md` + updated `memory.json`
+- [ ] Smoke-read the briefing for quality
+- [ ] Re-enable cron: `RemoteTrigger {action: "update", trigger_id: ..., body: {"enabled": true}}`
 
-**Verification:** manual run produces a briefing on the data branch and an email arrives at `NOTIFY_TO_EMAIL`. Cron schedule visible in routine list.
+**Verification:** manual run produces a briefing on the data branch readable via `https://raw.githubusercontent.com/emstacho-su/ai-news-agent-routines/data/briefings/{date}.md`. Cron schedule visible and routine `enabled: true`.
 
 ---
 

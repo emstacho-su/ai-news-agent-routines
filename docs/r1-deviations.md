@@ -28,19 +28,29 @@ cloud, with the following actual surface:
 
 ## Deviations and corrections
 
-### D1. Resend MCP server removed
+### D1. Email path removed entirely (Resend MCP and Gmail both eliminated)
 
 **Planned (§5):** Build a custom Resend MCP server (TypeScript), register
 it, attach it to the daily routine.
 
-**Corrected:** Use the **Gmail connector** (uuid
-`468bd9e7-cae6-4c6c-8a3b-f9db61d8d737`) directly. Email comes from
-Stack's actual Gmail account instead of `onboarding@resend.dev`.
+**First correction (R1):** Use the **Gmail connector** instead — no
+custom MCP needed.
+
+**Second correction (R3, after first real run):** Drop email entirely.
+Per G2.5, the Gmail connector exposes `create_draft` only — no
+`send_email`. So the only achievable "email" path was a Gmail draft
+that Stack would open and manually send to himself. Stack's correct
+observation: if the recipient is also the sender, the draft is just
+the briefing — there's no point in the email round-trip. The dashboard
+becomes the read surface.
 
 **Effect on build plan:**
-- Phase **R2 is deleted entirely**. ~50 lines of TypeScript + 1 deploy target eliminated.
-- Email path is shorter and uses the inbox's native sender identity, which is a UX upgrade.
-- Resend account remains usable for v1; v1-routines no longer depends on it.
+- Phase **R2 is deleted entirely** (was true after R1; even more true now).
+- The daily routine's prompt has no email step (R3 prompt revision).
+- The dashboard (R6 + R7) is the morning read surface.
+- A future browser-push notification (R6 or R9 polish) signals when a
+  new briefing lands on the data branch, replacing the email's
+  attention-grab function.
 
 ### D2. No HTTP triggers — follow-up + custom redesigned as async polling
 
@@ -143,6 +153,49 @@ This was caught on the processor routine, which was then locked down via
 
 For R3/R4: always pass an explicit `mcp_connections` list when creating
 or updating, even if empty.
+
+### G2.5. Email auto-send is not available via the platform connectors
+
+The Gmail connector (and Microsoft 365 / Outlook) only expose
+read/search/draft tools. There is no `send_email` or `send_draft` tool.
+Routines can create drafts, but a human must open the inbox and click
+send. The constraint is platform-wide and looks intentional
+(human-in-the-loop on outbound communication).
+
+For v1-routines this kills the "passive morning email" UX. Verified
+during the R3 first run on 2026-05-08.
+
+**Effect on architecture:** the daily routine drops the email step
+entirely. The dashboard is the read surface — Stack opens it each
+morning. A future enhancement (R6 or R9 polish) is a browser push
+notification when a new briefing lands on the data branch.
+
+### G2.7. Routine environment has no git write credentials by default
+
+First R3 run failed both `git push origin data` AND
+`gh api PUT contents/...` AND the built-in `github.push_files` MCP tool —
+all 403. Conclusion: the CCR session is authenticated for
+**read** (cloning works fine) but not write to repos owned by the user
+unless the **Claude GitHub App** is explicitly installed on the repo
+with **Contents: Read and write** permission.
+
+**Effect on R3:** Stack must install the Claude GitHub App on
+`emstacho-su/ai-news-agent-routines` before R3 can pass verification.
+Once installed, the routine's `git push origin data` (or the
+GitHub-MCP `push_files` fallback) should succeed without any change to
+the routine config.
+
+### G2.9. `mcp_connections: []` on update is a no-op
+
+Passing `mcp_connections: []` in an update body is treated as "no
+change" rather than "remove all connectors". To remove all attached
+connectors during an update, pass `clear_mcp_connections: true`
+instead. To replace with a specific subset, pass
+`mcp_connections: [{...}]` with at least one entry.
+
+This is symmetric with G1 (omit on create = auto-attach all) but the
+remediation is different (`clear_mcp_connections: true` only works on
+update, not create).
 
 ### G2. Routines are created enabled by default
 
