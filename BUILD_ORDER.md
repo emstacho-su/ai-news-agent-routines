@@ -77,15 +77,16 @@ the **Gmail connector** (`connector_uuid`
 
 **Goal:** an hourly processor routine that handles both follow-up and custom briefing requests on the data branch.
 
-- [ ] Port `prompts/follow_up.txt` and `prompts/custom_briefing.txt` into the processor routine's prompt
-- [ ] Routine reads `requests/` and `custom_requests/` on the data branch
-- [ ] For each request file, dispatch to follow-up or custom-briefing logic based on path
-- [ ] Write responses to `follow_ups/{ts}.md` or `custom_briefings/{date}_{slug}.md`
-- [ ] Move processed request files to `requests/processed/` (or delete) so they aren't re-run
-- [ ] Versioning logic for custom briefings (`_v2.md`, `_v3.md`)
-- [ ] Empty-poll path: routine should early-exit cheaply when no request files are present (measure quota cost)
+- [x] Locked request/response schemas in `docs/request-schemas.md`
+- [x] Wrote combined dispatcher prompt in `routines/processor.prompt.md` (Step 0 empty-poll fast path, Step 2a follow-up, Step 2b custom, Step 3 commit+push)
+- [x] Installed prompt on `trig_016P6y3fNZp3utmDduv5tA6D` via RemoteTrigger
+- [x] Hand-wrote one follow-up + one custom_briefing request to data branch (commit `6a5fb3b`)
+- [x] Manual fire 2026-05-08T02:39Z; ~7 min runtime; commit `16c8659` on data branch
+- [x] Both responses landed (`follow_ups/<id>.md`, `custom_briefings/2026-05-08_mcp-ecosystem-2026.md`); both requests moved to `processed/`
+- [x] Schema correct (frontmatter has request_id, briefing_date, topic_id, answered_at / focus, slug, generated_at)
+- [x] Re-enabled cron; next auto-fire 2026-05-08T03:00:03 UTC (will exercise empty-poll fast path)
 
-**Verification:** hand-write a follow-up request file on the data branch, fire the processor manually, observe a follow-up response file appear and the request move to `processed/`. Same flow for a custom request.
+**Verification: PASSED.** Both responses readable on data branch. Routine `enabled: true`, cron `0 * * * *` UTC. Empty-poll measurement TBD on first idle run.
 
 ---
 
