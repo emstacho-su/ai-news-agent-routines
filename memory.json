@@ -1,3 +1,194 @@
 {
-  "topics": []
+  "topics": [
+    {
+      "id": "anthropic-spacex-colossus-compute-deal",
+      "title": "Anthropic secures all of SpaceX's Colossus 1 compute; rate limits doubled",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Anthropic rented all compute capacity at SpaceX's Colossus 1 data center in Memphis: 300+ MW and 220,000+ NVIDIA H100/H200/GB200 GPUs",
+        "Claude Code five-hour rate limits doubled for Pro, Max, Team, and Enterprise; peak-hour reductions removed for Pro and Max; Opus API limits raised considerably",
+        "xAI dissolved as separate entity, folding into SpaceX as SpaceXAI",
+        "Anthropic expressed interest in future orbital data centers with SpaceX"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html",
+        "https://www.axios.com/2026/05/06/anthropic-spacex-elon-musk-compute",
+        "https://x.ai/news/anthropic-compute-partnership"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "code-with-claude-2026-sf",
+      "title": "Code with Claude 2026 developer conference: SF May 6, London May 19, Tokyo June 10",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "SF event ran May 6; Claude Code v2.1.126-v2.1.131 shipped (--plugin-url, claude project purge, skillOverrides)",
+        "10 financial-services agent templates shipped as Cowork and Code plugins",
+        "Managed Agents cookbook released",
+        "Three-city tour: London May 19, Tokyo June 10, all livestreamed; Extended sessions recorded post-event"
+      ],
+      "sources": [
+        "https://blakecrosley.com/blog/code-with-claude-sf-2026-recap",
+        "https://claude.com/code-with-claude/session/sf-whats-new-in-claude-code",
+        "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-mythos-project-glasswing",
+      "title": "Claude Mythos Preview: thousands of zero-days found; Project Glasswing coalition formed",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Mythos Preview identified thousands of previously unknown zero-days across every major OS and browser, including a 27-year-old bug",
+        "Autonomously chained 4 vulnerabilities to escape browser renderer and OS sandboxes; demonstrated sandbox escape in controlled testing",
+        "CEO Dario Amodei warned of 6-12 month window to patch before comparable offensive AI capability emerges",
+        "Project Glasswing coalition formed with ~40 orgs: AWS, Apple, Microsoft, Google, CrowdStrike, Palo Alto Networks",
+        "Mythos not publicly released; access restricted to Glasswing coalition"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html",
+        "https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html",
+        "https://www.anthropic.com/glasswing",
+        "https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "trustfall-ai-cli-mcp-rce",
+      "title": "TrustFall: one-keypress RCE in Claude Code, Gemini CLI, Cursor, and Copilot CLI via project MCP configs",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Malicious cloned repo includes .mcp.json and .claude/settings.json to auto-connect attacker-controlled MCP server on folder trust",
+        "All four tools default to Yes/Trust; one Enter keypress spawns server as unsandboxed OS process with developer full privileges",
+        "In CI headless mode (claude-code-action), trust dialog is skipped entirely -- zero interaction required",
+        "Root issue: Anthropic blocks bypassPermissions at project level but not enableAllProjectMcpServers or enabledMcpjsonServers",
+        "Affects: Claude Code, Gemini CLI, Cursor CLI, GitHub Copilot CLI; no patch announced as of May 7 2026"
+      ],
+      "sources": [
+        "https://adversa.ai/blog/trustfall-coding-agent-security-flaw-rce-claude-cursor-gemini-cli-copilot/",
+        "https://www.theregister.com/security/2026/05/07/claude-code-trust-prompt-can-trigger-one-click-rce/5235319",
+        "https://www.helpnetsecurity.com/2026/05/07/trustfall-ai-coding-cli-vulnerability-research/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-routines-launch",
+      "title": "Claude Code Routines: research preview launched April 14",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Routines are prompt + repo + connectors configured once, triggered by schedule, API call, or GitHub event",
+        "Runs on Anthropic cloud infrastructure with no local machine dependency",
+        "Daily run limits: 5 (Pro), 15 (Max), 25 (Team/Enterprise)",
+        "Available for Pro, Max, Team, Enterprise with Claude Code web enabled",
+        "Launched April 14, 2026 alongside redesigned Claude Code desktop app"
+      ],
+      "sources": [
+        "https://claude.com/blog/introducing-routines-in-claude-code",
+        "https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-mcp-improvements-may-2026",
+      "title": "Claude Code MCP quality-of-life improvements (May 2026 release cycle)",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "/mcp command now shows tool count per server and flags 0-tool servers",
+        "workspace is now a reserved MCP server name; existing servers with that name skipped with warning",
+        "Reconnecting MCP servers no longer flood conversation; re-announced tools summarized by server prefix",
+        "MCP servers with transient startup errors auto-retry up to 3 times",
+        "Bug fixes: corrupted arguments on stdio with CLAUDE_CODE_SHELL_PREFIX; images dropped in mixed content tool results; unauthorized connectors now show 'needs auth' not 'failed'"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-agent-framework-1-0",
+      "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native, .NET and Python",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Released April 3 2026; open-source, production-ready, .NET and Python",
+        "Full MCP integration for dynamic tool and data-source discovery without manual wiring",
+        "Multi-agent orchestration: sequential handoffs, group chat, Magentic-One pattern",
+        "DevUI browser-based debugger with real-time agent message flow, tool call, and state visualization"
+      ],
+      "sources": [
+        "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
+        "https://techcommunity.microsoft.com/blog/azuredevcommunityblog/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/4510698"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gpt-5-5-instant-chatgpt-default",
+      "title": "GPT-5.5 Instant replaces GPT-5.3 as ChatGPT default model (May 5)",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "GPT-5.5 Instant became ChatGPT's default model on May 5 2026, replacing GPT-5.3 Instant",
+        "Claims 52.5% fewer hallucinated claims on high-stakes prompts vs GPT-5.3 Instant",
+        "Available in API as chat-latest",
+        "GPT-5.5 original release was April 23 2026; Instant variant targets accuracy and concision"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+        "https://openai.com/index/gpt-5-5-instant/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-opus-4-7",
+      "title": "Claude Opus 4.7: task budgets, high-res vision, new tokenizer (released April 16)",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "High-res image support up to 2576px / 3.75MP (up from 1568px / 1.15MP)",
+        "Task budgets: rough token target for full agentic loop including thinking + tool calls + tool results + output",
+        "New xhigh effort level above high",
+        "New tokenizer: up to ~35% more tokens on some content",
+        "1M token context, 128K output, pricing unchanged at $5/$25 per M tokens in/out",
+        "GA on Bedrock, Vertex AI, Microsoft Foundry"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-opus-4-7",
+        "https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "xai-musk-anthropic-rivals-compute-partners",
+      "title": "xAI/Musk rents Colossus 1 to Anthropic despite months of public criticism",
+      "first_seen": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T01:59:21Z",
+      "key_facts": [
+        "Deal signed two months after Musk wrote that Anthropic 'hates Western civilization'",
+        "Musk's explanation: 'No one set off my evil detector'",
+        "xAI being dissolved as separate entity, folding into SpaceX as SpaceXAI",
+        "Anthropic expressed interest in orbital data centers with SpaceX"
+      ],
+      "sources": [
+        "https://simonwillison.net/2026/May/7/xai-anthropic/",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/musks-spacex-has-rented-out-access-to-its-supercomputers-220-000-nvidia-gpus-and-300-megawatts-of-ai-compute-power-to-rival-anthropic-musk-says-no-one-set-off-my-evil-detector-antrhropic-also-interested-in-orbital-data-centers"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    }
+  ]
 }
