@@ -63,21 +63,23 @@
       "id": "trustfall-ai-cli-mcp-rce",
       "title": "TrustFall: one-keypress RCE in Claude Code, Gemini CLI, Cursor, and Copilot CLI via project MCP configs",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-08T14:00:00Z",
       "key_facts": [
         "Malicious cloned repo includes .mcp.json and .claude/settings.json to auto-connect attacker-controlled MCP server on folder trust",
         "All four tools default to Yes/Trust; one Enter keypress spawns server as unsandboxed OS process with developer full privileges",
         "In CI headless mode (claude-code-action), trust dialog is skipped entirely -- zero interaction required",
         "Root issue: Anthropic blocks bypassPermissions at project level but not enableAllProjectMcpServers or enabledMcpjsonServers",
-        "Affects: Claude Code, Gemini CLI, Cursor CLI, GitHub Copilot CLI; no patch announced as of May 7 2026"
+        "Affects: Claude Code, Gemini CLI, Cursor CLI, GitHub Copilot CLI",
+        "Anthropic security team declined the report as outside their threat model; accepting folder trust constitutes consent per their design"
       ],
       "sources": [
         "https://adversa.ai/blog/trustfall-coding-agent-security-flaw-rce-claude-cursor-gemini-cli-copilot/",
         "https://www.theregister.com/security/2026/05/07/claude-code-trust-prompt-can-trigger-one-click-rce/5235319",
-        "https://www.helpnetsecurity.com/2026/05/07/trustfall-ai-coding-cli-vulnerability-research/"
+        "https://www.helpnetsecurity.com/2026/05/07/trustfall-ai-coding-cli-vulnerability-research/",
+        "https://www.darkreading.com/application-security/trustfall-exposes-claude-code-execution-risk"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-code-routines-launch",
@@ -188,6 +190,85 @@
         "https://www.tomshardware.com/tech-industry/artificial-intelligence/musks-spacex-has-rented-out-access-to-its-supercomputers-220-000-nvidia-gpus-and-300-megawatts-of-ai-compute-power-to-rival-anthropic-musk-says-no-one-set-off-my-evil-detector-antrhropic-also-interested-in-orbital-data-centers"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-google-200b-compute-deal",
+      "title": "Anthropic commits $200B to Google's cloud and TPU chips over five years",
+      "first_seen": "2026-05-08T14:00:00Z",
+      "last_updated": "2026-05-08T14:00:00Z",
+      "key_facts": [
+        "Anthropic signed a deal with Google and Broadcom for multiple gigawatts of TPU capacity; ~$200B commitment over 5 years",
+        "Capacity starts coming online in 2027",
+        "Commitment represents >40% of the revenue backlog Google disclosed to investors",
+        "Anthropic annualized revenue run rate hit $30B in April 2026 — more than triple end-of-2025, ahead of OpenAI on same metric",
+        "Combined compute commitments: SpaceX (300 MW GPU), Google ($200B TPU/cloud), Amazon (5 GW), Microsoft/NVIDIA ($30B Azure)"
+      ],
+      "sources": [
+        "https://www.theinformation.com/articles/anthropic-commits-spending-200-billion-googles-cloud-chips",
+        "https://www.cnbc.com/video/2026/05/05/anthropic-commits-to-spending-200-billion-on-googles-cloud-and-chips-according-to-the-information.html",
+        "https://www.engadget.com/2165585/anthropic-reportedly-agrees-to-pay-google-200-billion-for-chips-and-cloud-access/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-security-public-beta",
+      "title": "Claude Security enters public beta: Opus 4.7 vulnerability scanning and patch suggestions",
+      "first_seen": "2026-05-08T14:00:00Z",
+      "last_updated": "2026-05-08T14:00:00Z",
+      "key_facts": [
+        "Available at claude.ai/security for Enterprise customers; Team/Max coming soon",
+        "Powered by Opus 4.7; scans entire repos, directories, or branches without separate API integration",
+        "Features: scheduled scans, targeted scans, triage tracking, export and workflow integrations",
+        "Security platform integrations: CrowdStrike, Microsoft Security, Palo Alto Networks, SentinelOne, TrendAI, Wiz",
+        "Announced approximately April 30 2026"
+      ],
+      "sources": [
+        "https://claude.com/blog/claude-security-public-beta",
+        "https://www.helpnetsecurity.com/2026/05/04/anthropic-claude-security-public-beta/",
+        "https://www.itpro.com/security/anthropic-targets-vulnerability-detection-gains-with-claude-security-public-beta-heres-what-users-can-expect"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-goldman-blackstone-jv",
+      "title": "Anthropic forms $1.5B enterprise AI services JV with Goldman Sachs, Blackstone, Hellman & Friedman",
+      "first_seen": "2026-05-08T14:00:00Z",
+      "last_updated": "2026-05-08T14:00:00Z",
+      "key_facts": [
+        "AI-native services firm announced May 4 2026; co-founded with Blackstone, Hellman & Friedman, Goldman Sachs",
+        "Total ~$1.5B; Anthropic/Blackstone/H&F each ~$300M, Goldman $150M; also General Atlantic, Leonard Green, Apollo, GIC, Sequoia",
+        "Embeds engineers inside companies to redesign workflows around Claude; positioned against traditional management consulting",
+        "Built-in client pipeline: hundreds of PE-owned portfolio companies across founding PE firms"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html",
+        "https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/",
+        "https://www.anthropic.com/news/enterprise-ai-services-company"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-oauth-mcp-hijacking",
+      "title": "Claude Code OAuth tokens stolen via npm postinstall MCP hijacking (Mitiga research)",
+      "first_seen": "2026-05-08T14:00:00Z",
+      "last_updated": "2026-05-08T14:00:00Z",
+      "key_facts": [
+        "OAuth tokens and MCP config stored in ~/.claude.json; malicious npm postinstall hook modifies this file to redirect MCP traffic",
+        "Attack redirects every OAuth token (GitHub, Jira, Slack, etc.) through attacker-controlled proxy; token rotation does not help",
+        "Reported to Anthropic April 10 2026; Anthropic declined April 12 as 'out of scope'",
+        "Distinct from TrustFall: delivery vector is npm supply chain, not cloned repo .mcp.json",
+        "No patch; mitigation: audit npm postinstall scripts, inspect ~/.claude.json before/after untrusted npm install"
+      ],
+      "sources": [
+        "https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/",
+        "https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm",
+        "https://www.itsecuritynews.info/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
