@@ -163,14 +163,83 @@ For every story you surfaced (NOT skipped):
 
 Write the updated file back to `/tmp/data-branch/memory.json`.
 
+### Step 5.5 — Drain pending request queues
+
+Before committing, check whether the dashboard has dropped any follow-up or custom-briefing requests onto the data branch since the last run. The processor routine has been retired; this step replaces it.
+
+```bash
+cd /tmp/data-branch
+PENDING=$(find requests custom_requests -maxdepth 1 -name '*.json' 2>/dev/null | wc -l)
+echo "PENDING_REQUESTS=$PENDING"
+```
+
+If `PENDING == 0`: skip this step entirely.
+
+If `PENDING > 0`: process up to **5 requests** in this run (oldest first by filename, since IDs are timestamp-prefixed). Any beyond 5 wait for tomorrow's run. The schemas are documented in `docs/request-schemas.md` on the `dev` branch but for this routine you only need:
+
+- **Follow-up** (`requests/<id>.json`): fields `id`, `briefing_date`, `topic_id`, `item_headline`, `question`. For each:
+  1. Read the briefing markdown at `/tmp/data-branch/briefings/<briefing_date>.md` and locate the item by `topic_id` or `item_headline`.
+  2. Read the matching topic from memory.json (you already have it loaded from Step 1).
+  3. Answer concisely. Stack is technically sophisticated; skip 101-level explanations. Direct answer first, supporting detail after. Cite a source URL for any factual claim that goes beyond the briefing item itself. Use **at most 1 WebSearch per follow-up**; if the briefing context is sufficient, skip the search.
+  4. Write the response to `/tmp/data-branch/follow_ups/<id>.md` with frontmatter:
+
+     ```markdown
+     ---
+     request_id: <id>
+     briefing_date: <briefing_date>
+     topic_id: <topic_id or empty string>
+     answered_at: <ISO timestamp UTC of right now>
+     ---
+
+     # Follow-up: <briefing item headline, truncated to 60 chars>
+
+     **Q:** <the question, verbatim>
+
+     **A:** <your answer, markdown, cite inline>
+     ```
+
+  5. Move the request file: `mkdir -p requests/processed && mv requests/<id>.json requests/processed/<id>.json`.
+
+- **Custom briefing** (`custom_requests/<id>.json`): fields `id`, `focus`, `slug`, `created_at`. For each:
+  1. Run **2-3 WebSearch queries** angled on the focus area (less than the planning doc's 3-5; the daily run already used most of the search budget).
+  2. Build a focused briefing using sections appropriate to the topic (Releases / Patterns / Caveats for tooling; Key Papers / Findings / Open Questions for research). Cite every claim.
+  3. Compute the response filename: `DATE = first 10 chars of created_at`, base path `custom_briefings/<DATE>_<slug>.md`. If exists: try `_v2.md`, `_v3.md`, etc.
+  4. Write the response with frontmatter:
+
+     ```markdown
+     ---
+     request_id: <id>
+     focus: "<focus, JSON-escaped if it contains quotes>"
+     slug: <slug>
+     generated_at: <ISO timestamp UTC of right now>
+     ---
+
+     # Custom Briefing: <focus, prose form>
+
+     ## TL;DR
+     - 3 to 5 bullets.
+
+     ## <Section name>
+     ### <Item headline>
+     <2-4 sentences with inline source links>
+     ```
+
+  5. Move the request file: `mkdir -p custom_requests/processed && mv custom_requests/<id>.json custom_requests/processed/<id>.json`.
+
+**If a request file is malformed** (invalid JSON, missing required field): move to `<dir>/bad/<id>.json` and append a one-line entry to `<dir>/bad/log.txt`. Do not let one bad request abort the run.
+
+**Drain budget cap:** total **8 additional WebSearch calls** across all queue draining (in addition to the daily briefing's budget). If you hit the cap mid-drain, skip remaining requests and let them wait for tomorrow.
+
 ### Step 6 — Commit and push back to the data branch
 
 ```bash
 cd /tmp/data-branch
 git config user.email "ai-news-agent@routines.claude"
 git config user.name "ai-news-agent-daily"
-git add briefings/{TODAY}.md memory.json
-git commit -m "feat(briefing): {TODAY} daily briefing"
+git add -A
+N_RESPONSES=$(git diff --cached --name-only | grep -cE '^(follow_ups|custom_briefings)/' || true)
+N_PROCESSED=$(git diff --cached --name-only | grep -c '/processed/' || true)
+git commit -m "feat(briefing): {TODAY} daily briefing + drained $N_RESPONSES requests ($N_PROCESSED processed)"
 git push origin data
 ```
 
@@ -201,8 +270,10 @@ Would Stack actually want to read this? Skip hype, marketing fluff, drama. Prior
 
 ## Stop conditions
 
-- 30 tool calls maximum.
-- If you cannot find news worth covering, write a short briefing that says so honestly, commit it, and stop.
+- **45 tool calls maximum** across the whole run (daily briefing + queue drain combined).
+- **20 WebSearch calls maximum** total (12 for daily briefing per the original v1 prompt + 8 for queue drain).
+- If you cannot find news worth covering, write a short briefing that says so honestly, commit it (along with any drained requests), and stop.
 - Never write the briefing more than once per run; never re-run searches after composing the briefing.
+- Process at most 5 requests per run; the rest wait for tomorrow.
 
 ## Prompt (end)

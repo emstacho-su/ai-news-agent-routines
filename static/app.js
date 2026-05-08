@@ -97,9 +97,9 @@
   function pollForAnswer(requestId, panelRefs) {
     const { status, answer, submit, textarea } = panelRefs;
     status.textContent =
-      "queued (id " + requestId + "). Processor fires hourly at minute 0 UTC; checking every 30s...";
+      "queued (id " + requestId + "). Drained at next 12:00 UTC daily run; checking every 5 min...";
     let attempts = 0;
-    const maxAttempts = 240; // 2 hours
+    const maxAttempts = 24 * 12; // 24 hours at 5-min intervals
 
     const tick = async () => {
       attempts += 1;
@@ -121,10 +121,10 @@
           return;
         }
         status.textContent =
-          "queued (id " + requestId + "). " + attempts + " checks; next processor run within 1hr.";
+          "queued (id " + requestId + "). " + attempts + " checks; next 12:00 UTC daily run drains the queue.";
         if (attempts >= maxAttempts) {
           status.textContent =
-            "timeout after 2hr. Check the processor session URL for errors. Request id: " + requestId;
+            "timeout after 24hr. Check the daily routine session URL for errors. Request id: " + requestId;
           clearInterval(handle);
         }
       } catch (e) {
@@ -132,7 +132,7 @@
       }
     };
     tick();
-    const handle = setInterval(tick, 30000);
+    const handle = setInterval(tick, 300000);  // 5 min
   }
 
   function wirePanel(date, item, panelRefs) {
@@ -244,7 +244,7 @@
     if (queueId) queueId.textContent = requestId;
 
     let attempts = 0;
-    const maxAttempts = 240; // 2hr
+    const maxAttempts = 24 * 12; // 24hr at 5-min intervals
 
     const tick = async () => {
       attempts += 1;
@@ -263,12 +263,12 @@
         }
         if (queueMsg) {
           queueMsg.textContent =
-            "queued. " + attempts + " checks so far; next processor run at the top of the next UTC hour.";
+            "queued. " + attempts + " checks; drained at next 12:00 UTC daily run.";
         }
         if (attempts >= maxAttempts) {
           if (queueMsg) {
             queueMsg.textContent =
-              "timeout after 2hr. Check the processor session URL. Request id: " + requestId;
+              "timeout after 24hr. Check the daily routine session URL. Request id: " + requestId;
           }
           clearInterval(handle);
         }
@@ -277,7 +277,7 @@
       }
     };
     tick();
-    const handle = setInterval(tick, 30000);
+    const handle = setInterval(tick, 300000);  // 5 min
   }
 
   async function submitCustom(e) {

@@ -75,24 +75,48 @@ custom briefings work as **async via data branch polling**:
 versus the planned near-instant response. Quota cost: 24 polling runs/
 day, most of which are empty no-ops. Acceptable given Max plan headroom.
 
-### D3. Routine count changed from 3 to 2
+### D3. Routine count changed from 3 to 1 (final)
 
 **Planned (§4):** three routines — daily, follow-up, custom.
 
-**Corrected:** **two routines** —
+**First correction (R1):** **two routines** — daily + combined hourly processor.
 
-- `ai-news-agent-daily` — cron `0 12 * * *` UTC, generates and emails the daily briefing
-- `ai-news-agent-processor` — cron `0 * * * *` UTC, processes both follow-up and custom requests on the data branch
+**Second correction (post-R7, surfaced by Stack):** **one routine**.
+The Max plan ships ~15 routine runs/day. An hourly processor would
+consume 24/day on its own, blowing the cap by ~10am UTC. Even at every
+3 hours that's 8 runs/day plus 1 daily = 9 runs leaving 6 for manual
+fires — workable but anxious.
 
-The processor folds what the planning doc had as two separate routines
-into one. Merging is cheaper on quota (one empty-poll run per hour
-instead of two) and the two request types are similar enough that one
-prompt can handle both via dispatch on file path.
+The cleaner design Stack pointed to: **fold queue draining into the
+daily routine's prompt**. The daily routine already runs once per day
+at 12:00 UTC, generates the briefing, updates memory, and pushes. We
+extended its prompt with a Step 5.5 that, before the final commit,
+checks `requests/` and `custom_requests/` and processes up to 5
+queued items in the same run. One commit covers the briefing + the
+drained responses.
+
+Trade: follow-up + custom briefings now wait until the next morning's
+daily run (up to 24hr latency) rather than the next hourly tick (up
+to 1hr). For Stack's actual usage — daily reading, occasional
+follow-ups — that latency is acceptable. In exchange we drop from
+25 routine runs/day (26 with the daily) to **1**, leaving 14 in
+reserve for manual fires + safety margin.
 
 **Effect on build plan:**
-- Phase **R4** (was: follow-up routine port) is now: **processor
-  routine — handles both follow-up and custom requests**.
-- Phase **R5** is deleted; its dashboard-wiring concerns move into R6.
+- Daily routine prompt (`routines/daily.prompt.md`) gained Step 5.5
+  with a 5-request cap and an 8-WebSearch drain budget on top of the
+  daily briefing's existing budget. Combined caps: 45 tool calls /
+  20 WebSearches per run.
+- Processor routine (`trig_016P6y3fNZp3utmDduv5tA6D`) was renamed to
+  `ai-news-agent-processor (RETIRED — merged into daily)` and set
+  to `enabled: false`. The Routines API doesn't expose deletion;
+  retiring + disabling is the closest we get.
+- Dashboard JS messaging updated: "next processor run within 1hr" →
+  "drained at next 12:00 UTC daily run".
+- Polling cadence on the dashboard relaxed from 30s to 5min (24hr
+  worst-case wait makes 30s polling silly).
+- `routines/processor.prompt.md` kept in repo as a reference for the
+  retired design.
 
 ### D4. Tool surface clarified
 

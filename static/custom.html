@@ -26,7 +26,7 @@
     <section id="queue-section" class="activity" hidden>
       <h2 class="section-title">// QUEUED</h2>
       <p id="queue-msg" class="muted">
-        Request queued. The processor routine fires hourly at minute 0 UTC and writes the briefing back. Polling every 30 seconds.
+        Request queued. The daily routine fires at 12:00 UTC and drains the queue as part of its run. Polling every 5 minutes.
       </p>
       <p class="muted">
         Request id: <code id="queue-id">--</code>
@@ -67,7 +67,7 @@
   </div>
 
   <footer class="bottombar">
-    <span class="muted">processor routine fires hourly &middot; up to 1hr latency</span>
+    <span class="muted">daily routine drains the queue at 12:00 UTC &middot; up to 24hr latency</span>
   </footer>
 
   <script src="/static/app.js"></script>

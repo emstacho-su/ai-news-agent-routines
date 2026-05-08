@@ -73,20 +73,17 @@ the **Gmail connector** (`connector_uuid`
 
 ---
 
-## Phase R4 — Processor routine (follow-up + custom)
+## Phase R4 — Processor routine (RETIRED post-R7)
 
-**Goal:** an hourly processor routine that handles both follow-up and custom briefing requests on the data branch.
+**Original goal:** hourly processor routine handling follow-up + custom requests.
 
-- [x] Locked request/response schemas in `docs/request-schemas.md`
-- [x] Wrote combined dispatcher prompt in `routines/processor.prompt.md` (Step 0 empty-poll fast path, Step 2a follow-up, Step 2b custom, Step 3 commit+push)
-- [x] Installed prompt on `trig_016P6y3fNZp3utmDduv5tA6D` via RemoteTrigger
-- [x] Hand-wrote one follow-up + one custom_briefing request to data branch (commit `6a5fb3b`)
-- [x] Manual fire 2026-05-08T02:39Z; ~7 min runtime; commit `16c8659` on data branch
-- [x] Both responses landed (`follow_ups/<id>.md`, `custom_briefings/2026-05-08_mcp-ecosystem-2026.md`); both requests moved to `processed/`
-- [x] Schema correct (frontmatter has request_id, briefing_date, topic_id, answered_at / focus, slug, generated_at)
-- [x] Re-enabled cron; next auto-fire 2026-05-08T03:00:03 UTC (will exercise empty-poll fast path)
+**Verified working (commit `16c8659`):** processed 2 test requests cleanly, schema correct.
 
-**Verification: PASSED.** Both responses readable on data branch. Routine `enabled: true`, cron `0 * * * *` UTC. Empty-poll measurement TBD on first idle run.
+**Then retired** when Stack flagged the Max plan's ~15 runs/day cap. An hourly cron blows the cap. Drain logic was folded into the daily routine instead — see D3 in `docs/r1-deviations.md` and the updated `routines/daily.prompt.md` Step 5.5.
+
+The processor routine (`trig_016P6y3fNZp3utmDduv5tA6D`) is renamed `ai-news-agent-processor (RETIRED — merged into daily)` and `enabled: false`. The processor.prompt.md file is kept in the repo as a reference for the retired design.
+
+Net result: **1 routine run per day** (the daily, which generates the briefing and drains up to 5 queued requests in the same run). Quota headroom: 14 runs/day for manual fires + safety margin.
 
 ---
 
