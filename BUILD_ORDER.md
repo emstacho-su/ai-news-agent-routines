@@ -5,9 +5,12 @@ layout in `docs/routines-version-plan.md` §7. Each phase produces a
 working state. Do not start the next phase until the current phase
 verifies.
 
-> **Canonical reference:** when this file and `docs/routines-version-plan.md`
-> disagree, the planning doc wins. This file is the working checklist;
-> the planning doc is the contract.
+> **Canonical reference:** when this file, `docs/r1-deviations.md`, and
+> `docs/routines-version-plan.md` disagree, **r1-deviations.md wins**,
+> then BUILD_ORDER.md, then the planning doc. The deviations doc records
+> corrections to the planning doc that surfaced once the actual Routines
+> API was inspected. The planning doc is preserved as a historical
+> artifact.
 
 ---
 
@@ -29,88 +32,88 @@ verifies.
 
 ---
 
-## Phase R1 — Routines onboarding + auth
+## Phase R1 — Routines onboarding
 
-**Goal:** three routines exist on Stack's Max plan with placeholder prompts and HTTP triggers enabled (where applicable).
+**Goal:** two routines exist on Stack's Max plan with placeholder prompts.
 
-- [ ] Authenticate Claude Code locally to the Max plan
-- [ ] `claude routines create` for daily / follow-up / custom
-- [ ] Save Routine IDs in `.env` and document in `.env.example`
-- [ ] Verify each routine appears in `claude routines list`
-- [ ] Note Routines API base URL and auth scheme in `config.py`
+- [ ] Map actual Routines API surface (done — see `docs/r1-deviations.md`)
+- [ ] Create `ai-news-agent-daily` (cron `0 12 * * *` UTC) with placeholder prompt
+- [ ] Create `ai-news-agent-processor` (cron `0 * * * *` UTC) with placeholder prompt
+- [ ] Save the two routine IDs in local `.env` and document in `.env.example`
+- [ ] Verify both routines appear via `RemoteTrigger {action: "list"}`
+- [ ] Update `config.py` to use 2-routine constants (`ROUTINE_DAILY_ID`, `ROUTINE_PROCESSOR_ID`)
 
-**Verification:** `claude routines list` shows three routines; `.env` has all three IDs; mocked test calling `_fire_routine` with one of the IDs returns the canned response.
-
----
-
-## Phase R2 — Resend MCP server
-
-**Goal:** a minimal MCP server exposing `send_email(to, subject, html, text)` that the daily routine can call.
-
-- [ ] Scaffold `mcp-servers/resend/` (TypeScript, Node 20+, MCP SDK)
-- [ ] Implement `send_email` tool wrapping the Resend SDK
-- [ ] Local test against a Resend test API key
-- [ ] Decide deploy target: stdio (bundled in routine container) vs remote (Cloudflare Workers / Fly.io sidecar)
-- [ ] Deploy and register the MCP server with the daily routine
-
-**Verification:** local stdio test sends a real email to `NOTIFY_TO_EMAIL` (Stack-gated), and the MCP server responds with `{ id, status: "queued" }`.
+**Verification:** `RemoteTrigger {action: "list"}` shows two routines; both have `enabled: true` and the right cron expressions; `.env` has both IDs.
 
 ---
 
-## Phase R3 — daily routine end-to-end
+## Phase R2 — DELETED
 
-**Goal:** daily routine produces a briefing, writes to the data branch, and emails Stack.
-
-- [ ] Port `prompts/daily_briefing.txt` into `routines/daily.yaml`
-- [ ] Routine reads `memory.json` from data branch on start
-- [ ] Routine writes `briefings/{date}.md` and updated `memory.json` back to data branch
-- [ ] Routine calls Resend MCP for email
-- [ ] Manual `claude routines run` to verify (Stack-gated; uses Max quota)
-- [ ] Schedule cron `0 12 * * *` UTC
-
-**Verification:** manual run produces a briefing on the data branch and an email arrives at `NOTIFY_TO_EMAIL`. Cron schedule is visible in `claude routines list`.
+The Resend MCP server is no longer needed. The daily routine attaches
+the **Gmail connector** (`connector_uuid`
+`468bd9e7-cae6-4c6c-8a3b-f9db61d8d737`) directly. See
+`docs/r1-deviations.md` D1.
 
 ---
 
-## Phase R4 — follow-up routine
+## Phase R3 — Daily routine end-to-end
 
-**Goal:** dashboard can ask a follow-up question and receive an answer.
+**Goal:** daily routine produces a briefing, writes to the data branch, and emails Stack via Gmail.
 
-- [ ] Port `prompts/follow_up.txt` into `routines/follow-up.yaml`
-- [ ] HTTP trigger enabled
-- [ ] `dashboard.py` `POST /follow-up` route fires the trigger and awaits result
-- [ ] Smoke test against an existing 2026-05-07 briefing item
+- [ ] Port `prompts/daily_briefing.txt` into the daily routine's prompt
+- [ ] Routine clones the repo, checks out `data` branch (or fetches it as a second source), reads existing `memory.json`
+- [ ] Routine uses WebSearch to fetch news; produces briefing markdown
+- [ ] Routine writes `briefings/{date}.md` + updated `memory.json` back to `data` branch and pushes
+- [ ] Routine attaches Gmail connector and sends the briefing as email
+- [ ] Manual run via `RemoteTrigger {action: "run", trigger_id: ...}` (Stack-gated; uses Max quota)
+- [ ] Confirm cron `0 12 * * *` UTC is set
 
-**Verification:** dashboard follow-up form returns a coherent answer with sources cited.
-
----
-
-## Phase R5 — custom routine
-
-**Goal:** dashboard can request a focused briefing on an arbitrary topic.
-
-- [ ] Port `prompts/custom_briefing.txt` into `routines/custom.yaml`
-- [ ] HTTP trigger enabled
-- [ ] `dashboard.py` custom-briefing route fires the trigger
-- [ ] Versioning logic (`_v2.md`, `_v3.md`) handled inside the routine
-
-**Verification:** firing a custom briefing for a slug that already has a briefing today produces a `_v2.md` file on the data branch.
+**Verification:** manual run produces a briefing on the data branch and an email arrives at `NOTIFY_TO_EMAIL`. Cron schedule visible in routine list.
 
 ---
 
-## Phase R6 — dashboard refactor
+## Phase R4 — Processor routine (follow-up + custom)
 
-**Goal:** `dashboard.py` no longer imports v1 modules and reads briefings from the data branch.
+**Goal:** an hourly processor routine that handles both follow-up and custom briefing requests on the data branch.
+
+- [ ] Port `prompts/follow_up.txt` and `prompts/custom_briefing.txt` into the processor routine's prompt
+- [ ] Routine reads `requests/` and `custom_requests/` on the data branch
+- [ ] For each request file, dispatch to follow-up or custom-briefing logic based on path
+- [ ] Write responses to `follow_ups/{ts}.md` or `custom_briefings/{date}_{slug}.md`
+- [ ] Move processed request files to `requests/processed/` (or delete) so they aren't re-run
+- [ ] Versioning logic for custom briefings (`_v2.md`, `_v3.md`)
+- [ ] Empty-poll path: routine should early-exit cheaply when no request files are present (measure quota cost)
+
+**Verification:** hand-write a follow-up request file on the data branch, fire the processor manually, observe a follow-up response file appear and the request move to `processed/`. Same flow for a custom request.
+
+---
+
+## Phase R5 — DELETED
+
+Merged into R4. The dashboard wiring (writing request files, polling for
+responses) is owned by Phase R6. See `docs/r1-deviations.md` D3.
+
+---
+
+## Phase R6 — Dashboard refactor
+
+**Goal:** `dashboard.py` no longer imports v1 modules; reads briefings from the data branch; writes request files for follow-up + custom and polls for responses.
 
 - [ ] Strip imports of `agent`, `tools`, `scheduler`, `notifications`, `budget`, `follow_ups`, `memory`
 - [ ] Strip `_run_daily_job`, `_run_custom_job`, SSE streams, in-process scheduler lifespan
 - [ ] Strip `/api/budget`, `/api/scheduler`
 - [ ] Replace `BRIEFINGS_DIR` reads with GitHub raw URL fetches over `httpx`
-- [ ] New `_fire_routine(name, payload) -> dict` helper
-- [ ] New routes: `POST /trigger/daily`, `POST /trigger/custom`, `POST /follow-up`
-- [ ] Tests mock Routine HTTP triggers with `respx`
+- [ ] New `_write_request_file(kind, payload) -> request_id` helper that commits to the `data` branch via the GitHub Contents API (or a local checkout + git push)
+- [ ] New `_check_response(kind, request_id) -> str | None` helper that polls the data branch for the corresponding response file
+- [ ] New routes:
+  - `POST /follow-up` → writes `requests/{ts}.json`, returns `request_id`
+  - `POST /trigger/custom` → writes `custom_requests/{ts}.json`, returns `request_id`
+  - `GET /follow-up/{id}/status` → polls
+  - `GET /custom/{id}/status` → polls
+- [ ] Front-end: replace inline-await UX with a "queued — check back" flow showing position in queue and time-of-next-processor-run
+- [ ] Tests mock GitHub raw URL fetches and the request-write helper with `respx`
 
-**Verification:** dashboard runs locally (`uvicorn dashboard:app`), serves the briefings list from data branch, fires routines via mock without touching Anthropic API. Pytest passes with 60%+ coverage on critical paths.
+**Verification:** dashboard runs locally (`uvicorn dashboard:app`), serves briefings list from data branch, queues follow-up and custom requests without touching Anthropic API. Pytest passes with 60%+ coverage on critical paths.
 
 ---
 

@@ -38,20 +38,21 @@ PROFILE_FILE = DATA_DIR / "profile.md"
 # ---------------------------------------------------------------------------
 # Routines (Phase R1 fills the IDs)
 # ---------------------------------------------------------------------------
+# Two routines per docs/r1-deviations.md D3:
+#   - daily: cron-fired briefing generator + Gmail send
+#   - processor: hourly poller for follow-up + custom requests
 ROUTINE_DAILY_ID = os.getenv("ROUTINE_DAILY_ID", "")
-ROUTINE_FOLLOWUP_ID = os.getenv("ROUTINE_FOLLOWUP_ID", "")
-ROUTINE_CUSTOM_ID = os.getenv("ROUTINE_CUSTOM_ID", "")
-ROUTINE_API_TOKEN = os.getenv("ROUTINE_API_TOKEN", "")
+ROUTINE_PROCESSOR_ID = os.getenv("ROUTINE_PROCESSOR_ID", "")
 
-# Per Routines docs (TODO: confirm exact base URL in R1).
+# Routines API base. Real path is /v1/code/triggers (per the in-process
+# RemoteTrigger tool). The dashboard does NOT call this directly — it
+# writes request files to the data branch and lets the processor routine
+# pick them up. The constant is kept for any future direct calls and for
+# documentation.
 ROUTINE_API_BASE = os.getenv(
     "ROUTINE_API_BASE",
-    "https://api.claude.com/v1/routines",
+    "https://api.claude.com/v1/code/triggers",
 )
-
-# Default timeout for an HTTP-triggered Routine run. Daily and custom
-# routines may take several minutes; follow-up should be faster.
-ROUTINE_HTTP_TIMEOUT_SECONDS = int(os.getenv("ROUTINE_HTTP_TIMEOUT_SECONDS", "300"))
 
 # ---------------------------------------------------------------------------
 # GitHub data branch (Phase R6 dashboard refactor)
