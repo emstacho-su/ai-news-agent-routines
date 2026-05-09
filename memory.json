@@ -201,7 +201,7 @@
         "Anthropic signed a deal with Google and Broadcom for multiple gigawatts of TPU capacity; ~$200B commitment over 5 years",
         "Capacity starts coming online in 2027",
         "Commitment represents >40% of the revenue backlog Google disclosed to investors",
-        "Anthropic annualized revenue run rate hit $30B in April 2026 — more than triple end-of-2025, ahead of OpenAI on same metric",
+        "Anthropic annualized revenue run rate hit $30B in April 2026 -- more than triple end-of-2025, ahead of OpenAI on same metric",
         "Combined compute commitments: SpaceX (300 MW GPU), Google ($200B TPU/cloud), Amazon (5 GW), Microsoft/NVIDIA ($30B Azure)"
       ],
       "sources": [
@@ -269,6 +269,132 @@
         "https://www.itsecuritynews.info/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-akamai-1-8b-deal",
+      "title": "Anthropic inks $1.8B compute deal with Akamai (May 8, 2026)",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "$1.8B seven-year contract for Akamai's Cloud Infrastructure Services; Akamai stock surged 27% on disclosure (22+ year single-day record)",
+        "CEO Amodei cited '80x growth' in annualized revenue and usage in Q1 2026 as justification for compute urgency",
+        "Anthropic's fourth major compute commitment in ~1 week: SpaceX (300MW GPU), Google ($200B TPU), Amazon (5GW), Akamai ($1.8B CIS)"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai",
+        "https://www.benzinga.com/news/26/05/52434312/anthropic-signs-1-8-billion-akamai-cloud-deal-amid-surging-claude-ai-demand-report",
+        "https://thetechportal.com/2026/05/09/anthropic-reportedly-signs-1-8bn-deal-with-akamai-as-global-ai-compute-race-intensifies/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-900b-valuation-round",
+      "title": "Anthropic in talks for $50B raise at ~$900B valuation; IPO possibly October 2026",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
+        "Would surpass OpenAI's last round ($852B post-money, February 2026)",
+        "Revenue run rate reported at $30-40B (up from ~$10B end-2025)",
+        "Framed as last private round before potential IPO in October 2026"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
+        "https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value",
+        "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-finance-agents-m365",
+      "title": "Anthropic ships 10 financial-services AI agents and full Microsoft 365 integration (May 5, 2026)",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "10 ready-to-run agent templates: pitchbook drafting, KYC screening, valuation review, financial model maintenance, month-end close",
+        "Claude in Microsoft Excel, PowerPoint, Word via add-ins; Outlook coming soon; context carries automatically between Office apps",
+        "New data connectors: FactSet, S&P Capital IQ, MSCI, PitchBook, Moody's, IBISWorld, Dun & Bradstreet, Verisk",
+        "Announced at invite-only financial services briefing in New York, May 5 2026"
+      ],
+      "sources": [
+        "https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/",
+        "https://pulse2.com/anthropic-launches-new-ai-agent-templates-and-microsoft-365-integrations-for-financial-services/",
+        "https://www.anthropic.com/news/finance-agents"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "aws-mcp-server-ga",
+      "title": "AWS MCP Server generally available: IAM-guarded, CloudTrail-audited access for coding agents (May 6, 2026)",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "AWS MCP Server reached GA on May 6 2026; gives coding agents secure access to AWS services through MCP",
+        "Authorization via IAM; metrics in CloudWatch; all tool calls logged to CloudTrail",
+        "First major cloud provider with production-ready, enterprise-auditable MCP server",
+        "Dynamic tool discovery -- no manual API wiring required"
+      ],
+      "sources": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "servicenow-build-agent-coding-tools",
+      "title": "ServiceNow Build Agent ships inside Claude Code, Cursor, Windsurf, GitHub Copilot via open-sourced SDK (May 6, 2026)",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "Announced at Knowledge 2026; Build Agent GA in ServiceNow Studio + extensions to Claude Code, Cursor, Windsurf, GitHub Copilot, OpenAI Codex",
+        "Open-sourced ServiceNow SDK skills: agents get scoped app structure, data model, and platform build conventions",
+        "Governed by default: App Engine Management Center reviews apps before deployment",
+        "Claude Code integration uses Anthropic-powered longer context sessions for ServiceNow platform context"
+      ],
+      "sources": [
+        "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Build-Agent-now-works-inside-every-major-AI-coding-tool-governed-by-default/default.aspx",
+        "https://www.businesswire.com/news/home/20260506008934/en/ServiceNow-Build-Agent-now-works-inside-every-major-AI-coding-tool-governed-by-default"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-ultrareview",
+      "title": "Claude Code /ultrareview: parallel multi-agent cloud code review",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "Slash command orchestrates specialist subagents (security, correctness, architecture, style, test coverage) reviewing in parallel, then synthesizes",
+        "Usage: /ultrareview <PR#> or no-arg form diffs against default branch",
+        "Billed to extra usage at ~$5-20 per review depending on diff size; Pro/Max had 3 free runs (expired May 5)",
+        "Launched April 2026"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/ultrareview",
+        "https://www.claudedirectory.org/blog/ultrareview-claude-code-guide"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-1-pro-higher-limits",
+      "title": "Gemini 3.1 Pro rolling out higher usage limits in Gemini App and NotebookLM (May 2026)",
+      "first_seen": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-09T12:10:13Z",
+      "key_facts": [
+        "Gemini 3.1 Pro preview launched February 2026; May 2026 rollout brings higher limits for Google AI Pro/Ultra subscribers",
+        "Also available in NotebookLM (Pro/Ultra only) and via Gemini API in AI Studio, Vertex AI, Gemini Enterprise, Gemini CLI",
+        "1M token context, native multimodal, Google's strongest complex-reasoning model for agentic workflows"
+      ],
+      "sources": [
+        "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "https://ai.google.dev/gemini-api/docs/changelog"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
