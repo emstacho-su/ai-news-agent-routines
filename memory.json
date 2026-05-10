@@ -396,6 +396,67 @@
       ],
       "category": "Model Releases",
       "coverage_count": 1
+    },
+    {
+      "id": "anthropic-managed-agents-dreaming",
+      "title": "Claude Managed Agents: 'dreaming' research preview; Outcomes and Multi-Agent Orchestration reach public beta",
+      "first_seen": "2026-05-10T00:00:00Z",
+      "last_updated": "2026-05-10T00:00:00Z",
+      "key_facts": [
+        "Dreaming is a scheduled background process that reads across past agent sessions, extracts recurring patterns (mistakes, converging workflows, shared preferences), merges duplicates, removes stale context, and writes structured updates to memory stores",
+        "Does not modify model weights; learnings stored as plain-text notes and playbooks readable by future sessions",
+        "Two modes: auto-commit (dreaming writes directly) or human-review (diff shown before changes land)",
+        "Harvey Legal AI reported 6x task completion increase after enabling dreaming",
+        "Announced May 6 2026 at Code with Claude SF; dreaming in research preview; Outcomes + Multi-Agent Orchestration moved from research preview to public beta"
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes",
+        "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+        "https://thenewstack.io/anthropic-managed-agents-dreaming-outcomes/",
+        "https://platform.claude.com/docs/en/managed-agents/dreams"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-sonnet-5",
+      "title": "Claude Sonnet 5: 92.4% SWE-bench Verified, 88.3% OSWorld-Verified, 2M context (released April 1, 2026)",
+      "first_seen": "2026-05-10T00:00:00Z",
+      "last_updated": "2026-05-10T00:00:00Z",
+      "key_facts": [
+        "Released April 1 2026; model string claude-sonnet-5-20260401; $3/$15 per million tokens in/out",
+        "92.4% SWE-bench Verified (vs Opus 4.6 at 80.8%, GPT-5.4 at 57.7%)",
+        "88.3% OSWorld-Verified computer-use accuracy vs 72.4% human expert baseline",
+        "2M token context (1M context from Sonnet 4.6 now stable/GA)",
+        "Adaptive-thinking architecture from 4.6 generation upgraded with smarter reasoning-depth allocation",
+        "Internally codenamed 'Fennec' before launch; Sonnet 4.6 was also described as Fennec in early leaks"
+      ],
+      "sources": [
+        "https://dev.to/best_codes/anthropic-just-dropped-claude-sonnet-5-and-the-benchmarks-are-kind-of-insane-3ppc",
+        "https://bytebot.io/articles/claude-sonnet-5-release",
+        "https://www.nxcode.io/resources/news/claude-sonnet-5-fennec-leak-2026"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-40b-ai-equity-strategy-2026",
+      "title": "Nvidia crosses $40B in AI equity commitments in 2026 (OpenAI, Intel, Corning, IREN)",
+      "first_seen": "2026-05-10T00:00:00Z",
+      "last_updated": "2026-05-10T00:00:00Z",
+      "key_facts": [
+        "$30B stake in OpenAI, $5B in Intel, $3.2B equity option in Corning (three new US optical fiber factories for AI networking), $2.1B equity option in IREN (up to 5 GW Nvidia DSX-aligned data center buildout)",
+        "IREN deal also includes $3.4B five-year contract for Nvidia to access IREN managed GPU cloud for internal AI workloads",
+        "Corning factories to create 3,000+ jobs; tenfold increase in US optical manufacturing capacity",
+        "Strategic shift: Nvidia now a financial stakeholder across the AI supply chain, not just a chip vendor"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+        "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html",
+        "https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
     }
   ]
 }
