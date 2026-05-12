@@ -457,6 +457,132 @@
       ],
       "category": "Wildcard",
       "coverage_count": 1
+    },
+    {
+      "id": "claude-platform-aws-ga",
+      "title": "Claude Platform on AWS: GA launch with Managed Agents, Skills, MCP connector, and AWS IAM/CloudTrail",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "GA announced May 11-12 2026; first cloud provider to offer native Claude Platform (not just Bedrock model access)",
+        "Includes Messages API, Files API (beta), Batches API, Managed Agents (beta), Skills (beta), advisor strategy (beta), MCP connector (beta), code execution, prompt caching, citations, Claude Console",
+        "Auth via AWS IAM; billing through existing AWS commitments; all tool calls logged to CloudTrail; metrics in CloudWatch",
+        "Available across 18 regions at launch"
+      ],
+      "sources": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/",
+        "https://claude.com/blog/claude-platform-on-aws",
+        "https://www.investing.com/news/stock-market-news/claude-platform-launches-on-aws-with-native-api-access-93CH-4677801"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-v2-1-139-goal-agent-view",
+      "title": "Claude Code v2.1.139: /goal command for autonomous loops and agent view dashboard (Research Preview)",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
+        "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
+        "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)"
+      ],
+      "sources": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+        "https://claude-world.com/articles/claude-code-21139-release/",
+        "https://x.com/ClaudeCodeLog/status/2053913638197416198"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-agent-web-may-2026",
+      "title": "Gemini Agent on web: experimental multi-tool agent for Google AI Ultra subscribers (May 11, 2026)",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "Launched May 11 2026 on gemini.google.com for Google AI Ultra subscribers in the US",
+        "Orchestrates tools: Deep Research, Canvas, Google Workspace connectors (Gmail, Calendar), and live web browsing in agentic multi-step flows",
+        "Experimental; no API access announced; US-only at launch"
+      ],
+      "sources": [
+        "https://gemini.google/release-notes/",
+        "https://blog.google/products/gemini/gemini-3-gemini-app/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepseek-v4-pro-flash",
+      "title": "DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified, 1M context (preview since April 24, 2026)",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "V4 Pro: 1.6T total / 49B active parameters MoE; 80.6% SWE-bench Verified; 1M context; Thinking / Non-Thinking dual modes",
+        "V4 Flash: 284B total / 13B active; fast/economical variant; also 1M context and dual modes",
+        "API pricing: $1.74/$3.48 per M input/output tokens; 75% discount through May 31; weights open-sourced",
+        "Preview launched April 24 2026; no GA date announced"
+      ],
+      "sources": [
+        "https://api-docs.deepseek.com/news/news260424",
+        "https://www.sitepoint.com/deepseek-v4-released-whats-new-in-the-latest-model-2026/",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "salesforce-data-360-mcp-server",
+      "title": "Salesforce Data 360 MCP Server: developer preview wrapping ~190 REST ops behind 3 facade tools",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "Open-source developer preview; connects MCP clients (Claude Code, Cursor, Codex) to Data 360 APIs via stdio transport",
+        "3 facade tools instead of ~190 individual tools: search (intent/keyword discovery), payload_examples (working JSON payloads), execute (run operation)",
+        "Local/single-tenant only; Java 17+, Maven 3.9+ required; Salesforce-hosted multitenant version planned for GA"
+      ],
+      "sources": [
+        "https://developer.salesforce.com/blogs/2026/05/introducing-the-data-360-mcp-server-developer-preview",
+        "https://github.com/forcedotcom/d360-mcp-server"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "emergent-misalignment-feature-superposition-geometry",
+      "title": "Emergent Misalignment via Feature Superposition Geometry: 34.5% reduction via geometry-aware filtering (arXiv:2605.00842)",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "Geometric account of emergent misalignment: fine-tuning amplifies benign target feature but also strengthens nearby harmful features in proportion to their geometric similarity in superposed representations",
+        "Validated on Gemma-2 2B/9B/27B, LLaMA-3.1 8B, gpt-oss 20B using sparse autoencoders to measure feature proximity",
+        "Geometry-aware filtering (remove training samples closest to toxic features) reduces EM by 34.5% vs random removal; matches LLM-as-a-judge filtering at lower compute cost",
+        "Authors: Minegishi et al., University of Tokyo and Google DeepMind; submitted April 7 2026"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2605.00842",
+        "https://arxiv.org/html/2605.00842"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "caisi-frontier-labs-five-predeployment",
+      "title": "CAISI pre-deployment safety review expands to five frontier labs: Google DeepMind, Microsoft, xAI join Anthropic and OpenAI",
+      "first_seen": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-12T00:00:00Z",
+      "key_facts": [
+        "US Commerce Department CAISI added Google DeepMind, Microsoft, xAI as of May 5-7 2026; Anthropic and OpenAI were already participating since 2024",
+        "Labs provide pre-release model access (including reduced-safeguard versions) for independent national security evaluation; 40+ evaluations completed including unreleased frontier models",
+        "Voluntary but described by analysts as fast becoming a baseline expectation for US frontier lab operations"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/05/05/us-frontier-ai-testing-white-house-pivots-safety",
+        "https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models",
+        "https://techjacksolutions.com/ai-brief/caisi-google-deepmind-microsoft-xai-frontier-model-evaluation/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
     }
   ]
 }
