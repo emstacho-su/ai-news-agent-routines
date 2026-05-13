@@ -410,7 +410,7 @@
         "Announced May 6 2026 at Code with Claude SF; dreaming in research preview; Outcomes + Multi-Agent Orchestration moved from research preview to public beta"
       ],
       "sources": [
-        "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes",
+        "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-features",
         "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
         "https://thenewstack.io/anthropic-managed-agents-dreaming-outcomes/",
         "https://platform.claude.com/docs/en/managed-agents/dreams"
@@ -479,21 +479,24 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139: /goal command for autonomous loops and agent view dashboard (Research Preview)",
+      "title": "Claude Code v2.1.139-140: /goal command, agent view dashboard, agent subtype fixes",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-12T00:00:00Z",
+      "last_updated": "2026-05-13T12:09:39Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
-        "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)"
+        "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)",
+        "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
         "https://claude-world.com/articles/claude-code-21139-release/",
-        "https://x.com/ClaudeCodeLog/status/2053913638197416198"
+        "https://x.com/ClaudeCodeLog/status/2053913638197416198",
+        "https://claude-world.com/articles/claude-code-21140-release/",
+        "https://github.com/anthropics/claude-code/releases"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -582,6 +585,81 @@
         "https://techjacksolutions.com/ai-brief/caisi-google-deepmind-microsoft-xai-frontier-model-evaluation/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-legal",
+      "title": "Claude for Legal: 12 practice-area plugins, 20+ MCP connectors to Westlaw, Harvey, Everlaw, DocuSign (May 12, 2026)",
+      "first_seen": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-13T12:09:39Z",
+      "key_facts": [
+        "12 specialist legal plugins: litigation associate, AI governance counsel, IP diligence, M&A due diligence, and others; delivered via Claude Cowork and Claude Code plugins",
+        "20+ MCP connectors: Thomson Reuters, Westlaw, Practical Law, Harvey, Everlaw, Box, DocuSign",
+        "Confirmed early customers using Claude on live matters: Freshfields, Quinn Emanuel, Holland & Knight, Crosby Legal",
+        "Mirrors architecture of finance agents (May 5); same plugin packaging, different vertical data connectors"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/",
+        "https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html",
+        "https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/",
+        "https://fortune.com/2026/05/12/anthropic-legal-plug-in-release-claude-cowork-big-law/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-deployment-company",
+      "title": "OpenAI Deployment Company: $4B+ standalone enterprise AI firm, 19 investors, Tomoro acquisition (May 11, 2026)",
+      "first_seen": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-13T12:09:39Z",
+      "key_facts": [
+        "$4B+ venture; majority-owned by OpenAI; 19 co-investors including TPG (lead), Bain Capital, Goldman Sachs, Brookfield, Capgemini, SoftBank, Warburg Pincus",
+        "Acquired Tomoro, an applied AI consulting firm with ~150 Forward Deployed Engineers, to staff from day one",
+        "Embeds specialists inside enterprises to redesign workflows; competes with McKinsey/Accenture rather than other AI labs",
+        "Announced May 11 2026; arrived within one week of Anthropic's Goldman-Blackstone JV (May 4)"
+      ],
+      "sources": [
+        "https://openai.com/index/openai-launches-the-deployment-company/",
+        "https://www.pymnts.com/news/artificial-intelligence/2026/openai-launches-4-billion-dollar-company-accelerate-enterprise-ai-adoption/",
+        "https://www.bain.com/about/media-center/press-releases/2026/bain-company-openai-a-new-venture-to-deploy-ai-at-enterprise-scale/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-xi-beijing-ai-chips-2026",
+      "title": "Trump-Xi Beijing summit: Jensen Huang joins last-minute, AI chip export policy the central tech agenda item (May 13, 2026)",
+      "first_seen": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-13T12:09:39Z",
+      "key_facts": [
+        "Trump in Beijing for Xi summit; AI chip export restrictions are the dominant tech agenda item alongside EVs and rare earths",
+        "Jensen Huang initially excluded from delegation; Trump called him directly and he joined",
+        "US floated both tightening and relaxing H-series chip exports as negotiating leverage",
+        "China's AI progress (DeepSeek V4, mHC architecture) has eroded argument that export controls are preventing capability development"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html",
+        "https://thehill.com/business/5874569-trump-xi-ai-talks/",
+        "https://restofworld.org/2026/trump-xi-meeting-tech/",
+        "https://www.scmp.com/economy/global-economy/article/3353180/chinas-ai-ascent-leaves-trump-stark-choice-escalate-or-relax-chip-controls"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "agent-memory-survey-storage-reflection-experience",
+      "title": "Agent Memory Survey: Storage → Reflection → Experience evolutionary framework (arXiv:2605.06716, May 7, 2026)",
+      "first_seen": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-13T12:09:39Z",
+      "key_facts": [
+        "Three-stage evolutionary framework: Storage (trajectory preservation/retrieval), Reflection (trajectory critique/refinement via self-critique loops), Experience (trajectory abstraction into generalized policies/playbooks)",
+        "Existing work classified: Reflexion maps to Reflection stage; Anthropic 'dreaming' is an Experience-stage pipeline",
+        "Survey covers memory systems from 2022 through May 2026; preprint arXiv:2605.06716"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2605.06716"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
