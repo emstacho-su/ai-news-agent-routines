@@ -479,24 +479,27 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139-140: /goal command, agent view dashboard, agent subtype fixes",
+      "title": "Claude Code v2.1.139-141: /goal command, agent view dashboard, agent subtype fixes, terminalSequence hooks",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-14T12:13:45Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
         "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)",
-        "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)"
+        "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)",
+        "v2.1.141 (61 changes, May 14): terminalSequence hook field for desktop notifications/window titles/bells without a controlling terminal; ANTHROPIC_WORKSPACE_ID env var for workload identity federation scoped per workspace; claude agents --cwd <path> filters session list by directory; /feedback can attach recent sessions (24h or 7-day window); Rewind 'Summarize up to here' compresses earlier context while preserving recent turns"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
         "https://claude-world.com/articles/claude-code-21139-release/",
         "https://x.com/ClaudeCodeLog/status/2053913638197416198",
         "https://claude-world.com/articles/claude-code-21140-release/",
-        "https://github.com/anthropics/claude-code/releases"
+        "https://github.com/anthropics/claude-code/releases",
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://claudefa.st/blog/guide/changelog"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -630,21 +633,26 @@
       "id": "trump-xi-beijing-ai-chips-2026",
       "title": "Trump-Xi Beijing summit: Jensen Huang joins last-minute, AI chip export policy the central tech agenda item (May 13, 2026)",
       "first_seen": "2026-05-13T12:09:39Z",
-      "last_updated": "2026-05-13T12:09:39Z",
+      "last_updated": "2026-05-14T12:13:45Z",
       "key_facts": [
         "Trump in Beijing for Xi summit; AI chip export restrictions are the dominant tech agenda item alongside EVs and rare earths",
         "Jensen Huang initially excluded from delegation; Trump called him directly and he joined",
         "US floated both tightening and relaxing H-series chip exports as negotiating leverage",
-        "China's AI progress (DeepSeek V4, mHC architecture) has eroded argument that export controls are preventing capability development"
+        "China's AI progress (DeepSeek V4, mHC architecture) has eroded argument that export controls are preventing capability development",
+        "US cleared H200 chip sales to ~10 Chinese firms including Alibaba, Tencent, ByteDance, JD.com; no deliveries made as Beijing steered buyers toward domestic Huawei alternatives",
+        "Both sides agreed to 'constructive China-US relationship of strategic stability' framework for the next three years"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html",
         "https://thehill.com/business/5874569-trump-xi-ai-talks/",
         "https://restofworld.org/2026/trump-xi-meeting-tech/",
-        "https://www.scmp.com/economy/global-economy/article/3353180/chinas-ai-ascent-leaves-trump-stark-choice-escalate-or-relax-chip-controls"
+        "https://www.scmp.com/economy/global-economy/article/3353180/chinas-ai-ascent-leaves-trump-stark-choice-escalate-or-relax-chip-controls",
+        "https://www.cnbc.com/2026/05/14/trump-xi-meeting-china-stocks-ai-rally.html",
+        "https://www.cnbc.com/2026/05/14/trump-xi-summit-us-china-trade-taiwan-iran-nvidia.html",
+        "https://www.wionews.com/world/nvidia-h200-china-ai-chip-sale-blocked-1778749708827/amp"
       ],
       "category": "Wildcard",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "agent-memory-survey-storage-reflection-experience",
@@ -660,6 +668,43 @@
         "https://arxiv.org/abs/2605.06716"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-small-business",
+      "title": "Claude for Small Business: 15 workflows, 15 skills, 8 connectors (May 13, 2026)",
+      "first_seen": "2026-05-14T12:13:45Z",
+      "last_updated": "2026-05-14T12:13:45Z",
+      "key_facts": [
+        "Toggle-install package of 15 agentic workflows and 15 reusable skills; connectors to QuickBooks, PayPal, HubSpot, Canva, DocuSign, Google Workspace, and Microsoft 365",
+        "Workflows cover payroll planning, month-end close, lead triage, invoice chasing, contract review, and marketing campaign management",
+        "AI Fluency for Small Business free online course with PayPal; 10-city US workshop tour starting May 14 in Chicago"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-for-small-business",
+        "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/",
+        "https://www.axios.com/2026/05/13/anthropic-claude-small-business-smb"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-intelligence-android-2026",
+      "title": "Google Gemini Intelligence: proactive cross-app AI for Android, Googlebook laptop category (Android Show, May 12, 2026)",
+      "first_seen": "2026-05-14T12:13:45Z",
+      "last_updated": "2026-05-14T12:13:45Z",
+      "key_facts": [
+        "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
+        "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
+        "Googlebook: new Google-branded laptop category (Gemini Intelligence first-class OS feature); first devices from Acer, ASUS, Dell, HP, Lenovo arriving fall 2026",
+        "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling"
+      ],
+      "sources": [
+        "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+        "https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/",
+        "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
