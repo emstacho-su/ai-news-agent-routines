@@ -4,20 +4,22 @@
       "id": "anthropic-spacex-colossus-compute-deal",
       "title": "Anthropic secures all of SpaceX's Colossus 1 compute; rate limits doubled",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-15T00:00:00Z",
       "key_facts": [
         "Anthropic rented all compute capacity at SpaceX's Colossus 1 data center in Memphis: 300+ MW and 220,000+ NVIDIA H100/H200/GB200 GPUs",
         "Claude Code five-hour rate limits doubled for Pro, Max, Team, and Enterprise; peak-hour reductions removed for Pro and Max; Opus API limits raised considerably",
         "xAI dissolved as separate entity, folding into SpaceX as SpaceXAI",
-        "Anthropic expressed interest in future orbital data centers with SpaceX"
+        "Anthropic expressed interest in future orbital data centers with SpaceX",
+        "50% boost to weekly Claude Code limits added May 13; live through July 13 at 6 PM PDT, stacks with doubled hourly limits; no opt-in required; Pro, Max, Team, seat-based Enterprise"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html",
         "https://www.axios.com/2026/05/06/anthropic-spacex-elon-musk-compute",
-        "https://x.ai/news/anthropic-compute-partnership"
+        "https://x.ai/news/anthropic-compute-partnership",
+        "https://news.ycombinator.com/item?id=48126429"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "code-with-claude-2026-sf",
@@ -692,17 +694,57 @@
       "id": "gemini-intelligence-android-2026",
       "title": "Google Gemini Intelligence: proactive cross-app AI for Android, Googlebook laptop category (Android Show, May 12, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-14T12:13:45Z",
+      "last_updated": "2026-05-15T00:00:00Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
         "Googlebook: new Google-branded laptop category (Gemini Intelligence first-class OS feature); first devices from Acer, ASUS, Dell, HP, Lenovo arriving fall 2026",
-        "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling"
+        "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling",
+        "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Remy (agentic cross-app AI) expected as headline model announcements"
       ],
       "sources": [
         "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
         "https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/",
-        "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/"
+        "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
+        "https://imini.com/blogs/gemini-omni-google-io-2026",
+        "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 2
+    },
+    {
+      "id": "microsoft-cancels-claude-code-licenses",
+      "title": "Microsoft cancels internal Claude Code licenses; Experiences+Devices engineers switch to Copilot CLI by June 30",
+      "first_seen": "2026-05-15T00:00:00Z",
+      "last_updated": "2026-05-15T00:00:00Z",
+      "key_facts": [
+        "Experiences+Devices org (Windows, M365, Outlook, Teams, Surface) revoking all Claude Code licenses with June 30 hard cutoff",
+        "Stated reason: converge on GitHub Copilot CLI as single standard CLI agent; financial motive is Claude Code's popularity undermining internal Copilot CLI adoption",
+        "Claude models remain available through Copilot CLI and M365 Copilot features; Foundry/Cowork agreements unaffected",
+        "Microsoft originally rolled out Claude Code to thousands of employees in December 2025 after it caught on faster than anticipated"
+      ],
+      "sources": [
+        "https://www.resetera.com/threads/the-verge-microsoft-starts-canceling-claude-code-licenses-engineers-will-have-to-switch-to-copilot.1520725/",
+        "https://letsdatascience.com/news/microsoft-cancels-claude-code-licenses-shifts-developers-to-4a042e96",
+        "https://www.tipranks.com/news/the-fly/microsoft-rolling-back-internal-use-of-claude-code-the-verge-reports-thefly-news"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "semantic-kernel-rce-cve-2026",
+      "title": "Semantic Kernel RCE: CVE-2026-26030 (CVSS 9.8) and CVE-2026-25592 — prompt injection → eval() → host code execution",
+      "first_seen": "2026-05-15T00:00:00Z",
+      "last_updated": "2026-05-15T00:00:00Z",
+      "key_facts": [
+        "CVE-2026-26030 (CVSS 9.8, Python SDK < 1.39.4): InMemoryVectorStore default filter used eval() with user-controlled input interpolated; prompt injection → arbitrary host code execution. Fix: upgrade to 1.39.4+",
+        "CVE-2026-25592 (.NET SDK < 1.71.0): SessionsPythonPlugin's DownloadFileAsync accidentally exposed to the model as callable kernel function with no path validation; hostile prompt → arbitrary file write. Fix: upgrade to 1.71.0+",
+        "Both disclosed May 7, 2026; pattern: agent frameworks blurring the line between LLM inference and trusted OS operations"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+        "https://nvd.nist.gov/vuln/detail/cve-2026-26030",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-25592"
       ],
       "category": "Tools & Frameworks",
       "coverage_count": 1
