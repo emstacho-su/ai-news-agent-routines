@@ -481,15 +481,17 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139-141: /goal command, agent view dashboard, agent subtype fixes, terminalSequence hooks",
+      "title": "Claude Code v2.1.139-143: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-14T12:13:45Z",
+      "last_updated": "2026-05-16T12:15:41Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
         "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)",
         "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)",
-        "v2.1.141 (61 changes, May 14): terminalSequence hook field for desktop notifications/window titles/bells without a controlling terminal; ANTHROPIC_WORKSPACE_ID env var for workload identity federation scoped per workspace; claude agents --cwd <path> filters session list by directory; /feedback can attach recent sessions (24h or 7-day window); Rewind 'Summarize up to here' compresses earlier context while preserving recent turns"
+        "v2.1.141 (61 changes, May 14): terminalSequence hook field for desktop notifications/window titles/bells without a controlling terminal; ANTHROPIC_WORKSPACE_ID env var for workload identity federation scoped per workspace; claude agents --cwd <path> filters session list by directory; /feedback can attach recent sessions (24h or 7-day window); Rewind 'Summarize up to here' compresses earlier context while preserving recent turns",
+        "v2.1.142 (May 14): eight new dispatch flags for background sessions — --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, --dangerously-skip-permissions",
+        "v2.1.143 (May 15): plugin dependency enforcement — claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -501,7 +503,7 @@
         "https://claudefa.st/blog/guide/changelog"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -747,6 +749,78 @@
         "https://nvd.nist.gov/vuln/detail/CVE-2026-25592"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-gates-foundation-partnership",
+      "title": "Anthropic forms $200M, four-year AI partnership with the Gates Foundation (May 14, 2026)",
+      "first_seen": "2026-05-16T12:15:41Z",
+      "last_updated": "2026-05-16T12:15:41Z",
+      "key_facts": [
+        "$200M commitment over four years: grant funding, Claude usage credits, and technical support",
+        "Three focus verticals: global health (vaccine/therapy acceleration, overlooked diseases starting with polio and HPV), education (AI tutoring + foundational literacy tools in sub-Saharan Africa and India), economic mobility (agriculture-specific Claude improvements, public-good crop datasets for smallholder farmers)",
+        "Framed as Anthropic's explicit 'markets alone won't reach here' investment ahead of IPO window"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/gates-foundation-partnership",
+        "https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-codex-mobile-memory-web",
+      "title": "OpenAI Codex: mobile launch (iOS/Android), persistent memory, in-app browser, 90+ plugins (May 14-15, 2026)",
+      "first_seen": "2026-05-16T12:15:41Z",
+      "last_updated": "2026-05-16T12:15:41Z",
+      "key_facts": [
+        "Codex available in ChatGPT iOS/Android app across all plans including Free; mobile UI shows running task status and allows approving/denying pending commands",
+        "Persistent memory preview: stores preferences, corrections, and gathered context across sessions",
+        "In-app browser with inline annotation for precise web instructions to the agent",
+        "90+ additional plugins combining skills, app integrations, and MCP servers; GPT-5.5 rolling out to Codex sessions"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+        "https://openai.com/index/work-with-codex-from-anywhere/",
+        "https://openai.com/index/codex-for-almost-everything/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "mistral-medium-3-5-work-mode",
+      "title": "Mistral Medium 3.5: 128B open-weights, 77.6% SWE-bench, Work mode in Le Chat (April 29/May 3, 2026)",
+      "first_seen": "2026-05-16T12:15:41Z",
+      "last_updated": "2026-05-16T12:15:41Z",
+      "key_facts": [
+        "128B dense model, 256K context, modified MIT open-weights license; released April 29/May 3 2026",
+        "77.6% SWE-bench Verified — ahead of Devstral 2 and Qwen3.5 397B A17B",
+        "Le Chat Work mode: parallel multi-step agentic tasks across email, calendar, docs, Jira, Slack; explicit tool-call visibility and approval gates before sensitive actions",
+        "Remote cloud coding agents also ship in Mistral Vibe on the same checkpoint"
+      ],
+      "sources": [
+        "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "five-eyes-agentic-ai-guidance",
+      "title": "Five Eyes 'Careful Adoption of Agentic AI Services' joint guidance (May 1, 2026)",
+      "first_seen": "2026-05-16T12:15:41Z",
+      "last_updated": "2026-05-16T12:15:41Z",
+      "key_facts": [
+        "Published May 1 2026 by CISA, NSA, Australia ASD ACSC, Canada, New Zealand, UK NCSC — first coordinated multi-government agentic AI security guidance",
+        "Core stance: assume agentic AI systems may behave unexpectedly until security practices and evaluation standards mature",
+        "Five risk categories: privilege, design/configuration, behavioral, structural, supply-chain",
+        "Recommended approach: start with clearly defined low-risk tasks, deploy incrementally, explicit accountability, continuous threat-model evaluation, human oversight"
+      ],
+      "sources": [
+        "https://www.theregister.com/2026/05/04/five_eyes_agentic_ai_recommendations/",
+        "https://cyberscoop.com/cisa-nsa-five-eyes-guidance-secure-deployment-ai-agents/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
