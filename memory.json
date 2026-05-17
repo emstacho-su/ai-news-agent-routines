@@ -483,7 +483,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139-143: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-16T12:15:41Z",
+      "last_updated": "2026-05-17T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
@@ -491,7 +491,10 @@
         "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)",
         "v2.1.141 (61 changes, May 14): terminalSequence hook field for desktop notifications/window titles/bells without a controlling terminal; ANTHROPIC_WORKSPACE_ID env var for workload identity federation scoped per workspace; claude agents --cwd <path> filters session list by directory; /feedback can attach recent sessions (24h or 7-day window); Rewind 'Summarize up to here' compresses earlier context while preserving recent turns",
         "v2.1.142 (May 14): eight new dispatch flags for background sessions — --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, --dangerously-skip-permissions",
-        "v2.1.143 (May 15): plugin dependency enforcement — claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane"
+        "v2.1.143 (May 15): plugin dependency enforcement — claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane",
+        "/fast mode switches to Opus 4.7 default as of ~May 14 (was Opus 4.6); pricing unchanged at $30/$150 per M in/out tokens",
+        "Ctrl+R reverse-search now defaults to all prompts across every project and session; press Ctrl+S to narrow back to current project",
+        "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -503,7 +506,7 @@
         "https://claudefa.st/blog/guide/changelog"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -696,23 +699,29 @@
       "id": "gemini-intelligence-android-2026",
       "title": "Google Gemini Intelligence: proactive cross-app AI for Android, Googlebook laptop category (Android Show, May 12, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-15T00:00:00Z",
+      "last_updated": "2026-05-17T00:00:00Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
         "Googlebook: new Google-branded laptop category (Gemini Intelligence first-class OS feature); first devices from Acer, ASUS, Dell, HP, Lenovo arriving fall 2026",
         "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling",
-        "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Remy (agentic cross-app AI) expected as headline model announcements"
+        "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Remy (agentic cross-app AI) expected as headline model announcements",
+        "Gemini Omni leaked via UI string in Gemini app May 2: 'Start with an idea or try a template. Powered by Omni.' — found in video generation tab alongside Toucan/Veo 3.1 surface",
+        "Early access demos show scene editing: watermark removal, object swap within clips, scene rewrites via chat; strong logical reasoning in video generation; multi-character scenes still glitch",
+        "Android 17 Beta 4 at near-final stage; stable public release expected June 2026"
       ],
       "sources": [
         "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
         "https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/",
         "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
         "https://imini.com/blogs/gemini-omni-google-io-2026",
-        "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/"
+        "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/",
+        "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/",
+        "https://www.androidauthority.com/google-gemini-omni-video-model-leak-3665801/",
+        "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "microsoft-cancels-claude-code-licenses",
@@ -821,6 +830,64 @@
         "https://cyberscoop.com/cisa-nsa-five-eyes-guidance-secure-deployment-ai-agents/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "pwc-anthropic-expanded-partnership",
+      "title": "PwC expands Anthropic alliance: 30,000 staff on Claude agents, Finance Business Group, global Claude Code/Cowork rollout",
+      "first_seen": "2026-05-17T00:00:00Z",
+      "last_updated": "2026-05-17T00:00:00Z",
+      "key_facts": [
+        "PwC rolling out Claude Code and Claude Cowork starting with US teams, scaling to global workforce; training and certifying 30,000 PwC professionals on Claude agents",
+        "New Finance Business Group for regulated industries (banking, insurance, healthcare) pairs PwC domain expertise with full Anthropic stack (Claude, Cowork, Code)",
+        "Joint Center of Excellence; production client outcomes: insurance underwriting 10 weeks to 10 days, delivery improvements up to 70%",
+        "Three partnership pillars: agentic technology build, AI-native deal-making, reinvention of enterprise function"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/pwc-expanded-partnership",
+        "https://www.pwc.com/us/en/about-us/newsroom/press-releases/anthropic-pwc-expand-alliance-agentic-enterprise.html",
+        "https://siliconangle.com/2026/05/14/pwc-expands-anthropic-alliance-will-train-30000-staff-claude/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "cerebras-ipo-nasdaq-may-2026",
+      "title": "Cerebras IPO (CBRS): $5.55B raise, 68% first-day pop, ~$95B market cap — largest US tech IPO since Uber (May 14, 2026)",
+      "first_seen": "2026-05-17T00:00:00Z",
+      "last_updated": "2026-05-17T00:00:00Z",
+      "key_facts": [
+        "Priced at $185/share May 13; raised $5.55B; opened at $350 on Nasdaq May 14 (68% pop); ~$95B peak market cap — largest US tech IPO since Uber 2019",
+        "2025 revenue $510M (76% YoY up from $24.6M in 2022); major catalyst: multi-year OpenAI inference deal, 750 MW expandable to 2 GW by 2030",
+        "86% revenue concentration in UAE entities flagged by analysts; unresolved at IPO",
+        "Wafer-scale engine: single chip sized to full silicon wafer vs Nvidia multi-chip SXM; claims lower inference latency on large batches"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/14/cerebras-cbrs-stock-trade-nasdaq-ipo.html",
+        "https://www.fool.com/investing/2026/05/14/cbrs-stock-ai-chip-stocks-nvda-stock-competitor/",
+        "https://www.techtimes.com/articles/316698/20260515/cerebras-raises-555-billion-ai-chip-ipo-86-revenue-dependence-uae-entities-unresolved.htm"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "subq-1m-subquadratic-llm",
+      "title": "SubQ 1M-Preview: first fully subquadratic LLM (SSA architecture), 12M-token native context, 52x faster attention at 1M tokens (May 5, 2026)",
+      "first_seen": "2026-05-17T00:00:00Z",
+      "last_updated": "2026-05-17T00:00:00Z",
+      "key_facts": [
+        "Subquadratic Selective Attention (SSA): fully linear scaling in compute and memory with context length; first commercially available LLM on non-transformer attention architecture",
+        "12M-token native context window; 52x faster than FlashAttention at 1M tokens; ~1,000x lower attention compute at 12M tokens vs dense baseline; 92.1% NIAH at 12M tokens",
+        "SWE-bench Verified: 82.4% (edges Opus 4.6's 81.4%); RULER@128K: 95.0% vs Opus 4.6's 94.8%; claims ~1/5th cost of frontier models at equivalent context",
+        "Subquadratic emerged from stealth May 5 2026 with $29M raised; 11-person PhD team"
+      ],
+      "sources": [
+        "https://subq.ai/introducing-subq",
+        "https://www.datacamp.com/blog/subq-ai-explained",
+        "https://news.ycombinator.com/item?id=48023079",
+        "https://siliconangle.com/2026/05/05/subquadratic-launches-29m-bring-12m-token-context-windows-ai/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
