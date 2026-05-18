@@ -25,20 +25,23 @@
       "id": "code-with-claude-2026-sf",
       "title": "Code with Claude 2026 developer conference: SF May 6, London May 19, Tokyo June 10",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-05-18T00:00:00Z",
       "key_facts": [
         "SF event ran May 6; Claude Code v2.1.126-v2.1.131 shipped (--plugin-url, claude project purge, skillOverrides)",
         "10 financial-services agent templates shipped as Cowork and Code plugins",
         "Managed Agents cookbook released",
-        "Three-city tour: London May 19, Tokyo June 10, all livestreamed; Extended sessions recorded post-event"
+        "Three-city tour: London May 19, Tokyo June 10, all livestreamed; Extended sessions recorded post-event",
+        "Extended London day added May 20 due to demand: for independent developers and early-stage founders only; not livestreamed"
       ],
       "sources": [
         "https://blakecrosley.com/blog/code-with-claude-sf-2026-recap",
         "https://claude.com/code-with-claude/session/sf-whats-new-in-claude-code",
-        "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+        "https://simonwillison.net/2026/May/6/code-w-claude-2026/",
+        "https://claude.com/code-with-claude/london",
+        "https://claude.com/code-with-claude/london-extended"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-mythos-project-glasswing",
@@ -293,22 +296,26 @@
     },
     {
       "id": "anthropic-900b-valuation-round",
-      "title": "Anthropic in talks for $50B raise at ~$900B valuation; IPO possibly October 2026",
+      "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO possibly October 2026",
       "first_seen": "2026-05-09T12:10:13Z",
-      "last_updated": "2026-05-09T12:10:13Z",
+      "last_updated": "2026-05-18T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
         "Would surpass OpenAI's last round ($852B post-money, February 2026)",
         "Revenue run rate reported at $30-40B (up from ~$10B end-2025)",
-        "Framed as last private round before potential IPO in October 2026"
+        "Framed as last private round before potential IPO in October 2026",
+        "Bloomberg May 12 revised raise figure to $30B (not $50B as earlier reported); ~$900B valuation unchanged; no term sheet signed as of May 18",
+        "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
         "https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value",
-        "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html"
+        "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html",
+        "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
+        "https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -699,16 +706,18 @@
       "id": "gemini-intelligence-android-2026",
       "title": "Google Gemini Intelligence: proactive cross-app AI for Android, Googlebook laptop category (Android Show, May 12, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-17T00:00:00Z",
+      "last_updated": "2026-05-18T00:00:00Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
         "Googlebook: new Google-branded laptop category (Gemini Intelligence first-class OS feature); first devices from Acer, ASUS, Dell, HP, Lenovo arriving fall 2026",
         "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling",
-        "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Remy (agentic cross-app AI) expected as headline model announcements",
+        "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Gemini Spark (agentic cross-app AI, previously referred to as 'Remy') expected as headline announcements",
         "Gemini Omni leaked via UI string in Gemini app May 2: 'Start with an idea or try a template. Powered by Omni.' — found in video generation tab alongside Toucan/Veo 3.1 surface",
         "Early access demos show scene editing: watermark removal, object swap within clips, scene rewrites via chat; strong logical reasoning in video generation; multi-character scenes still glitch",
-        "Android 17 Beta 4 at near-final stage; stable public release expected June 2026"
+        "Android 17 Beta 4 at near-final stage; stable public release expected June 2026",
+        "Gemini Spark full onboarding leaked (Android Authority, May 14-17): 24/7 background proactive agent; Skills (recurring task templates); scheduled workflows; onboarding explicitly states 'Spark can share sensitive information with third parties or make purchases without asking for confirmation in some situations'; stores remote browser session data including login state",
+        "Gemini Spark draws from connected apps, Gmail, Calendar, chat history, browsing sessions, location data, and 'Personal Intelligence'; described by Android Authority as 'gunning for Claude Cowork's throne'"
       ],
       "sources": [
         "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
@@ -718,10 +727,13 @@
         "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/",
         "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/",
         "https://www.androidauthority.com/google-gemini-omni-video-model-leak-3665801/",
-        "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/"
+        "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/",
+        "https://www.androidauthority.com/gemini-spark-onboarding-screen-leaked-3667118/",
+        "https://www.androidauthority.com/google-gemini-spark-agent-leak-3667475/",
+        "https://9to5google.com/2026/05/14/gemini-spark-insight/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "microsoft-cancels-claude-code-licenses",
@@ -868,6 +880,46 @@
         "https://www.techtimes.com/articles/316698/20260515/cerebras-raises-555-billion-ai-chip-ipo-86-revenue-dependence-uae-entities-unresolved.htm"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "mcp-2026-roadmap",
+      "title": "MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle, governance contributor ladder, enterprise readiness",
+      "first_seen": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-18T00:00:00Z",
+      "key_facts": [
+        "Roadmap organized around Working Groups rather than dates; four priority areas",
+        "Streamable HTTP: target is fully stateless servers that work behind load balancers/proxies without session-affinity workarounds; stateful sessions fighting horizontal scaling is the current production bottleneck",
+        "Tasks primitive: adding retry semantics for transient failures and expiry policies for result retention — lifecycle gaps from early production use",
+        "Governance: Contributor Ladder SEP (community → WG contributor → lead → core maintainer); delegation model so WGs with track record can merge extension updates without full core review",
+        "Enterprise readiness: SSO-integrated auth, audit trails, standard gateway patterns"
+      ],
+      "sources": [
+        "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+        "https://thenewstack.io/model-context-protocol-roadmap-2026/",
+        "https://modelcontextprotocol.io/development/roadmap"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "meta-avocado-delayed",
+      "title": "Meta Avocado delayed past May; benchmarks below GPT-5.5 and Opus 4.7; Gemini licensing discussed",
+      "first_seen": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-18T00:00:00Z",
+      "key_facts": [
+        "Meta's flagship proprietary model (codenamed Avocado) missed its May 2026 target; third delay since original late-2025 window",
+        "Internal tests put Avocado between Gemini 2.5 and 3.0 — below GPT-5.5 Instant and Claude Opus 4.7 on developer benchmarks",
+        "Meta leadership reportedly discussed licensing Google Gemini as a short-term stopgap; no decision made",
+        "Avocado is a proprietary closed-weights model — departure from Meta's Llama open-source strategy",
+        "Meta committed $115-135B in 2026 AI capex despite delays"
+      ],
+      "sources": [
+        "https://mlq.ai/news/meta-postpones-avocado-ai-model-launch-to-may-amid-performance-gaps-with-competitors/",
+        "https://thenextweb.com/news/the-unreleased-ai-metas-model",
+        "https://winbuzzer.com/2026/03/13/meta-delays-avocado-ai-model-after-failing-to-match-rivals-xcxwbn/"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     },
     {
