@@ -25,23 +25,26 @@
       "id": "code-with-claude-2026-sf",
       "title": "Code with Claude 2026 developer conference: SF May 6, London May 19, Tokyo June 10",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-19T12:14:25Z",
       "key_facts": [
         "SF event ran May 6; Claude Code v2.1.126-v2.1.131 shipped (--plugin-url, claude project purge, skillOverrides)",
         "10 financial-services agent templates shipped as Cowork and Code plugins",
         "Managed Agents cookbook released",
         "Three-city tour: London May 19, Tokyo June 10, all livestreamed; Extended sessions recorded post-event",
-        "Extended London day added May 20 due to demand: for independent developers and early-stage founders only; not livestreamed"
+        "Extended London day added May 20 due to demand: for independent developers and early-stage founders only; not livestreamed",
+        "London Day 1 (May 19): 'What's new in Claude Code' session 10:30-11:00 BST by Ralph Ramos; Claude for Creative Work connectors announced as London headline product drop",
+        "SF keynote Dianne Penn hinted at 'context windows that feel infinite'; no new model announced at either city event"
       ],
       "sources": [
         "https://blakecrosley.com/blog/code-with-claude-sf-2026-recap",
         "https://claude.com/code-with-claude/session/sf-whats-new-in-claude-code",
         "https://simonwillison.net/2026/May/6/code-w-claude-2026/",
         "https://claude.com/code-with-claude/london",
-        "https://claude.com/code-with-claude/london-extended"
+        "https://claude.com/code-with-claude/london-extended",
+        "https://claude.com/code-with-claude/session/ldn-whats-new-in-claude-code"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "claude-mythos-project-glasswing",
@@ -488,9 +491,9 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139-143: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph",
+      "title": "Claude Code v2.1.139-144: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-17T00:00:00Z",
+      "last_updated": "2026-05-19T12:14:25Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
@@ -501,7 +504,8 @@
         "v2.1.143 (May 15): plugin dependency enforcement — claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane",
         "/fast mode switches to Opus 4.7 default as of ~May 14 (was Opus 4.6); pricing unchanged at $30/$150 per M in/out tokens",
         "Ctrl+R reverse-search now defaults to all prompts across every project and session; press Ctrl+S to narrow back to current project",
-        "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace"
+        "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace",
+        "v2.1.144 (52 changes, ~May 17-18): --plugin-url flag fetches plugin archive from URL for current session; /model now session-scoped (press d in picker to set default); /resume surfaces background sessions in TUI marked 'bg'; Edit tool now does exact string replacement preventing unintended partial matches; system searches use grep tool for reproducible results; known VS Code spawn crash (issue #60436)"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -510,10 +514,12 @@
         "https://claude-world.com/articles/claude-code-21140-release/",
         "https://github.com/anthropics/claude-code/releases",
         "https://releasebot.io/updates/anthropic/claude-code",
-        "https://claudefa.st/blog/guide/changelog"
+        "https://claudefa.st/blog/guide/changelog",
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/issues/60436"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -704,9 +710,9 @@
     },
     {
       "id": "gemini-intelligence-android-2026",
-      "title": "Google Gemini Intelligence: proactive cross-app AI for Android, Googlebook laptop category (Android Show, May 12, 2026)",
+      "title": "Google Gemini Intelligence / I/O 2026: Gemini Omni, Spark, Android XR, Aluminium OS (keynote May 19, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-19T12:14:25Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
@@ -717,7 +723,8 @@
         "Early access demos show scene editing: watermark removal, object swap within clips, scene rewrites via chat; strong logical reasoning in video generation; multi-character scenes still glitch",
         "Android 17 Beta 4 at near-final stage; stable public release expected June 2026",
         "Gemini Spark full onboarding leaked (Android Authority, May 14-17): 24/7 background proactive agent; Skills (recurring task templates); scheduled workflows; onboarding explicitly states 'Spark can share sensitive information with third parties or make purchases without asking for confirmation in some situations'; stores remote browser session data including login state",
-        "Gemini Spark draws from connected apps, Gmail, Calendar, chat history, browsing sessions, location data, and 'Personal Intelligence'; described by Android Authority as 'gunning for Claude Cowork's throne'"
+        "Gemini Spark draws from connected apps, Gmail, Calendar, chat history, browsing sessions, location data, and 'Personal Intelligence'; described by Android Authority as 'gunning for Claude Cowork's throne'",
+        "Google I/O 2026 keynote opened May 19; pre-event benchmark coverage puts new Gemini model behind Claude Mythos and GPT-5.5 on standard developer evals; Android XR glasses preview with Samsung and Warby Parker confirmed; Aluminium OS (Chrome/Android merger) expected reveal"
       ],
       "sources": [
         "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
@@ -730,10 +737,12 @@
         "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/",
         "https://www.androidauthority.com/gemini-spark-onboarding-screen-leaked-3667118/",
         "https://www.androidauthority.com/google-gemini-spark-agent-leak-3667475/",
-        "https://9to5google.com/2026/05/14/gemini-spark-insight/"
+        "https://9to5google.com/2026/05/14/gemini-spark-insight/",
+        "https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news",
+        "https://www.techtimes.com/articles/316755/20260517/google-i-o-2026-keynote-opens-tuesday-new-gemini-lands-behind-mythos-gpt-55.htm"
       ],
-      "category": "Tools & Frameworks",
-      "coverage_count": 4
+      "category": "Model Releases",
+      "coverage_count": 5
     },
     {
       "id": "microsoft-cancels-claude-code-licenses",
@@ -940,6 +949,42 @@
         "https://siliconangle.com/2026/05/05/subquadratic-launches-29m-bring-12m-token-context-windows-ai/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-creative-work",
+      "title": "Claude for Creative Work: Adobe CC (50+ tools), Autodesk Fusion, Blender, Ableton, Affinity connectors (GA late April/May 2026)",
+      "first_seen": "2026-05-19T12:14:25Z",
+      "last_updated": "2026-05-19T12:14:25Z",
+      "key_facts": [
+        "Nine connectors: Adobe Creative Cloud (50+ tools across Photoshop, Premiere, Express, etc.), Autodesk Fusion (3D model creation/modification via natural language), Blender (Python API via natural language + docs), Ableton Live/Push (documentation-grounded Q&A), Affinity/Canva (batch automation), Splice, SketchUp, Resolute Arena/Wire",
+        "Claude Design (Anthropic Labs, April 17) exports generated visuals to Canva; builds on same product surface",
+        "Educational partnerships: RISD Art and Computation program, Ringling College of Art and Design, Goldsmiths MA/MFA Computational Arts (London)",
+        "GA rollout started late April 2026; showcased at Code with Claude London (May 19) as London headline product"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-for-creative-work",
+        "https://www.neowin.net/news/anthropic-unveils-claude-for-creative-work-expanding-ai-into-professional-creative-tools/",
+        "https://blog.adobe.com/en/publish/2026/04/28/adobe-for-creativity-connector",
+        "https://www.thurrott.com/a-i/anthropic/335498/anthropic-claude-now-connects-with-affinity-adobe-and-other-creator-solutions"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-malta-dell-codex-enterprise",
+      "title": "OpenAI/Malta: ChatGPT Plus for all citizens after literacy course; OpenAI/Dell: Codex for hybrid/on-prem enterprise (May 18, 2026)",
+      "first_seen": "2026-05-19T12:14:25Z",
+      "last_updated": "2026-05-19T12:14:25Z",
+      "key_facts": [
+        "Malta partnership: world-first national ChatGPT Plus rollout; all Maltese citizens who complete AI literacy course (developed with University of Malta) receive access",
+        "Dell partnership: Codex available in hybrid and on-premises enterprise environments via Dell Technologies; targets regulated industries that cannot use cloud-only deployment"
+      ],
+      "sources": [
+        "https://hipther.com/latest-news/2026/05/18/111871/ai-dispatch-daily-trends-and-innovations-may-18-2026-openai-malta-chatgpt-plus-steven-soderbergh-vatican-ai-commission/",
+        "https://openai.com/news/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
