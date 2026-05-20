@@ -25,7 +25,7 @@
       "id": "code-with-claude-2026-sf",
       "title": "Code with Claude 2026 developer conference: SF May 6, London May 19, Tokyo June 10",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-19T12:14:25Z",
+      "last_updated": "2026-05-20T00:00:00Z",
       "key_facts": [
         "SF event ran May 6; Claude Code v2.1.126-v2.1.131 shipped (--plugin-url, claude project purge, skillOverrides)",
         "10 financial-services agent templates shipped as Cowork and Code plugins",
@@ -33,7 +33,8 @@
         "Three-city tour: London May 19, Tokyo June 10, all livestreamed; Extended sessions recorded post-event",
         "Extended London day added May 20 due to demand: for independent developers and early-stage founders only; not livestreamed",
         "London Day 1 (May 19): 'What's new in Claude Code' session 10:30-11:00 BST by Ralph Ramos; Claude for Creative Work connectors announced as London headline product drop",
-        "SF keynote Dianne Penn hinted at 'context windows that feel infinite'; no new model announced at either city event"
+        "SF keynote Dianne Penn hinted at 'context windows that feel infinite'; no new model announced at either city event",
+        "London Extended (May 20): format is founder stories, builder deep-dives, and laptops-open Applied AI team workshops; 'see it in the wild' framing; no new product drops; sessions to be recorded and released publicly"
       ],
       "sources": [
         "https://blakecrosley.com/blog/code-with-claude-sf-2026-recap",
@@ -491,9 +492,9 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139-144: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading",
+      "title": "Claude Code v2.1.139-145: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-19T12:14:25Z",
+      "last_updated": "2026-05-20T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
@@ -505,7 +506,8 @@
         "/fast mode switches to Opus 4.7 default as of ~May 14 (was Opus 4.6); pricing unchanged at $30/$150 per M in/out tokens",
         "Ctrl+R reverse-search now defaults to all prompts across every project and session; press Ctrl+S to narrow back to current project",
         "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace",
-        "v2.1.144 (52 changes, ~May 17-18): --plugin-url flag fetches plugin archive from URL for current session; /model now session-scoped (press d in picker to set default); /resume surfaces background sessions in TUI marked 'bg'; Edit tool now does exact string replacement preventing unintended partial matches; system searches use grep tool for reproducible results; known VS Code spawn crash (issue #60436)"
+        "v2.1.144 (52 changes, ~May 17-18): --plugin-url flag fetches plugin archive from URL for current session; /model now session-scoped (press d in picker to set default); /resume surfaces background sessions in TUI marked 'bg'; Edit tool now does exact string replacement preventing unintended partial matches; system searches use grep tool for reproducible results; known VS Code spawn crash (issue #60436)",
+        "v2.1.145 (~May 20): startup hang fix — side-channel calls to api.anthropic.com now time out after 15s (was hanging up to 75s; affects captive portals, strict firewalls, VPNs); image resize fix — newer models now receive 2000px max (bug was resizing to 2576px); plugin browser shows 'last updated' timestamp per plugin"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -712,7 +714,7 @@
       "id": "gemini-intelligence-android-2026",
       "title": "Google Gemini Intelligence / I/O 2026: Gemini Omni, Spark, Android XR, Aluminium OS (keynote May 19, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-19T12:14:25Z",
+      "last_updated": "2026-05-20T00:00:00Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
@@ -724,7 +726,11 @@
         "Android 17 Beta 4 at near-final stage; stable public release expected June 2026",
         "Gemini Spark full onboarding leaked (Android Authority, May 14-17): 24/7 background proactive agent; Skills (recurring task templates); scheduled workflows; onboarding explicitly states 'Spark can share sensitive information with third parties or make purchases without asking for confirmation in some situations'; stores remote browser session data including login state",
         "Gemini Spark draws from connected apps, Gmail, Calendar, chat history, browsing sessions, location data, and 'Personal Intelligence'; described by Android Authority as 'gunning for Claude Cowork's throne'",
-        "Google I/O 2026 keynote opened May 19; pre-event benchmark coverage puts new Gemini model behind Claude Mythos and GPT-5.5 on standard developer evals; Android XR glasses preview with Samsung and Warby Parker confirmed; Aluminium OS (Chrome/Android merger) expected reveal"
+        "Google I/O 2026 keynote opened May 19; pre-event benchmark coverage puts new Gemini model behind Claude Mythos and GPT-5.5 on standard developer evals; Android XR glasses preview with Samsung and Warby Parker confirmed; Aluminium OS (Chrome/Android merger) expected reveal",
+        "CONFIRMED at I/O May 19: Gemini Omni ships as world model — accepts image/audio/video/text in single prompt; maintains character/background/motion consistency across edits; SynthID watermarked; Gemini Omni Flash live for AI Plus+ subscribers; free via YouTube Shorts/Create later in week; Omni Pro teased with no ship date; one undisclosed riskiest feature held back",
+        "CONFIRMED: Gemini Spark ships in $100/month AI Ultra plan (price cut); 24/7 background agent running on Google Cloud VMs",
+        "CONFIRMED: Android XR smart glasses — Samsung + Qualcomm hardware, Gentle Monster + Warby Parker frames; two tiers (audio-only all-day wear; in-lens display variant); fall 2026 ship",
+        "I/O scale metrics: 3.2 quadrillion tokens/month (7x YoY), 900M Gemini app MAU (2x YoY)"
       ],
       "sources": [
         "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
@@ -739,10 +745,15 @@
         "https://www.androidauthority.com/google-gemini-spark-agent-leak-3667475/",
         "https://9to5google.com/2026/05/14/gemini-spark-insight/",
         "https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news",
-        "https://www.techtimes.com/articles/316755/20260517/google-i-o-2026-keynote-opens-tuesday-new-gemini-lands-behind-mythos-gpt-55.htm"
+        "https://www.techtimes.com/articles/316755/20260517/google-i-o-2026-keynote-opens-tuesday-new-gemini-lands-behind-mythos-gpt-55.htm",
+        "https://9to5google.com/2026/05/19/gemini-omni-create-anything-model-video/",
+        "https://www.engadget.com/2176173/google-io-live-blog-gemini-ai/",
+        "https://www.techtimes.com/articles/316853/20260519/google-cuts-ai-ultra-100-launches-gemini-spark-agent-android-xr-glasses-i-o-2026.htm",
+        "https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash",
+        "https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world"
       ],
       "category": "Model Releases",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "microsoft-cancels-claude-code-licenses",
@@ -969,6 +980,91 @@
         "https://www.thurrott.com/a-i/anthropic/335498/anthropic-claude-now-connects-with-affinity-adobe-and-other-creator-solutions"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-kpmg-alliance",
+      "title": "KPMG + Anthropic global alliance: 276,000 staff on Claude, Digital Gateway Powered by Claude (May 19, 2026)",
+      "first_seen": "2026-05-20T00:00:00Z",
+      "last_updated": "2026-05-20T00:00:00Z",
+      "key_facts": [
+        "Global alliance announced May 19 2026; all 276,000+ KPMG employees globally get Claude access",
+        "KPMG Digital Gateway Powered by Claude: Cowork and Managed Agents integrated into KPMG's Azure-based tax/audit/advisory delivery platform",
+        "Building regulatory-adjustment agents now takes minutes instead of weeks with Managed Agents in Digital Gateway",
+        "Initial focus: tax clients and private equity portfolio companies; KPMG named preferred Anthropic PE partner",
+        "Joint cybersecurity and AI assurance practice embedded in the platform; joint new Claude-powered product builds planned for PE portfolio companies"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/anthropic-kpmg",
+        "https://kpmg.com/xx/en/media/press-releases/2026/05/kpmg-and-anthropic-sign-global-alliance-and-launch-digital-gateway-powered-by-claude.html",
+        "https://news.bloomberglaw.com/health-law-and-business/kpmg-formed-global-alliance-with-anthropic-to-deploy-claude",
+        "https://www.resultsense.com/news/2026-05-20-anthropic-kpmg-276k-alliance/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-cache-diagnostics",
+      "title": "Anthropic cache diagnostics public beta: API returns cache_miss_reason per Messages request",
+      "first_seen": "2026-05-20T00:00:00Z",
+      "last_updated": "2026-05-20T00:00:00Z",
+      "key_facts": [
+        "Pass diagnostics.previous_message_id on any Messages request; API returns cache_miss_reason identifying where prompt prefix diverged from prior turn",
+        "Enable via beta header: cache-diagnosis-2026-04-07",
+        "Anthropic Python SDK updated mid-May 2026 to support cache diagnostics natively",
+        "Eliminates need to manually diff headers or content lengths to debug cache miss behavior"
+      ],
+      "sources": [
+        "https://docs.anthropic.com/en/release-notes/api",
+        "https://phemex.com/news/article/anthropic-unveils-prompt-caching-dashboard-with-key-metrics-75230"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "title": "Gemini 3.5 Flash: GA May 19, 2026 — 1M context, $1.50/$9/M, 4× faster, primary Google developer model",
+      "first_seen": "2026-05-20T00:00:00Z",
+      "last_updated": "2026-05-20T00:00:00Z",
+      "key_facts": [
+        "GA at Google I/O May 19; replaces Gemini 3.1 Pro as primary developer model; model ID gemini-3.5-flash",
+        "1M input / 65K output token context; 4 thinking levels; 'thought preservation' carries reasoning state across turns",
+        "Pricing: $1.50/$9.00 per million tokens in/out; $0.15 cached input",
+        "4× faster than rival frontier models on output tokens/second; 289 tokens/sec sustained in Antigravity CLI",
+        "Benchmarks vs Gemini 3.1 Pro: 76.2% vs 70.3% Terminal-Bench 2.1; 83.6% vs 78.2% MCP Atlas (agent-level MCP tool use)",
+        "Google claims within 2 points of Anthropic flagship on internal benchmark at ~1/3 the price",
+        "Available immediately: Gemini API, AI Studio, Antigravity, Gemini app, AI Mode in Google Search"
+      ],
+      "sources": [
+        "https://deepmind.google/models/gemini/flash/",
+        "https://llm-stats.com/models/gemini-3.5-flash",
+        "https://www.rdworldonline.com/googles-gemini-3-5-flash-scores-within-two-points-of-anthropics-flagship-at-a-third-of-the-price/",
+        "https://lushbinary.com/blog/gemini-3-5-flash-developer-guide-benchmarks-pricing-agentic/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-antigravity-2-0",
+      "title": "Google Antigravity 2.0: agent-first coding platform with CLI, SDK, managed execution; Gemini CLI retires June 18",
+      "first_seen": "2026-05-20T00:00:00Z",
+      "last_updated": "2026-05-20T00:00:00Z",
+      "key_facts": [
+        "Announced at Google I/O May 19; three components: redesigned desktop app, Go-based Antigravity CLI, Antigravity SDK for custom agents",
+        "Desktop app: multi-agent parallel orchestration, custom subagent workflows, scheduled background tasks",
+        "Antigravity CLI: same harness and agent quality as desktop app, terminal-optimized; replaces Gemini CLI",
+        "Gemini CLI and Gemini Code Assist IDE extensions retire June 18 2026 for all tiers (Pro, Ultra, free); Agent Skills, Hooks, Subagents, Extensions port over as Antigravity plugins",
+        "Gemini 3.5 Flash runs at 289 tokens/sec in Antigravity CLI; demo built functioning OS from scratch in 12 hours",
+        "Also ships: Managed Agents in Gemini API; enterprise support via Gemini Enterprise Agent Platform; custom agent templates in AI Studio"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/05/19/google-launches-antigravity-2-0-with-an-updated-desktop-app-and-cli-tool-at-io-2026/",
+        "https://www.marktechpost.com/2026/05/19/google-launches-antigravity-2-0-at-i-o-2026-a-standalone-agent-first-platform-with-cli-sdk-managed-execution-and-enterprise-support/",
+        "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "https://thenextweb.com/news/google-antigravity-2-desktop-cli-sdk-io-2026",
+        "https://cybernews.com/ai-news/google-io-2026-gemini-omni-antigravity-agentic-ai/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     },
     {
