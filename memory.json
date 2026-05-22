@@ -4,22 +4,25 @@
       "id": "anthropic-spacex-colossus-compute-deal",
       "title": "Anthropic secures all of SpaceX's Colossus 1 compute; rate limits doubled",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-15T00:00:00Z",
+      "last_updated": "2026-05-22T00:00:00Z",
       "key_facts": [
         "Anthropic rented all compute capacity at SpaceX's Colossus 1 data center in Memphis: 300+ MW and 220,000+ NVIDIA H100/H200/GB200 GPUs",
         "Claude Code five-hour rate limits doubled for Pro, Max, Team, and Enterprise; peak-hour reductions removed for Pro and Max; Opus API limits raised considerably",
         "xAI dissolved as separate entity, folding into SpaceX as SpaceXAI",
         "Anthropic expressed interest in future orbital data centers with SpaceX",
-        "50% boost to weekly Claude Code limits added May 13; live through July 13 at 6 PM PDT, stacks with doubled hourly limits; no opt-in required; Pro, Max, Team, seat-based Enterprise"
+        "50% boost to weekly Claude Code limits added May 13; live through July 13 at 6 PM PDT, stacks with doubled hourly limits; no opt-in required; Pro, Max, Team, seat-based Enterprise",
+        "SpaceX S-1 (filed May 20, 2026) discloses exact payment terms: $1.25B/month covering Colossus I and Colossus II through May 2029 — $15B/year, ~$45B total; 90-day mutual termination clause; Anthropic retains ownership of its AI models and data"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html",
         "https://www.axios.com/2026/05/06/anthropic-spacex-elon-musk-compute",
         "https://x.ai/news/anthropic-compute-partnership",
-        "https://news.ycombinator.com/item?id=48126429"
+        "https://news.ycombinator.com/item?id=48126429",
+        "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+        "https://www.sec.gov/Archives/edgar/data/0001181412/000162828026036936/spaceexplorationtechnologi.htm"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "code-with-claude-2026-sf",
@@ -302,24 +305,26 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO possibly October 2026",
       "first_seen": "2026-05-09T12:10:13Z",
-      "last_updated": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-22T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
         "Would surpass OpenAI's last round ($852B post-money, February 2026)",
         "Revenue run rate reported at $30-40B (up from ~$10B end-2025)",
         "Framed as last private round before potential IPO in October 2026",
         "Bloomberg May 12 revised raise figure to $30B (not $50B as earlier reported); ~$900B valuation unchanged; no term sheet signed as of May 18",
-        "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)"
+        "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)",
+        "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
         "https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value",
         "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html",
         "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
-        "https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026"
+        "https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026",
+        "https://techfundingnews.com/anthropic-30b-fundraise-900b-valuation-mega-round/"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -494,7 +499,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139-146: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading, /code-review",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-21T12:10:47Z",
+      "last_updated": "2026-05-22T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
@@ -508,7 +513,9 @@
         "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace",
         "v2.1.144 (52 changes, ~May 17-18): --plugin-url flag fetches plugin archive from URL for current session; /model now session-scoped (press d in picker to set default); /resume surfaces background sessions in TUI marked 'bg'; Edit tool now does exact string replacement preventing unintended partial matches; system searches use grep tool for reproducible results; known VS Code spawn crash (issue #60436)",
         "v2.1.145 (~May 20): startup hang fix — side-channel calls to api.anthropic.com now time out after 15s (was hanging up to 75s; affects captive portals, strict firewalls, VPNs); image resize fix — newer models now receive 2000px max (bug was resizing to 2576px); plugin browser shows 'last updated' timestamp per plugin",
-        "v2.1.146 (May 21): /simplify renamed to /code-review with optional effort level (e.g. /code-review high); Auto mode no longer suppresses AskUserQuestion when user or skill explicitly relies on it; Windows PowerShell 'command line is invalid' regression (v2.1.124) fixed for winget/Store-installed pwsh; MCP pagination bug fixed — resources/list, resources/templates/list, prompts/list were silently dropping items past page 1; Windows Terminal full-screen strobing in attached background sessions fixed; diff rendering performance improved for large file edits"
+        "v2.1.146 (May 21): /simplify renamed to /code-review with optional effort level (e.g. /code-review high); Auto mode no longer suppresses AskUserQuestion when user or skill explicitly relies on it; Windows PowerShell 'command line is invalid' regression (v2.1.124) fixed for winget/Store-installed pwsh; MCP pagination bug fixed — resources/list, resources/templates/list, prompts/list were silently dropping items past page 1; Windows Terminal full-screen strobing in attached background sessions fixed; diff rendering performance improved for large file edits",
+        "v2.1.147 (May 22): pinned background sessions — Ctrl+T in claude agents keeps session alive when idle, auto-restarts in place on Claude Code updates, shed under memory pressure only after non-pinned sessions; auto-updater hardened with network-failure retries, specific error codes and OS error codes on failure, shows current version when update fails; Bedrock/Vertex Opus 1M context model picker fix (regression from v2.1.129); MCP images with unsupported MIME types (e.g. SVG) now saved to disk instead of breaking conversation",
+        "v2.1.148 (May 22): hotfix — Bash tool returning exit code 127 on every command regression introduced in v2.1.147"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -522,7 +529,7 @@
         "https://github.com/anthropics/claude-code/issues/60436"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1186,6 +1193,46 @@
         "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-ipo-confidential-filing",
+      "title": "OpenAI files confidential IPO S-1 with Goldman, Morgan Stanley, JPMorgan; September listing target at $1T+ valuation",
+      "first_seen": "2026-05-22T00:00:00Z",
+      "last_updated": "2026-05-22T00:00:00Z",
+      "key_facts": [
+        "Confidential S-1 filed with SEC approximately May 22, 2026; Goldman Sachs and Morgan Stanley lead underwriters, JPMorgan Chase also involved",
+        "Targeting public listing September 2026 at valuation above $1 trillion (vs $852B post-money from March 2026 $122B round)",
+        "Public S-1 expected 60-90 days after confidential filing (late July–August 2026)",
+        "OpenAI monthly run-rate revenue surpassed $2B; enterprise adoption driving growth"
+      ],
+      "sources": [
+        "https://aiweekly.co/alerts/openai-files-confidential-ipo-with-goldman-morgan-stanley",
+        "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+        "https://www.axios.com/2026/05/20/openai-ipo-spacex-musk",
+        "https://www.bloomberg.com/news/articles/2026-05-20/openai-preparing-for-ipo-filing-in-days-or-weeks-wsj-reports"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "webmcp-chrome-origin-trial",
+      "title": "WebMCP: Google's proposed open web standard for AI agent tools enters Chrome 149 origin trial",
+      "first_seen": "2026-05-22T00:00:00Z",
+      "last_updated": "2026-05-22T00:00:00Z",
+      "key_facts": [
+        "Proposed W3C Web Machine Learning Community Group standard; websites expose JavaScript functions and HTML forms as structured MCP tools for browser AI agents — no simulated clicks needed",
+        "Chrome 149 origin trial began following Google I/O May 19; spec and docs published on developer.chrome.com",
+        "Only current consumer: Gemini in Chrome (in-browser assistant, separate from Gemini web app); on a WebMCP-enabled page, Gemini can discover and call registered tools",
+        "Early adopters in origin trial: Booking.com, Expedia, Instacart, Intuit, Shopify, Redfin; not yet on W3C official Standards Track"
+      ],
+      "sources": [
+        "https://developer.chrome.com/blog/chrome-at-io26",
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://thenewstack.io/google-agent-ready-web/",
+        "https://ppc.land/chrome-149-origin-trial-puts-webmcp-in-developers-hands-at-last/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
