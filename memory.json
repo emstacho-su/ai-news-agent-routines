@@ -722,7 +722,7 @@
       "id": "gemini-intelligence-android-2026",
       "title": "Google Gemini Intelligence / I/O 2026: Gemini Omni, Spark, Android XR, Aluminium OS, TPU 8, developer keynote (May 19-20, 2026)",
       "first_seen": "2026-05-14T12:13:45Z",
-      "last_updated": "2026-05-21T12:10:47Z",
+      "last_updated": "2026-05-23T00:00:00Z",
       "key_facts": [
         "Proactive AI moving across Android apps: cross-app automation (Gmail/Calendar/shopping), Android Auto with message/calendar context, AI-generated widgets via natural language",
         "Gemini in Chrome with 'auto browse' for agentic web navigation on Android",
@@ -743,32 +743,35 @@
         "Gemini 3.5 Pro currently internal-only; wider distribution expected next month (June 2026)",
         "SynthID (AI-content watermarking) adopted by OpenAI, Kakao, and Eleven Labs",
         "'Build with Gemini XPRIZE Hackathon' announced: $2M prize pool, largest-ever Google hackathon",
-        "8.5M+ developers building with Gemini models monthly"
+        "8.5M+ developers building with Gemini models monthly",
+        "Gemini Spark rollout began week of May 19 to trusted testers; U.S. Ultra subscribers entering beta ~May 26; third-party integrations beyond Workspace confirmed: Canva, OpenTable, Instacart; near-term roadmap: payment authorization (user-defined merchant/budget limits) and custom sub-agent creation"
       ],
       "sources": [
-        "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
-        "https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/",
-        "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
-        "https://imini.com/blogs/gemini-omni-google-io-2026",
-        "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/",
-        "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/",
-        "https://www.androidauthority.com/google-gemini-omni-video-model-leak-3665801/",
-        "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/",
-        "https://www.androidauthority.com/gemini-spark-onboarding-screen-leaked-3667118/",
-        "https://www.androidauthority.com/google-gemini-spark-agent-leak-3667475/",
-        "https://9to5google.com/2026/05/14/gemini-spark-insight/",
-        "https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news",
-        "https://www.techtimes.com/articles/316755/20260517/google-i-o-2026-keynote-opens-tuesday-new-gemini-lands-behind-mythos-gpt-55.htm",
-        "https://9to5google.com/2026/05/19/gemini-omni-create-anything-model-video/",
         "https://www.engadget.com/2176173/google-io-live-blog-gemini-ai/",
-        "https://www.techtimes.com/articles/316853/20260519/google-cuts-ai-ultra-100-launches-gemini-spark-agent-android-xr-glasses-i-o-2026.htm",
+        "https://www.androidauthority.com/google-gemini-omni-video-model-leak-3665801/",
         "https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash",
-        "https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world",
+        "https://9to5google.com/2026/05/19/gemini-omni-create-anything-model-video/",
+        "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/",
         "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/",
-        "https://hothardware.com/news/google-io-2026-gemini-35-flash-ai-search-and-more"
+        "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+        "https://hothardware.com/news/google-io-2026-gemini-35-flash-ai-search-and-more",
+        "https://www.techtimes.com/articles/316853/20260519/google-cuts-ai-ultra-100-launches-gemini-spark-agent-android-xr-glasses-i-o-2026.htm",
+        "https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/",
+        "https://www.androidauthority.com/google-gemini-spark-agent-leak-3667475/",
+        "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/",
+        "https://imini.com/blogs/gemini-omni-google-io-2026",
+        "https://9to5google.com/2026/05/14/gemini-spark-insight/",
+        "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/",
+        "https://thenextweb.com/news/google-gemini-spark-agentic-assistant-gmail-io-2026",
+        "https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world",
+        "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
+        "https://www.androidauthority.com/gemini-spark-onboarding-screen-leaked-3667118/",
+        "https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news",
+        "https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/",
+        "https://www.techtimes.com/articles/316755/20260517/google-i-o-2026-keynote-opens-tuesday-new-gemini-lands-behind-mythos-gpt-55.htm"
       ],
       "category": "Model Releases",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "microsoft-cancels-claude-code-licenses",
@@ -921,21 +924,26 @@
       "id": "mcp-2026-roadmap",
       "title": "MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle, governance contributor ladder, enterprise readiness",
       "first_seen": "2026-05-18T00:00:00Z",
-      "last_updated": "2026-05-18T00:00:00Z",
+      "last_updated": "2026-05-23T00:00:00Z",
       "key_facts": [
         "Roadmap organized around Working Groups rather than dates; four priority areas",
         "Streamable HTTP: target is fully stateless servers that work behind load balancers/proxies without session-affinity workarounds; stateful sessions fighting horizontal scaling is the current production bottleneck",
         "Tasks primitive: adding retry semantics for transient failures and expiry policies for result retention — lifecycle gaps from early production use",
         "Governance: Contributor Ladder SEP (community → WG contributor → lead → core maintainer); delegation model so WGs with track record can merge extension updates without full core review",
-        "Enterprise readiness: SSO-integrated auth, audit trails, standard gateway patterns"
+        "Enterprise readiness: SSO-integrated auth, audit trails, standard gateway patterns",
+        "RC locked May 21 2026: stateless core via six coordinated SEPs — initialize/initialized handshake removed (SEP-2575); version, client info, capabilities now travel in _meta on every request; Mcp-Session-Id and protocol-level session state removed (SEP-2567); server/discover method replaces handshake",
+        "MCP Apps extension: servers ship interactive HTML interfaces in sandboxed iframes; tools pre-declare UI templates for host caching and security review; every UI-initiated action routes through same audit/consent path as direct tool calls",
+        "Tasks extension: servers return task handles from tools/call; clients drive with tasks/get, tasks/update, tasks/cancel; supports retry semantics and expiry policies",
+        "10-week SDK validation window open; final specification publishes July 28 2026"
       ],
       "sources": [
-        "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
         "https://thenewstack.io/model-context-protocol-roadmap-2026/",
-        "https://modelcontextprotocol.io/development/roadmap"
+        "https://modelcontextprotocol.io/development/roadmap",
+        "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "meta-avocado-delayed",
@@ -1233,6 +1241,62 @@
         "https://ppc.land/chrome-149-origin-trial-puts-webmcp-in-developers-hands-at-last/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-microsoft-maia-chip-talks",
+      "title": "Anthropic in early talks to rent Microsoft Maia 200 AI chips",
+      "first_seen": "2026-05-23T00:00:00Z",
+      "last_updated": "2026-05-23T00:00:00Z",
+      "key_facts": [
+        "Early-stage discussions to rent servers powered by Microsoft Maia 200 custom AI accelerator; no deal signed; discussions may not result in agreement",
+        "Dario Amodei cited 'difficulties with compute' as motivation; would be Anthropic's third major chip arrangement after SpaceX Colossus ($45B) and AWS Trainium 10-year $100B+ commitment",
+        "Microsoft Maia 200 announced January 2026, not yet available to external Azure customers; Satya Nadella cited 30%+ tokens per dollar improvement vs prior silicon",
+        "MSFT stock rose ~2% on May 21 report; analysts see deal as validating Microsoft's custom AI silicon program"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html",
+        "https://www.bloomberg.com/news/articles/2026-05-21/anthropic-in-talks-to-use-microsoft-ai-chips-information-says"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "teampcp-nx-console-supply-chain-attack",
+      "title": "TeamPCP Nx Console VS Code supply chain attack breaches GitHub, OpenAI, Mistral (May 2026)",
+      "first_seen": "2026-05-23T00:00:00Z",
+      "last_updated": "2026-05-23T00:00:00Z",
+      "key_facts": [
+        "May 11: TeamPCP compromised TanStack router ecosystem — 170 npm packages + 2 PyPI packages updated with worm-like credential-stealing payload",
+        "May 18: Nx Console v18.95.0 trojanized via stolen contributor GitHub token; live on VS Code Marketplace only 18 minutes (12:30–12:48 PM UTC); 2.2M+ installs",
+        "Payload: multi-stage credential stealer exfiltrating secrets via HTTPS, GitHub API, and DNS tunneling",
+        "GitHub disclosed ~3,800 internal repos exfiltrated (May 19); OpenAI and Mistral also breached; Grafana Labs confirmed via same vector",
+        "Fix: update Nx Console to 18.100.0+; rotate all credentials accessible in VS Code workspaces May 11–18"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/05/github-internal-repositories-breached.html",
+        "https://www.helpnetsecurity.com/2026/05/21/github-grafana-breach-root-cause-nx-console/",
+        "https://www.helpnetsecurity.com/2026/05/20/github-breached-teampcp/",
+        "https://www.aikido.dev/blog/github-breached-vs-code-extension"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "meta-ai-restructuring-may-2026",
+      "title": "Meta cuts 8,000 roles, moves 7,000 to AI teams; CapEx guidance up to $145B",
+      "first_seen": "2026-05-23T00:00:00Z",
+      "last_updated": "2026-05-23T00:00:00Z",
+      "key_facts": [
+        "8,000 roles eliminated (10% of ~80,000 workforce) week of May 18 2026; 7,000 more reassigned to AI-focused teams including Applied AI Engineering, Agent Transformation Accelerator XFN, Central Analytics",
+        "2026 CapEx guidance raised to as high as $145B",
+        "Additional rounds expected August and later 2026"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html",
+        "https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
