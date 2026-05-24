@@ -305,7 +305,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO possibly October 2026",
       "first_seen": "2026-05-09T12:10:13Z",
-      "last_updated": "2026-05-22T00:00:00Z",
+      "last_updated": "2026-05-24T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
         "Would surpass OpenAI's last round ($852B post-money, February 2026)",
@@ -313,7 +313,8 @@
         "Framed as last private round before potential IPO in October 2026",
         "Bloomberg May 12 revised raise figure to $30B (not $50B as earlier reported); ~$900B valuation unchanged; no term sheet signed as of May 18",
         "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)",
-        "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+"
+        "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+",
+        "Round expected to close as soon as week of May 26 2026 (Bloomberg May 22); each lead investor committing ~$2B; total may exceed $30B"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
@@ -321,10 +322,12 @@
         "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html",
         "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
         "https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026",
-        "https://techfundingnews.com/anthropic-30b-fundraise-900b-valuation-mega-round/"
+        "https://techfundingnews.com/anthropic-30b-fundraise-900b-valuation-mega-round/",
+        "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+        "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm"
       ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -515,7 +518,9 @@
         "v2.1.145 (~May 20): startup hang fix — side-channel calls to api.anthropic.com now time out after 15s (was hanging up to 75s; affects captive portals, strict firewalls, VPNs); image resize fix — newer models now receive 2000px max (bug was resizing to 2576px); plugin browser shows 'last updated' timestamp per plugin",
         "v2.1.146 (May 21): /simplify renamed to /code-review with optional effort level (e.g. /code-review high); Auto mode no longer suppresses AskUserQuestion when user or skill explicitly relies on it; Windows PowerShell 'command line is invalid' regression (v2.1.124) fixed for winget/Store-installed pwsh; MCP pagination bug fixed — resources/list, resources/templates/list, prompts/list were silently dropping items past page 1; Windows Terminal full-screen strobing in attached background sessions fixed; diff rendering performance improved for large file edits",
         "v2.1.147 (May 22): pinned background sessions — Ctrl+T in claude agents keeps session alive when idle, auto-restarts in place on Claude Code updates, shed under memory pressure only after non-pinned sessions; auto-updater hardened with network-failure retries, specific error codes and OS error codes on failure, shows current version when update fails; Bedrock/Vertex Opus 1M context model picker fix (regression from v2.1.129); MCP images with unsupported MIME types (e.g. SVG) now saved to disk instead of breaking conversation",
-        "v2.1.148 (May 22): hotfix — Bash tool returning exit code 127 on every command regression introduced in v2.1.147"
+        "v2.1.148 (May 22): hotfix — Bash tool returning exit code 127 on every command regression introduced in v2.1.147",
+        "v2.1.149 (May 22): /usage shows per-category limit breakdown (skills, subagents, plugins, per-MCP-server cost); /diff detail view keyboard-scrollable (arrows, j/k, PgUp/PgDn, Space, Home/End); markdown output renders GFM task-list checkboxes instead of plain bullets; enterprise allowAllClaudeAiMcps managed setting loads claude.ai cloud MCP connectors alongside managed-mcp.json; 20+ bug fixes (PowerShell permissions, MCP pagination, file descriptor exhaustion, session titles)",
+        "v2.1.150 (May 23): internal infrastructure improvements; no user-facing changes"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -526,10 +531,11 @@
         "https://releasebot.io/updates/anthropic/claude-code",
         "https://claudefa.st/blog/guide/changelog",
         "https://code.claude.com/docs/en/changelog",
-        "https://github.com/anthropics/claude-code/issues/60436"
+        "https://github.com/anthropics/claude-code/issues/60436",
+        "https://www.claudeupdates.dev/version/2.1.149"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 8
+      "coverage_count": 9
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -924,7 +930,7 @@
       "id": "mcp-2026-roadmap",
       "title": "MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle, governance contributor ladder, enterprise readiness",
       "first_seen": "2026-05-18T00:00:00Z",
-      "last_updated": "2026-05-23T00:00:00Z",
+      "last_updated": "2026-05-24T00:00:00Z",
       "key_facts": [
         "Roadmap organized around Working Groups rather than dates; four priority areas",
         "Streamable HTTP: target is fully stateless servers that work behind load balancers/proxies without session-affinity workarounds; stateful sessions fighting horizontal scaling is the current production bottleneck",
@@ -934,7 +940,9 @@
         "RC locked May 21 2026: stateless core via six coordinated SEPs — initialize/initialized handshake removed (SEP-2575); version, client info, capabilities now travel in _meta on every request; Mcp-Session-Id and protocol-level session state removed (SEP-2567); server/discover method replaces handshake",
         "MCP Apps extension: servers ship interactive HTML interfaces in sandboxed iframes; tools pre-declare UI templates for host caching and security review; every UI-initiated action routes through same audit/consent path as direct tool calls",
         "Tasks extension: servers return task handles from tools/call; clients drive with tasks/get, tasks/update, tasks/cancel; supports retry semantics and expiry policies",
-        "10-week SDK validation window open; final specification publishes July 28 2026"
+        "10-week SDK validation window open; final specification publishes July 28 2026",
+        "Streamable HTTP RC detail: requests must carry Mcp-Method and Mcp-Name headers so load balancers and gateways can route by operation without body inspection; servers reject header/body mismatches",
+        "List response caching: tools/list, resources/list, and resource-read responses carry ttlMs and cacheScope fields (modeled on HTTP Cache-Control) so clients know exactly how long a tool manifest is fresh"
       ],
       "sources": [
         "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
@@ -943,7 +951,7 @@
         "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "meta-avocado-delayed",
@@ -1188,20 +1196,25 @@
       "id": "pope-leo-ai-encyclical-olah",
       "title": "Pope Leo XIV AI encyclical 'Magnifica Humanitas' launches May 25 alongside Anthropic co-founder Christopher Olah",
       "first_seen": "2026-05-21T12:10:47Z",
-      "last_updated": "2026-05-21T12:10:47Z",
+      "last_updated": "2026-05-24T00:00:00Z",
       "key_facts": [
         "Encyclical titled 'Magnifica Humanitas' (Magnificent Humanity); centers on protection of the human person in the age of AI",
         "Christopher Olah (Anthropic co-founder, interpretability researcher) joins the Vatican launch presentation on May 25",
         "Pope personally presenting is atypical; highlights Vatican's intent to be a leading moral authority on AI",
-        "Announced May 18-19 2026"
+        "Announced May 18-19 2026",
+        "Full title: 'Magnifica Humanitas: On the Protection of Human Dignity in the Age of Artificial Intelligence'; releases May 25 at 11:30 AM at Vatican Synod Hall",
+        "Pope Leo XIV will speak at the presentation — unusual for encyclical launches; also presenting: Cardinals Fernández, Czerny, Parolin; ethicist Anna Rowlands (Durham)",
+        "Document signed May 15, 135th anniversary of Rerum novarum"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-05-18/anthropic-s-co-founder-to-launch-encyclical-on-ai-with-pope-leo",
         "https://www.pbs.org/newshour/world/pope-leo-xiv-to-launch-his-first-encylical-a-document-on-artificial-intelligence-with-anthropics-co-founder",
-        "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder"
+        "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder",
+        "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html",
+        "https://www.americamagazine.org/vatican-dispatch/2026/05/18/pope-leo-encyclical-artifical-intelligence-anthropic/"
       ],
       "category": "Wildcard",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-ipo-confidential-filing",
@@ -1278,6 +1291,45 @@
         "https://www.helpnetsecurity.com/2026/05/21/github-grafana-breach-root-cause-nx-console/",
         "https://www.helpnetsecurity.com/2026/05/20/github-breached-teampcp/",
         "https://www.aikido.dev/blog/github-breached-vs-code-extension"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-erdos-unit-distance-conjecture",
+      "title": "OpenAI reasoning model disproves Erdős unit distance conjecture (80-year-old discrete geometry problem)",
+      "first_seen": "2026-05-24T00:00:00Z",
+      "last_updated": "2026-05-24T00:00:00Z",
+      "key_facts": [
+        "General-purpose OpenAI reasoning model (not math-specific, not scaffolded for proof search) found infinite family of constructions proving Erdős unit distance conjecture false; yields polynomial improvement over square grids, which were believed optimal for ~80 years",
+        "Problem posed by Paul Erdős in 1946: given n points in the plane, max pairs at exactly distance 1",
+        "Proof checked by external mathematicians: Noga Alon (Princeton), Melanie Wood, Thomas Bloom — all provided supportive statements",
+        "OpenAI published result May 20-22 2026; proof verified independently"
+      ],
+      "sources": [
+        "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+        "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/",
+        "https://news.ycombinator.com/item?id=48212493"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-ai-eo-voluntary-prerelease-postponed",
+      "title": "Trump pulls planned AI executive order on voluntary 90-day pre-release model sharing (May 20-21, 2026)",
+      "first_seen": "2026-05-24T00:00:00Z",
+      "last_updated": "2026-05-24T00:00:00Z",
+      "key_facts": [
+        "White House canceled signing of EO that would have required frontier AI labs to voluntarily share pre-release models with government for up to 90-day national security review before public release",
+        "EO had been negotiated with OpenAI, Anthropic, and other labs; signing ceremony was scheduled",
+        "Trump: 'didn't like certain aspects of it'; cited concern about impeding US lead over China in AI",
+        "EO had already been postponed multiple times before this final cancellation; future status unclear",
+        "Distinct from existing CAISI pre-deployment framework (which is narrower security evaluation at NIST)"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why",
+        "https://www.cnbc.com/2026/05/21/trump-ai-executive-order-postponed.html",
+        "https://www.washingtonpost.com/technology/2026/05/21/white-house-tore-down-ai-rules-now-its-building-new-defenses/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
