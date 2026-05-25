@@ -1196,7 +1196,7 @@
       "id": "pope-leo-ai-encyclical-olah",
       "title": "Pope Leo XIV AI encyclical 'Magnifica Humanitas' launches May 25 alongside Anthropic co-founder Christopher Olah",
       "first_seen": "2026-05-21T12:10:47Z",
-      "last_updated": "2026-05-24T00:00:00Z",
+      "last_updated": "2026-05-25T00:00:00Z",
       "key_facts": [
         "Encyclical titled 'Magnifica Humanitas' (Magnificent Humanity); centers on protection of the human person in the age of AI",
         "Christopher Olah (Anthropic co-founder, interpretability researcher) joins the Vatican launch presentation on May 25",
@@ -1204,17 +1204,23 @@
         "Announced May 18-19 2026",
         "Full title: 'Magnifica Humanitas: On the Protection of Human Dignity in the Age of Artificial Intelligence'; releases May 25 at 11:30 AM at Vatican Synod Hall",
         "Pope Leo XIV will speak at the presentation — unusual for encyclical launches; also presenting: Cardinals Fernández, Czerny, Parolin; ethicist Anna Rowlands (Durham)",
-        "Document signed May 15, 135th anniversary of Rerum novarum"
+        "Document signed May 15, 135th anniversary of Rerum novarum",
+        "Full text released May 25: explicit call for ban on lethal autonomous weapons without human oversight; warns AI is being used to 'fuel warfare'",
+        "Frames AI challenge as 'anthropological, not technological'; calls for 'shared standards of social justice' from AI developers",
+        "Directly criticizes Big Tech concentration of AI capabilities as widening inequality, weakening democracy, and 'undermining what it means to be human'"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-05-18/anthropic-s-co-founder-to-launch-encyclical-on-ai-with-pope-leo",
         "https://www.pbs.org/newshour/world/pope-leo-xiv-to-launch-his-first-encylical-a-document-on-artificial-intelligence-with-anthropics-co-founder",
         "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder",
         "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html",
-        "https://www.americamagazine.org/vatican-dispatch/2026/05/18/pope-leo-encyclical-artifical-intelligence-anthropic/"
+        "https://www.americamagazine.org/vatican-dispatch/2026/05/18/pope-leo-encyclical-artifical-intelligence-anthropic/",
+        "https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl",
+        "https://religionnews.com/2026/05/25/in-his-first-encyclical-pope-leo-xiv-says-ai-must-serve-humanity-not-the-powerful-few/",
+        "https://www.ncregister.com/cna/pope-leo-ai-magnifica-humanitas"
       ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "openai-ipo-confidential-filing",
@@ -1347,6 +1353,62 @@
       "sources": [
         "https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html",
         "https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "cnbc-disruptor-50-2026-anthropic-1",
+      "title": "CNBC Disruptor 50 2026: Anthropic ranks #1, OpenAI #2",
+      "first_seen": "2026-05-25T00:00:00Z",
+      "last_updated": "2026-05-25T00:00:00Z",
+      "key_facts": [
+        "Anthropic ranked #1 on CNBC's 14th annual Disruptor 50 list (published May 19 2026), displacing OpenAI (now #2)",
+        "Top 5: Anthropic, OpenAI, Databricks, Anduril, Ramp — combined ~$2T valuation",
+        "43 of 50 companies flagged AI as critical to their model; CNBC cited $30B+ ARR and 80× Q1 revenue growth as decisive factors"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-anthropic-no-1.html",
+        "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-full-list-companies.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "apple-wwdc-2026-gemini-siri-ios-27",
+      "title": "Apple WWDC 2026 (June 8-12): Gemini-powered rebuilt Siri, iOS 27 Extensions for third-party AI agents including Claude",
+      "first_seen": "2026-05-25T00:00:00Z",
+      "last_updated": "2026-05-25T00:00:00Z",
+      "key_facts": [
+        "WWDC 2026 runs June 8-12; keynote June 8 10 AM PT; iOS 27, macOS 27 announced",
+        "Apple-Google deal (announced January 12 2026, ~$1B/year reported): custom 1.2T-parameter Gemini model powers rebuilt Siri; all queries processed through Apple Private Cloud Compute — end-to-end encrypted, no data retained at Google",
+        "iOS 27 'Extensions' framework opens the Siri invocation surface to third-party AI agents; Claude and ChatGPT explicitly named as selectable options — first time Apple has allowed competing AI agents at OS level",
+        "Additional features: standalone Siri app with conversation history; system-wide 'Search or Ask' gesture; Visual Intelligence upgrades (nutrition labels, business-card extraction); genai.apple.com domain live"
+      ],
+      "sources": [
+        "https://www.tomsguide.com/phones/iphones/wwdc-2026",
+        "https://9to5mac.com/2026/05/12/ios-27s-completely-rebuilt-siri-will-include-a-new-system-wide-search-gesture-report/",
+        "https://www.businesstoday.in/technology/artificial-intelligence/story/apple-hints-at-major-ai-announcement-as-new-gen-ai-page-appears-ahead-of-wwdc-2026-533078-2026-05-25",
+        "https://tech.yahoo.com/ai/apple-intelligence/articles/wwdc-2026-preview-ios-27-043000444.html"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "nextera-dominion-67b-ai-power",
+      "title": "NextEra Energy acquires Dominion for $67B to power AI data centers — largest US utility merger",
+      "first_seen": "2026-05-25T00:00:00Z",
+      "last_updated": "2026-05-25T00:00:00Z",
+      "key_facts": [
+        "NextEra Energy acquiring Dominion Energy for $67B (all-stock, announced May 18 2026) — largest US utility merger in history; explicitly motivated by AI data center power demand",
+        "Dominion controls power grid across Northern Virginia, home to the world's highest concentration of hyperscale data centers (Microsoft, Google, Amazon, Meta)",
+        "Combined entity: $249B market cap, $420B enterprise value, 130 GW construction backlog exceeding total existing generation capacity",
+        "Expected to close mid-to-late 2027 pending regulatory approval; NextEra shareholders 74.5%, Dominion 25.5%"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html",
+        "https://fortune.com/2026/05/18/nextera-dominion-67-billion-acquisition-ai-data-centers-largest-utility/",
+        "https://247wallst.com/investing/2026/05/21/ai-data-centers-are-about-to-break-the-grid-one-company-just-spent-67-billion-to-fix-it/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
