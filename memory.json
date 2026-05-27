@@ -11,7 +11,7 @@
         "xAI dissolved as separate entity, folding into SpaceX as SpaceXAI",
         "Anthropic expressed interest in future orbital data centers with SpaceX",
         "50% boost to weekly Claude Code limits added May 13; live through July 13 at 6 PM PDT, stacks with doubled hourly limits; no opt-in required; Pro, Max, Team, seat-based Enterprise",
-        "SpaceX S-1 (filed May 20, 2026) discloses exact payment terms: $1.25B/month covering Colossus I and Colossus II through May 2029 — $15B/year, ~$45B total; 90-day mutual termination clause; Anthropic retains ownership of its AI models and data"
+        "SpaceX S-1 (filed May 20, 2026) discloses exact payment terms: $1.25B/month covering Colossus I and Colossus II through May 2029 \u2014 $15B/year, ~$45B total; 90-day mutual termination clause; Anthropic retains ownership of its AI models and data"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html",
@@ -305,7 +305,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO possibly October 2026",
       "first_seen": "2026-05-09T12:10:13Z",
-      "last_updated": "2026-05-24T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
         "Would surpass OpenAI's last round ($852B post-money, February 2026)",
@@ -314,7 +314,8 @@
         "Bloomberg May 12 revised raise figure to $30B (not $50B as earlier reported); ~$900B valuation unchanged; no term sheet signed as of May 18",
         "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)",
         "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+",
-        "Round expected to close as soon as week of May 26 2026 (Bloomberg May 22); each lead investor committing ~$2B; total may exceed $30B"
+        "Round expected to close as soon as week of May 26 2026 (Bloomberg May 22); each lead investor committing ~$2B; total may exceed $30B",
+        "Round reported closed ~May 24 2026 per Memorial Day weekend reporting; total exceeds $30B at $900B+ post-money valuation; Anthropic surpasses OpenAI as world's most valuable AI startup; no official Anthropic press release at time of briefing"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
@@ -327,7 +328,7 @@
         "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm"
       ],
       "category": "Anthropic",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -505,20 +506,20 @@
       "last_updated": "2026-05-22T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
-        "Agent view (Research Preview): single dashboard listing every Claude Code session — running, blocked, or completed — via `claude agents`",
+        "Agent view (Research Preview): single dashboard listing every Claude Code session \u2014 running, blocked, or completed \u2014 via `claude agents`",
         "Also: claude plugin details <n> for component inventory and projected token cost; /scroll-speed command; hook args: string[] field for shell-safe exec; memory growth fix (10GB+ RSS from stdio MCP servers writing non-protocol data)",
         "v2.1.140 (May 13): agent tool subagent_type matching now case- and separator-insensitive ('Code Reviewer' resolves to 'code-reviewer'); background service startup hardened for enterprise endpoint security; settings symlink hot-reload regression fixed (spurious ConfigChange hooks)",
         "v2.1.141 (61 changes, May 14): terminalSequence hook field for desktop notifications/window titles/bells without a controlling terminal; ANTHROPIC_WORKSPACE_ID env var for workload identity federation scoped per workspace; claude agents --cwd <path> filters session list by directory; /feedback can attach recent sessions (24h or 7-day window); Rewind 'Summarize up to here' compresses earlier context while preserving recent turns",
-        "v2.1.142 (May 14): eight new dispatch flags for background sessions — --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, --dangerously-skip-permissions",
-        "v2.1.143 (May 15): plugin dependency enforcement — claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane",
+        "v2.1.142 (May 14): eight new dispatch flags for background sessions \u2014 --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, --dangerously-skip-permissions",
+        "v2.1.143 (May 15): plugin dependency enforcement \u2014 claude plugin disable refuses when another enabled plugin depends on target (prints disable-chain hint); claude plugin enable force-enables transitive deps; worktree.bgIsolation: 'none' for repos where worktrees are impractical; per-turn/per-invocation projected context cost in /plugin marketplace pane",
         "/fast mode switches to Opus 4.7 default as of ~May 14 (was Opus 4.6); pricing unchanged at $30/$150 per M in/out tokens",
         "Ctrl+R reverse-search now defaults to all prompts across every project and session; press Ctrl+S to narrow back to current project",
         "PowerShell tool now passes -ExecutionPolicy Bypass automatically (env var opt-out available); plugins with root-level SKILL.md and no skills/ subdirectory surfaced as skills in marketplace",
         "v2.1.144 (52 changes, ~May 17-18): --plugin-url flag fetches plugin archive from URL for current session; /model now session-scoped (press d in picker to set default); /resume surfaces background sessions in TUI marked 'bg'; Edit tool now does exact string replacement preventing unintended partial matches; system searches use grep tool for reproducible results; known VS Code spawn crash (issue #60436)",
-        "v2.1.145 (~May 20): startup hang fix — side-channel calls to api.anthropic.com now time out after 15s (was hanging up to 75s; affects captive portals, strict firewalls, VPNs); image resize fix — newer models now receive 2000px max (bug was resizing to 2576px); plugin browser shows 'last updated' timestamp per plugin",
-        "v2.1.146 (May 21): /simplify renamed to /code-review with optional effort level (e.g. /code-review high); Auto mode no longer suppresses AskUserQuestion when user or skill explicitly relies on it; Windows PowerShell 'command line is invalid' regression (v2.1.124) fixed for winget/Store-installed pwsh; MCP pagination bug fixed — resources/list, resources/templates/list, prompts/list were silently dropping items past page 1; Windows Terminal full-screen strobing in attached background sessions fixed; diff rendering performance improved for large file edits",
-        "v2.1.147 (May 22): pinned background sessions — Ctrl+T in claude agents keeps session alive when idle, auto-restarts in place on Claude Code updates, shed under memory pressure only after non-pinned sessions; auto-updater hardened with network-failure retries, specific error codes and OS error codes on failure, shows current version when update fails; Bedrock/Vertex Opus 1M context model picker fix (regression from v2.1.129); MCP images with unsupported MIME types (e.g. SVG) now saved to disk instead of breaking conversation",
-        "v2.1.148 (May 22): hotfix — Bash tool returning exit code 127 on every command regression introduced in v2.1.147",
+        "v2.1.145 (~May 20): startup hang fix \u2014 side-channel calls to api.anthropic.com now time out after 15s (was hanging up to 75s; affects captive portals, strict firewalls, VPNs); image resize fix \u2014 newer models now receive 2000px max (bug was resizing to 2576px); plugin browser shows 'last updated' timestamp per plugin",
+        "v2.1.146 (May 21): /simplify renamed to /code-review with optional effort level (e.g. /code-review high); Auto mode no longer suppresses AskUserQuestion when user or skill explicitly relies on it; Windows PowerShell 'command line is invalid' regression (v2.1.124) fixed for winget/Store-installed pwsh; MCP pagination bug fixed \u2014 resources/list, resources/templates/list, prompts/list were silently dropping items past page 1; Windows Terminal full-screen strobing in attached background sessions fixed; diff rendering performance improved for large file edits",
+        "v2.1.147 (May 22): pinned background sessions \u2014 Ctrl+T in claude agents keeps session alive when idle, auto-restarts in place on Claude Code updates, shed under memory pressure only after non-pinned sessions; auto-updater hardened with network-failure retries, specific error codes and OS error codes on failure, shows current version when update fails; Bedrock/Vertex Opus 1M context model picker fix (regression from v2.1.129); MCP images with unsupported MIME types (e.g. SVG) now saved to disk instead of breaking conversation",
+        "v2.1.148 (May 22): hotfix \u2014 Bash tool returning exit code 127 on every command regression introduced in v2.1.147",
         "v2.1.149 (May 22): /usage shows per-category limit breakdown (skills, subagents, plugins, per-MCP-server cost); /diff detail view keyboard-scrollable (arrows, j/k, PgUp/PgDn, Space, Home/End); markdown output renders GFM task-list checkboxes instead of plain bullets; enterprise allowAllClaudeAiMcps managed setting loads claude.ai cloud MCP connectors alongside managed-mcp.json; 20+ bug fixes (PowerShell permissions, MCP pagination, file descriptor exhaustion, session titles)",
         "v2.1.150 (May 23): internal infrastructure improvements; no user-facing changes"
       ],
@@ -692,7 +693,7 @@
     },
     {
       "id": "agent-memory-survey-storage-reflection-experience",
-      "title": "Agent Memory Survey: Storage → Reflection → Experience evolutionary framework (arXiv:2605.06716, May 7, 2026)",
+      "title": "Agent Memory Survey: Storage \u2192 Reflection \u2192 Experience evolutionary framework (arXiv:2605.06716, May 7, 2026)",
       "first_seen": "2026-05-13T12:09:39Z",
       "last_updated": "2026-05-13T12:09:39Z",
       "key_facts": [
@@ -735,15 +736,15 @@
         "Googlebook: new Google-branded laptop category (Gemini Intelligence first-class OS feature); first devices from Acer, ASUS, Dell, HP, Lenovo arriving fall 2026",
         "Rollout: Pixel and Samsung phones summer 2026, broader Android fall 2026; Google I/O keynote (May 19-20) expected to add new Gemini model and developer agent tooling",
         "Google I/O keynote May 19 (10 AM PT): Gemini Omni (unified text/image/video pipeline, UI string surfaced) and Gemini Spark (agentic cross-app AI, previously referred to as 'Remy') expected as headline announcements",
-        "Gemini Omni leaked via UI string in Gemini app May 2: 'Start with an idea or try a template. Powered by Omni.' — found in video generation tab alongside Toucan/Veo 3.1 surface",
+        "Gemini Omni leaked via UI string in Gemini app May 2: 'Start with an idea or try a template. Powered by Omni.' \u2014 found in video generation tab alongside Toucan/Veo 3.1 surface",
         "Early access demos show scene editing: watermark removal, object swap within clips, scene rewrites via chat; strong logical reasoning in video generation; multi-character scenes still glitch",
         "Android 17 Beta 4 at near-final stage; stable public release expected June 2026",
         "Gemini Spark full onboarding leaked (Android Authority, May 14-17): 24/7 background proactive agent; Skills (recurring task templates); scheduled workflows; onboarding explicitly states 'Spark can share sensitive information with third parties or make purchases without asking for confirmation in some situations'; stores remote browser session data including login state",
         "Gemini Spark draws from connected apps, Gmail, Calendar, chat history, browsing sessions, location data, and 'Personal Intelligence'; described by Android Authority as 'gunning for Claude Cowork's throne'",
         "Google I/O 2026 keynote opened May 19; pre-event benchmark coverage puts new Gemini model behind Claude Mythos and GPT-5.5 on standard developer evals; Android XR glasses preview with Samsung and Warby Parker confirmed; Aluminium OS (Chrome/Android merger) expected reveal",
-        "CONFIRMED at I/O May 19: Gemini Omni ships as world model — accepts image/audio/video/text in single prompt; maintains character/background/motion consistency across edits; SynthID watermarked; Gemini Omni Flash live for AI Plus+ subscribers; free via YouTube Shorts/Create later in week; Omni Pro teased with no ship date; one undisclosed riskiest feature held back",
+        "CONFIRMED at I/O May 19: Gemini Omni ships as world model \u2014 accepts image/audio/video/text in single prompt; maintains character/background/motion consistency across edits; SynthID watermarked; Gemini Omni Flash live for AI Plus+ subscribers; free via YouTube Shorts/Create later in week; Omni Pro teased with no ship date; one undisclosed riskiest feature held back",
         "CONFIRMED: Gemini Spark ships in $100/month AI Ultra plan (price cut); 24/7 background agent running on Google Cloud VMs",
-        "CONFIRMED: Android XR smart glasses — Samsung + Qualcomm hardware, Gentle Monster + Warby Parker frames; two tiers (audio-only all-day wear; in-lens display variant); fall 2026 ship",
+        "CONFIRMED: Android XR smart glasses \u2014 Samsung + Qualcomm hardware, Gentle Monster + Warby Parker frames; two tiers (audio-only all-day wear; in-lens display variant); fall 2026 ship",
         "I/O scale metrics: 3.2 quadrillion tokens/month (7x YoY), 900M Gemini app MAU (2x YoY)",
         "Developer keynote (May 20): TPU 8t (training, ~3x raw compute vs prior gen) and TPU 8i (inference, 2x perf/watt) silicon announced",
         "Gemini 3.5 Pro currently internal-only; wider distribution expected next month (June 2026)",
@@ -800,12 +801,12 @@
     },
     {
       "id": "semantic-kernel-rce-cve-2026",
-      "title": "Semantic Kernel RCE: CVE-2026-26030 (CVSS 9.8) and CVE-2026-25592 — prompt injection → eval() → host code execution",
+      "title": "Semantic Kernel RCE: CVE-2026-26030 (CVSS 9.8) and CVE-2026-25592 \u2014 prompt injection \u2192 eval() \u2192 host code execution",
       "first_seen": "2026-05-15T00:00:00Z",
       "last_updated": "2026-05-15T00:00:00Z",
       "key_facts": [
-        "CVE-2026-26030 (CVSS 9.8, Python SDK < 1.39.4): InMemoryVectorStore default filter used eval() with user-controlled input interpolated; prompt injection → arbitrary host code execution. Fix: upgrade to 1.39.4+",
-        "CVE-2026-25592 (.NET SDK < 1.71.0): SessionsPythonPlugin's DownloadFileAsync accidentally exposed to the model as callable kernel function with no path validation; hostile prompt → arbitrary file write. Fix: upgrade to 1.71.0+",
+        "CVE-2026-26030 (CVSS 9.8, Python SDK < 1.39.4): InMemoryVectorStore default filter used eval() with user-controlled input interpolated; prompt injection \u2192 arbitrary host code execution. Fix: upgrade to 1.39.4+",
+        "CVE-2026-25592 (.NET SDK < 1.71.0): SessionsPythonPlugin's DownloadFileAsync accidentally exposed to the model as callable kernel function with no path validation; hostile prompt \u2192 arbitrary file write. Fix: upgrade to 1.71.0+",
         "Both disclosed May 7, 2026; pattern: agent frameworks blurring the line between LLM inference and trusted OS operations"
       ],
       "sources": [
@@ -859,7 +860,7 @@
       "last_updated": "2026-05-16T12:15:41Z",
       "key_facts": [
         "128B dense model, 256K context, modified MIT open-weights license; released April 29/May 3 2026",
-        "77.6% SWE-bench Verified — ahead of Devstral 2 and Qwen3.5 397B A17B",
+        "77.6% SWE-bench Verified \u2014 ahead of Devstral 2 and Qwen3.5 397B A17B",
         "Le Chat Work mode: parallel multi-step agentic tasks across email, calendar, docs, Jira, Slack; explicit tool-call visibility and approval gates before sensitive actions",
         "Remote cloud coding agents also ship in Mistral Vibe on the same checkpoint"
       ],
@@ -876,7 +877,7 @@
       "first_seen": "2026-05-16T12:15:41Z",
       "last_updated": "2026-05-16T12:15:41Z",
       "key_facts": [
-        "Published May 1 2026 by CISA, NSA, Australia ASD ACSC, Canada, New Zealand, UK NCSC — first coordinated multi-government agentic AI security guidance",
+        "Published May 1 2026 by CISA, NSA, Australia ASD ACSC, Canada, New Zealand, UK NCSC \u2014 first coordinated multi-government agentic AI security guidance",
         "Core stance: assume agentic AI systems may behave unexpectedly until security practices and evaluation standards mature",
         "Five risk categories: privilege, design/configuration, behavioral, structural, supply-chain",
         "Recommended approach: start with clearly defined low-risk tasks, deploy incrementally, explicit accountability, continuous threat-model evaluation, human oversight"
@@ -909,11 +910,11 @@
     },
     {
       "id": "cerebras-ipo-nasdaq-may-2026",
-      "title": "Cerebras IPO (CBRS): $5.55B raise, 68% first-day pop, ~$95B market cap — largest US tech IPO since Uber (May 14, 2026)",
+      "title": "Cerebras IPO (CBRS): $5.55B raise, 68% first-day pop, ~$95B market cap \u2014 largest US tech IPO since Uber (May 14, 2026)",
       "first_seen": "2026-05-17T00:00:00Z",
       "last_updated": "2026-05-17T00:00:00Z",
       "key_facts": [
-        "Priced at $185/share May 13; raised $5.55B; opened at $350 on Nasdaq May 14 (68% pop); ~$95B peak market cap — largest US tech IPO since Uber 2019",
+        "Priced at $185/share May 13; raised $5.55B; opened at $350 on Nasdaq May 14 (68% pop); ~$95B peak market cap \u2014 largest US tech IPO since Uber 2019",
         "2025 revenue $510M (76% YoY up from $24.6M in 2022); major catalyst: multi-year OpenAI inference deal, 750 MW expandable to 2 GW by 2030",
         "86% revenue concentration in UAE entities flagged by analysts; unresolved at IPO",
         "Wafer-scale engine: single chip sized to full silicon wafer vs Nvidia multi-chip SXM; claims lower inference latency on large batches"
@@ -934,10 +935,10 @@
       "key_facts": [
         "Roadmap organized around Working Groups rather than dates; four priority areas",
         "Streamable HTTP: target is fully stateless servers that work behind load balancers/proxies without session-affinity workarounds; stateful sessions fighting horizontal scaling is the current production bottleneck",
-        "Tasks primitive: adding retry semantics for transient failures and expiry policies for result retention — lifecycle gaps from early production use",
-        "Governance: Contributor Ladder SEP (community → WG contributor → lead → core maintainer); delegation model so WGs with track record can merge extension updates without full core review",
+        "Tasks primitive: adding retry semantics for transient failures and expiry policies for result retention \u2014 lifecycle gaps from early production use",
+        "Governance: Contributor Ladder SEP (community \u2192 WG contributor \u2192 lead \u2192 core maintainer); delegation model so WGs with track record can merge extension updates without full core review",
         "Enterprise readiness: SSO-integrated auth, audit trails, standard gateway patterns",
-        "RC locked May 21 2026: stateless core via six coordinated SEPs — initialize/initialized handshake removed (SEP-2575); version, client info, capabilities now travel in _meta on every request; Mcp-Session-Id and protocol-level session state removed (SEP-2567); server/discover method replaces handshake",
+        "RC locked May 21 2026: stateless core via six coordinated SEPs \u2014 initialize/initialized handshake removed (SEP-2575); version, client info, capabilities now travel in _meta on every request; Mcp-Session-Id and protocol-level session state removed (SEP-2567); server/discover method replaces handshake",
         "MCP Apps extension: servers ship interactive HTML interfaces in sandboxed iframes; tools pre-declare UI templates for host caching and security review; every UI-initiated action routes through same audit/consent path as direct tool calls",
         "Tasks extension: servers return task handles from tools/call; clients drive with tasks/get, tasks/update, tasks/cancel; supports retry semantics and expiry policies",
         "10-week SDK validation window open; final specification publishes July 28 2026",
@@ -960,9 +961,9 @@
       "last_updated": "2026-05-18T00:00:00Z",
       "key_facts": [
         "Meta's flagship proprietary model (codenamed Avocado) missed its May 2026 target; third delay since original late-2025 window",
-        "Internal tests put Avocado between Gemini 2.5 and 3.0 — below GPT-5.5 Instant and Claude Opus 4.7 on developer benchmarks",
+        "Internal tests put Avocado between Gemini 2.5 and 3.0 \u2014 below GPT-5.5 Instant and Claude Opus 4.7 on developer benchmarks",
         "Meta leadership reportedly discussed licensing Google Gemini as a short-term stopgap; no decision made",
-        "Avocado is a proprietary closed-weights model — departure from Meta's Llama open-source strategy",
+        "Avocado is a proprietary closed-weights model \u2014 departure from Meta's Llama open-source strategy",
         "Meta committed $115-135B in 2026 AI capex despite delays"
       ],
       "sources": [
@@ -1054,14 +1055,14 @@
     },
     {
       "id": "gemini-3-5-flash",
-      "title": "Gemini 3.5 Flash: GA May 19, 2026 — 1M context, $1.50/$9/M, 4× faster, primary Google developer model",
+      "title": "Gemini 3.5 Flash: GA May 19, 2026 \u2014 1M context, $1.50/$9/M, 4\u00d7 faster, primary Google developer model",
       "first_seen": "2026-05-20T00:00:00Z",
       "last_updated": "2026-05-20T00:00:00Z",
       "key_facts": [
         "GA at Google I/O May 19; replaces Gemini 3.1 Pro as primary developer model; model ID gemini-3.5-flash",
         "1M input / 65K output token context; 4 thinking levels; 'thought preservation' carries reasoning state across turns",
         "Pricing: $1.50/$9.00 per million tokens in/out; $0.15 cached input",
-        "4× faster than rival frontier models on output tokens/second; 289 tokens/sec sustained in Antigravity CLI",
+        "4\u00d7 faster than rival frontier models on output tokens/second; 289 tokens/sec sustained in Antigravity CLI",
         "Benchmarks vs Gemini 3.1 Pro: 76.2% vs 70.3% Terminal-Bench 2.1; 83.6% vs 78.2% MCP Atlas (agent-level MCP tool use)",
         "Google claims within 2 points of Anthropic flagship on internal benchmark at ~1/3 the price",
         "Available immediately: Gemini API, AI Studio, Antigravity, Gemini app, AI Mode in Google Search"
@@ -1121,7 +1122,7 @@
       "last_updated": "2026-05-21T12:10:47Z",
       "key_facts": [
         "Q2 2026 revenue projected at $10.9B, up 130% from $4.8B in Q1 2026",
-        "Operating income projected at $559M — first profitable quarter in Anthropic history",
+        "Operating income projected at $559M \u2014 first profitable quarter in Anthropic history",
         "Compute cost ratio falling from 71 cents per revenue dollar in Q1 to 56 cents in Q2",
         "Profitability may not persist through full year due to large committed compute spend coming online later in 2026",
         "Prior guidance (summer 2025) had projected no full-year profitability until at least 2028"
@@ -1180,7 +1181,7 @@
       "last_updated": "2026-05-21T12:10:47Z",
       "key_facts": [
         "Federal jury in Oakland unanimously dismissed all Musk claims on May 19 2026; deliberated less than two hours after 11 days of testimony",
-        "All claims barred by statute of limitations — Musk waited too long after knowing the facts to file in 2024",
+        "All claims barred by statute of limitations \u2014 Musk waited too long after knowing the facts to file in 2024",
         "Musk had sought up to $134B in damages and Sam Altman's ouster, alleging OpenAI abandoned nonprofit mission",
         "Judge Yvonne Gonzalez Rogers accepted jury findings; Musk's team vowed appeal"
       ],
@@ -1203,7 +1204,7 @@
         "Pope personally presenting is atypical; highlights Vatican's intent to be a leading moral authority on AI",
         "Announced May 18-19 2026",
         "Full title: 'Magnifica Humanitas: On the Protection of Human Dignity in the Age of Artificial Intelligence'; releases May 25 at 11:30 AM at Vatican Synod Hall",
-        "Pope Leo XIV will speak at the presentation — unusual for encyclical launches; also presenting: Cardinals Fernández, Czerny, Parolin; ethicist Anna Rowlands (Durham)",
+        "Pope Leo XIV will speak at the presentation \u2014 unusual for encyclical launches; also presenting: Cardinals Fern\u00e1ndez, Czerny, Parolin; ethicist Anna Rowlands (Durham)",
         "Document signed May 15, 135th anniversary of Rerum novarum",
         "Full text released May 25: explicit call for ban on lethal autonomous weapons without human oversight; warns AI is being used to 'fuel warfare'",
         "Frames AI challenge as 'anthropological, not technological'; calls for 'shared standards of social justice' from AI developers",
@@ -1230,7 +1231,7 @@
       "key_facts": [
         "Confidential S-1 filed with SEC approximately May 22, 2026; Goldman Sachs and Morgan Stanley lead underwriters, JPMorgan Chase also involved",
         "Targeting public listing September 2026 at valuation above $1 trillion (vs $852B post-money from March 2026 $122B round)",
-        "Public S-1 expected 60-90 days after confidential filing (late July–August 2026)",
+        "Public S-1 expected 60-90 days after confidential filing (late July\u2013August 2026)",
         "OpenAI monthly run-rate revenue surpassed $2B; enterprise adoption driving growth"
       ],
       "sources": [
@@ -1248,7 +1249,7 @@
       "first_seen": "2026-05-22T00:00:00Z",
       "last_updated": "2026-05-22T00:00:00Z",
       "key_facts": [
-        "Proposed W3C Web Machine Learning Community Group standard; websites expose JavaScript functions and HTML forms as structured MCP tools for browser AI agents — no simulated clicks needed",
+        "Proposed W3C Web Machine Learning Community Group standard; websites expose JavaScript functions and HTML forms as structured MCP tools for browser AI agents \u2014 no simulated clicks needed",
         "Chrome 149 origin trial began following Google I/O May 19; spec and docs published on developer.chrome.com",
         "Only current consumer: Gemini in Chrome (in-browser assistant, separate from Gemini web app); on a WebMCP-enabled page, Gemini can discover and call registered tools",
         "Early adopters in origin trial: Booking.com, Expedia, Instacart, Intuit, Shopify, Redfin; not yet on W3C official Standards Track"
@@ -1286,11 +1287,11 @@
       "first_seen": "2026-05-23T00:00:00Z",
       "last_updated": "2026-05-23T00:00:00Z",
       "key_facts": [
-        "May 11: TeamPCP compromised TanStack router ecosystem — 170 npm packages + 2 PyPI packages updated with worm-like credential-stealing payload",
-        "May 18: Nx Console v18.95.0 trojanized via stolen contributor GitHub token; live on VS Code Marketplace only 18 minutes (12:30–12:48 PM UTC); 2.2M+ installs",
+        "May 11: TeamPCP compromised TanStack router ecosystem \u2014 170 npm packages + 2 PyPI packages updated with worm-like credential-stealing payload",
+        "May 18: Nx Console v18.95.0 trojanized via stolen contributor GitHub token; live on VS Code Marketplace only 18 minutes (12:30\u201312:48 PM UTC); 2.2M+ installs",
         "Payload: multi-stage credential stealer exfiltrating secrets via HTTPS, GitHub API, and DNS tunneling",
         "GitHub disclosed ~3,800 internal repos exfiltrated (May 19); OpenAI and Mistral also breached; Grafana Labs confirmed via same vector",
-        "Fix: update Nx Console to 18.100.0+; rotate all credentials accessible in VS Code workspaces May 11–18"
+        "Fix: update Nx Console to 18.100.0+; rotate all credentials accessible in VS Code workspaces May 11\u201318"
       ],
       "sources": [
         "https://thehackernews.com/2026/05/github-internal-repositories-breached.html",
@@ -1303,13 +1304,13 @@
     },
     {
       "id": "openai-erdos-unit-distance-conjecture",
-      "title": "OpenAI reasoning model disproves Erdős unit distance conjecture (80-year-old discrete geometry problem)",
+      "title": "OpenAI reasoning model disproves Erd\u0151s unit distance conjecture (80-year-old discrete geometry problem)",
       "first_seen": "2026-05-24T00:00:00Z",
       "last_updated": "2026-05-24T00:00:00Z",
       "key_facts": [
-        "General-purpose OpenAI reasoning model (not math-specific, not scaffolded for proof search) found infinite family of constructions proving Erdős unit distance conjecture false; yields polynomial improvement over square grids, which were believed optimal for ~80 years",
-        "Problem posed by Paul Erdős in 1946: given n points in the plane, max pairs at exactly distance 1",
-        "Proof checked by external mathematicians: Noga Alon (Princeton), Melanie Wood, Thomas Bloom — all provided supportive statements",
+        "General-purpose OpenAI reasoning model (not math-specific, not scaffolded for proof search) found infinite family of constructions proving Erd\u0151s unit distance conjecture false; yields polynomial improvement over square grids, which were believed optimal for ~80 years",
+        "Problem posed by Paul Erd\u0151s in 1946: given n points in the plane, max pairs at exactly distance 1",
+        "Proof checked by external mathematicians: Noga Alon (Princeton), Melanie Wood, Thomas Bloom \u2014 all provided supportive statements",
         "OpenAI published result May 20-22 2026; proof verified independently"
       ],
       "sources": [
@@ -1324,13 +1325,14 @@
       "id": "trump-ai-eo-voluntary-prerelease-postponed",
       "title": "Trump pulls planned AI executive order on voluntary 90-day pre-release model sharing (May 20-21, 2026)",
       "first_seen": "2026-05-24T00:00:00Z",
-      "last_updated": "2026-05-24T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
       "key_facts": [
         "White House canceled signing of EO that would have required frontier AI labs to voluntarily share pre-release models with government for up to 90-day national security review before public release",
         "EO had been negotiated with OpenAI, Anthropic, and other labs; signing ceremony was scheduled",
         "Trump: 'didn't like certain aspects of it'; cited concern about impeding US lead over China in AI",
         "EO had already been postponed multiple times before this final cancellation; future status unclear",
-        "Distinct from existing CAISI pre-deployment framework (which is narrower security evaluation at NIST)"
+        "Distinct from existing CAISI pre-deployment framework (which is narrower security evaluation at NIST)",
+        "Musk, Zuckerberg, and Sacks each called Trump directly on a Wednesday night (likely May 20) to oppose the EO; three-call lobbying by competing interests produced the cancellation"
       ],
       "sources": [
         "https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why",
@@ -1338,24 +1340,25 @@
         "https://www.washingtonpost.com/technology/2026/05/21/white-house-tore-down-ai-rules-now-its-building-new-defenses/"
       ],
       "category": "Wildcard",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "meta-ai-restructuring-may-2026",
       "title": "Meta cuts 8,000 roles, moves 7,000 to AI teams; CapEx guidance up to $145B",
       "first_seen": "2026-05-23T00:00:00Z",
-      "last_updated": "2026-05-23T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
       "key_facts": [
         "8,000 roles eliminated (10% of ~80,000 workforce) week of May 18 2026; 7,000 more reassigned to AI-focused teams including Applied AI Engineering, Agent Transformation Accelerator XFN, Central Analytics",
         "2026 CapEx guidance raised to as high as $145B",
-        "Additional rounds expected August and later 2026"
+        "Additional rounds expected August and later 2026",
+        "Meta's 'Model Capability Initiative' (MCI) tracks employee activity across Gmail, Google Chat, Metamate (internal assistant), and VS Code to train AI models on productivity patterns; Zuckerberg defending program publicly (reported Memorial Day weekend; primary source unconfirmed)"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html",
         "https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs"
       ],
       "category": "Wildcard",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "cnbc-disruptor-50-2026-anthropic-1",
@@ -1364,8 +1367,8 @@
       "last_updated": "2026-05-25T00:00:00Z",
       "key_facts": [
         "Anthropic ranked #1 on CNBC's 14th annual Disruptor 50 list (published May 19 2026), displacing OpenAI (now #2)",
-        "Top 5: Anthropic, OpenAI, Databricks, Anduril, Ramp — combined ~$2T valuation",
-        "43 of 50 companies flagged AI as critical to their model; CNBC cited $30B+ ARR and 80× Q1 revenue growth as decisive factors"
+        "Top 5: Anthropic, OpenAI, Databricks, Anduril, Ramp \u2014 combined ~$2T valuation",
+        "43 of 50 companies flagged AI as critical to their model; CNBC cited $30B+ ARR and 80\u00d7 Q1 revenue growth as decisive factors"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-anthropic-no-1.html",
@@ -1381,8 +1384,8 @@
       "last_updated": "2026-05-25T00:00:00Z",
       "key_facts": [
         "WWDC 2026 runs June 8-12; keynote June 8 10 AM PT; iOS 27, macOS 27 announced",
-        "Apple-Google deal (announced January 12 2026, ~$1B/year reported): custom 1.2T-parameter Gemini model powers rebuilt Siri; all queries processed through Apple Private Cloud Compute — end-to-end encrypted, no data retained at Google",
-        "iOS 27 'Extensions' framework opens the Siri invocation surface to third-party AI agents; Claude and ChatGPT explicitly named as selectable options — first time Apple has allowed competing AI agents at OS level",
+        "Apple-Google deal (announced January 12 2026, ~$1B/year reported): custom 1.2T-parameter Gemini model powers rebuilt Siri; all queries processed through Apple Private Cloud Compute \u2014 end-to-end encrypted, no data retained at Google",
+        "iOS 27 'Extensions' framework opens the Siri invocation surface to third-party AI agents; Claude and ChatGPT explicitly named as selectable options \u2014 first time Apple has allowed competing AI agents at OS level",
         "Additional features: standalone Siri app with conversation history; system-wide 'Search or Ask' gesture; Visual Intelligence upgrades (nutrition labels, business-card extraction); genai.apple.com domain live"
       ],
       "sources": [
@@ -1396,11 +1399,11 @@
     },
     {
       "id": "nextera-dominion-67b-ai-power",
-      "title": "NextEra Energy acquires Dominion for $67B to power AI data centers — largest US utility merger",
+      "title": "NextEra Energy acquires Dominion for $67B to power AI data centers \u2014 largest US utility merger",
       "first_seen": "2026-05-25T00:00:00Z",
       "last_updated": "2026-05-25T00:00:00Z",
       "key_facts": [
-        "NextEra Energy acquiring Dominion Energy for $67B (all-stock, announced May 18 2026) — largest US utility merger in history; explicitly motivated by AI data center power demand",
+        "NextEra Energy acquiring Dominion Energy for $67B (all-stock, announced May 18 2026) \u2014 largest US utility merger in history; explicitly motivated by AI data center power demand",
         "Dominion controls power grid across Northern Virginia, home to the world's highest concentration of hyperscale data centers (Microsoft, Google, Amazon, Meta)",
         "Combined entity: $249B market cap, $420B enterprise value, 130 GW construction backlog exceeding total existing generation capacity",
         "Expected to close mid-to-late 2027 pending regulatory approval; NextEra shareholders 74.5%, Dominion 25.5%"
@@ -1411,6 +1414,85 @@
         "https://247wallst.com/investing/2026/05/21/ai-data-centers-are-about-to-break-the-grid-one-company-just-spent-67-billion-to-fix-it/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-omni",
+      "title": "Gemini Omni: Google's any-input-to-video multimodal model, rolling out May 2026",
+      "first_seen": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
+      "key_facts": [
+        "Announced at Google I/O May 19 2026; rolling out to Google AI Plus, Pro, Ultra subscribers globally via Gemini app and Google Flow",
+        "Accepts text, image, audio, and video as inputs; generates ~10-second physics-aware video clips with synchronized audio via conversational back-and-forth",
+        "Each instruction round maintains character, lighting, and object consistency across edits",
+        "Omni Flash available at no cost inside YouTube Shorts Remix and YouTube Create app for users 18+",
+        "Voice cloning from existing video audio explicitly blocked (deepfake mitigation)",
+        "Distinct from Gemini 3.5 Flash (coding/agent model); Omni is a dedicated video-generation model"
+      ],
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+        "https://cryptobriefing.com/google-gemini-omni-ai-video-generation/",
+        "https://www.bworldonline.com/technology/2026/05/20/751019/google-launches-gemini-omni-capable-of-chat-based-video-generation-editing/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "stable-audio-3",
+      "title": "Stable Audio 3.0: 6-minute open-weight music generation on fully licensed data (May 20)",
+      "first_seen": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
+      "key_facts": [
+        "Released May 20 2026; four models: small SFX (459M), small (459M), medium (1.4B), large (2.7B)",
+        "Medium and large generate up to 6:20 of full compositions with melodic/structural coherence (2\u00d7 Stable Audio 2.0)",
+        "Small SFX, small, and medium released as open weights; large is API-only",
+        "Training data fully licensed via Warner Music Group and Universal Music Group deals (signed 2025)",
+        "Ethan Kaplan (ex-CDO Universal Audio and Fender) joined Stability to lead professional music offering"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
+        "https://stability.ai/stable-audio",
+        "https://musically.com/2026/05/21/stability-ai-launches-its-latest-fully-licensed-music-model/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-4-3",
+      "title": "Grok 4.3: xAI cost-efficient frontier model with 1M context and native video (May 4)",
+      "first_seen": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
+      "key_facts": [
+        "Launched May 4 2026 as xAI's current cost-efficient flagship; built-in reasoning, 1M-token context, native video input",
+        "Priced at $1.25/M input tokens; scores 53 on Intelligence Index (median 35); #1 on CaseLaw v2 and CorpFin benchmarks",
+        "GA on Microsoft Foundry and OCI Generative AI by late May; 8 legacy Grok models retired from API on May 15",
+        "May 22: new third-party connectors added for Vercel, Canva, Gamma, and S&P Global"
+      ],
+      "sources": [
+        "https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing",
+        "https://help.apiyi.com/en/grok-4-3-api-release-may-2026-news-en.html"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "chatgpt-excel-sheets-ga",
+      "title": "ChatGPT for Excel and Google Sheets exits beta, globally available (late May 2026)",
+      "first_seen": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-05-27T00:00:00Z",
+      "key_facts": [
+        "Out of beta; globally available to Business, Enterprise, Edu, K-12, Free, Go, Plus, Pro (EU: outside EU only for Pro/Plus)",
+        "Sidebar in Excel and Google Sheets: natural-language build, update, and debug for multi-tab files with formulas and references",
+        "Business/Enterprise/Edu have free preview through June 2 2026; after that follows plan credits",
+        "Excel beta launched March 5 2026; Google Sheets joined beta April 22 2026; both exited beta late May",
+        "Financial data integrations added: FactSet, Bloomberg, S&P data for ChatGPT Pro"
+      ],
+      "sources": [
+        "https://openai.com/index/chatgpt-for-excel/",
+        "https://www.digitaltrends.com/computing/chatgpt-for-excel-and-google-sheets-is-now-out-of-beta-and-its-kind-of-a-big-deal/",
+        "https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
