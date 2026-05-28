@@ -501,9 +501,9 @@
     },
     {
       "id": "claude-code-v2-1-139-goal-agent-view",
-      "title": "Claude Code v2.1.139-146: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading, /code-review",
+      "title": "Claude Code v2.1.139-152: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading, /code-review, /code-review --fix",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-22T00:00:00Z",
+      "last_updated": "2026-05-28T12:15:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session \u2014 running, blocked, or completed \u2014 via `claude agents`",
@@ -521,7 +521,9 @@
         "v2.1.147 (May 22): pinned background sessions \u2014 Ctrl+T in claude agents keeps session alive when idle, auto-restarts in place on Claude Code updates, shed under memory pressure only after non-pinned sessions; auto-updater hardened with network-failure retries, specific error codes and OS error codes on failure, shows current version when update fails; Bedrock/Vertex Opus 1M context model picker fix (regression from v2.1.129); MCP images with unsupported MIME types (e.g. SVG) now saved to disk instead of breaking conversation",
         "v2.1.148 (May 22): hotfix \u2014 Bash tool returning exit code 127 on every command regression introduced in v2.1.147",
         "v2.1.149 (May 22): /usage shows per-category limit breakdown (skills, subagents, plugins, per-MCP-server cost); /diff detail view keyboard-scrollable (arrows, j/k, PgUp/PgDn, Space, Home/End); markdown output renders GFM task-list checkboxes instead of plain bullets; enterprise allowAllClaudeAiMcps managed setting loads claude.ai cloud MCP connectors alongside managed-mcp.json; 20+ bug fixes (PowerShell permissions, MCP pagination, file descriptor exhaustion, session titles)",
-        "v2.1.150 (May 23): internal infrastructure improvements; no user-facing changes"
+        "v2.1.150 (May 23): internal infrastructure improvements; no user-facing changes",
+        "v2.1.151: not released (skipped)",
+        "v2.1.152 (May 26, 33 changes): /code-review --fix applies review findings (reuse, simplification, efficiency) directly to working tree; /reload-skills command; disallowed-tools config for blocking tools per project; bug fixes: PR badge not refreshing immediately after gh pr create, non-ASCII Agent Teams teammate names breaking API calls via invalid header encoding, /review failing on repos with Classic Projects (deprecated projectCards GraphQL query)"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -533,10 +535,11 @@
         "https://claudefa.st/blog/guide/changelog",
         "https://code.claude.com/docs/en/changelog",
         "https://github.com/anthropics/claude-code/issues/60436",
-        "https://www.claudeupdates.dev/version/2.1.149"
+        "https://www.claudeupdates.dev/version/2.1.149",
+        "https://dev.classmethod.jp/en/articles/20260524-claude-code-updates-v2-1-152/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 9
+      "coverage_count": 10
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1493,6 +1496,77 @@
         "https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-rampart-clarity",
+      "title": "Microsoft open-sources RAMPART + Clarity: pytest-native agentic AI safety testing for CI/CD (May 20, 2026)",
+      "first_seen": "2026-05-28T12:15:00Z",
+      "last_updated": "2026-05-28T12:15:00Z",
+      "key_facts": [
+        "RAMPART (Risk Assessment and Measurement Platform for Agentic Red Teaming): pytest-native framework built on Microsoft's PyRIT toolkit; encodes adversarial/benign agent scenarios (prompt injection, out-of-bounds tool use, behavioral drift) as repeatable CI tests",
+        "Statistical trial policies (e.g. 'must be safe in 80%+ of runs') account for model probabilistic behavior — avoids false pass/fail from single deterministic run",
+        "Clarity: companion AI design-review agent for pre-code phase; guides problem clarification, failure-mode analysis, and decision tracking before implementation begins; both tools open-sourced on GitHub"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
+        "https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html",
+        "https://cyberscoop.com/microsoft-rampart-clarity-agentic-ai-security-red-teaming-tools/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-synthid-c2pa",
+      "title": "OpenAI joins C2PA steering committee, embeds SynthID watermarks on all generated images (May 19, 2026)",
+      "first_seen": "2026-05-28T12:15:00Z",
+      "last_updated": "2026-05-28T12:15:00Z",
+      "key_facts": [
+        "OpenAI joined C2PA standard steering committee and embedded Google DeepMind's SynthID invisible watermark alongside existing C2PA Content Credentials on all ChatGPT/Codex/API-generated images",
+        "Dual-layer rationale: C2PA metadata carries signed origin/edit history but gets stripped on format conversion; SynthID pixel-level signal survives re-uploads and screenshots",
+        "Public verification tool live at openai.com/verify — checks for both C2PA credentials and SynthID presence even when metadata was stripped"
+      ],
+      "sources": [
+        "https://openai.com/index/advancing-content-provenance/",
+        "https://www.resultsense.com/news/2026-05-20-openai-c2pa-synthid-content-provenance/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "qwen-3-7-max",
+      "title": "Qwen 3.7 Max: Alibaba's agent-focused flagship, 1M context, 60.6% SWE-Pro (May 19, 2026)",
+      "first_seen": "2026-05-28T12:15:00Z",
+      "last_updated": "2026-05-28T12:15:00Z",
+      "key_facts": [
+        "Purpose-built for agentic coding workflows (not general chat); 1M-token context window, native extended-thinking mode; API-only via Alibaba Cloud DashScope at $2.50/$7.50 per M in/out tokens",
+        "Benchmarks: 60.6% SWE-Pro, 69.7% Terminal-Bench 2.0, 92.4% GPQA Diamond — ahead of DeepSeek V4 Pro and Claude Opus 4.6 on agentic coding evals",
+        "Qwen 3.7 Plus (separate variant) will be released as open weights; Max remains proprietary/API-only"
+      ],
+      "sources": [
+        "https://qwen.ai/blog?id=qwen3.7",
+        "https://decrypt.co/368499/alibaba-qwen-3-7-max-preview-review",
+        "https://overchat.ai/ai-hub/qwen-3-7-max"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "armada-deployable-data-centers",
+      "title": "Armada raises $230M Series B at $2B valuation for modular deployable AI data centers (May 19, 2026)",
+      "first_seen": "2026-05-28T12:15:00Z",
+      "last_updated": "2026-05-28T12:15:00Z",
+      "key_facts": [
+        "Modular units deployable in days on local power sources; current customers include US Navy and remote offshore oil rigs; Series B co-led by Overmatch, 8090 Industries, and BlackRock at $2B pre-money valuation",
+        "Manufacturing partnership with Johnson Controls for Galleon Forge One, a new 400,000 sq ft Arizona factory",
+        "Customer bookings grew 540% FY25→FY26; Q1 FY27 alone posted ~2,000% YoY growth; primary verticals: defense, energy, industrial edge"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/19/modular-data-center-builder-armada-raises-230-million.html",
+        "https://siliconangle.com/2026/05/19/armada-raises-230m-2b-valuation-build-portable-ai-data-centers/",
+        "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
