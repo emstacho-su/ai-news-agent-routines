@@ -315,7 +315,8 @@
         "Q1 2026 ARR now pegged at $44B+ with 1,000+ customers at $1M+ annually (revised up from $30-40B range)",
         "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+",
         "Round expected to close as soon as week of May 26 2026 (Bloomberg May 22); each lead investor committing ~$2B; total may exceed $30B",
-        "Round reported closed ~May 24 2026 per Memorial Day weekend reporting; total exceeds $30B at $900B+ post-money valuation; Anthropic surpasses OpenAI as world's most valuable AI startup; no official Anthropic press release at time of briefing"
+        "Round reported closed ~May 24 2026 per Memorial Day weekend reporting; total exceeds $30B at $900B+ post-money valuation; Anthropic surpasses OpenAI as world's most valuable AI startup; no official Anthropic press release at time of briefing",
+        "Round officially confirmed closed at $65B total (>2x the $30B target); $965B post-money valuation; co-leads Altimeter Capital, Dragoneer, Greenoaks, Sequoia Capital, Capital Group, Coatue, D1 Capital Partners; strategic semiconductor partners Samsung, SK Hynix, Micron; ~$15B of total from previously committed hyperscaler investments including $5B Amazon; expected last private raise before IPO"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
@@ -325,10 +326,13 @@
         "https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026",
         "https://techfundingnews.com/anthropic-30b-fundraise-900b-valuation-mega-round/",
         "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
-        "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm"
+        "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm",
+        "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
+        "https://www.aljazeera.com/economy/2026/5/29/anthropic-soars-to-965bn-valuation-leapfrogging-openai",
+        "https://siliconcanals.com/sc-n-anthropic-just-closed-a-65b-round-at-a-965b-valuation-and-the-cap-table-reveals-something-closer-to-industrial-policy-than-a-venture-deal/"
       ],
       "category": "Anthropic",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -523,7 +527,9 @@
         "v2.1.149 (May 22): /usage shows per-category limit breakdown (skills, subagents, plugins, per-MCP-server cost); /diff detail view keyboard-scrollable (arrows, j/k, PgUp/PgDn, Space, Home/End); markdown output renders GFM task-list checkboxes instead of plain bullets; enterprise allowAllClaudeAiMcps managed setting loads claude.ai cloud MCP connectors alongside managed-mcp.json; 20+ bug fixes (PowerShell permissions, MCP pagination, file descriptor exhaustion, session titles)",
         "v2.1.150 (May 23): internal infrastructure improvements; no user-facing changes",
         "v2.1.151: not released (skipped)",
-        "v2.1.152 (May 26, 33 changes): /code-review --fix applies review findings (reuse, simplification, efficiency) directly to working tree; /reload-skills command; disallowed-tools config for blocking tools per project; bug fixes: PR badge not refreshing immediately after gh pr create, non-ASCII Agent Teams teammate names breaking API calls via invalid header encoding, /review failing on repos with Classic Projects (deprecated projectCards GraphQL query)"
+        "v2.1.152 (May 26, 33 changes): /code-review --fix applies review findings (reuse, simplification, efficiency) directly to working tree; /reload-skills command; disallowed-tools config for blocking tools per project; bug fixes: PR badge not refreshing immediately after gh pr create, non-ASCII Agent Teams teammate names breaking API calls via invalid header encoding, /review failing on repos with Classic Projects (deprecated projectCards GraphQL query)",
+        "v2.1.153 (May 27, 36 changes): /resume surfaces background sessions (started via claude --bg or agent view) marked 'bg' alongside interactive sessions in TUI; /model changes session-scoped by default (press d for new-session default); skipLfs option in GitHub/git plugin marketplace sources skips LFS downloads; MCP and authentication security fixes",
+        "v2.1.154 (May 28, 44 changes): Claude Opus 4.8 set as default (high effort by default; /effort xhigh also available); Dynamic Workflows research preview activated for Max/Team/Enterprise — describe task, Claude generates JS orchestration script fanning work to up to 16 concurrent/1,000 total subagents, state in script variables not conversation; 'workflow' keyword or ultracode prompt triggers orchestration; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE env var deprecated, removal June 1 2026"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -536,10 +542,12 @@
         "https://code.claude.com/docs/en/changelog",
         "https://github.com/anthropics/claude-code/issues/60436",
         "https://www.claudeupdates.dev/version/2.1.149",
-        "https://dev.classmethod.jp/en/articles/20260524-claude-code-updates-v2-1-152/"
+        "https://dev.classmethod.jp/en/articles/20260524-claude-code-updates-v2-1-152/",
+        "https://dev.classmethod.jp/en/articles/20260528-claude-code-updates-v2-1-153/",
+        "https://dev.classmethod.jp/en/articles/20260529-claude-code-updates-v2-1-154/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 10
+      "coverage_count": 12
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1565,6 +1573,66 @@
         "https://www.cnbc.com/2026/05/19/modular-data-center-builder-armada-raises-230-million.html",
         "https://siliconangle.com/2026/05/19/armada-raises-230m-2b-valuation-build-portable-ai-data-centers/",
         "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-opus-4-8-dynamic-workflows",
+      "title": "Claude Opus 4.8: Dynamic Workflows research preview, /fast mode 3x cheaper, 69.2% SWE-bench Pro (May 28, 2026)",
+      "first_seen": "2026-05-29T00:00:00Z",
+      "last_updated": "2026-05-29T00:00:00Z",
+      "key_facts": [
+        "Released May 28 2026; model string unchanged from Opus 4.7 generation; same price $5/$25 per million in/out tokens; 1M context (200K on Microsoft Foundry); available Claude API, Bedrock, Vertex, Foundry",
+        "Benchmark improvements: 69.2% SWE-bench Pro (vs 64.3% Opus 4.7); 4x reduction in unreported code flaws; better honesty/deception alignment scores",
+        "Dynamic Workflows (research preview, Max/Team/Enterprise, requires Claude Code v2.1.154): describe task -> Claude generates JavaScript orchestration script -> runtime fans work to up to 16 concurrent subagents, capped at 1,000 total per run; intermediate state in script variables not context window; triggers: 'workflow' keyword in prompt or ultracode mode (xhigh effort + auto-orchestration)",
+        "/fast mode re-priced from $30/$150 to $10/$50 per million tokens (3x reduction)",
+        "Effort controls for thinking depth now accessible on claude.ai for non-CLI sessions"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-opus-4-8",
+        "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+        "https://thenewstack.io/claude-opus-48-release/",
+        "https://www.marktechpost.com/2026/05/28/anthropic-ships-claude-opus-4-8-alongside-dynamic-workflows-and-cheaper-fast-mode-with-workflows-capped-at-1000-subagents/",
+        "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+        "https://code.claude.com/docs/en/workflows"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-pro-deep-think",
+      "title": "Gemini 3 Pro + Deep Think: 45.1% ARC-AGI-2, 1501 LMArena Elo, flagship multimodal (May 28, 2026 preview)",
+      "first_seen": "2026-05-29T00:00:00Z",
+      "last_updated": "2026-05-29T00:00:00Z",
+      "key_facts": [
+        "Released May 28 2026 in preview; Google's top-of-line multimodal flagship positioned above Gemini 3.5 Flash; API pricing unconfirmed while in preview",
+        "Gemini 3 Pro standard: 1501 Elo on LMArena; 37.5% Humanity's Last Exam (no tools); 91.9% GPQA Diamond",
+        "Gemini 3 Deep Think: 41.0% Humanity's Last Exam; 93.8% GPQA Diamond; 45.1% ARC-AGI-2 (with code execution, ARC Prize Verified) -- significant advance on a benchmark designed to resist current-generation frontier models",
+        "Deep Think gold-medal-level on written sections of 2025 International Physics and Chemistry Olympiads; 50.5% on CMT-Benchmark advanced theoretical physics",
+        "Deep Think initially gated to safety testers before wider rollout to Ultra subscribers; Gemini 3.5 Flash remains primary developer model"
+      ],
+      "sources": [
+        "https://blog.google/products/gemini/gemini-3/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
+        "https://benchlm.ai/models/gemini-3-pro-deep-think"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "california-ai-bills-crossover-2026",
+      "title": "California AI legislation: 30 bills cross chamber-of-origin deadline May 29, 2026",
+      "first_seen": "2026-05-29T00:00:00Z",
+      "last_updated": "2026-05-29T00:00:00Z",
+      "key_facts": [
+        "Crossover deadline May 29 2026: nearly all 30 California AI-related bills cleared their chamber of origin and move to the other chamber",
+        "Notable bills advancing: AB 1609 (customer service chatbot disclosure, 68-0 Assembly), AB 1651 (AI in State Bar exam), SB 243/264 (AI disclosure for simulated-human-conversation tools), SB 994 (algorithmic rent-setting)",
+        "Pipeline volume ~3x 2025 levels; California AI law historically sets de facto national standards post SB 53 (2026)"
+      ],
+      "sources": [
+        "https://www.transparencycoalition.ai/news/ai-legislative-update-may29-2026",
+        "https://www.troutmanprivacy.com/2026/05/proposed-state-privacy-and-ai-law-update-may-18-2026/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
