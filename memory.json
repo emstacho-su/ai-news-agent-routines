@@ -507,7 +507,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139-152: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading, /code-review, /code-review --fix",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-28T12:15:00Z",
+      "last_updated": "2026-05-30T12:08:15Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session \u2014 running, blocked, or completed \u2014 via `claude agents`",
@@ -529,7 +529,8 @@
         "v2.1.151: not released (skipped)",
         "v2.1.152 (May 26, 33 changes): /code-review --fix applies review findings (reuse, simplification, efficiency) directly to working tree; /reload-skills command; disallowed-tools config for blocking tools per project; bug fixes: PR badge not refreshing immediately after gh pr create, non-ASCII Agent Teams teammate names breaking API calls via invalid header encoding, /review failing on repos with Classic Projects (deprecated projectCards GraphQL query)",
         "v2.1.153 (May 27, 36 changes): /resume surfaces background sessions (started via claude --bg or agent view) marked 'bg' alongside interactive sessions in TUI; /model changes session-scoped by default (press d for new-session default); skipLfs option in GitHub/git plugin marketplace sources skips LFS downloads; MCP and authentication security fixes",
-        "v2.1.154 (May 28, 44 changes): Claude Opus 4.8 set as default (high effort by default; /effort xhigh also available); Dynamic Workflows research preview activated for Max/Team/Enterprise — describe task, Claude generates JS orchestration script fanning work to up to 16 concurrent/1,000 total subagents, state in script variables not conversation; 'workflow' keyword or ultracode prompt triggers orchestration; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE env var deprecated, removal June 1 2026"
+        "v2.1.154 (May 28, 44 changes): Claude Opus 4.8 set as default (high effort by default; /effort xhigh also available); Dynamic Workflows research preview activated for Max/Team/Enterprise \u2014 describe task, Claude generates JS orchestration script fanning work to up to 16 concurrent/1,000 total subagents, state in script variables not conversation; 'workflow' keyword or ultracode prompt triggers orchestration; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE env var deprecated, removal June 1 2026",
+        "v2.1.158 (May 30): auto mode available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8; opt in via CLAUDE_CODE_ENABLE_AUTO_MODE=1"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -547,7 +548,7 @@
         "https://dev.classmethod.jp/en/articles/20260529-claude-code-updates-v2-1-154/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 12
+      "coverage_count": 13
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1513,7 +1514,7 @@
       "last_updated": "2026-05-28T12:15:00Z",
       "key_facts": [
         "RAMPART (Risk Assessment and Measurement Platform for Agentic Red Teaming): pytest-native framework built on Microsoft's PyRIT toolkit; encodes adversarial/benign agent scenarios (prompt injection, out-of-bounds tool use, behavioral drift) as repeatable CI tests",
-        "Statistical trial policies (e.g. 'must be safe in 80%+ of runs') account for model probabilistic behavior — avoids false pass/fail from single deterministic run",
+        "Statistical trial policies (e.g. 'must be safe in 80%+ of runs') account for model probabilistic behavior \u2014 avoids false pass/fail from single deterministic run",
         "Clarity: companion AI design-review agent for pre-code phase; guides problem clarification, failure-mode analysis, and decision tracking before implementation begins; both tools open-sourced on GitHub"
       ],
       "sources": [
@@ -1532,7 +1533,7 @@
       "key_facts": [
         "OpenAI joined C2PA standard steering committee and embedded Google DeepMind's SynthID invisible watermark alongside existing C2PA Content Credentials on all ChatGPT/Codex/API-generated images",
         "Dual-layer rationale: C2PA metadata carries signed origin/edit history but gets stripped on format conversion; SynthID pixel-level signal survives re-uploads and screenshots",
-        "Public verification tool live at openai.com/verify — checks for both C2PA credentials and SynthID presence even when metadata was stripped"
+        "Public verification tool live at openai.com/verify \u2014 checks for both C2PA credentials and SynthID presence even when metadata was stripped"
       ],
       "sources": [
         "https://openai.com/index/advancing-content-provenance/",
@@ -1548,7 +1549,7 @@
       "last_updated": "2026-05-28T12:15:00Z",
       "key_facts": [
         "Purpose-built for agentic coding workflows (not general chat); 1M-token context window, native extended-thinking mode; API-only via Alibaba Cloud DashScope at $2.50/$7.50 per M in/out tokens",
-        "Benchmarks: 60.6% SWE-Pro, 69.7% Terminal-Bench 2.0, 92.4% GPQA Diamond — ahead of DeepSeek V4 Pro and Claude Opus 4.6 on agentic coding evals",
+        "Benchmarks: 60.6% SWE-Pro, 69.7% Terminal-Bench 2.0, 92.4% GPQA Diamond \u2014 ahead of DeepSeek V4 Pro and Claude Opus 4.6 on agentic coding evals",
         "Qwen 3.7 Plus (separate variant) will be released as open weights; Max remains proprietary/API-only"
       ],
       "sources": [
@@ -1567,7 +1568,7 @@
       "key_facts": [
         "Modular units deployable in days on local power sources; current customers include US Navy and remote offshore oil rigs; Series B co-led by Overmatch, 8090 Industries, and BlackRock at $2B pre-money valuation",
         "Manufacturing partnership with Johnson Controls for Galleon Forge One, a new 400,000 sq ft Arizona factory",
-        "Customer bookings grew 540% FY25→FY26; Q1 FY27 alone posted ~2,000% YoY growth; primary verticals: defense, energy, industrial edge"
+        "Customer bookings grew 540% FY25\u2192FY26; Q1 FY27 alone posted ~2,000% YoY growth; primary verticals: defense, energy, industrial edge"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/19/modular-data-center-builder-armada-raises-230-million.html",
@@ -1635,6 +1636,55 @@
         "https://www.troutmanprivacy.com/2026/05/proposed-state-privacy-and-ai-law-update-may-18-2026/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-rosalind-biodefense",
+      "title": "OpenAI Rosalind Biodefense Program: GPT-Rosalind access opened to vetted developers",
+      "first_seen": "2026-05-30T12:08:15Z",
+      "last_updated": "2026-05-30T12:08:15Z",
+      "key_facts": [
+        "Rosalind Biodefense Program opens trusted access to GPT-Rosalind \u2014 a life sciences model reasoning about molecules, proteins, genes, and disease biology \u2014 to vetted developers and U.S. government partners",
+        "OpenAI covers access costs and provides launch support for epidemiological modeling, early warning systems, diagnostics, and vaccine development",
+        "Initial partners: Lawrence Livermore National Laboratory, Johns Hopkins Applied Physics Laboratory, and CEPI"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/05/29/openai-biodefense-program",
+        "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-frontier-governance-framework",
+      "title": "OpenAI Frontier Governance Framework: safety practices mapped to EU AI Act and California law",
+      "first_seen": "2026-05-30T12:08:15Z",
+      "last_updated": "2026-05-30T12:08:15Z",
+      "key_facts": [
+        "Published May 28 2026; maps OpenAI's existing Preparedness Framework onto EU AI Act Code of Practice for General Purpose AI and California's Transparency in Frontier AI Act",
+        "Covers risk assessment across four categories: cyber offense, CBRN risks, harmful manipulation, and loss of control",
+        "Uses external domain experts and independent third-party evaluators to stress-test safeguards for models approaching a new risk tier"
+      ],
+      "sources": [
+        "https://openai.com/index/openai-frontier-governance-framework/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "cisco-multiturn-ai-safety-gap",
+      "title": "Cisco research: multi-turn conversations raise AI jailbreak success rates 71%",
+      "first_seen": "2026-05-30T12:08:15Z",
+      "last_updated": "2026-05-30T12:08:15Z",
+      "key_facts": [
+        "Cisco multi-turn red-teaming: attack success rates rose 71% after five conversational turns compared to single-turn baselines; no frontier model is iteratively safe",
+        "Worst case: xAI Grok 4.1 Fast hit 88.3% attack success rate (non-reasoning mode) vs 43.5% with reasoning on \u2014 gap not captured in official model card",
+        "Published safety benchmarks are almost entirely single-turn, systematically understating real-world vulnerability in production conversational contexts"
+      ],
+      "sources": [
+        "https://www.csoonline.com/article/4177903/ai-models-more-vulnerable-than-claimed-when-faced-with-iterative-attacks.html"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
