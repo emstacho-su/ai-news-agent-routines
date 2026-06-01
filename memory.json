@@ -1686,6 +1686,98 @@
       ],
       "category": "Research & Technical",
       "coverage_count": 1
+    },
+    {
+      "id": "anthropic-programmatic-credit-june-2026",
+      "title": "Anthropic billing split June 15: programmatic usage (Agent SDK, claude -p, GitHub Actions) moves to separate monthly credit pool",
+      "first_seen": "2026-06-01T12:08:57.063202+00:00",
+      "last_updated": "2026-06-01T12:08:57.063202+00:00",
+      "key_facts": [
+        "Effective June 15, 2026; covers Claude Agent SDK, claude -p, Claude Code GitHub Actions, third-party apps \u2014 NOT terminal Claude Code or Claude.ai chat",
+        "Credit allocations: Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo, Team Standard $20/seat, Team Premium $100/seat; billed at full API rates",
+        "Credits must be claimed \u2014 watch for Anthropic email June 8; do not roll over month-to-month"
+      ],
+      "sources": [
+        "https://thenewstack.io/anthropic-agent-sdk-credits/",
+        "https://the-decoder.com/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-api-prices/",
+        "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/",
+        "https://devtoolpicks.com/blog/anthropic-splits-claude-subscriptions-agent-sdk-credit-june-2026"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "github-copilot-ai-credits-june-2026",
+      "title": "GitHub Copilot moves to usage-based AI Credits billing effective June 1, 2026",
+      "first_seen": "2026-06-01T12:08:57.063202+00:00",
+      "last_updated": "2026-06-01T12:08:57.063202+00:00",
+      "key_facts": [
+        "1 AI Credit = $0.01 USD, token-metered at listed API rates (input/output/cached); replaces premium request units",
+        "Copilot Pro+ $39/mo includes $39 AI Credits, Business $19/user includes $19, Enterprise $39/user includes $39",
+        "Code completions and Next Edit Suggestions remain unlimited; Chat, agent mode, and model-routed tasks draw from credits",
+        "Business/Enterprise get elevated credits through September 1, 2026 as transition buffer"
+      ],
+      "sources": [
+        "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+        "https://usagebox.com/articles/github-copilot-usage-based-billing-2026",
+        "https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/prepare-for-your-move-to-usage-based-billing"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "langgraph-1-2",
+      "title": "LangGraph v1.2: DeltaChannel for efficient long-session checkpointing, per-node timeouts, streaming API v3 (May 11, 2026)",
+      "first_seen": "2026-06-01T12:08:57.063202+00:00",
+      "last_updated": "2026-06-01T12:08:57.063202+00:00",
+      "key_facts": [
+        "DeltaChannel: checkpoints only incremental diff per step with periodic full snapshots (snapshot_frequency=K); cuts storage costs for long message-list threads",
+        "Per-node timeouts via TimeoutPolicy(run_timeout, idle_timeout) on add_node; raises NodeTimeoutError and hands off to retry policy; async nodes only",
+        "langgraph-prebuilt package split out from main package (Supervisor, Swarm, LangMem, Trustcall) \u2014 import paths changed",
+        "Streaming API v3: content-block-centric streaming replaces token-stream assumptions"
+      ],
+      "sources": [
+        "https://www.langchain.com/blog/delta-channels-evolving-agent-runtime",
+        "https://github.com/langchain-ai/langgraph/releases",
+        "https://changelog.langchain.com/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-5-pro-preview",
+      "title": "Gemini 3.5 Pro: limited Vertex enterprise preview as of May 2026, GA expected June 2026",
+      "first_seen": "2026-06-01T12:08:57.063202+00:00",
+      "last_updated": "2026-06-01T12:08:57.063202+00:00",
+      "key_facts": [
+        "Announced at Google I/O May 19; Sundar Pichai: 'Give us until next month' \u2014 June GA window",
+        "Spec targets: 2M-token context, Deep Think reasoning, frontier multimodal; pricing TBD (reference: 3.1 Pro at $2.00/$12.00 per 1M input/output)",
+        "Gemini 3.5 Flash (GA since May 19) is the publicly available 3.5 model; Flash leads MCP Atlas benchmark at 83.6%"
+      ],
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+        "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
+        "https://ofox.ai/blog/gemini-3-5-pro-release-date-expected-specs-2026/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-model-deprecations-june-aug-2026",
+      "title": "OpenAI deprecation timeline: GPT-4.5 exits ChatGPT June 27, o3 exits ChatGPT August 26",
+      "first_seen": "2026-06-01T12:08:57.063202+00:00",
+      "last_updated": "2026-06-01T12:08:57.063202+00:00",
+      "key_facts": [
+        "GPT-4.5: removed from ChatGPT June 27, 2026 (30-day notice from ~May 27)",
+        "o3: removed from ChatGPT August 26, 2026 (90-day sunset period)",
+        "API-side deprecation dates separate; watch OpenAI model deprecation page for API timeline"
+      ],
+      "sources": [
+        "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "https://www.mager.co/blog/2026-05-31-ai-may-2026/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
     }
   ]
 }
