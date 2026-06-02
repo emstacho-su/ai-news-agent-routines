@@ -305,7 +305,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO possibly October 2026",
       "first_seen": "2026-05-09T12:10:13Z",
-      "last_updated": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-06-02T12:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900B; board decision expected in May 2026",
         "Would surpass OpenAI's last round ($852B post-money, February 2026)",
@@ -316,7 +316,9 @@
         "Terms agreed by May 22; lead investors: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital; Claude Code ARR alone now $2.5B+",
         "Round expected to close as soon as week of May 26 2026 (Bloomberg May 22); each lead investor committing ~$2B; total may exceed $30B",
         "Round reported closed ~May 24 2026 per Memorial Day weekend reporting; total exceeds $30B at $900B+ post-money valuation; Anthropic surpasses OpenAI as world's most valuable AI startup; no official Anthropic press release at time of briefing",
-        "Round officially confirmed closed at $65B total (>2x the $30B target); $965B post-money valuation; co-leads Altimeter Capital, Dragoneer, Greenoaks, Sequoia Capital, Capital Group, Coatue, D1 Capital Partners; strategic semiconductor partners Samsung, SK Hynix, Micron; ~$15B of total from previously committed hyperscaler investments including $5B Amazon; expected last private raise before IPO"
+        "Round officially confirmed closed at $65B total (>2x the $30B target); $965B post-money valuation; co-leads Altimeter Capital, Dragoneer, Greenoaks, Sequoia Capital, Capital Group, Coatue, D1 Capital Partners; strategic semiconductor partners Samsung, SK Hynix, Micron; ~$15B of total from previously committed hyperscaler investments including $5B Amazon; expected last private raise before IPO",
+        "Confidential S-1 submitted to SEC on June 1, 2026 \u2014 official IPO filing, keeps financials private during SEC review",
+        "Q2 2026 projected at $10.9B revenue (>2x Q1's $4.8B); annualized run rate $47B; break-even projected 2028 (vs OpenAI's stated 2030)"
       ],
       "sources": [
         "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
@@ -329,10 +331,13 @@
         "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm",
         "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
         "https://www.aljazeera.com/economy/2026/5/29/anthropic-soars-to-965bn-valuation-leapfrogging-openai",
-        "https://siliconcanals.com/sc-n-anthropic-just-closed-a-65b-round-at-a-965b-valuation-and-the-cap-table-reveals-something-closer-to-industrial-policy-than-a-venture-deal/"
+        "https://siliconcanals.com/sc-n-anthropic-just-closed-a-65b-round-at-a-965b-valuation-and-the-cap-table-reveals-something-closer-to-industrial-policy-than-a-venture-deal/",
+        "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+        "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
+        "https://finance.yahoo.com/markets/stocks/articles/anthropic-files-confidential-1-joins-161008569.html"
       ],
       "category": "Anthropic",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -507,7 +512,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139-152: /goal, agent view, terminalSequence, dispatch flags, plugin dependency graph, URL plugin loading, /code-review, /code-review --fix",
       "first_seen": "2026-05-12T00:00:00Z",
-      "last_updated": "2026-05-30T12:08:15Z",
+      "last_updated": "2026-06-02T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and runs Claude autonomously across turns until met; works in interactive, -p flag, and Remote Control modes; live overlay shows elapsed time/turns/tokens",
         "Agent view (Research Preview): single dashboard listing every Claude Code session \u2014 running, blocked, or completed \u2014 via `claude agents`",
@@ -530,7 +535,8 @@
         "v2.1.152 (May 26, 33 changes): /code-review --fix applies review findings (reuse, simplification, efficiency) directly to working tree; /reload-skills command; disallowed-tools config for blocking tools per project; bug fixes: PR badge not refreshing immediately after gh pr create, non-ASCII Agent Teams teammate names breaking API calls via invalid header encoding, /review failing on repos with Classic Projects (deprecated projectCards GraphQL query)",
         "v2.1.153 (May 27, 36 changes): /resume surfaces background sessions (started via claude --bg or agent view) marked 'bg' alongside interactive sessions in TUI; /model changes session-scoped by default (press d for new-session default); skipLfs option in GitHub/git plugin marketplace sources skips LFS downloads; MCP and authentication security fixes",
         "v2.1.154 (May 28, 44 changes): Claude Opus 4.8 set as default (high effort by default; /effort xhigh also available); Dynamic Workflows research preview activated for Max/Team/Enterprise \u2014 describe task, Claude generates JS orchestration script fanning work to up to 16 concurrent/1,000 total subagents, state in script variables not conversation; 'workflow' keyword or ultracode prompt triggers orchestration; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE env var deprecated, removal June 1 2026",
-        "v2.1.158 (May 30): auto mode available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8; opt in via CLAUDE_CODE_ENABLE_AUTO_MODE=1"
+        "v2.1.158 (May 30): auto mode available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8; opt in via CLAUDE_CODE_ENABLE_AUTO_MODE=1",
+        "v2.1.160 (June 2): shell startup file write prompt (.zshenv, .zlogin, .bash_login, ~/.config/git/); acceptEdits now gates build-tool configs (.npmrc, .yarnrc*, bunfig.toml, .bazelrc, .pre-commit-config.yaml, .devcontainer/); single-file grep satisfies read-before-edit; WSL clipboard via PowerShell interop; SIGTERM-before-SIGKILL on background-session teardown; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE removed; JetBrains install prompt removed"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -548,7 +554,7 @@
         "https://dev.classmethod.jp/en/articles/20260529-claude-code-updates-v2-1-154/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 13
+      "coverage_count": 14
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1777,6 +1783,47 @@
         "https://www.mager.co/blog/2026-05-31-ai-may-2026/"
       ],
       "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-4-api-deprecation-june-2026",
+      "title": "Claude Sonnet 4 + Opus 4 API hard retirement: June 15, 2026 at 9 AM PT",
+      "first_seen": "2026-06-02T12:00:00Z",
+      "last_updated": "2026-06-02T12:00:00Z",
+      "key_facts": [
+        "claude-sonnet-4-20250514 and claude-opus-4-20250514 stop accepting API calls June 15, 2026 at 9 AM PT; no auto-failover \u2014 requests return errors",
+        "Migration path: swap model string to claude-sonnet-4-6-20251001 and claude-opus-4-6-20251001 respectively (one-line change)",
+        "Claude Sonnet 4.6 ships near-Opus-level coding performance, 1M context window beta, improved computer use; Opus 4.6 is current production Opus",
+        "Retirement date coincides with June 15 billing split (Agent SDK / claude -p moves to credit pool) \u2014 two migration items on same deadline"
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+        "https://tygartmedia.com/claude-4-deprecation/",
+        "https://chatforest.com/guides/anthropic-claude-sonnet-4-opus-4-deprecation-june-15-2026/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-build-2026-mai-polaris",
+      "title": "Microsoft Build 2026: Project Polaris replaces GPT-4 in Copilot; MAI model family; Windows agent platform",
+      "first_seen": "2026-06-02T12:00:00Z",
+      "last_updated": "2026-06-02T12:00:00Z",
+      "key_facts": [
+        "Project Polaris: in-house MoE coding model for GitHub Copilot; beats GPT-4 Turbo on HumanEval/MBPP especially Rust/Haskell; replaces GPT-4 Turbo as Copilot default August 2026 with optional 3-month rollback",
+        "MAI model family commercially available: MAI-Transcribe-1 (STT), MAI-Voice-1, MAI-Image-2; MAI-Thinking-1 (first Microsoft reasoning model) unveiled at Build",
+        "Copilot Workspace GA: GitHub agentic coding environment \u2014 full-repo reasoning, multi-file edits, test-run-iterate loops",
+        "Windows Agent Framework v1.0 (MIT): cross-environment agent library (local/cloud/edge); Agent Identity + WDAC governance for enterprise agent policies; local vs. cloud inference routing",
+        "Azure AI Foundry Agents Service GA: managed agent framework with auto-scaling, production SLAs, trace/replay/red-teaming evaluation harnesses",
+        "Strategic signal: Microsoft publicly decoupling from OpenAI at foundation model layer"
+      ],
+      "sources": [
+        "http://www.techtimes.com/articles/317596/20260602/github-copilot-replaces-gpt-4-project-polaris-ships-multi-agent-vs-code-build.htm",
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/",
+        "https://faq.com.tw/en/developer-tools/2026-06-01-microsoft-build-2026-mai-coding-models-en/",
+        "https://windowsnews.ai/article/microsoft-build-2026-homegrown-ai-models-to-power-github-copilot.420887"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
