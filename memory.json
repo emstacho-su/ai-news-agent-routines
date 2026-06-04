@@ -54,22 +54,25 @@
       "id": "claude-mythos-project-glasswing",
       "title": "Claude Mythos Preview: thousands of zero-days found; Project Glasswing coalition formed",
       "first_seen": "2026-05-08T01:59:21Z",
-      "last_updated": "2026-05-08T01:59:21Z",
+      "last_updated": "2026-06-04T00:00:00Z",
       "key_facts": [
         "Mythos Preview identified thousands of previously unknown zero-days across every major OS and browser, including a 27-year-old bug",
         "Autonomously chained 4 vulnerabilities to escape browser renderer and OS sandboxes; demonstrated sandbox escape in controlled testing",
         "CEO Dario Amodei warned of 6-12 month window to patch before comparable offensive AI capability emerges",
         "Project Glasswing coalition formed with ~40 orgs: AWS, Apple, Microsoft, Google, CrowdStrike, Palo Alto Networks",
-        "Mythos not publicly released; access restricted to Glasswing coalition"
+        "Mythos not publicly released; access restricted to Glasswing coalition",
+        "Glasswing expanded June 2-3, 2026 to 150+ new organizations across 15+ countries; new verticals include power, water, healthcare, communications, and hardware; coalition has collectively found 10,000+ high/critical-severity vulnerabilities; future expansion planned to open-source maintainers and safety testers"
       ],
       "sources": [
         "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html",
         "https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html",
         "https://www.anthropic.com/glasswing",
-        "https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities"
+        "https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities",
+        "https://www.anthropic.com/news/expanding-project-glasswing",
+        "https://www.cnbc.com/2026/06/02/anthropic-mythos-ai-project-glasswing.html"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "trustfall-ai-cli-mcp-rce",
@@ -536,7 +539,9 @@
         "v2.1.153 (May 27, 36 changes): /resume surfaces background sessions (started via claude --bg or agent view) marked 'bg' alongside interactive sessions in TUI; /model changes session-scoped by default (press d for new-session default); skipLfs option in GitHub/git plugin marketplace sources skips LFS downloads; MCP and authentication security fixes",
         "v2.1.154 (May 28, 44 changes): Claude Opus 4.8 set as default (high effort by default; /effort xhigh also available); Dynamic Workflows research preview activated for Max/Team/Enterprise \u2014 describe task, Claude generates JS orchestration script fanning work to up to 16 concurrent/1,000 total subagents, state in script variables not conversation; 'workflow' keyword or ultracode prompt triggers orchestration; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE env var deprecated, removal June 1 2026",
         "v2.1.158 (May 30): auto mode available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8; opt in via CLAUDE_CODE_ENABLE_AUTO_MODE=1",
-        "v2.1.160 (June 2): shell startup file write prompt (.zshenv, .zlogin, .bash_login, ~/.config/git/); acceptEdits now gates build-tool configs (.npmrc, .yarnrc*, bunfig.toml, .bazelrc, .pre-commit-config.yaml, .devcontainer/); single-file grep satisfies read-before-edit; WSL clipboard via PowerShell interop; SIGTERM-before-SIGKILL on background-session teardown; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE removed; JetBrains install prompt removed"
+        "v2.1.160 (June 2): shell startup file write prompt (.zshenv, .zlogin, .bash_login, ~/.config/git/); acceptEdits now gates build-tool configs (.npmrc, .yarnrc*, bunfig.toml, .bazelrc, .pre-commit-config.yaml, .devcontainer/); single-file grep satisfies read-before-edit; WSL clipboard via PowerShell interop; SIGTERM-before-SIGKILL on background-session teardown; CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE removed; JetBrains install prompt removed",
+        "v2.1.161 (June 2, 22 changes): parallel tool call reliability improvements; OpenTelemetry metrics integration for enterprise observability pipelines; auth bug fixes",
+        "v2.1.162 (June 3): slash commands now populate the prompt editor instead of executing immediately — enables review/modify before running; /effort change explicitly confirms persistence across sessions"
       ],
       "sources": [
         "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
@@ -551,10 +556,12 @@
         "https://www.claudeupdates.dev/version/2.1.149",
         "https://dev.classmethod.jp/en/articles/20260524-claude-code-updates-v2-1-152/",
         "https://dev.classmethod.jp/en/articles/20260528-claude-code-updates-v2-1-153/",
-        "https://dev.classmethod.jp/en/articles/20260529-claude-code-updates-v2-1-154/"
+        "https://dev.classmethod.jp/en/articles/20260529-claude-code-updates-v2-1-154/",
+        "https://www.claudeupdates.dev/update",
+        "https://dev.classmethod.jp/en/articles/20260603-cc-updates-v2-1-161/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 14
+      "coverage_count": 16
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1341,24 +1348,28 @@
     },
     {
       "id": "trump-ai-eo-voluntary-prerelease-postponed",
-      "title": "Trump pulls planned AI executive order on voluntary 90-day pre-release model sharing (May 20-21, 2026)",
+      "title": "Trump pulls 90-day AI EO in May; signs revised 30-day voluntary version June 2, 2026",
       "first_seen": "2026-05-24T00:00:00Z",
-      "last_updated": "2026-05-27T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
       "key_facts": [
         "White House canceled signing of EO that would have required frontier AI labs to voluntarily share pre-release models with government for up to 90-day national security review before public release",
         "EO had been negotiated with OpenAI, Anthropic, and other labs; signing ceremony was scheduled",
         "Trump: 'didn't like certain aspects of it'; cited concern about impeding US lead over China in AI",
         "EO had already been postponed multiple times before this final cancellation; future status unclear",
         "Distinct from existing CAISI pre-deployment framework (which is narrower security evaluation at NIST)",
-        "Musk, Zuckerberg, and Sacks each called Trump directly on a Wednesday night (likely May 20) to oppose the EO; three-call lobbying by competing interests produced the cancellation"
+        "Musk, Zuckerberg, and Sacks each called Trump directly on a Wednesday night (likely May 20) to oppose the EO; three-call lobbying by competing interests produced the cancellation",
+        "Revised EO signed June 2, 2026: review period cut to 30 days (from 90), participation is voluntary, explicitly bars mandatory licensing or preclearance requirements; focuses on cybersecurity benchmarks and vulnerability sharing"
       ],
       "sources": [
         "https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why",
         "https://www.cnbc.com/2026/05/21/trump-ai-executive-order-postponed.html",
-        "https://www.washingtonpost.com/technology/2026/05/21/white-house-tore-down-ai-rules-now-its-building-new-defenses/"
+        "https://www.washingtonpost.com/technology/2026/05/21/white-house-tore-down-ai-rules-now-its-building-new-defenses/",
+        "https://www.npr.org/2026/06/02/nx-s1-5844347/ai-safety-trump-executive-order",
+        "https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html",
+        "https://www.nbcnews.com/tech/tech-news/trump-ai-executive-order-rcna348072"
       ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "meta-ai-restructuring-may-2026",
@@ -1822,6 +1833,95 @@
         "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/",
         "https://faq.com.tw/en/developer-tools/2026-06-01-microsoft-build-2026-mai-coding-models-en/",
         "https://windowsnews.ai/article/microsoft-build-2026-homegrown-ai-models-to-power-github-copilot.420887"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "sysdig-llm-agent-intrusion",
+      "title": "Sysdig: first confirmed autonomous LLM-agent cyberattack — 4-pivot AWS exfiltration in under 1 hour",
+      "first_seen": "2026-06-04T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
+      "key_facts": [
+        "First documented live cyberattack driven by an autonomous LLM agent (Sysdig Threat Research, observed May 2026, published June 2026)",
+        "Attack chain: Marimo notebook RCE (CVE-2026-39987) → credential extraction → AWS Secrets Manager pivots → SSH bastion access → PostgreSQL database exfiltration",
+        "Four environment pivots completed with zero human intervention in under one hour; database exfiltration completed in under 2 minutes on bastion phase",
+        "LLM agent spread 12 redundant API calls across 11 Cloudflare edge locations for infrastructure evasion — agent actively reasoning about detection, not just execution"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots",
+        "https://thehackernews.com/2026/05/ai-agent-cyberattack-llm-sysdig.html"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "minimax-m3",
+      "title": "MiniMax M3: open-weight 1M-context coding model, 59% SWE-bench Pro, $0.60/$2.40 per M tokens (June 1, 2026)",
+      "first_seen": "2026-06-04T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
+      "key_facts": [
+        "Released June 1, 2026; Mixture-of-Sequential-Attention (MSA) architecture; claims 9× faster prefill and 15× faster decoding at 1M tokens vs. prior generation",
+        "Benchmarks (MiniMax-reported, agent-scaffolded): 59.0% SWE-bench Pro, ahead of GPT-5.5 Instant and Gemini 3.1 Pro; native image and video understanding",
+        "Pricing: $0.60/M input, $2.40/M output — roughly 5-10× cheaper than frontier models at equivalent context",
+        "Open weights + technical report releasing on HuggingFace within ~10 days of launch; independent benchmark verification pending"
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/minimax-m3-debuts-eclipsing-gpt-5-5-and-gemini-3-1-pro-on-key-benchmark-performance-for-just-5-10-of-the-cost",
+        "https://www.marktechpost.com/2026/06/01/minimax-releases-minimax-m3-with-msa-architecture-supporting-1m-token-context-native-multimodality-and-agentic-coding/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-cosmos-3",
+      "title": "NVIDIA Cosmos 3: open omnimodal foundation model for physical AI — Nano (16B) and Super (64B) checkpoints (June 1, 2026)",
+      "first_seen": "2026-06-04T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
+      "key_facts": [
+        "Released May 31/June 1, 2026; first fully open omnimodal foundation model for physical AI (robotics, autonomous vehicles, warehouse monitoring)",
+        "Two open-weight checkpoints: Cosmos3-Nano (16B total / 8B dense) and Cosmos3-Super (64B total / 32B dense)",
+        "Accepts text, image, video, audio, and action sequences via Mixture-of-Transformers architecture; target inference loop is sense-plan-act for embodied systems",
+        "Weights open-sourced on GitHub/Hugging Face; distinct from text/code LLMs"
+      ],
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "a2a-protocol-v1",
+      "title": "Agent-to-Agent (A2A) Protocol v1.0 GA: 7-vendor support, MCP-native cross-platform agent interoperability",
+      "first_seen": "2026-06-04T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
+      "key_facts": [
+        "A2A Protocol reached v1.0 GA with steering committee: AWS, Google, IBM, Microsoft, Salesforce, SAP, ServiceNow; built on IETF draft co-developed with Google",
+        "Lets agents from different providers expose callable endpoints for cross-framework tool discovery; routes agent-to-agent calls through MCP tool surfaces",
+        "Wire-compatible with Copilot Studio and Microsoft Agent Framework 1.0; 150+ organizations adopted in first year",
+        "Entered public preview in Copilot Studio May 2026; reached GA at Microsoft Build 2026"
+      ],
+      "sources": [
+        "https://devblogs.microsoft.com/agent-framework/a2a-v1-is-here-cross-platform-agent-communication-in-microsoft-agent-framework-for-net/",
+        "https://azure.microsoft.com/en-us/blog/agent-factory-connecting-agents-apps-and-data-with-new-open-standards-like-mcp-and-a2a/",
+        "https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "fastmcp-3-4-remote",
+      "title": "FastMCP 3.4.0: stdio-to-remote transport bridge for MCP — auto-OAuth, bearer tokens, gateway patterns (June 2, 2026)",
+      "first_seen": "2026-06-04T00:00:00Z",
+      "last_updated": "2026-06-04T00:00:00Z",
+      "key_facts": [
+        "FastMCP 3.4.0 ('The remote release') shipped June 2, 2026; standalone Python bridge connecting stdio-only MCP hosts to remote HTTP/SSE servers",
+        "Enables gateway patterns: CLI tools that only speak stdio (e.g., Claude Code) can reach any HTTP-hosted MCP server without a custom shim",
+        "Auto-OAuth for HTTPS; supports bearer tokens and custom headers; proxies arbitrary MCP servers transparently regardless of transport type"
+      ],
+      "sources": [
+        "https://gofastmcp.com/updates",
+        "https://github.com/PrefectHQ/fastmcp/releases"
       ],
       "category": "Tools & Frameworks",
       "coverage_count": 1
