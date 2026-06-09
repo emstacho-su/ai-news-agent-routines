@@ -1,1 +1,1322 @@
-{"topics":[{"id":"anthropic-spacex-colossus-compute-deal","title":"Anthropic secures all of SpaceX's Colossus 1 compute; rate l","first_seen":"2026-05-08","last_updated":"2026-05-22","key_facts":["Anthropic rented all compute capacity at"],"sources":[],"category":"Anthropic","coverage_count":3},{"id":"code-with-claude-2026-sf","title":"Code with Claude 2026 developer conference: SF May 6, London","first_seen":"2026-05-08","last_updated":"2026-05-20","key_facts":["SF event ran May 6; Claude Code v2.1.126"],"sources":[],"category":"Anthropic","coverage_count":3},{"id":"claude-mythos-project-glasswing","title":"Claude Mythos Preview: thousands of zero-days found; Project","first_seen":"2026-05-08","last_updated":"2026-06-05","key_facts":["Mythos Preview identified thousands of p"],"sources":[],"category":"Anthropic","coverage_count":3},{"id":"trustfall-ai-cli-mcp-rce","title":"TrustFall: one-keypress RCE in Claude Code, Gemini CLI, Curs","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["Malicious cloned repo includes .mcp.json"],"sources":[],"category":"Tools & Frameworks","coverage_count":2},{"id":"claude-code-routines-launch","title":"Claude Code Routines: research preview launched April 14","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["Routines are prompt + repo + connectors "],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"claude-code-mcp-improvements-may-2026","title":"Claude Code MCP quality-of-life improvements (May 2026 relea","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["/mcp command now shows tool count per se"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"microsoft-agent-framework-1-0","title":"Microsoft Agent Framework 1.0: production-ready, MCP-native,","first_seen":"2026-05-08","last_updated":"2026-06-07","key_facts":["Released April 3 2026; open-source, prod"],"sources":[],"category":"Tools & Frameworks","coverage_count":2},{"id":"gpt-5-5-instant-chatgpt-default","title":"GPT-5.5 Instant replaces GPT-5.3 as ChatGPT default model (M","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["GPT-5.5 Instant became ChatGPT's default"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"claude-opus-4-7","title":"Claude Opus 4.7: task budgets, high-res vision, new tokenize","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["High-res image support up to 2576px / 3."],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"xai-musk-anthropic-rivals-compute-partners","title":"xAI/Musk rents Colossus 1 to Anthropic despite months of pub","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["Deal signed two months after Musk wrote "],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"anthropic-google-200b-compute-deal","title":"Anthropic commits $200B to Google's cloud and TPU chips over","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["Anthropic signed a deal with Google and "],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"claude-security-public-beta","title":"Claude Security enters public beta: Opus 4.7 vulnerability s","first_seen":"2026-05-08","last_updated":"2026-06-06","key_facts":["Available at claude.ai/security for Ente"],"sources":[],"category":"Anthropic","coverage_count":3},{"id":"anthropic-goldman-blackstone-jv","title":"Anthropic forms $1.5B enterprise AI services JV with Goldman","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["AI-native services firm announced May 4 "],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"claude-code-oauth-mcp-hijacking","title":"Claude Code OAuth tokens stolen via npm postinstall MCP hija","first_seen":"2026-05-08","last_updated":"2026-05-08","key_facts":["OAuth tokens and MCP config stored in ~/"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"anthropic-akamai-1-8b-deal","title":"Anthropic inks $1.8B compute deal with Akamai (May 8, 2026)","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["$1.8B seven-year contract for Akamai's C"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"anthropic-900b-valuation-round","title":"Anthropic in talks for $30B raise at ~$900B valuation; IPO p","first_seen":"2026-05-09","last_updated":"2026-06-08","key_facts":["Multiple preemptive offers at $850B-$900","S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026","$965B post-money valuation; $47B ARR as of May 2026","Q2 2026 projected $10.9B revenue, $559M operating profit (~5% margin); IPO target October 2026"],"sources":["https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/","https://www.anthropic.com/news/confidential-draft-s1-sec"],"category":"Anthropic","coverage_count":8},{"id":"anthropic-finance-agents-m365","title":"Anthropic ships 10 financial-services AI agents and full Mic","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["10 ready-to-run agent templates: pitchbo"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"aws-mcp-server-ga","title":"AWS MCP Server generally available: IAM-guarded, CloudTrail-","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["AWS MCP Server reached GA on May 6 2026;"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"servicenow-build-agent-coding-tools","title":"ServiceNow Build Agent ships inside Claude Code, Cursor, Wind","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["Announced at Knowledge 2026; Build Agent"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"claude-code-ultrareview","title":"Claude Code /ultrareview: parallel multi-agent cloud code re","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["Slash command orchestrates specialist su"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"gemini-3-1-pro-higher-limits","title":"Gemini 3.1 Pro rolling out higher usage limits in Gemini App","first_seen":"2026-05-09","last_updated":"2026-05-09","key_facts":["Gemini 3.1 Pro preview launched February"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"anthropic-managed-agents-dreaming","title":"Claude Managed Agents: dreaming research preview; Outcomes +","first_seen":"2026-05-10","last_updated":"2026-05-10","key_facts":["Dreaming is a scheduled background proce"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"claude-sonnet-5","title":"Claude Sonnet 5: 92.4% SWE-bench Verified, 88.3% OSWorld-Ver","first_seen":"2026-05-10","last_updated":"2026-05-10","key_facts":["Released April 1 2026; model string clau"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"nvidia-40b-ai-equity-strategy-2026","title":"Nvidia crosses $40B in AI equity commitments in 2026","first_seen":"2026-05-10","last_updated":"2026-05-10","key_facts":["$30B stake in OpenAI, $5B in Intel, $3.2"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"claude-platform-aws-ga","title":"Claude Platform on AWS: GA launch with Managed Agents, Skills","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["GA announced May 11-12 2026; first cloud"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"claude-code-v2-1-139-goal-agent-view","title":"Claude Code v2.1.139+: /goal, agent view, fallbackModel","first_seen":"2026-05-12","last_updated":"2026-06-07","key_facts":["/goal sets a completion condition and ru"],"sources":[],"category":"Tools & Frameworks","coverage_count":19},{"id":"gemini-agent-web-may-2026","title":"Gemini Agent on web: experimental multi-tool agent for Google","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["Launched May 11 2026 on gemini.google.co"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"deepseek-v4-pro-flash","title":"DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["V4 Pro: 1.6T total / 49B active paramete"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"salesforce-data-360-mcp-server","title":"Salesforce Data 360 MCP Server: developer preview","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["Open-source developer preview; connects "],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"emergent-misalignment-feature-superposition-geometry","title":"Emergent Misalignment via Feature Superposition Geometry","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["Geometric account of emergent misalignme"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"caisi-frontier-labs-five-predeployment","title":"CAISI pre-deployment safety review expands to five frontier labs","first_seen":"2026-05-12","last_updated":"2026-05-12","key_facts":["US Commerce Department CAISI added Googl"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"claude-for-legal","title":"Claude for Legal: 12 practice-area plugins, 20+ MCP connectors","first_seen":"2026-05-13","last_updated":"2026-05-13","key_facts":["12 specialist legal plugins: litigation "],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"openai-deployment-company","title":"OpenAI Deployment Company: $4B+ standalone enterprise AI firm","first_seen":"2026-05-13","last_updated":"2026-05-13","key_facts":["$4B+ venture; majority-owned by OpenAI"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"trump-xi-beijing-ai-chips-2026","title":"Trump-Xi Beijing summit: Jensen Huang joins, AI chip deals","first_seen":"2026-05-13","last_updated":"2026-05-14","key_facts":["Trump in Beijing for Xi summit; AI chip "],"sources":[],"category":"Wildcard","coverage_count":2},{"id":"agent-memory-survey-storage-reflection-experience","title":"Agent Memory Survey: Storage to Reflection to Experience","first_seen":"2026-05-13","last_updated":"2026-05-13","key_facts":["Three-stage evolutionary framework: Stor"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"claude-for-small-business","title":"Claude for Small Business: 15 workflows, 15 skills, 8 connectors","first_seen":"2026-05-14","last_updated":"2026-05-14","key_facts":["Toggle-install package of 15 agentic wor"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"gemini-intelligence-android-2026","title":"Google Gemini Intelligence / I/O 2026: Gemini Omni, Android","first_seen":"2026-05-14","last_updated":"2026-05-23","key_facts":["Proactive AI moving across Android apps"],"sources":[],"category":"Model Releases","coverage_count":8},{"id":"microsoft-cancels-claude-code-licenses","title":"Microsoft cancels internal Claude Code licenses","first_seen":"2026-05-15","last_updated":"2026-05-15","key_facts":["Experiences+Devices org (Windows, M365)"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"semantic-kernel-rce-cve-2026","title":"Semantic Kernel RCE: CVE-2026-26030 (CVSS 9.8)","first_seen":"2026-05-15","last_updated":"2026-05-15","key_facts":["CVE-2026-26030 (CVSS 9.8, Python SDK)"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"anthropic-gates-foundation-partnership","title":"Anthropic forms $200M four-year AI partnership with Gates Foundation","first_seen":"2026-05-16","last_updated":"2026-05-16","key_facts":["$200M commitment over four years: grants"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"openai-codex-mobile-memory-web","title":"OpenAI Codex: mobile launch, persistent memory preview","first_seen":"2026-05-16","last_updated":"2026-05-16","key_facts":["Codex available in ChatGPT iOS/Android a"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"mistral-medium-3-5-work-mode","title":"Mistral Medium 3.5: 128B open-weights, 77.6% SWE-bench","first_seen":"2026-05-16","last_updated":"2026-05-16","key_facts":["128B dense model, 256K context, modified"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"five-eyes-agentic-ai-guidance","title":"Five Eyes Careful Adoption of Agentic AI Services guidance","first_seen":"2026-05-16","last_updated":"2026-05-16","key_facts":["Published May 1 2026 by CISA, NSA, Austr"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"pwc-anthropic-expanded-partnership","title":"PwC expands Anthropic alliance: 30,000 staff on Claude agents","first_seen":"2026-05-17","last_updated":"2026-05-17","key_facts":["PwC rolling out Claude Code and Claude C"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"cerebras-ipo-nasdaq-may-2026","title":"Cerebras IPO (CBRS): $5.55B raise, 68% first-day pop","first_seen":"2026-05-17","last_updated":"2026-05-17","key_facts":["Priced at $185/share May 13; raised $5.5"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"mcp-2026-roadmap","title":"MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle","first_seen":"2026-05-18","last_updated":"2026-05-24","key_facts":["Roadmap organized around Working Groups "],"sources":[],"category":"Tools & Frameworks","coverage_count":3},{"id":"meta-avocado-delayed","title":"Meta Avocado delayed past May; benchmarks below GPT-5.5","first_seen":"2026-05-18","last_updated":"2026-05-18","key_facts":["Meta's flagship proprietary model delayed"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"subq-1m-subquadratic-llm","title":"SubQ 1M-Preview: first fully subquadratic LLM (SSA architecture)","first_seen":"2026-05-17","last_updated":"2026-05-17","key_facts":["Subquadratic Selective Attention (SSA)"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"claude-for-creative-work","title":"Claude for Creative Work: Adobe CC, Autodesk Fusion connectors","first_seen":"2026-05-19","last_updated":"2026-05-19","key_facts":["Nine connectors: Adobe Creative Cloud"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"anthropic-kpmg-alliance","title":"KPMG + Anthropic global alliance: 276,000 staff on Claude","first_seen":"2026-05-20","last_updated":"2026-05-20","key_facts":["Global alliance announced May 19 2026"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"anthropic-cache-diagnostics","title":"Anthropic cache diagnostics public beta: API cache_miss field","first_seen":"2026-05-20","last_updated":"2026-05-20","key_facts":["Pass diagnostics.previous_message_id on "],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"gemini-3-5-flash","title":"Gemini 3.5 Flash: GA May 19 2026, 1M context","first_seen":"2026-05-20","last_updated":"2026-05-20","key_facts":["GA at Google I/O May 19; replaces Gemini"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"google-antigravity-2-0","title":"Google Antigravity 2.0: agent-first coding platform with CLI","first_seen":"2026-05-20","last_updated":"2026-05-20","key_facts":["Announced at Google I/O May 19"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"openai-malta-dell-codex-enterprise","title":"OpenAI/Malta ChatGPT Plus for all citizens","first_seen":"2026-05-19","last_updated":"2026-05-19","key_facts":["Malta partnership: world-first national "],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"anthropic-q2-2026-profitability","title":"Anthropic projects first profitable quarter: $10.9B Q2 revenue","first_seen":"2026-05-21","last_updated":"2026-05-21","key_facts":["Q2 2026 revenue projected at $10.9B"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"anthropic-acquires-stainless","title":"Anthropic acquires Stainless ($300M+): SDK-generation platform","first_seen":"2026-05-21","last_updated":"2026-05-21","key_facts":["Acquisition price $300M+; founder Alex R"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"karpathy-joins-anthropic","title":"Andrej Karpathy joins Anthropic","first_seen":"2026-05-21","last_updated":"2026-05-21","key_facts":["Announced May 19 2026; Karpathy starts i"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"musk-openai-lawsuit-verdict","title":"Elon Musk loses OpenAI lawsuit: all claims dismissed","first_seen":"2026-05-21","last_updated":"2026-05-21","key_facts":["Federal jury in Oakland unanimously dism"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"pope-leo-ai-encyclical-olah","title":"Pope Leo XIV AI encyclical Magnifica Humanitas","first_seen":"2026-05-21","last_updated":"2026-05-25","key_facts":["Encyclical titled Magnifica Humanitas"],"sources":[],"category":"Wildcard","coverage_count":3},{"id":"openai-ipo-confidential-filing","title":"OpenAI files confidential IPO S-1 with Goldman, Morgan Stanley","first_seen":"2026-05-22","last_updated":"2026-05-22","key_facts":["Confidential S-1 filed with SEC"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"webmcp-chrome-origin-trial","title":"WebMCP: Google proposed open web standard for AI agent tools","first_seen":"2026-05-22","last_updated":"2026-05-22","key_facts":["Proposed W3C Web Machine Learning spec"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"anthropic-microsoft-maia-chip-talks","title":"Anthropic in early talks to rent Microsoft Maia 200 AI chips","first_seen":"2026-05-23","last_updated":"2026-05-23","key_facts":["Early-stage discussions with Microsoft"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"teampcp-nx-console-supply-chain-attack","title":"TeamPCP Nx Console VS Code supply chain attack","first_seen":"2026-05-23","last_updated":"2026-05-23","key_facts":["May 11: TeamPCP compromised TanStack"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"openai-erdos-unit-distance-conjecture","title":"OpenAI reasoning model disproves Erdos unit distance conjecture","first_seen":"2026-05-24","last_updated":"2026-05-24","key_facts":["General-purpose OpenAI reasoning model"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"trump-ai-eo-voluntary-prerelease-postponed","title":"Trump pulls 90-day AI EO; signs revised 30-day voluntary EO","first_seen":"2026-05-24","last_updated":"2026-06-04","key_facts":["White House canceled signing of EO"],"sources":[],"category":"Wildcard","coverage_count":3},{"id":"meta-ai-restructuring-may-2026","title":"Meta cuts 8,000 roles, moves 7,000 to AI teams","first_seen":"2026-05-23","last_updated":"2026-05-27","key_facts":["8,000 roles eliminated (10% of ~80,000)"],"sources":[],"category":"Wildcard","coverage_count":2},{"id":"cnbc-disruptor-50-2026-anthropic-1","title":"CNBC Disruptor 50 2026: Anthropic ranks #1, OpenAI #2","first_seen":"2026-05-25","last_updated":"2026-05-25","key_facts":["Anthropic ranked #1 on CNBC's 14th annual"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"apple-wwdc-2026-gemini-siri-ios-27","title":"Apple WWDC 2026 (June 8-12): Gemini-powered Siri, iOS 27","first_seen":"2026-05-25","last_updated":"2026-06-08","key_facts":["WWDC 2026 runs June 8-12; keynote June 8","Extensions system confirmed: users pick Claude, Gemini, or ChatGPT as backend for Siri/Writing Tools/Image Playground","Siri powered by ~1.2T-parameter custom Gemini model at ~$1B/year license; iOS 27 Beta 1 released June 8 2026; consumer rollout fall 2026"],"sources":["https://nerdleveltech.com/ios-27-extensions-third-party-ai-models-apple-intelligence","https://www.macrumors.com/guide/wwdc-2026-what-to-expect/"],"category":"Tools & Frameworks","coverage_count":3},{"id":"nextera-dominion-67b-ai-power","title":"NextEra Energy acquires Dominion for $67B to power AI data centers","first_seen":"2026-05-25","last_updated":"2026-05-25","key_facts":["NextEra Energy acquiring Dominion Energy"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"gemini-omni","title":"Gemini Omni: any-input-to-video multimodal model","first_seen":"2026-05-27","last_updated":"2026-05-27","key_facts":["Announced at Google I/O May 19 2026"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"stable-audio-3","title":"Stable Audio 3.0: 6-minute open-weight music generation","first_seen":"2026-05-27","last_updated":"2026-05-27","key_facts":["Released May 20 2026; four models"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"grok-4-3","title":"Grok 4.3: xAI cost-efficient frontier model with 1M context","first_seen":"2026-05-27","last_updated":"2026-05-27","key_facts":["Launched May 4 2026 as xAI's current"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"chatgpt-excel-sheets-ga","title":"ChatGPT for Excel and Google Sheets exits beta","first_seen":"2026-05-27","last_updated":"2026-05-27","key_facts":["Out of beta; globally available"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"microsoft-rampart-clarity","title":"Microsoft open-sources RAMPART + Clarity: agent testing tools","first_seen":"2026-05-28","last_updated":"2026-05-28","key_facts":["RAMPART: Risk Assessment and Measurement"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"openai-synthid-c2pa","title":"OpenAI joins C2PA steering committee, embeds SynthID watermarks","first_seen":"2026-05-28","last_updated":"2026-05-28","key_facts":["OpenAI joined C2PA standard steering"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"qwen-3-7-max","title":"Qwen 3.7 Max: Alibaba agent-focused flagship, 1M context","first_seen":"2026-05-28","last_updated":"2026-05-28","key_facts":["Purpose-built for agentic coding"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"armada-deployable-data-centers","title":"Armada raises $230M Series B for modular deployable data centers","first_seen":"2026-05-28","last_updated":"2026-05-28","key_facts":["Modular units deployable in days"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"claude-opus-4-8-dynamic-workflows","title":"Claude Opus 4.8: Dynamic Workflows research preview","first_seen":"2026-05-29","last_updated":"2026-06-08","key_facts":["Released May 28 2026; Dynamic Workflows","Available in Microsoft Foundry model catalog: $5/1M input, $25/1M output, 200K context; standard Azure credits do not apply"],"sources":["https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-4-8-is-now-available-in-microsoft-foundry/4523367"],"category":"Anthropic","coverage_count":2},{"id":"gemini-3-pro-deep-think","title":"Gemini 3 Pro + Deep Think: 45.1% ARC-AGI-2","first_seen":"2026-05-29","last_updated":"2026-05-29","key_facts":["Released May 28 2026 in preview"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"california-ai-bills-crossover-2026","title":"California AI legislation: 30 bills cross chamber deadline","first_seen":"2026-05-29","last_updated":"2026-05-29","key_facts":["Crossover deadline May 29 2026"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"openai-rosalind-biodefense","title":"OpenAI Rosalind Biodefense Program: worldwide expansion","first_seen":"2026-05-30","last_updated":"2026-06-07","key_facts":["Rosalind Biodefense Program opens truste"],"sources":[],"category":"Model Releases","coverage_count":2},{"id":"openai-frontier-governance-framework","title":"OpenAI Frontier Governance Framework: safety practices mapped","first_seen":"2026-05-30","last_updated":"2026-05-30","key_facts":["Published May 28 2026; maps OpenAI safety"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"cisco-multiturn-ai-safety-gap","title":"Cisco research: multi-turn conversations raise AI jailbreak success","first_seen":"2026-05-30","last_updated":"2026-05-30","key_facts":["Cisco multi-turn red-teaming results"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"anthropic-programmatic-credit-june-2026","title":"Anthropic billing split June 15: programmatic usage credit pool","first_seen":"2026-06-01","last_updated":"2026-06-07","key_facts":["Effective June 15 2026; Agent SDK, -p, Actions"],"sources":[],"category":"Anthropic","coverage_count":2},{"id":"github-copilot-ai-credits-june-2026","title":"GitHub Copilot moves to usage-based AI Credits billing","first_seen":"2026-06-01","last_updated":"2026-06-01","key_facts":["1 AI Credit = $0.01 USD, token-metered"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"langgraph-1-2","title":"LangGraph v1.2: DeltaChannel efficient checkpointing","first_seen":"2026-06-01","last_updated":"2026-06-01","key_facts":["DeltaChannel: checkpoints only increment"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"gemini-3-5-pro-preview","title":"Gemini 3.5 Pro: limited Vertex enterprise preview","first_seen":"2026-06-01","last_updated":"2026-06-01","key_facts":["Announced at Google I/O May 19"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"openai-model-deprecations-june-aug-2026","title":"OpenAI deprecation timeline: GPT-4.5 exits ChatGPT June 27","first_seen":"2026-06-01","last_updated":"2026-06-01","key_facts":["GPT-4.5: removed from ChatGPT June 27"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"claude-4-api-deprecation-june-2026","title":"Claude Sonnet 4 + Opus 4 API hard retirement June 15 2026","first_seen":"2026-06-02","last_updated":"2026-06-02","key_facts":["claude-sonnet-4-20250514 retirement"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"microsoft-build-2026-mai-polaris","title":"Microsoft Build 2026: Project Polaris replaces GPT-4 in Copilot","first_seen":"2026-06-02","last_updated":"2026-06-02","key_facts":["Project Polaris: in-house MoE coding model"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"sysdig-llm-agent-intrusion","title":"Sysdig: first confirmed autonomous LLM-agent cyberattack","first_seen":"2026-06-04","last_updated":"2026-06-04","key_facts":["First documented live cyberattack driven"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"minimax-m3","title":"MiniMax M3: open-weight 1M-context coding model","first_seen":"2026-06-04","last_updated":"2026-06-04","key_facts":["Released June 1 2026; Mixture-of-Seqenc"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"nvidia-cosmos-3","title":"NVIDIA Cosmos 3: open omnimodal foundation model for physical AI","first_seen":"2026-06-04","last_updated":"2026-06-04","key_facts":["Released May 31/June 1 2026"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"a2a-protocol-v1","title":"Agent-to-Agent (A2A) Protocol v1.0 GA: 7-vendor support","first_seen":"2026-06-04","last_updated":"2026-06-04","key_facts":["A2A Protocol reached v1.0 GA"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"fastmcp-3-4-remote","title":"FastMCP 3.4.0: stdio-to-remote transport bridge for MCP","first_seen":"2026-06-04","last_updated":"2026-06-04","key_facts":["FastMCP 3.4.0 The remote release shipped"],"sources":[],"category":"Tools & Frameworks","coverage_count":1},{"id":"great-american-ai-act","title":"Great American AI Act: bipartisan House discussion draft","first_seen":"2026-06-05","last_updated":"2026-06-05","key_facts":["Discussion draft released June 4 2026"],"sources":[],"category":"Wildcard","coverage_count":1},{"id":"claude-ai-for-science-chemistry-nmr","title":"Claude as Chemist: Opus 4.7 matches dedicated NMR tools","first_seen":"2026-06-06","last_updated":"2026-06-06","key_facts":["Anthropic AI for Science program expands"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"claude-partner-network-services-track","title":"Claude Partner Network: Services Track + Partner Hub launched","first_seen":"2026-06-06","last_updated":"2026-06-06","key_facts":["Three-tier Services Track for consulting"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"gpt-5-6-rumor-june-2026","title":"[RUMOR] GPT-5.6 internal benchmark leaks","first_seen":"2026-06-06","last_updated":"2026-06-06","key_facts":["Benchmark leaks attributed to internal OpenAI"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"claude-managed-agents-self-hosted-sandboxes","title":"Claude Managed Agents: self-hosted sandboxes public beta","first_seen":"2026-06-07","last_updated":"2026-06-07","key_facts":["Announced Code with Claude London May 19"],"sources":[],"category":"Anthropic","coverage_count":1},{"id":"chatgpt-memory-dreaming-v3","title":"ChatGPT Memory Dreaming V3 extends to Free users","first_seen":"2026-06-07","last_updated":"2026-06-07","key_facts":["Background synthesis reads across years"],"sources":[],"category":"Model Releases","coverage_count":1},{"id":"bagen-llm-agents-budget-aware","title":"BAGEN: frontier LLM agents are not budget-aware (arXiv 2606.00198)","first_seen":"2026-06-07","last_updated":"2026-06-07","key_facts":["Northwestern/O2 Lab; five frontier agents"],"sources":[],"category":"Research & Technical","coverage_count":1},{"id":"pentagon-anthropic-dod-blacklist","title":"Pentagon blacklists Anthropic; DoD tests OpenAI/Gemini/Grok as replacements","first_seen":"2026-06-08","last_updated":"2026-06-08","key_facts":["March 2026: DoD designated Anthropic supply-chain risk after Anthropic refused to remove restrictions on mass surveillance/lethal autonomous weapons","180-day deadline (expires ~September 2026) to phase Claude out of all DoD workflows; defense vendors must certify non-use","OpenAI and Gemini already deployed in some DoD systems as of June 2026; xAI Grok also in testing"],"sources":["https://www.bloomberg.com/news/articles/2026-05-21/pentagon-tests-rival-ai-models-in-race-to-replace-anthropic","https://www.cnbc.com/2026/03/09/anthropic-was-the-pentagons-choice-for-ai-now-its-banned-and-experts-are-worried.html","https://federalnewsnetwork.com/defense-news/2026/03/dod-confident-it-can-replace-anthropics-claude-within-six-months-but-some-warn-transition-wont-be-easy/"],"category":"Wildcard","coverage_count":1},{"id":"eu-ai-act-august-2026-enforcement","title":"EU AI Act full enforcement August 2, 2026: GPAI obligations live","first_seen":"2026-06-08","last_updated":"2026-06-08","key_facts":["August 2, 2026 = full EU AI Act applies including GPAI model obligations","June 2026: Code of Practice on AI-generated content marking due for publication","EU Parliament voted to delay high-risk AI compliance to Dec 2027 but requires EU Council agreement before Aug 2; not yet secured"],"sources":["https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai","https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline"],"category":"Wildcard","coverage_count":1}]}
+{
+  "topics": [
+    {
+      "id": "anthropic-spacex-colossus-compute-deal",
+      "title": "Anthropic secures all of SpaceX's Colossus 1 compute; rate l",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-22",
+      "key_facts": [
+        "Anthropic rented all compute capacity at"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 3
+    },
+    {
+      "id": "code-with-claude-2026-sf",
+      "title": "Code with Claude 2026 developer conference: SF May 6, London",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-20",
+      "key_facts": [
+        "SF event ran May 6; Claude Code v2.1.126"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 3
+    },
+    {
+      "id": "claude-mythos-project-glasswing",
+      "title": "Claude Mythos Preview: thousands of zero-days found; Project",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "Mythos Preview identified thousands of p",
+        "Initial 50-partner cohort found 10,000+ high/critical severity security flaws",
+        "June 2: expanded to ~150 additional orgs across 15+ countries (AU, CA, FR, DE, IN, JP, KR, etc.), total ~200 orgs; focus on critical infrastructure",
+        "Bloomberg June 9: named tension between Anthropic calling Mythos 'too dangerous for general release' and ongoing expansion"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-06-09/anthropic-calls-mythos-dangerous-why-is-it-expanding-access",
+        "https://www.cnbc.com/2026/06/02/anthropic-mythos-ai-project-glasswing.html",
+        "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 4
+    },
+    {
+      "id": "trustfall-ai-cli-mcp-rce",
+      "title": "TrustFall: one-keypress RCE in Claude Code, Gemini CLI, Curs",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "Malicious cloned repo includes .mcp.json"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 2
+    },
+    {
+      "id": "claude-code-routines-launch",
+      "title": "Claude Code Routines: research preview launched April 14",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "Routines are prompt + repo + connectors "
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-mcp-improvements-may-2026",
+      "title": "Claude Code MCP quality-of-life improvements (May 2026 relea",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "/mcp command now shows tool count per se"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-agent-framework-1-0",
+      "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "Released April 3 2026; open-source, prod"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 2
+    },
+    {
+      "id": "gpt-5-5-instant-chatgpt-default",
+      "title": "GPT-5.5 Instant replaces GPT-5.3 as ChatGPT default model (M",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "GPT-5.5 Instant became ChatGPT's default"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-opus-4-7",
+      "title": "Claude Opus 4.7: task budgets, high-res vision, new tokenize",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "High-res image support up to 2576px / 3."
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "xai-musk-anthropic-rivals-compute-partners",
+      "title": "xAI/Musk rents Colossus 1 to Anthropic despite months of pub",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "Deal signed two months after Musk wrote "
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-google-200b-compute-deal",
+      "title": "Anthropic commits $200B to Google's cloud and TPU chips over",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "Anthropic signed a deal with Google and "
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-security-public-beta",
+      "title": "Claude Security enters public beta: Opus 4.7 vulnerability s",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-06-06",
+      "key_facts": [
+        "Available at claude.ai/security for Ente"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 3
+    },
+    {
+      "id": "anthropic-goldman-blackstone-jv",
+      "title": "Anthropic forms $1.5B enterprise AI services JV with Goldman",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "AI-native services firm announced May 4 "
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-oauth-mcp-hijacking",
+      "title": "Claude Code OAuth tokens stolen via npm postinstall MCP hija",
+      "first_seen": "2026-05-08",
+      "last_updated": "2026-05-08",
+      "key_facts": [
+        "OAuth tokens and MCP config stored in ~/"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-akamai-1-8b-deal",
+      "title": "Anthropic inks $1.8B compute deal with Akamai (May 8, 2026)",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "$1.8B seven-year contract for Akamai's C"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-900b-valuation-round",
+      "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-06-08",
+      "key_facts": [
+        "Multiple preemptive offers at $850B-$900",
+        "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
+        "$965B post-money valuation; $47B ARR as of May 2026",
+        "Q2 2026 projected $10.9B revenue, $559M operating profit (~5% margin); IPO target October 2026"
+      ],
+      "sources": [
+        "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
+        "https://www.anthropic.com/news/confidential-draft-s1-sec"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 8
+    },
+    {
+      "id": "anthropic-finance-agents-m365",
+      "title": "Anthropic ships 10 financial-services AI agents and full Mic",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "10 ready-to-run agent templates: pitchbo"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "aws-mcp-server-ga",
+      "title": "AWS MCP Server generally available: IAM-guarded, CloudTrail-",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "AWS MCP Server reached GA on May 6 2026;"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "servicenow-build-agent-coding-tools",
+      "title": "ServiceNow Build Agent ships inside Claude Code, Cursor, Wind",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "Announced at Knowledge 2026; Build Agent"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-ultrareview",
+      "title": "Claude Code /ultrareview: parallel multi-agent cloud code re",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "Slash command orchestrates specialist su"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-1-pro-higher-limits",
+      "title": "Gemini 3.1 Pro rolling out higher usage limits in Gemini App",
+      "first_seen": "2026-05-09",
+      "last_updated": "2026-05-09",
+      "key_facts": [
+        "Gemini 3.1 Pro preview launched February"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-managed-agents-dreaming",
+      "title": "Claude Managed Agents: dreaming research preview; Outcomes +",
+      "first_seen": "2026-05-10",
+      "last_updated": "2026-05-10",
+      "key_facts": [
+        "Dreaming is a scheduled background proce"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-sonnet-5",
+      "title": "Claude Sonnet 5: 92.4% SWE-bench Verified, 88.3% OSWorld-Ver",
+      "first_seen": "2026-05-10",
+      "last_updated": "2026-05-10",
+      "key_facts": [
+        "Released April 1 2026; model string clau"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-40b-ai-equity-strategy-2026",
+      "title": "Nvidia crosses $40B in AI equity commitments in 2026",
+      "first_seen": "2026-05-10",
+      "last_updated": "2026-05-10",
+      "key_facts": [
+        "$30B stake in OpenAI, $5B in Intel, $3.2"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-platform-aws-ga",
+      "title": "Claude Platform on AWS: GA launch with Managed Agents, Skills",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "GA announced May 11-12 2026; first cloud"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-v2-1-139-goal-agent-view",
+      "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "/goal sets a completion condition and ru"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 19
+    },
+    {
+      "id": "gemini-agent-web-may-2026",
+      "title": "Gemini Agent on web: experimental multi-tool agent for Google",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "Launched May 11 2026 on gemini.google.co"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepseek-v4-pro-flash",
+      "title": "DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "V4 Pro: 1.6T total / 49B active paramete"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "salesforce-data-360-mcp-server",
+      "title": "Salesforce Data 360 MCP Server: developer preview",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "Open-source developer preview; connects "
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "emergent-misalignment-feature-superposition-geometry",
+      "title": "Emergent Misalignment via Feature Superposition Geometry",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "Geometric account of emergent misalignme"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "caisi-frontier-labs-five-predeployment",
+      "title": "CAISI pre-deployment safety review expands to five frontier labs",
+      "first_seen": "2026-05-12",
+      "last_updated": "2026-05-12",
+      "key_facts": [
+        "US Commerce Department CAISI added Googl"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-legal",
+      "title": "Claude for Legal: 12 practice-area plugins, 20+ MCP connectors",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "key_facts": [
+        "12 specialist legal plugins: litigation "
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-deployment-company",
+      "title": "OpenAI Deployment Company: $4B+ standalone enterprise AI firm",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "key_facts": [
+        "$4B+ venture; majority-owned by OpenAI"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-xi-beijing-ai-chips-2026",
+      "title": "Trump-Xi Beijing summit: Jensen Huang joins, AI chip deals",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-14",
+      "key_facts": [
+        "Trump in Beijing for Xi summit; AI chip "
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 2
+    },
+    {
+      "id": "agent-memory-survey-storage-reflection-experience",
+      "title": "Agent Memory Survey: Storage to Reflection to Experience",
+      "first_seen": "2026-05-13",
+      "last_updated": "2026-05-13",
+      "key_facts": [
+        "Three-stage evolutionary framework: Stor"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-small-business",
+      "title": "Claude for Small Business: 15 workflows, 15 skills, 8 connectors",
+      "first_seen": "2026-05-14",
+      "last_updated": "2026-05-14",
+      "key_facts": [
+        "Toggle-install package of 15 agentic wor"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-intelligence-android-2026",
+      "title": "Google Gemini Intelligence / I/O 2026: Gemini Omni, Android",
+      "first_seen": "2026-05-14",
+      "last_updated": "2026-05-23",
+      "key_facts": [
+        "Proactive AI moving across Android apps"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 8
+    },
+    {
+      "id": "microsoft-cancels-claude-code-licenses",
+      "title": "Microsoft cancels internal Claude Code licenses",
+      "first_seen": "2026-05-15",
+      "last_updated": "2026-05-15",
+      "key_facts": [
+        "Experiences+Devices org (Windows, M365)"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "semantic-kernel-rce-cve-2026",
+      "title": "Semantic Kernel RCE: CVE-2026-26030 (CVSS 9.8)",
+      "first_seen": "2026-05-15",
+      "last_updated": "2026-05-15",
+      "key_facts": [
+        "CVE-2026-26030 (CVSS 9.8, Python SDK)"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-gates-foundation-partnership",
+      "title": "Anthropic forms $200M four-year AI partnership with Gates Foundation",
+      "first_seen": "2026-05-16",
+      "last_updated": "2026-05-16",
+      "key_facts": [
+        "$200M commitment over four years: grants"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-codex-mobile-memory-web",
+      "title": "OpenAI Codex: mobile launch, persistent memory preview",
+      "first_seen": "2026-05-16",
+      "last_updated": "2026-05-16",
+      "key_facts": [
+        "Codex available in ChatGPT iOS/Android a"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "mistral-medium-3-5-work-mode",
+      "title": "Mistral Medium 3.5: 128B open-weights, 77.6% SWE-bench",
+      "first_seen": "2026-05-16",
+      "last_updated": "2026-05-16",
+      "key_facts": [
+        "128B dense model, 256K context, modified"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "five-eyes-agentic-ai-guidance",
+      "title": "Five Eyes Careful Adoption of Agentic AI Services guidance",
+      "first_seen": "2026-05-16",
+      "last_updated": "2026-05-16",
+      "key_facts": [
+        "Published May 1 2026 by CISA, NSA, Austr"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "pwc-anthropic-expanded-partnership",
+      "title": "PwC expands Anthropic alliance: 30,000 staff on Claude agents",
+      "first_seen": "2026-05-17",
+      "last_updated": "2026-05-17",
+      "key_facts": [
+        "PwC rolling out Claude Code and Claude C"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "cerebras-ipo-nasdaq-may-2026",
+      "title": "Cerebras IPO (CBRS): $5.55B raise, 68% first-day pop",
+      "first_seen": "2026-05-17",
+      "last_updated": "2026-05-17",
+      "key_facts": [
+        "Priced at $185/share May 13; raised $5.5"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "mcp-2026-roadmap",
+      "title": "MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle",
+      "first_seen": "2026-05-18",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "Roadmap organized around Working Groups ",
+        "2026-07 RC published; GA target July 28: stateless protocol core, MCP Apps (server-rendered UI), Tasks extension graduated, OAuth 2.1/OIDC auth hardening",
+        "Ecosystem: 10,000+ public servers, 110M+ monthly SDK downloads; ~40% of public servers expose tools with no auth (VIPER-MCP: 67 CVEs from 40k repo sweep)"
+      ],
+      "sources": [
+        "https://aaif.io/blog/mcp-is-now-enterprise-infrastructure-everything-that-happened-at-mcp-dev-summit-north-america-2026/",
+        "https://medium.com/@balajibal/mcps-upcoming-2026-release-is-a-big-deal-1d15990f121f",
+        "https://adversa.ai/blog/top-mcp-security-resources-june-2026/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 4
+    },
+    {
+      "id": "meta-avocado-delayed",
+      "title": "Meta Avocado delayed past May; benchmarks below GPT-5.5",
+      "first_seen": "2026-05-18",
+      "last_updated": "2026-05-18",
+      "key_facts": [
+        "Meta's flagship proprietary model delayed"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "subq-1m-subquadratic-llm",
+      "title": "SubQ 1M-Preview: first fully subquadratic LLM (SSA architecture)",
+      "first_seen": "2026-05-17",
+      "last_updated": "2026-05-17",
+      "key_facts": [
+        "Subquadratic Selective Attention (SSA)"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-creative-work",
+      "title": "Claude for Creative Work: Adobe CC, Autodesk Fusion connectors",
+      "first_seen": "2026-05-19",
+      "last_updated": "2026-05-19",
+      "key_facts": [
+        "Nine connectors: Adobe Creative Cloud"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-kpmg-alliance",
+      "title": "KPMG + Anthropic global alliance: 276,000 staff on Claude",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-20",
+      "key_facts": [
+        "Global alliance announced May 19 2026"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-cache-diagnostics",
+      "title": "Anthropic cache diagnostics public beta: API cache_miss field",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-20",
+      "key_facts": [
+        "Pass diagnostics.previous_message_id on "
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "title": "Gemini 3.5 Flash: GA May 19 2026, 1M context",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-20",
+      "key_facts": [
+        "GA at Google I/O May 19; replaces Gemini"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-antigravity-2-0",
+      "title": "Google Antigravity 2.0: agent-first coding platform with CLI",
+      "first_seen": "2026-05-20",
+      "last_updated": "2026-05-20",
+      "key_facts": [
+        "Announced at Google I/O May 19"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-malta-dell-codex-enterprise",
+      "title": "OpenAI/Malta ChatGPT Plus for all citizens",
+      "first_seen": "2026-05-19",
+      "last_updated": "2026-05-19",
+      "key_facts": [
+        "Malta partnership: world-first national "
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-q2-2026-profitability",
+      "title": "Anthropic projects first profitable quarter: $10.9B Q2 revenue",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-21",
+      "key_facts": [
+        "Q2 2026 revenue projected at $10.9B"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-acquires-stainless",
+      "title": "Anthropic acquires Stainless ($300M+): SDK-generation platform",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-21",
+      "key_facts": [
+        "Acquisition price $300M+; founder Alex R"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "karpathy-joins-anthropic",
+      "title": "Andrej Karpathy joins Anthropic",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-21",
+      "key_facts": [
+        "Announced May 19 2026; Karpathy starts i"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "musk-openai-lawsuit-verdict",
+      "title": "Elon Musk loses OpenAI lawsuit: all claims dismissed",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-21",
+      "key_facts": [
+        "Federal jury in Oakland unanimously dism"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "pope-leo-ai-encyclical-olah",
+      "title": "Pope Leo XIV AI encyclical Magnifica Humanitas",
+      "first_seen": "2026-05-21",
+      "last_updated": "2026-05-25",
+      "key_facts": [
+        "Encyclical titled Magnifica Humanitas"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 3
+    },
+    {
+      "id": "openai-ipo-confidential-filing",
+      "title": "OpenAI files confidential IPO S-1 with Goldman, Morgan Stanley",
+      "first_seen": "2026-05-22",
+      "last_updated": "2026-05-22",
+      "key_facts": [
+        "Confidential S-1 filed with SEC"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "webmcp-chrome-origin-trial",
+      "title": "WebMCP: Google proposed open web standard for AI agent tools",
+      "first_seen": "2026-05-22",
+      "last_updated": "2026-05-22",
+      "key_facts": [
+        "Proposed W3C Web Machine Learning spec"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-microsoft-maia-chip-talks",
+      "title": "Anthropic in early talks to rent Microsoft Maia 200 AI chips",
+      "first_seen": "2026-05-23",
+      "last_updated": "2026-05-23",
+      "key_facts": [
+        "Early-stage discussions with Microsoft"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "teampcp-nx-console-supply-chain-attack",
+      "title": "TeamPCP Nx Console VS Code supply chain attack",
+      "first_seen": "2026-05-23",
+      "last_updated": "2026-05-23",
+      "key_facts": [
+        "May 11: TeamPCP compromised TanStack"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-erdos-unit-distance-conjecture",
+      "title": "OpenAI reasoning model disproves Erdos unit distance conjecture",
+      "first_seen": "2026-05-24",
+      "last_updated": "2026-05-24",
+      "key_facts": [
+        "General-purpose OpenAI reasoning model"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-ai-eo-voluntary-prerelease-postponed",
+      "title": "Trump pulls 90-day AI EO; signs revised 30-day voluntary EO",
+      "first_seen": "2026-05-24",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "White House canceled signing of EO"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 3
+    },
+    {
+      "id": "meta-ai-restructuring-may-2026",
+      "title": "Meta cuts 8,000 roles, moves 7,000 to AI teams",
+      "first_seen": "2026-05-23",
+      "last_updated": "2026-05-27",
+      "key_facts": [
+        "8,000 roles eliminated (10% of ~80,000)"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 2
+    },
+    {
+      "id": "cnbc-disruptor-50-2026-anthropic-1",
+      "title": "CNBC Disruptor 50 2026: Anthropic ranks #1, OpenAI #2",
+      "first_seen": "2026-05-25",
+      "last_updated": "2026-05-25",
+      "key_facts": [
+        "Anthropic ranked #1 on CNBC's 14th annual"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "apple-wwdc-2026-gemini-siri-ios-27",
+      "title": "Apple WWDC 2026 (June 8-12): Gemini-powered Siri, iOS 27",
+      "first_seen": "2026-05-25",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "WWDC 2026 runs June 8-12; keynote June 8",
+        "Extensions system confirmed: users pick Claude, Gemini, or ChatGPT as backend for Siri/Writing Tools/Image Playground",
+        "Siri powered by ~1.2T-parameter custom Gemini model at ~$1B/year license; iOS 27 Beta 1 released June 8 2026; consumer rollout fall 2026",
+        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API — apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes"
+      ],
+      "sources": [
+        "https://nerdleveltech.com/ios-27-extensions-third-party-ai-models-apple-intelligence",
+        "https://www.macrumors.com/guide/wwdc-2026-what-to-expect/",
+        "https://www.techtimes.com/articles/318039/20260609/wwdc-2026-developer-tools-foundation-models-now-swaps-ai-providers-without-code-changes.htm",
+        "https://developer.apple.com/videos/play/wwdc2026/241/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 4
+    },
+    {
+      "id": "nextera-dominion-67b-ai-power",
+      "title": "NextEra Energy acquires Dominion for $67B to power AI data centers",
+      "first_seen": "2026-05-25",
+      "last_updated": "2026-05-25",
+      "key_facts": [
+        "NextEra Energy acquiring Dominion Energy"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-omni",
+      "title": "Gemini Omni: any-input-to-video multimodal model",
+      "first_seen": "2026-05-27",
+      "last_updated": "2026-05-27",
+      "key_facts": [
+        "Announced at Google I/O May 19 2026"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "stable-audio-3",
+      "title": "Stable Audio 3.0: 6-minute open-weight music generation",
+      "first_seen": "2026-05-27",
+      "last_updated": "2026-05-27",
+      "key_facts": [
+        "Released May 20 2026; four models"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-4-3",
+      "title": "Grok 4.3: xAI cost-efficient frontier model with 1M context",
+      "first_seen": "2026-05-27",
+      "last_updated": "2026-05-27",
+      "key_facts": [
+        "Launched May 4 2026 as xAI's current"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "chatgpt-excel-sheets-ga",
+      "title": "ChatGPT for Excel and Google Sheets exits beta",
+      "first_seen": "2026-05-27",
+      "last_updated": "2026-05-27",
+      "key_facts": [
+        "Out of beta; globally available"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-rampart-clarity",
+      "title": "Microsoft open-sources RAMPART + Clarity: agent testing tools",
+      "first_seen": "2026-05-28",
+      "last_updated": "2026-05-28",
+      "key_facts": [
+        "RAMPART: Risk Assessment and Measurement"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-synthid-c2pa",
+      "title": "OpenAI joins C2PA steering committee, embeds SynthID watermarks",
+      "first_seen": "2026-05-28",
+      "last_updated": "2026-05-28",
+      "key_facts": [
+        "OpenAI joined C2PA standard steering"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "qwen-3-7-max",
+      "title": "Qwen 3.7 Max: Alibaba agent-focused flagship, 1M context",
+      "first_seen": "2026-05-28",
+      "last_updated": "2026-05-28",
+      "key_facts": [
+        "Purpose-built for agentic coding"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "armada-deployable-data-centers",
+      "title": "Armada raises $230M Series B for modular deployable data centers",
+      "first_seen": "2026-05-28",
+      "last_updated": "2026-05-28",
+      "key_facts": [
+        "Modular units deployable in days"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-opus-4-8-dynamic-workflows",
+      "title": "Claude Opus 4.8: Dynamic Workflows research preview",
+      "first_seen": "2026-05-29",
+      "last_updated": "2026-06-08",
+      "key_facts": [
+        "Released May 28 2026; Dynamic Workflows",
+        "Available in Microsoft Foundry model catalog: $5/1M input, $25/1M output, 200K context; standard Azure credits do not apply"
+      ],
+      "sources": [
+        "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-4-8-is-now-available-in-microsoft-foundry/4523367"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 2
+    },
+    {
+      "id": "gemini-3-pro-deep-think",
+      "title": "Gemini 3 Pro + Deep Think: 45.1% ARC-AGI-2",
+      "first_seen": "2026-05-29",
+      "last_updated": "2026-05-29",
+      "key_facts": [
+        "Released May 28 2026 in preview"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "california-ai-bills-crossover-2026",
+      "title": "California AI legislation: 30 bills cross chamber deadline",
+      "first_seen": "2026-05-29",
+      "last_updated": "2026-05-29",
+      "key_facts": [
+        "Crossover deadline May 29 2026"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-rosalind-biodefense",
+      "title": "OpenAI Rosalind Biodefense Program: worldwide expansion",
+      "first_seen": "2026-05-30",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "Rosalind Biodefense Program opens truste"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 2
+    },
+    {
+      "id": "openai-frontier-governance-framework",
+      "title": "OpenAI Frontier Governance Framework: safety practices mapped",
+      "first_seen": "2026-05-30",
+      "last_updated": "2026-05-30",
+      "key_facts": [
+        "Published May 28 2026; maps OpenAI safety"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "cisco-multiturn-ai-safety-gap",
+      "title": "Cisco research: multi-turn conversations raise AI jailbreak success",
+      "first_seen": "2026-05-30",
+      "last_updated": "2026-05-30",
+      "key_facts": [
+        "Cisco multi-turn red-teaming results"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-programmatic-credit-june-2026",
+      "title": "Anthropic billing split June 15: programmatic usage credit pool",
+      "first_seen": "2026-06-01",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "Effective June 15 2026; Agent SDK, -p, Actions",
+        "Credit amounts by plan: $20/mo Pro, $100/mo Max 5x, $200/mo Max 20x; metered at full API token rates",
+        "No rollover; resets each billing cycle; per-user (CI jobs cannot pool credits across committers)",
+        "Scope: Agent SDK (Python/TypeScript), claude -p, GitHub Actions, approved third-party apps; interactive Claude Code unaffected"
+      ],
+      "sources": [
+        "https://the-decoder.com/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-api-prices/",
+        "https://www.buildthisnow.com/blog/guide/mechanics/claude-billing-change-june-2026"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 3
+    },
+    {
+      "id": "github-copilot-ai-credits-june-2026",
+      "title": "GitHub Copilot moves to usage-based AI Credits billing",
+      "first_seen": "2026-06-01",
+      "last_updated": "2026-06-01",
+      "key_facts": [
+        "1 AI Credit = $0.01 USD, token-metered"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "langgraph-1-2",
+      "title": "LangGraph v1.2: DeltaChannel efficient checkpointing",
+      "first_seen": "2026-06-01",
+      "last_updated": "2026-06-01",
+      "key_facts": [
+        "DeltaChannel: checkpoints only increment"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-5-pro-preview",
+      "title": "Gemini 3.5 Pro: limited Vertex enterprise preview",
+      "first_seen": "2026-06-01",
+      "last_updated": "2026-06-01",
+      "key_facts": [
+        "Announced at Google I/O May 19"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-model-deprecations-june-aug-2026",
+      "title": "OpenAI deprecation timeline: GPT-4.5 exits ChatGPT June 27",
+      "first_seen": "2026-06-01",
+      "last_updated": "2026-06-01",
+      "key_facts": [
+        "GPT-4.5: removed from ChatGPT June 27"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-4-api-deprecation-june-2026",
+      "title": "Claude Sonnet 4 + Opus 4 API hard retirement June 15 2026",
+      "first_seen": "2026-06-02",
+      "last_updated": "2026-06-02",
+      "key_facts": [
+        "claude-sonnet-4-20250514 retirement"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-build-2026-mai-polaris",
+      "title": "Microsoft Build 2026: Project Polaris replaces GPT-4 in Copilot",
+      "first_seen": "2026-06-02",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "Project Polaris: in-house MoE coding model",
+        "MAI-Thinking-1: reasoning model counterpart; 35B active / ~1T total sparse MoE, 256K context; 97.0% AIME 2025, 94.5% AIME 2026",
+        "Trained from scratch on commercially licensed data, no OpenAI distillation; Surge blind evals preferred over Claude Sonnet 4.6; private preview on Microsoft Foundry; co-designed with Maia 200 silicon (1.4x efficiency gain)"
+      ],
+      "sources": [
+        "https://microsoft.ai/news/introducing-mai-thinking-1/",
+        "https://www.techtimes.com/articles/317631/20260602/microsoft-build-2026-mai-thinking-1-first-house-reasoning-model-trained-without-openai-data.htm"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 2
+    },
+    {
+      "id": "sysdig-llm-agent-intrusion",
+      "title": "Sysdig: first confirmed autonomous LLM-agent cyberattack",
+      "first_seen": "2026-06-04",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "First documented live cyberattack driven"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "minimax-m3",
+      "title": "MiniMax M3: open-weight 1M-context coding model",
+      "first_seen": "2026-06-04",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "Released June 1 2026; Mixture-of-Seqenc"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-cosmos-3",
+      "title": "NVIDIA Cosmos 3: open omnimodal foundation model for physical AI",
+      "first_seen": "2026-06-04",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "Released May 31/June 1 2026"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "a2a-protocol-v1",
+      "title": "Agent-to-Agent (A2A) Protocol v1.0 GA: 7-vendor support",
+      "first_seen": "2026-06-04",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "A2A Protocol reached v1.0 GA"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "fastmcp-3-4-remote",
+      "title": "FastMCP 3.4.0: stdio-to-remote transport bridge for MCP",
+      "first_seen": "2026-06-04",
+      "last_updated": "2026-06-04",
+      "key_facts": [
+        "FastMCP 3.4.0 The remote release shipped"
+      ],
+      "sources": [],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "great-american-ai-act",
+      "title": "Great American AI Act: bipartisan House discussion draft",
+      "first_seen": "2026-06-05",
+      "last_updated": "2026-06-05",
+      "key_facts": [
+        "Discussion draft released June 4 2026"
+      ],
+      "sources": [],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-ai-for-science-chemistry-nmr",
+      "title": "Claude as Chemist: Opus 4.7 matches dedicated NMR tools",
+      "first_seen": "2026-06-06",
+      "last_updated": "2026-06-06",
+      "key_facts": [
+        "Anthropic AI for Science program expands"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-partner-network-services-track",
+      "title": "Claude Partner Network: Services Track + Partner Hub launched",
+      "first_seen": "2026-06-06",
+      "last_updated": "2026-06-06",
+      "key_facts": [
+        "Three-tier Services Track for consulting"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gpt-5-6-rumor-june-2026",
+      "title": "[RUMOR] GPT-5.6 internal benchmark leaks",
+      "first_seen": "2026-06-06",
+      "last_updated": "2026-06-06",
+      "key_facts": [
+        "Benchmark leaks attributed to internal OpenAI"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-managed-agents-self-hosted-sandboxes",
+      "title": "Claude Managed Agents: self-hosted sandboxes public beta",
+      "first_seen": "2026-06-07",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "Announced Code with Claude London May 19"
+      ],
+      "sources": [],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "chatgpt-memory-dreaming-v3",
+      "title": "ChatGPT Memory Dreaming V3 extends to Free users",
+      "first_seen": "2026-06-07",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "Background synthesis reads across years"
+      ],
+      "sources": [],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "bagen-llm-agents-budget-aware",
+      "title": "BAGEN: frontier LLM agents are not budget-aware (arXiv 2606.00198)",
+      "first_seen": "2026-06-07",
+      "last_updated": "2026-06-07",
+      "key_facts": [
+        "Northwestern/O2 Lab; five frontier agents"
+      ],
+      "sources": [],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "pentagon-anthropic-dod-blacklist",
+      "title": "Pentagon blacklists Anthropic; DoD tests OpenAI/Gemini/Grok as replacements",
+      "first_seen": "2026-06-08",
+      "last_updated": "2026-06-08",
+      "key_facts": [
+        "March 2026: DoD designated Anthropic supply-chain risk after Anthropic refused to remove restrictions on mass surveillance/lethal autonomous weapons",
+        "180-day deadline (expires ~September 2026) to phase Claude out of all DoD workflows; defense vendors must certify non-use",
+        "OpenAI and Gemini already deployed in some DoD systems as of June 2026; xAI Grok also in testing"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-05-21/pentagon-tests-rival-ai-models-in-race-to-replace-anthropic",
+        "https://www.cnbc.com/2026/03/09/anthropic-was-the-pentagons-choice-for-ai-now-its-banned-and-experts-are-worried.html",
+        "https://federalnewsnetwork.com/defense-news/2026/03/dod-confident-it-can-replace-anthropics-claude-within-six-months-but-some-warn-transition-wont-be-easy/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "eu-ai-act-august-2026-enforcement",
+      "title": "EU AI Act full enforcement August 2, 2026: GPAI obligations live",
+      "first_seen": "2026-06-08",
+      "last_updated": "2026-06-08",
+      "key_facts": [
+        "August 2, 2026 = full EU AI Act applies including GPAI model obligations",
+        "June 2026: Code of Practice on AI-generated content marking due for publication",
+        "EU Parliament voted to delay high-risk AI compliance to Dec 2027 but requires EU Council agreement before Aug 2; not yet secured"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-foundation-models-swift-package",
+      "title": "Claude Swift package for Apple Foundation Models framework (WWDC 2026)",
+      "first_seen": "2026-06-09",
+      "last_updated": "2026-06-09",
+      "key_facts": [
+        "Anthropic released a Swift package implementing Apple's LanguageModel protocol (iOS 27 / macOS 27 / visionOS 27 / watchOS 27)",
+        "Single SPM dependency swap routes heavy queries from Apple on-device model to Claude; no session-code changes required",
+        "Supports streaming, tool calls, and structured outputs back into SwiftUI; authenticates via Anthropic API key"
+      ],
+      "sources": [
+        "https://claude.com/blog/claude-for-foundation-models",
+        "https://www.techtimes.com/articles/318039/20260609/wwdc-2026-developer-tools-foundation-models-now-swaps-ai-providers-without-code-changes.htm",
+        "https://developer.apple.com/videos/play/wwdc2026/241/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    }
+  ]
+}
