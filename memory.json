@@ -317,13 +317,16 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-06-07",
+      "last_updated": "2026-06-10T12:15:00Z",
       "key_facts": [
-        "/goal sets a completion condition and ru"
+        "/goal sets a completion condition and ru",
+        "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
+        "v2.1.169: /cd command changes working directory mid-session without breaking prompt cache",
+        "v2.1.169: disableBundledSkills / CLAUDE_CODE_DISABLE_BUNDLED_SKILLS hides built-in skills/workflows/slash-commands from the model; auto-retry on non-retryable API errors via fallback model; fixed image processing token bug and remote session startup stuck bug"
       ],
       "sources": [],
       "category": "Tools & Frameworks",
-      "coverage_count": 19
+      "coverage_count": 20
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -827,12 +830,13 @@
       "id": "apple-wwdc-2026-gemini-siri-ios-27",
       "title": "Apple WWDC 2026 (June 8-12): Gemini-powered Siri, iOS 27",
       "first_seen": "2026-05-25",
-      "last_updated": "2026-06-09",
+      "last_updated": "2026-06-10T12:15:00Z",
       "key_facts": [
         "WWDC 2026 runs June 8-12; keynote June 8",
         "Extensions system confirmed: users pick Claude, Gemini, or ChatGPT as backend for Siri/Writing Tools/Image Playground",
         "Siri powered by ~1.2T-parameter custom Gemini model at ~$1B/year license; iOS 27 Beta 1 released June 8 2026; consumer rollout fall 2026",
-        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API — apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes"
+        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API — apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes",
+        "PSOTU (June 9): Foundation Models gains image input, Dynamic Profiles for multi-agent workflows, free Private Cloud Compute for developers with <2M first-time downloads, Python SDK; framework going open source summer 2026"
       ],
       "sources": [
         "https://nerdleveltech.com/ios-27-extensions-third-party-ai-models-apple-intelligence",
@@ -841,7 +845,7 @@
         "https://developer.apple.com/videos/play/wwdc2026/241/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "nextera-dominion-67b-ai-power",
@@ -859,13 +863,14 @@
       "id": "gemini-omni",
       "title": "Gemini Omni: any-input-to-video multimodal model",
       "first_seen": "2026-05-27",
-      "last_updated": "2026-05-27",
+      "last_updated": "2026-06-10T12:15:00Z",
       "key_facts": [
-        "Announced at Google I/O May 19 2026"
+        "Announced at Google I/O May 19 2026",
+        "Gemini Omni Flash rolling out to Gemini app, Google Flow, and YouTube Shorts for AI Plus/Pro/Ultra; Boston Dynamics integrates Gemini Robotics-ER 1.6 into Spot robot and Orbit AI platform (June 2026)"
       ],
       "sources": [],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "stable-audio-3",
@@ -1316,6 +1321,41 @@
         "https://developer.apple.com/videos/play/wwdc2026/241/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-fable-5-mythos-5",
+      "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
+      "first_seen": "2026-06-10",
+      "last_updated": "2026-06-10T12:15:00Z",
+      "key_facts": [
+        "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
+        "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
+        "Free on Pro/Max/Team/seat-based Enterprise June 9–22; also on Amazon Bedrock and GitHub Copilot"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+        "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/",
+        "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/",
+        "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "ai-ceos-synthetic-dna-congress-2026",
+      "title": "AI lab CEOs joint letter: mandate synthetic DNA screening (June 5 2026)",
+      "first_seen": "2026-06-10",
+      "last_updated": "2026-06-10T12:15:00Z",
+      "key_facts": [
+        "June 5 2026 joint open letter to US Congress signed by OpenAI, Anthropic, Google DeepMind, and Microsoft AI CEOs",
+        "Calls for mandatory screening requirements on synthetic DNA providers; argues AI has eroded technical barriers to weaponizing biological material"
+      ],
+      "sources": [
+        "https://yellow.com/news/openai-anthropic-google-microsoft-synthetic-dna-congress-letter"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
