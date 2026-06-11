@@ -1327,21 +1327,27 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-06-10T12:15:00Z",
+      "last_updated": "2026-06-11T12:11:43Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
-        "Free on Pro/Max/Team/seat-based Enterprise June 9–22; also on Amazon Bedrock and GitHub Copilot"
+        "Free on Pro/Max/Team/seat-based Enterprise June 9–22; also on Amazon Bedrock and GitHub Copilot",
+        "API pricing: $10/1M input, $50/1M output (2× Opus 4.8); free period ends June 22, then billed at programmatic credit rates",
+        "Mandatory 30-day data retention for all Fable 5 API traffic regardless of prior zero-retention agreements; Anthropic states: used only for novel attack defense, not training; triggers GDPR/compliance concerns",
+        "Developer backlash: Clément Delangue (Hugging Face) cited AI capability centralization risk; Hex analytics reports 90% on their complex analytical benchmark (first model to reach that)"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
         "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
         "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/",
         "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/",
-        "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained"
+        "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained",
+        "https://yellow.com/news/claude-fable-5-free-until-june-22",
+        "https://www.kucoin.com/news/flash/anthropic-s-claude-fable-5-launch-sparks-developer-backlash-over-token-costs-and-data-policies",
+        "https://www.developersdigest.tech/blog/claude-fable-5-june-22-deadline"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -1356,6 +1362,37 @@
         "https://yellow.com/news/openai-anthropic-google-microsoft-synthetic-dna-congress-letter"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-oracle-cloud-credits",
+      "title": "OpenAI + Oracle Cloud: enterprise Universal Credits for GPT models and Codex",
+      "first_seen": "2026-06-11",
+      "last_updated": "2026-06-11T12:11:43Z",
+      "key_facts": [
+        "Announced June 10-11 2026; Oracle enterprise customers can apply Oracle Universal Credits toward OpenAI models (GPT-5.5 Instant) and Codex",
+        "No separate OpenAI purchasing agreement required; first cloud-commitment pathway alongside AWS and Azure"
+      ],
+      "sources": [
+        "https://openai.com/index/openai-on-oracle-cloud/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "apple-foundation-models-mlx-huggingface",
+      "title": "Apple Foundation Models: MLX + Hugging Face open-weight models via LanguageModel API (WWDC 2026)",
+      "first_seen": "2026-06-11",
+      "last_updated": "2026-06-11T12:11:43Z",
+      "key_facts": [
+        "WWDC 2026 developer sessions (June 10-11): MLX confirmed as first-class in Foundation Models stack; any Hugging Face open-weight model runs through the same LanguageModel protocol as Claude/Gemini/Apple on-device",
+        "Same Swift session code routes to local quantized model or remote cloud model via SPM dependency swap with no other changes"
+      ],
+      "sources": [
+        "https://medium.com/@nuthalapativarun/mlx-is-now-a-first-class-citizen-in-apples-ai-stack-run-any-hugging-face-model-through-foundation-9dfb8dad2191",
+        "https://developer.apple.com/videos/play/wwdc2026/241/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
