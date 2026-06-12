@@ -317,16 +317,20 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-06-10T12:15:00Z",
+      "last_updated": "2026-06-12T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
         "v2.1.169: /cd command changes working directory mid-session without breaking prompt cache",
-        "v2.1.169: disableBundledSkills / CLAUDE_CODE_DISABLE_BUNDLED_SKILLS hides built-in skills/workflows/slash-commands from the model; auto-retry on non-retryable API errors via fallback model; fixed image processing token bug and remote session startup stuck bug"
+        "v2.1.169: disableBundledSkills / CLAUDE_CODE_DISABLE_BUNDLED_SKILLS hides built-in skills/workflows/slash-commands from the model; auto-retry on non-retryable API errors via fallback model; fixed image processing token bug and remote session startup stuck bug",
+        "v2.1.170 (June 9 2026): Fable 5 available in Claude Code; safety classifier auto-retries flagged dual-use prompts against Opus 4.8 instead of hard-failing; fixed VS Code integrated terminal transcript-save bug (sessions now appear in --resume)"
       ],
-      "sources": [],
+      "sources": [
+        "https://dev.classmethod.jp/en/articles/20260609-cc-updates-v2-1-170/",
+        "https://github.com/anthropics/claude-code/releases"
+      ],
       "category": "Tools & Frameworks",
-      "coverage_count": 20
+      "coverage_count": 21
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1393,6 +1397,93 @@
         "https://developer.apple.com/videos/play/wwdc2026/241/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-when-ai-builds-itself",
+      "title": "Anthropic 'When AI Builds Itself': Claude writes 80%+ of prod code; conditional global pause proposed",
+      "first_seen": "2026-06-12",
+      "last_updated": "2026-06-12T12:00:00Z",
+      "key_facts": [
+        "Published June 4 2026; as of May 2026 >80% of code merged to Anthropic production codebase authored by Claude (up from low single digits pre-Feb 2025)",
+        "Typical Anthropic engineer merges ~8× more code per day vs 2024",
+        "Anthropic proposes world should have the *option* to pause frontier AI development; calls coordinated global slowdown 'likely a good thing' but does not commit to unilateral halt",
+        "Recursive self-improvement described as 'not inevitable' but potentially 'sooner than most institutions are prepared for'"
+      ],
+      "sources": [
+        "https://www.scientificamerican.com/article/anthropic-warns-ai-may-soon-begin-recursive-self-improvement/",
+        "https://www.sofx.com/anthropic-calls-for-global-ai-pause-as-claude-writes-its-own-code/",
+        "https://themenonlab.blog/blog/anthropic-recursive-self-improvement-ai-builds-itself-june-2026/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-economic-futures-fund",
+      "title": "Anthropic Economic Futures Research Fund: $200M for job impact, $150M fellowship, Dario essay",
+      "first_seen": "2026-06-12",
+      "last_updated": "2026-06-12T12:00:00Z",
+      "key_facts": [
+        "Announced June 10 2026; $200M Economic Futures Research Fund to back research trials and policy evaluation on AI labor displacement",
+        "$150M national fellowship program for early-career professionals in AI-exposed communities",
+        "Dario Amodei essay 'Policy on the AI Exponential' proposes tiered US government response framework keyed to national unemployment milestones: 5%, 10%, and 'unprecedented' unspecified level"
+      ],
+      "sources": [
+        "https://www.usnews.com/news/business/articles/2026-06-10/anthropic-pledges-200-million-to-research-ais-economic-impact-as-ceo-suggests-job-loss-solutions",
+        "https://www.washingtontimes.com/news/2026/jun/10/ceo-suggests-job-loss-solutions-anthropic-pledges-200-million/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemma-4-12b",
+      "title": "Gemma 4 12B: encoder-free multimodal (vision+audio), 16GB VRAM, Apache 2.0",
+      "first_seen": "2026-06-12",
+      "last_updated": "2026-06-12T12:00:00Z",
+      "key_facts": [
+        "Released June 3 2026; encoder-free architecture — vision and audio inputs flow directly to LLM backbone, no separate multimodal encoders",
+        "First mid-sized Gemma with native audio input; 16GB VRAM to run locally; benchmarks near the 26B MoE at <50% memory footprint",
+        "Apache 2.0 license; available on Hugging Face and Google AI Developer ecosystem"
+      ],
+      "sources": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "meta-business-agent-global",
+      "title": "Meta Business Agent globally available on WhatsApp, Instagram, Messenger",
+      "first_seen": "2026-06-12",
+      "last_updated": "2026-06-12T12:00:00Z",
+      "key_facts": [
+        "Announced June 3 2026 at Meta Conversations (London); globally available on WhatsApp Business, Instagram Pro, and Messenger",
+        "Handles customer questions, product recs, appointment booking, sales lead qualification; routes to human on request",
+        "1M+ businesses in pilot (India, Mexico, Brazil); Meta Business Agent Platform for enterprise connects to Shopify, Zendesk, Shopee",
+        "Currently free; tiered pricing expected within a few months"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+        "https://about.fb.com/news/2026/06/meta-business-agent/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "new-york-ai-bills-2026",
+      "title": "New York legislature passes 7 AI bills; Governor Hochul has until Dec 31 to sign",
+      "first_seen": "2026-06-12",
+      "last_updated": "2026-06-12T12:00:00Z",
+      "key_facts": [
+        "NY legislature adjourned June 5 2026 after passing 7 AI bills sent to Governor Hochul; she has until Dec 31 2026 to sign or veto",
+        "Bills include: Kids Chatbot Safety Act (bans AI companion chatbots for minors), AI Training Data Transparency Act (dataset disclosure), FAIR News Act (AI-generated news disclosure), data center moratorium, ban on AI-assisted surveillance pricing"
+      ],
+      "sources": [
+        "https://www.transparencycoalition.ai/news/new-york-lawmakers-pass-kids-ai-chatbot-safety-bill-and-two-transparency-acts",
+        "https://www.lexology.com/library/detail.aspx?g=91697b73-ce5f-408d-8917-a8ba2ee390e0"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
