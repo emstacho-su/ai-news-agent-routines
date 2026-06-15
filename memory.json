@@ -83,13 +83,17 @@
       "id": "microsoft-agent-framework-1-0",
       "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-06-07",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
-        "Released April 3 2026; open-source, prod"
+        "Released April 3 2026; open-source, prod",
+        "v1.8.0 (June 2026): McpSkillsSource for MCP-based skills discovery (agents enumerate and invoke any MCP server's tools as first-class skills); FunctionInvocationContext for progressive tool exposure; background agent support in harness agent; AgentFileStore and FileAccessProvider for file access; provider updates: Bedrock, Foundry, Mistral, A2A, GitHub Copilot, OpenAI"
       ],
-      "sources": [],
+      "sources": [
+        "https://devblogs.microsoft.com/agent-framework/",
+        "https://releasebot.io/updates/microsoft"
+      ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "gpt-5-5-instant-chatgpt-default",
@@ -317,7 +321,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-06-14T00:00:00Z",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -325,7 +329,8 @@
         "v2.1.169: disableBundledSkills / CLAUDE_CODE_DISABLE_BUNDLED_SKILLS hides built-in skills/workflows/slash-commands from the model; auto-retry on non-retryable API errors via fallback model; fixed image processing token bug and remote session startup stuck bug",
         "v2.1.170 (June 9 2026): Fable 5 available in Claude Code; safety classifier auto-retries flagged dual-use prompts against Opus 4.8 instead of hard-failing; fixed VS Code integrated terminal transcript-save bug (sessions now appear in --resume)",
         "v2.1.172 (June 10 2026): sub-agents can spawn their own sub-agents up to 5 levels deep (recursive multi-agent nesting); Bedrock region resolution aligned with AWS SDK priority order; fixes around 1M context, image processing, permission rule behavior; v2.1.171 not published to npm",
-        "v2.1.176 (June 12 2026): session titles generated in conversation language (language setting to pin); footerLinksRegexes setting for regex-matched footer link badges (user or managed settings); Bedrock credentials cached until IAM Expiration instead of fixed 1hr; availableModels blocks alias-model redirects via ANTHROPIC_DEFAULT_*_MODEL; /fast refuses out-of-allowlist toggle; hook if-conditions for Read/Edit/Write path patterns (e.g. Edit(src/**), Read(~/.ssh/**)) now match correctly; JetBrains 2026.1+ terminal flickering fixed; Skill tool headless-mode permission error fixed (regression from v2.1.141)"
+        "v2.1.176 (June 12 2026): session titles generated in conversation language (language setting to pin); footerLinksRegexes setting for regex-matched footer link badges (user or managed settings); Bedrock credentials cached until IAM Expiration instead of fixed 1hr; availableModels blocks alias-model redirects via ANTHROPIC_DEFAULT_*_MODEL; /fast refuses out-of-allowlist toggle; hook if-conditions for Read/Edit/Write path patterns (e.g. Edit(src/**), Read(~/.ssh/**)) now match correctly; JetBrains 2026.1+ terminal flickering fixed; Skill tool headless-mode permission error fixed (regression from v2.1.141)",
+        "v2.1.177 (June 12-13 2026): 22 total changes (majority bug fixes); stabilization of background sessions, Remote Control, and model control; auto-fallback route updated from Fable 5 to Opus 4.8 following export suspension"
       ],
       "sources": [
         "https://dev.classmethod.jp/en/articles/20260609-cc-updates-v2-1-170/",
@@ -333,10 +338,11 @@
         "https://dev.classmethod.jp/en/articles/20260611-cc-updates-v2-1-172/",
         "https://code.claude.com/docs/en/changelog",
         "https://releasebot.io/updates/anthropic/claude-code",
-        "https://claudefa.st/blog/guide/changelog"
+        "https://claudefa.st/blog/guide/changelog",
+        "https://dev.classmethod.jp/en/articles/20260613-cc-updates-v2-1-177/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 23
+      "coverage_count": 24
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1050,23 +1056,25 @@
       "id": "anthropic-programmatic-credit-june-2026",
       "title": "Anthropic billing split June 15: programmatic usage credit pool",
       "first_seen": "2026-06-01",
-      "last_updated": "2026-06-13T00:00:00Z",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
         "Effective June 15 2026; Agent SDK, -p, Actions",
         "Credit amounts by plan: $20/mo Pro, $100/mo Max 5x, $200/mo Max 20x; metered at full API token rates",
         "No rollover; resets each billing cycle; per-user (CI jobs cannot pool credits across committers)",
         "Scope: Agent SDK (Python/TypeScript), claude -p, GitHub Actions, approved third-party apps; interactive Claude Code unaffected",
         "Credit is NOT auto-applied: must be actively claimed via Claude account settings before June 15 reset (Anthropic sending claim email)",
-        "Optional overflow billing ('usage credits'): if disabled, API calls fail hard once monthly credit exhausted; if enabled, overflow billed at standard API rates"
+        "Optional overflow billing ('usage credits'): if disabled, API calls fail hard once monthly credit exhausted; if enabled, overflow billed at standard API rates",
+        "Billing split went live June 15 2026; developer workaround: switching non-reasoning steps (formatting, summarization, simple code review) from Opus 4.8 to Sonnet 4.6 cuts credit burn ~3-4x; per-user cap means CI GitHub Actions credits cannot be pooled across committers"
       ],
       "sources": [
         "https://the-decoder.com/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-api-prices/",
         "https://www.buildthisnow.com/blog/guide/mechanics/claude-billing-change-june-2026",
         "https://thenewstack.io/anthropic-agent-sdk-credits/",
-        "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/"
+        "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/",
+        "https://levelup.gitconnected.com/anthropic-will-quietly-reprice-your-claude-pro-plan-on-june-15-the-free-20-credit-replacing-1ebd922a7786"
       ],
       "category": "Anthropic",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "github-copilot-ai-credits-june-2026",
@@ -1124,13 +1132,17 @@
       "id": "claude-4-api-deprecation-june-2026",
       "title": "Claude Sonnet 4 + Opus 4 API hard retirement June 15 2026",
       "first_seen": "2026-06-02",
-      "last_updated": "2026-06-02",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
-        "claude-sonnet-4-20250514 retirement"
+        "claude-sonnet-4-20250514 retirement",
+        "claude-sonnet-4-20250514 and claude-opus-4-20250514 officially retired June 15 2026; API calls to these model strings now return hard errors; migrate to claude-sonnet-4-6 and claude-opus-4-8 respectively"
       ],
-      "sources": [],
+      "sources": [
+        "https://help.make.com/anthropic-claude-model-deprecations-on-june-15-2026",
+        "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html"
+      ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "microsoft-build-2026-mai-polaris",
@@ -1354,7 +1366,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-06-14T00:00:00Z",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1364,7 +1376,8 @@
         "Developer backlash: Clément Delangue (Hugging Face) cited AI capability centralization risk; Hex analytics reports 90% on their complex analytical benchmark (first model to reach that)",
         "June 12 2026: US Commerce Secretary Howard Lutnick signed export control directive ordering Anthropic to suspend Fable 5 and Mythos 5 access for all foreign nationals (inside or outside the US, including foreign-national Anthropic employees); trigger was Pliny the Liberator jailbreak posted June 10 on X",
         "Anthropic blocked all global access (real-time nationality verification not feasible at API layer); all users routed to Opus 4.8 automatically; no restore timeline given as of June 13",
-        "Anthropic disputes jailbreak severity: 'only verbal evidence of a potential narrow, non-universal jailbreak ... essentially consists of asking the model to read a specific codebase and fix any software flaws'; argues it provides 'no Mythos-specific uplift'"
+        "Anthropic disputes jailbreak severity: 'only verbal evidence of a potential narrow, non-universal jailbreak ... essentially consists of asking the model to read a specific codebase and fix any software flaws'; argues it provides 'no Mythos-specific uplift'",
+        "Fortune June 14 2026: actual trigger was Amazon AWS researchers jailbreaking Mythos 5; CEO Andy Jassy personally alerted senior White House officials; Anthropic given 90-minute notice to pull both models globally; Amazon is simultaneously Anthropic's largest investor, cloud host, and reporter of the jailbreak to government"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1379,10 +1392,13 @@
         "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html",
         "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
         "https://thenewstack.io/us-gov-orders-anthropic-to-pull-fable-5-and-mythos-5-three-days-after-launch/",
-        "https://venturebeat.com/technology/anthropic-blocks-all-public-access-to-claude-fable-5-mythos-5-following-us-government-order-what-enterprises-should-do"
+        "https://venturebeat.com/technology/anthropic-blocks-all-public-access-to-claude-fable-5-mythos-5-following-us-government-order-what-enterprises-should-do",
+        "https://fortune.com/2026/06/14/how-a-warning-from-amazon-led-the-white-house-to-shut-down-anthropics-mythos-model/",
+        "https://www.axios.com/2026/06/13/anthropic-amazon-white-house",
+        "https://www.techtimes.com/articles/318350/20260614/amazon-triggered-claude-fable-5-shutdown-investor-cloud-host-now-regulator.htm"
       ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -1539,19 +1555,22 @@
       "id": "g7-summit-ai-leaders-june-2026",
       "title": "G7 summit June 15-17: Altman, Amodei, Hassabis attend together in France",
       "first_seen": "2026-06-13",
-      "last_updated": "2026-06-13T00:00:00Z",
+      "last_updated": "2026-06-15T00:00:00Z",
       "key_facts": [
         "52nd G7 summit in Évian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed — first G7 with representation from all three major AI labs",
         "French President Macron extended personal invitations; Altman's first G7 appearance",
-        "Expected outcome: package of voluntary commitments from tech firms; youth safety and AI infrastructure/regulation on agenda; context: same three co-signed synthetic DNA Congressional letter days prior"
+        "Expected outcome: package of voluntary commitments from tech firms; youth safety and AI infrastructure/regulation on agenda; context: same three co-signed synthetic DNA Congressional letter days prior",
+        "Summit opened June 15 2026; US blocking multilateral AI governance commitments (framing: economic competitiveness); AI sovereignty rifts between US and EU/Canada/Japan dominate agenda; expected commniqué language to be voluntary and watered-down vs prior G7 summits"
       ],
       "sources": [
         "https://dataconomy.com/2026/06/12/ai-leaders-openai-google-deepmind-anthropic-g7-summit/",
         "https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis",
-        "https://www.yahoo.com/news/politics/articles/sam-altman-demis-hassabis-dario-115705986.html"
+        "https://www.yahoo.com/news/politics/articles/sam-altman-demis-hassabis-dario-115705986.html",
+        "https://www.techpolicy.press/g7-summit-set-to-kick-off-amidst-allies-widening-rift-over-ai-sovereignty/",
+        "https://www.usnews.com/news/world/articles/2026-06-15/explainer-what-is-the-g7-and-whats-on-the-agenda-at-the-evian-les-bains-summit"
       ],
       "category": "Wildcard",
-      "coverage_count": 1
+      "coverage_count": 2
     }
   ]
 }
