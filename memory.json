@@ -321,7 +321,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-06-16T12:10:24Z",
+      "last_updated": "2026-06-17T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -331,7 +331,8 @@
         "v2.1.172 (June 10 2026): sub-agents can spawn their own sub-agents up to 5 levels deep (recursive multi-agent nesting); Bedrock region resolution aligned with AWS SDK priority order; fixes around 1M context, image processing, permission rule behavior; v2.1.171 not published to npm",
         "v2.1.176 (June 12 2026): session titles generated in conversation language (language setting to pin); footerLinksRegexes setting for regex-matched footer link badges (user or managed settings); Bedrock credentials cached until IAM Expiration instead of fixed 1hr; availableModels blocks alias-model redirects via ANTHROPIC_DEFAULT_*_MODEL; /fast refuses out-of-allowlist toggle; hook if-conditions for Read/Edit/Write path patterns (e.g. Edit(src/**), Read(~/.ssh/**)) now match correctly; JetBrains 2026.1+ terminal flickering fixed; Skill tool headless-mode permission error fixed (regression from v2.1.141)",
         "v2.1.177 (June 12-13 2026): 22 total changes (majority bug fixes); stabilization of background sessions, Remote Control, and model control; auto-fallback route updated from Fable 5 to Opus 4.8 following export suspension",
-        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules — match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode — subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review"
+        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules — match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode — subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review",
+        "v2.1.179 (June 16 2026): mid-stream connection drops preserve partial responses instead of surfacing raw errors; mouse-wheel scrolling restored in WSL2 under Windows Terminal and VS Code; Linux sandbox initialization errors that blocked sessions are fixed"
       ],
       "sources": [
         "https://dev.classmethod.jp/en/articles/20260609-cc-updates-v2-1-170/",
@@ -343,7 +344,7 @@
         "https://dev.classmethod.jp/en/articles/20260613-cc-updates-v2-1-177/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 25
+      "coverage_count": 26
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1369,7 +1370,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-06-16T12:10:24Z",
+      "last_updated": "2026-06-17T00:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1381,7 +1382,8 @@
         "Anthropic blocked all global access (real-time nationality verification not feasible at API layer); all users routed to Opus 4.8 automatically; no restore timeline given as of June 13",
         "Anthropic disputes jailbreak severity: 'only verbal evidence of a potential narrow, non-universal jailbreak ... essentially consists of asking the model to read a specific codebase and fix any software flaws'; argues it provides 'no Mythos-specific uplift'",
         "Fortune June 14 2026: actual trigger was Amazon AWS researchers jailbreaking Mythos 5; CEO Andy Jassy personally alerted senior White House officials; Anthropic given 90-minute notice to pull both models globally; Amazon is simultaneously Anthropic's largest investor, cloud host, and reporter of the jailbreak to government",
-        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution — both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction"
+        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution — both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction",
+        "June 17 2026: Fable 5 and Mythos 5 remain offline globally; Anthropic communicates restoration timeline of weeks not days; free-access window (June 9-22) effectively consumed by outage; no restoration date given"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1402,10 +1404,11 @@
         "https://www.techtimes.com/articles/318350/20260614/amazon-triggered-claude-fable-5-shutdown-investor-cloud-host-now-regulator.htm",
         "https://www.cnbc.com/2026/06/15/anthropic-mythos-trump-ai.html",
         "https://fedscoop.com/anthropic-says-trump-ban-puts-federal-contractor-partnerships-jeopardy/",
-        "https://www.bloomberg.com/news/articles/2026-06-15/anthropic-set-to-meet-trump-officials-over-ai-security-concerns"
+        "https://www.bloomberg.com/news/articles/2026-06-15/anthropic-set-to-meet-trump-officials-over-ai-security-concerns",
+        "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026"
       ],
       "category": "Anthropic",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -1562,23 +1565,86 @@
       "id": "g7-summit-ai-leaders-june-2026",
       "title": "G7 summit June 15-17: Altman, Amodei, Hassabis attend together in France",
       "first_seen": "2026-06-13",
-      "last_updated": "2026-06-16T12:10:24Z",
+      "last_updated": "2026-06-17T00:00:00Z",
       "key_facts": [
         "52nd G7 summit in Evian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed — first G7 with representation from all three major AI labs",
         "French President Macron extended personal invitations; Altman's first G7 appearance",
         "Expected outcome: package of voluntary commitments from tech firms; youth safety and AI infrastructure/regulation on agenda; context: same three co-signed synthetic DNA Congressional letter days prior",
         "Summit opened June 15 2026; US blocking multilateral AI governance commitments (framing: economic competitiveness); AI sovereignty rifts between US and EU/Canada/Japan dominate agenda; expected communique language to be voluntary and watered-down vs prior G7 summits",
-        "Summit day 1 (June 15): Elysee arranged dedicated AI working lunch with Altman/Amodei/Hassabis and G7 leaders; US delegation blocking binding governance language; key themes youth safety and frontier bio/cyber risk (context: same three labs co-signed synthetic DNA letter to Congress); no concrete day-1 outcomes"
+        "Summit day 1 (June 15): Elysee arranged dedicated AI working lunch with Altman/Amodei/Hassabis and G7 leaders; US delegation blocking binding governance language; key themes youth safety and frontier bio/cyber risk (context: same three labs co-signed synthetic DNA letter to Congress); no concrete day-1 outcomes",
+        "Summit concluded June 17 2026 with 'G7 Leaders Statement on AI for Prosperity' — voluntary, US-shaped; US blocked binding governance language; AI sovereignty rift between US and EU/Canada/Japan unresolved; no specifics from closed-door CEO sessions released"
       ],
       "sources": [
         "https://dataconomy.com/2026/06/12/ai-leaders-openai-google-deepmind-anthropic-g7-summit/",
         "https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis",
         "https://www.yahoo.com/news/politics/articles/sam-altman-demis-hassabis-dario-115705986.html",
         "https://www.techpolicy.press/g7-summit-set-to-kick-off-amidst-allies-widening-rift-over-ai-sovereignty/",
-        "https://www.usnews.com/news/world/articles/2026-06-15/explainer-what-is-the-g7-and-whats-on-the-agenda-at-the-evian-les-bains-summit"
+        "https://www.usnews.com/news/world/articles/2026-06-15/explainer-what-is-the-g7-and-whats-on-the-agenda-at-the-evian-les-bains-summit",
+        "https://qazinform.com/news/what-the-g7-agreed-on-iran-migration-ai-and-more-78feba"
       ],
       "category": "Wildcard",
-      "coverage_count": 3
+      "coverage_count": 4
+    },
+    {
+      "id": "databricks-data-ai-summit-2026",
+      "title": "Databricks Data + AI Summit 2026: OpenSharing protocol + Unity AI Gateway",
+      "first_seen": "2026-06-17T00:00:00Z",
+      "last_updated": "2026-06-17T00:00:00Z",
+      "key_facts": [
+        "Summit runs June 15-18 2026, Moscone Center San Francisco, 30K+ in person / 150+ countries virtual",
+        "OpenSharing: Linux Foundation open protocol for sharing AI assets (agent skills, ML models, unstructured data) across organizations and platforms — announced jointly with Databricks June 10",
+        "Unity AI Gateway: runtime governance layer for models, agents, tools, and MCP servers under unified policy enforcement",
+        "Agent Bricks: 100K+ agents built, 1+ quadrillion tokens/year; Satya Nadella (pre-recorded) and Greg Brockman keynotes",
+        "Sessions from Anthropic, Cognition, CrewAI, LangChain, LlamaIndex, OpenAI, Replit; 800+ breakout sessions"
+      ],
+      "sources": [
+        "https://www.databricks.com/blog/agent-bricks-dais-2026",
+        "https://techcommunity.microsoft.com/blog/azure-databricks/azure-databricks-at-databricks-data--ai-summit-2026-updates-and-new-announcement/4528388",
+        "https://www.techtimes.com/articles/318450/20260616/databricks-summit-2026-day-2-agentic-ai-catalog-federation-move-lab-enterprise.htm",
+        "https://www.databricks.com/blog/whats-new-unity-catalog-data-ai-summit-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-deployment-simulation",
+      "title": "OpenAI Deployment Simulation: replaying real conversations for pre-release safety eval",
+      "first_seen": "2026-06-17T00:00:00Z",
+      "last_updated": "2026-06-17T00:00:00Z",
+      "key_facts": [
+        "Published June 16 2026; technique strips assistant response from recent production conversations and regenerates with candidate model before release",
+        "Analyzed ~1.3M de-identified conversations spanning GPT-5 Thinking through GPT-5.4 (August 2025 - March 2026); 20 undesired-behavior categories tracked",
+        "Aggregate result: median multiplicative estimation error 1.5x (true 10/100K -> estimated 6.7-15/100K)",
+        "General technique applicable to any deployment-time property, not only safety; complements rather than replaces adversarial red-teaming",
+        "Technique is reproducible: could be applied to logged assistant conversations to estimate regression rates before model swaps"
+      ],
+      "sources": [
+        "https://openai.com/index/deployment-simulation/",
+        "https://www.marktechpost.com/2026/06/16/openai-deployment-simulation/",
+        "https://aidailypost.com/news/openais-deployment-simulation-beats-baseline-adds-risk-checks-agentic"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-ising-quantum-ai",
+      "title": "NVIDIA Ising: open-source AI for quantum error correction and calibration",
+      "first_seen": "2026-06-17T00:00:00Z",
+      "last_updated": "2026-06-17T00:00:00Z",
+      "key_facts": [
+        "Launched April 14 2026; two components: Ising Calibration (VLM automating quantum processor calibration, days to hours) and Ising Decoding (error-correction models)",
+        "Ising Decoding: 2.5x faster and 3x higher accuracy than pyMatching (current open-source standard) for error-correction decoding",
+        "Released on GitHub, Hugging Face, build.nvidia.com; integrates with CUDA-Q and NVQLink QPU-GPU interconnect",
+        "Early adopters: IonQ, IQM, Infleqtion, Harvard, Cornell, Fermi National Accelerator Laboratory, Lawrence Berkeley National Lab",
+        "Targeted at hybrid quantum-classical workflows; not a general-purpose LLM"
+      ],
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-releases-ising-open-ai-models",
+        "https://thequantuminsider.com/2026/04/14/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
     }
   ]
 }
