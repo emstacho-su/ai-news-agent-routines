@@ -331,7 +331,7 @@
         "v2.1.172 (June 10 2026): sub-agents can spawn their own sub-agents up to 5 levels deep (recursive multi-agent nesting); Bedrock region resolution aligned with AWS SDK priority order; fixes around 1M context, image processing, permission rule behavior; v2.1.171 not published to npm",
         "v2.1.176 (June 12 2026): session titles generated in conversation language (language setting to pin); footerLinksRegexes setting for regex-matched footer link badges (user or managed settings); Bedrock credentials cached until IAM Expiration instead of fixed 1hr; availableModels blocks alias-model redirects via ANTHROPIC_DEFAULT_*_MODEL; /fast refuses out-of-allowlist toggle; hook if-conditions for Read/Edit/Write path patterns (e.g. Edit(src/**), Read(~/.ssh/**)) now match correctly; JetBrains 2026.1+ terminal flickering fixed; Skill tool headless-mode permission error fixed (regression from v2.1.141)",
         "v2.1.177 (June 12-13 2026): 22 total changes (majority bug fixes); stabilization of background sessions, Remote Control, and model control; auto-fallback route updated from Fable 5 to Opus 4.8 following export suspension",
-        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules — match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode — subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review",
+        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules \u2014 match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode \u2014 subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review",
         "v2.1.179 (June 16 2026): mid-stream connection drops preserve partial responses instead of surfacing raw errors; mouse-wheel scrolling restored in WSL2 under Windows Terminal and VS Code; Linux sandbox initialization errors that blocked sessions are fixed"
       ],
       "sources": [
@@ -668,18 +668,21 @@
       "id": "google-antigravity-2-0",
       "title": "Google Antigravity 2.0: agent-first coding platform with CLI",
       "first_seen": "2026-05-20",
-      "last_updated": "2026-06-13T00:00:00Z",
+      "last_updated": "2026-06-18T12:08:20Z",
       "key_facts": [
         "Announced at Google I/O May 19",
         "Gemini CLI and Gemini Code Assist IDE extensions sunset June 18 2026 for consumer tiers (Google AI Pro/Ultra, free Gemini Code Assist for Individuals); migration path is Antigravity CLI (agy); feature parity not 1:1 at launch",
-        "Enterprise exception: Gemini Code Assist Standard/Enterprise and Google Cloud licenses remain fully supported post-June 18"
+        "Enterprise exception: Gemini Code Assist Standard/Enterprise and Google Cloud licenses remain fully supported post-June 18",
+        "June 18 2026: consumer-tier sunset executed \u2014 Gemini CLI and Gemini Code Assist IDE extensions stop serving requests for Google AI Pro/Ultra and free users; Antigravity CLI (agy, closed-source Go rewrite) is the replacement with partial feature parity (Agent Skills, Hooks, Subagents, Extensions preserved; not 1:1); enterprise Gemini Code Assist Standard/Enterprise unaffected"
       ],
       "sources": [
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-        "https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605"
+        "https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605",
+        "https://groundy.com/articles/google-sunsets-gemini-cli-on-june-18-forced-migration-to-antigravity-cli-breaks/",
+        "https://www.aibuilderclub.com/blog/google-kills-gemini-cli-june-18-2026"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "openai-malta-dell-codex-enterprise",
@@ -858,7 +861,7 @@
         "WWDC 2026 runs June 8-12; keynote June 8",
         "Extensions system confirmed: users pick Claude, Gemini, or ChatGPT as backend for Siri/Writing Tools/Image Playground",
         "Siri powered by ~1.2T-parameter custom Gemini model at ~$1B/year license; iOS 27 Beta 1 released June 8 2026; consumer rollout fall 2026",
-        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API — apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes",
+        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API \u2014 apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes",
         "PSOTU (June 9): Foundation Models gains image input, Dynamic Profiles for multi-agent workflows, free Private Cloud Compute for developers with <2M first-time downloads, Python SDK; framework going open source summer 2026"
       ],
       "sources": [
@@ -1370,7 +1373,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-06-17T00:00:00Z",
+      "last_updated": "2026-06-18T12:08:20Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1382,8 +1385,9 @@
         "Anthropic blocked all global access (real-time nationality verification not feasible at API layer); all users routed to Opus 4.8 automatically; no restore timeline given as of June 13",
         "Anthropic disputes jailbreak severity: 'only verbal evidence of a potential narrow, non-universal jailbreak ... essentially consists of asking the model to read a specific codebase and fix any software flaws'; argues it provides 'no Mythos-specific uplift'",
         "Fortune June 14 2026: actual trigger was Amazon AWS researchers jailbreaking Mythos 5; CEO Andy Jassy personally alerted senior White House officials; Anthropic given 90-minute notice to pull both models globally; Amazon is simultaneously Anthropic's largest investor, cloud host, and reporter of the jailbreak to government",
-        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution — both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction",
-        "June 17 2026: Fable 5 and Mythos 5 remain offline globally; Anthropic communicates restoration timeline of weeks not days; free-access window (June 9-22) effectively consumed by outage; no restoration date given"
+        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution \u2014 both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction",
+        "June 17 2026: Fable 5 and Mythos 5 remain offline globally; Anthropic communicates restoration timeline of weeks not days; free-access window (June 9-22) effectively consumed by outage; no restoration date given",
+        "June 18 2026 (day 6 of suspension): no restoration timeline; refund deadline for promotional June 9-22 window is June 20; Washington talks continuing; full 13-day free-trial window being consumed by outage with no end date"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1408,7 +1412,7 @@
         "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026"
       ],
       "category": "Anthropic",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -1498,7 +1502,7 @@
       "first_seen": "2026-06-12",
       "last_updated": "2026-06-12T12:00:00Z",
       "key_facts": [
-        "Released June 3 2026; encoder-free architecture — vision and audio inputs flow directly to LLM backbone, no separate multimodal encoders",
+        "Released June 3 2026; encoder-free architecture \u2014 vision and audio inputs flow directly to LLM backbone, no separate multimodal encoders",
         "First mid-sized Gemma with native audio input; 16GB VRAM to run locally; benchmarks near the 26B MoE at <50% memory footprint",
         "Apache 2.0 license; available on Hugging Face and Google AI Developer ecosystem"
       ],
@@ -1567,12 +1571,12 @@
       "first_seen": "2026-06-13",
       "last_updated": "2026-06-17T00:00:00Z",
       "key_facts": [
-        "52nd G7 summit in Evian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed — first G7 with representation from all three major AI labs",
+        "52nd G7 summit in Evian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed \u2014 first G7 with representation from all three major AI labs",
         "French President Macron extended personal invitations; Altman's first G7 appearance",
         "Expected outcome: package of voluntary commitments from tech firms; youth safety and AI infrastructure/regulation on agenda; context: same three co-signed synthetic DNA Congressional letter days prior",
         "Summit opened June 15 2026; US blocking multilateral AI governance commitments (framing: economic competitiveness); AI sovereignty rifts between US and EU/Canada/Japan dominate agenda; expected communique language to be voluntary and watered-down vs prior G7 summits",
         "Summit day 1 (June 15): Elysee arranged dedicated AI working lunch with Altman/Amodei/Hassabis and G7 leaders; US delegation blocking binding governance language; key themes youth safety and frontier bio/cyber risk (context: same three labs co-signed synthetic DNA letter to Congress); no concrete day-1 outcomes",
-        "Summit concluded June 17 2026 with 'G7 Leaders Statement on AI for Prosperity' — voluntary, US-shaped; US blocked binding governance language; AI sovereignty rift between US and EU/Canada/Japan unresolved; no specifics from closed-door CEO sessions released"
+        "Summit concluded June 17 2026 with 'G7 Leaders Statement on AI for Prosperity' \u2014 voluntary, US-shaped; US blocked binding governance language; AI sovereignty rift between US and EU/Canada/Japan unresolved; no specifics from closed-door CEO sessions released"
       ],
       "sources": [
         "https://dataconomy.com/2026/06/12/ai-leaders-openai-google-deepmind-anthropic-g7-summit/",
@@ -1589,22 +1593,24 @@
       "id": "databricks-data-ai-summit-2026",
       "title": "Databricks Data + AI Summit 2026: OpenSharing protocol + Unity AI Gateway",
       "first_seen": "2026-06-17T00:00:00Z",
-      "last_updated": "2026-06-17T00:00:00Z",
+      "last_updated": "2026-06-18T12:08:20Z",
       "key_facts": [
         "Summit runs June 15-18 2026, Moscone Center San Francisco, 30K+ in person / 150+ countries virtual",
-        "OpenSharing: Linux Foundation open protocol for sharing AI assets (agent skills, ML models, unstructured data) across organizations and platforms — announced jointly with Databricks June 10",
+        "OpenSharing: Linux Foundation open protocol for sharing AI assets (agent skills, ML models, unstructured data) across organizations and platforms \u2014 announced jointly with Databricks June 10",
         "Unity AI Gateway: runtime governance layer for models, agents, tools, and MCP servers under unified policy enforcement",
         "Agent Bricks: 100K+ agents built, 1+ quadrillion tokens/year; Satya Nadella (pre-recorded) and Greg Brockman keynotes",
-        "Sessions from Anthropic, Cognition, CrewAI, LangChain, LlamaIndex, OpenAI, Replit; 800+ breakout sessions"
+        "Sessions from Anthropic, Cognition, CrewAI, LangChain, LlamaIndex, OpenAI, Replit; 800+ breakout sessions",
+        "Summit final day June 18: Genie One launched (agentic AI coworker for business teams, powered by Genie Ontology live-context layer); Databricks also shipped Genie Code updates, new Unity Catalog security features, and confirmed 30K+ in-person attendance from 150+ countries"
       ],
       "sources": [
         "https://www.databricks.com/blog/agent-bricks-dais-2026",
         "https://techcommunity.microsoft.com/blog/azure-databricks/azure-databricks-at-databricks-data--ai-summit-2026-updates-and-new-announcement/4528388",
         "https://www.techtimes.com/articles/318450/20260616/databricks-summit-2026-day-2-agentic-ai-catalog-federation-move-lab-enterprise.htm",
-        "https://www.databricks.com/blog/whats-new-unity-catalog-data-ai-summit-2026"
+        "https://www.databricks.com/blog/whats-new-unity-catalog-data-ai-summit-2026",
+        "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-genie-one-all-new-agentic-coworker-every-team"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-deployment-simulation",
@@ -1644,6 +1650,58 @@
         "https://thequantuminsider.com/2026/04/14/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-seoul-office",
+      "title": "Anthropic opens Seoul office: third APAC presence, LG CNS / Samsung SDS / Nexon partnerships",
+      "first_seen": "2026-06-18",
+      "last_updated": "2026-06-18T12:08:20Z",
+      "key_facts": [
+        "Opened June 17 2026; third Asia-Pacific office after Tokyo and Bengaluru; led by KiYoung Choi",
+        "Enterprise partnerships: LG CNS (Claude to thousands of LG Group employees), Samsung SDS (Claude across Samsung Electronics), Nexon (Claude Code for live-service game dev)",
+        "MOU with Korea's Ministry of Science and ICT; NAIRL partnership (KAIST, Korea Univ, Yonsei, POSTECH) gives up to 60 researchers Claude access for AI safety and alignment research",
+        "Office opened while US export controls on Fable 5/Mythos 5 remain in effect for foreign nationals"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+        "https://www.upi.com/Top_News/World-News/2026/06/18/korea-Anthropic-Seoul-office-Korea-partnerships-Washington-AI-export-controls/4641781769900/",
+        "https://www.kedglobal.com/artificial-intelligence/newsView/ked202606180004"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "databricks-genie-one",
+      "title": "Databricks Genie One: agentic AI coworker with live Genie Ontology context layer",
+      "first_seen": "2026-06-18",
+      "last_updated": "2026-06-18T12:08:20Z",
+      "key_facts": [
+        "Announced June 18 2026 at Data+AI Summit; agentic AI coworker for marketing, finance, and sales teams",
+        "Genie Ontology: live context layer that continuously learns business state from internal and external data",
+        "Targets enterprise reporting, sales pipeline analysis, finance reconciliation; competes with MS Copilot for Finance and Salesforce Einstein"
+      ],
+      "sources": [
+        "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-genie-one-all-new-agentic-coworker-every-team"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-outage-june-18-2026",
+      "title": "Claude.ai widespread outage June 18 2026: chat, API, Claude Code affected",
+      "first_seen": "2026-06-18",
+      "last_updated": "2026-06-18T12:08:20Z",
+      "key_facts": [
+        "Midday June 18 2026: widespread Claude.ai outage; 2000+ Downdetector reports in US, 2200+ in India",
+        "~63% of reports related to chat interface; Claude Code and API also affected",
+        "Anthropic issued no public explanation as of press time; appears to be infrastructure event distinct from Fable 5 policy suspension"
+      ],
+      "sources": [
+        "https://community.designtaxi.com/topic/31243-is-claude-anthropic-ai-down-june-18-2026/",
+        "https://www.gizbot.com/artificial-intelligence/anthropic-claude-ai-outage-users-report-chat-issues-and-connection-failures-014-126435.html"
+      ],
+      "category": "Anthropic",
       "coverage_count": 1
     }
   ]
