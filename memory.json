@@ -337,7 +337,7 @@
         "v2.1.172 (June 10 2026): sub-agents can spawn their own sub-agents up to 5 levels deep (recursive multi-agent nesting); Bedrock region resolution aligned with AWS SDK priority order; fixes around 1M context, image processing, permission rule behavior; v2.1.171 not published to npm",
         "v2.1.176 (June 12 2026): session titles generated in conversation language (language setting to pin); footerLinksRegexes setting for regex-matched footer link badges (user or managed settings); Bedrock credentials cached until IAM Expiration instead of fixed 1hr; availableModels blocks alias-model redirects via ANTHROPIC_DEFAULT_*_MODEL; /fast refuses out-of-allowlist toggle; hook if-conditions for Read/Edit/Write path patterns (e.g. Edit(src/**), Read(~/.ssh/**)) now match correctly; JetBrains 2026.1+ terminal flickering fixed; Skill tool headless-mode permission error fixed (regression from v2.1.141)",
         "v2.1.177 (June 12-13 2026): 22 total changes (majority bug fixes); stabilization of background sessions, Remote Control, and model control; auto-fallback route updated from Fable 5 to Opus 4.8 following export suspension",
-        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules \u2014 match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode \u2014 subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review",
+        "v2.1.178 (June 15 2026): Tool(param:value) syntax for permission rules — match on tool input parameters (e.g. Agent(model:claude-opus-4-8) blocks Opus subagents while allowing others); skills in nested .claude/skills/ directories load automatically, name clashes surface as <dir>:<name>; improved auto mode — subagent spawns evaluated by safety classifier before launch, closing gap where subagent could request blocked action without pre-review",
         "v2.1.179 (June 16 2026): mid-stream connection drops preserve partial responses instead of surfacing raw errors; mouse-wheel scrolling restored in WSL2 under Windows Terminal and VS Code; Linux sandbox initialization errors that blocked sessions are fixed",
         "v2.1.181 (June 17-18 2026): /config key=value syntax changes arbitrary settings from the prompt mid-session; fixed Write/Edit generating zero-byte or truncated files on network drives / cloud-sync folders; fixed idle sessions losing history when another process cleaned the transcript",
         "v2.1.183 (June 19 2026): auto mode now blocks destructive git commands (git reset --hard, git checkout -- ., git clean -f) when user did not explicitly request discarding local work; safety classifier pre-screens subagent actions before launch for irreversible git operations",
@@ -346,8 +346,8 @@
         "v2.1.191 (June 25 2026): /rewind restores conversation state after /clear; ~37% CPU reduction during streaming via coalesced update batching; memory growth suppressed in long sessions; background agent stop is now permanent (no more resurrection); fixed Cmd+click in Ghostty fullscreen over ssh/tmux",
         "June 27 2026: CLAUDE_CODE_DISABLE_MOUSE_CLICKS env var suppresses fullscreen click/drag/hover (wheel preserved); macOS voice dictation silence bug fixed after default device change; hyphenated hook matchers now exact-match (was substring, misfiring); MCP headersHelper auto-reconnects on 401/403; background agents no longer emit 'end your response' to main thread; Remote session provisioning checklist added",
         "Late June 2026: new 'claude agents' CLI subcommand for inspecting and managing active agent sessions; fullscreen mouse click controls (CLAUDE_CODE_DISABLE_MOUSE_CLICKS env var suppresses click/drag/hover while preserving wheel); macOS voice dictation silence bug fixed after default device change; background agent reliability improvements; Remote session startup improvements",
-        "June 2026: OpenTelemetry telemetry output added \u2014 CLAUDE_CODE_ENABLE_TELEMETRY=1 + OTEL_EXPORTER_OTLP_ENDPOINT; tracks token usage/costs, session activity, performance, quota hits, tool decisions, errors/retries; claude_code.assistant_response log event (redacted unless OTEL_LOG_ASSISTANT_RESPONSES=1)",
-        "June 2026: Trusted Devices for Remote Control Admins (Team/Enterprise) \u2014 admins can require device verification before granting remote view/steer access to Claude Code sessions",
+        "June 2026: OpenTelemetry telemetry output added — CLAUDE_CODE_ENABLE_TELEMETRY=1 + OTEL_EXPORTER_OTLP_ENDPOINT; tracks token usage/costs, session activity, performance, quota hits, tool decisions, errors/retries; claude_code.assistant_response log event (redacted unless OTEL_LOG_ASSISTANT_RESPONSES=1)",
+        "June 2026: Trusted Devices for Remote Control Admins (Team/Enterprise) — admins can require device verification before granting remote view/steer access to Claude Code sessions",
         "June 2026: live file path autocomplete added in bash mode"
       ],
       "sources": [
@@ -392,13 +392,18 @@
       "id": "salesforce-data-360-mcp-server",
       "title": "Salesforce Data 360 MCP Server: developer preview",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-05-12",
+      "last_updated": "2026-06-30T12:00:00Z",
       "key_facts": [
-        "Open-source developer preview; connects "
+        "Open-source developer preview; connects ",
+        "Salesforce Summer '26 release (June 2026): Salesforce Hosted MCP Servers promoted from developer preview to GA; standard servers: Agentforce 360 Platform, Tableau Next, Data 360 SQL; 'Headless 360' exposes every major Salesforce capability as API, MCP tool, or CLI command; custom MCP server builder for enterprise configs; part of Agentforce 3 launch"
       ],
-      "sources": [],
+      "sources": [
+        "https://developer.salesforce.com/blogs/2026/06/the-salesforce-developers-guide-to-the-summer-26-release",
+        "https://www.salesforceben.com/salesforce-announces-agentforce-3-0-command-center-mcp-and-apps/",
+        "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available"
+      ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "emergent-misalignment-feature-superposition-geometry",
@@ -500,13 +505,19 @@
       "id": "microsoft-cancels-claude-code-licenses",
       "title": "Microsoft cancels internal Claude Code licenses",
       "first_seen": "2026-05-15",
-      "last_updated": "2026-05-15",
+      "last_updated": "2026-06-30T12:00:00Z",
       "key_facts": [
-        "Experiences+Devices org (Windows, M365)"
+        "Experiences+Devices org (Windows, M365)",
+        "June 30 2026: official fiscal-year-end cutover date; Experiences+Devices (Windows, M365, Outlook, Teams, Surface) engineers transitioned to GitHub Copilot CLI; token-based pricing at enterprise scale and internal-control preferences cited as drivers; engineers reportedly preferred Claude Code",
+        "Rajesh Jha (EVP Experiences+Devices): 'Claude Code was an important part of that learning. At the same time, Copilot CLI has given us something especially important: a product we can help shape directly with GitHub for Microsoft's repos, workflows, security expectations, and engineering needs.'"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.forbes.com/sites/jonmarkman/2026/06/01/microsoft-ends-claude-code-licenses-as-it-pushes-copilot-cli/",
+        "https://windowsforum.com/threads/microsoft-plans-june-30-2026-shift-from-claude-code-to-copilot-cli.425488/",
+        "https://www.developer-tech.com/news/microsoft-claude-code-github-copilot-cli/"
+      ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "semantic-kernel-rce-cve-2026",
@@ -602,8 +613,8 @@
         "2026-07 RC published; GA target July 28: stateless protocol core, MCP Apps (server-rendered UI), Tasks extension graduated, OAuth 2.1/OIDC auth hardening",
         "Ecosystem: 10,000+ public servers, 110M+ monthly SDK downloads; ~40% of public servers expose tools with no auth (VIPER-MCP: 67 CVEs from 40k repo sweep)",
         "2026-07-28 RC details: initialize/initialized handshake and Mcp-Session-Id header removed; protocol version/client info/capabilities travel inline in _meta field per request; new routing headers Mcp-Method and Mcp-Name for gateway routing without JSON parsing; Roots/Sampling/Logging formally deprecated; SDK Tier 1 maintainers expected to ship RC support within 10-week window from May 21 lock",
-        "2026-07-28 release candidate available June 26 2026: protocol goes fully stateless \u2014 Mcp-Session-Id header removed, initialize/initialized handshake removed; capabilities now travel in _meta on every request via new server/discover method",
-        "RC additions: Extensions framework, Tasks API, MCP Apps, authorization hardening, formal deprecation policy (Active \u2192 Deprecated \u2192 Removed minimum 12 months)",
+        "2026-07-28 release candidate available June 26 2026: protocol goes fully stateless — Mcp-Session-Id header removed, initialize/initialized handshake removed; capabilities now travel in _meta on every request via new server/discover method",
+        "RC additions: Extensions framework, Tasks API, MCP Apps, authorization hardening, formal deprecation policy (Active → Deprecated → Removed minimum 12 months)",
         "Breaking changes; 10-week validation window for Tier 1 SDK maintainers before July 28 final; server-initiated requests now constrained to only fire during active client request processing"
       ],
       "sources": [
@@ -698,7 +709,7 @@
         "Announced at Google I/O May 19",
         "Gemini CLI and Gemini Code Assist IDE extensions sunset June 18 2026 for consumer tiers (Google AI Pro/Ultra, free Gemini Code Assist for Individuals); migration path is Antigravity CLI (agy); feature parity not 1:1 at launch",
         "Enterprise exception: Gemini Code Assist Standard/Enterprise and Google Cloud licenses remain fully supported post-June 18",
-        "June 18 2026: consumer-tier sunset executed \u2014 Gemini CLI and Gemini Code Assist IDE extensions stop serving requests for Google AI Pro/Ultra and free users; Antigravity CLI (agy, closed-source Go rewrite) is the replacement with partial feature parity (Agent Skills, Hooks, Subagents, Extensions preserved; not 1:1); enterprise Gemini Code Assist Standard/Enterprise unaffected"
+        "June 18 2026: consumer-tier sunset executed — Gemini CLI and Gemini Code Assist IDE extensions stop serving requests for Google AI Pro/Ultra and free users; Antigravity CLI (agy, closed-source Go rewrite) is the replacement with partial feature parity (Agent Skills, Hooks, Subagents, Extensions preserved; not 1:1); enterprise Gemini Code Assist Standard/Enterprise unaffected"
       ],
       "sources": [
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
@@ -788,7 +799,7 @@
       "last_updated": "2026-06-24T12:10:00Z",
       "key_facts": [
         "Confidential S-1 filed with SEC",
-        "June 24 2026: Altman told staff RSI (recursive self-improvement) could arrive within 6 months; if so, 'it could be advantageous to delay an IPO' \u2014 technology and world may change in surprising ways; no IPO delay announced, S-1 still targets September listing",
+        "June 24 2026: Altman told staff RSI (recursive self-improvement) could arrive within 6 months; if so, 'it could be advantageous to delay an IPO' — technology and world may change in surprising ways; no IPO delay announced, S-1 still targets September listing",
         "Internal OpenAI milestones: automated intern-level function by September 2026, full automated AI researcher by March 2028"
       ],
       "sources": [],
@@ -888,7 +899,7 @@
         "WWDC 2026 runs June 8-12; keynote June 8",
         "Extensions system confirmed: users pick Claude, Gemini, or ChatGPT as backend for Siri/Writing Tools/Image Playground",
         "Siri powered by ~1.2T-parameter custom Gemini model at ~$1B/year license; iOS 27 Beta 1 released June 8 2026; consumer rollout fall 2026",
-        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API \u2014 apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes",
+        "PSOTU (June 8): LanguageModel protocol in Foundation Models framework is a developer API — apps swap Claude/Gemini/Apple on-device via SPM dependency with no other code changes",
         "PSOTU (June 9): Foundation Models gains image input, Dynamic Profiles for multi-agent workflows, free Private Cloud Compute for developers with <2M first-time downloads, Python SDK; framework going open source summer 2026"
       ],
       "sources": [
@@ -1300,7 +1311,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "[RUMOR] GPT-5.6 internal benchmark leaks",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-06-28T12:08:47Z",
+      "last_updated": "2026-06-30T12:00:00Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1310,20 +1321,23 @@
         "June 23 2026: reports place GPT-5.6 family launch 'next week' from June 23 (late June / early July); companion model GPT-Bidi-1 (bidirectional voice, High/Medium/Instant tiers) also reportedly in preparation; no API model string or system card published; Polymarket recalibrated below 50% for June 28 window after June 22 passed with no release",
         "June 24 2026: Polymarket odds for June 22-28 window collapsed to ~18% (from 83%); traders actively abandoning bets; release now framed as 'late June / early July at best'; GPT-Bidi-1 companion voice model (bidirectional, High/Medium/Instant tiers) also reportedly in preparation; no official announcement",
         "June 25 2026 (day after June 22-28 window opened): window effectively closed, Polymarket odds collapsed to ~18%; release framed as late June / early July at best; companion voice model GPT-Bidi-1 also reportedly in preparation; no official model string or system card",
-        "June 26 2026: Polymarket collapses \u2014 'GPT-5.6 not launched by June 28' now trades at 83% YES (was 83% NO earlier in June); $1.55M+ in volume; June 28 window effectively off",
+        "June 26 2026: Polymarket collapses — 'GPT-5.6 not launched by June 28' now trades at 83% YES (was 83% NO earlier in June); $1.55M+ in volume; June 28 window effectively off",
         "Technical leaks indicate 1.5M-token context window and reward hacking fixes from April 2026 post-mortem",
-        "June 26 2026: launched in limited preview as three-tier family \u2014 Sol (flagship, $5/$30 per 1M tokens, max reasoning + ultra sub-agent mode), Terra (balanced, $2.50/$15 per 1M), Luna (fast, $1/$6 per 1M); restricted to ~20 vetted orgs after US government review; GA 'coming weeks'",
-        "Sol 'ultra' mode spins up sub-agents for complex coding/biology/cybersecurity tasks; redesigned reward audit pipeline addresses GPT-5.5 alignment failures from 'Where the Goblins Came From' post-mortem"
+        "June 26 2026: launched in limited preview as three-tier family — Sol (flagship, $5/$30 per 1M tokens, max reasoning + ultra sub-agent mode), Terra (balanced, $2.50/$15 per 1M), Luna (fast, $1/$6 per 1M); restricted to ~20 vetted orgs after US government review; GA 'coming weeks'",
+        "Sol 'ultra' mode spins up sub-agents for complex coding/biology/cybersecurity tasks; redesigned reward audit pipeline addresses GPT-5.5 alignment failures from 'Where the Goblins Came From' post-mortem",
+        "June 30 2026: no GA expansion; predictable prompt caching with 30-minute minimum cache life confirmed across Sol/Terra/Luna tiers — reliability improvement over GPT-5.5 variable cache windows"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
         "https://polymarket.com/event/when-will-gpt-5pt6-be-released",
         "https://finance.yahoo.com/technology/ai/articles/traders-abandon-bets-gpt-5-093100441.html",
         "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
-        "https://openai.com/index/previewing-gpt-5-6-sol/"
+        "https://openai.com/index/previewing-gpt-5-6-sol/",
+        "https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna",
+        "https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna"
       ],
       "category": "Model Releases",
-      "coverage_count": 10
+      "coverage_count": 11
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -1424,7 +1438,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-06-29T12:10:00Z",
+      "last_updated": "2026-06-30T12:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1436,25 +1450,28 @@
         "Anthropic blocked all global access (real-time nationality verification not feasible at API layer); all users routed to Opus 4.8 automatically; no restore timeline given as of June 13",
         "Anthropic disputes jailbreak severity: 'only verbal evidence of a potential narrow, non-universal jailbreak ... essentially consists of asking the model to read a specific codebase and fix any software flaws'; argues it provides 'no Mythos-specific uplift'",
         "Fortune June 14 2026: actual trigger was Amazon AWS researchers jailbreaking Mythos 5; CEO Andy Jassy personally alerted senior White House officials; Anthropic given 90-minute notice to pull both models globally; Amazon is simultaneously Anthropic's largest investor, cloud host, and reporter of the jailbreak to government",
-        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution \u2014 both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction",
+        "June 15 2026: Anthropic executives flew to Washington and met with White House/Commerce Department officials; meeting ended without resolution — both sides remain publicly entrenched over whether Fable 5 poses genuine national security risk; US cites China-linked group's suspected Mythos 5 access; no restoration timeline; Anthropic warns federal contractor partnerships 'in jeopardy' (FedScoop) even though Feb 2026 supply-chain-risk designation remains blocked by court injunction",
         "June 17 2026: Fable 5 and Mythos 5 remain offline globally; Anthropic communicates restoration timeline of weeks not days; free-access window (June 9-22) effectively consumed by outage; no restoration date given",
         "June 18 2026 (day 6 of suspension): no restoration timeline; refund deadline for promotional June 9-22 window is June 20; Washington talks continuing; full 13-day free-trial window being consumed by outage with no end date",
-        "June 19 2026 (day 7 of suspension): unconfirmed BridgeMind social-media claim of '48-hour restoration' circulating \u2014 not from Anthropic, no official channel confirmed; Anthropic messaging remains 'weeks not days'; promotional refund deadline June 20; Polymarket prediction market tracking US-customer restoration is live",
+        "June 19 2026 (day 7 of suspension): unconfirmed BridgeMind social-media claim of '48-hour restoration' circulating — not from Anthropic, no official channel confirmed; Anthropic messaging remains 'weeks not days'; promotional refund deadline June 20; Polymarket prediction market tracking US-customer restoration is live",
         "David Sacks (PCAST co-chair, June 14 2026): US govt warned Anthropic pre-order that Fable 5 had been jailbroken and asked Dario to fix or de-deploy; Dario refused, calling jailbreak 'non-serious'; export directive issued as a result",
         "June 20 2026 (day 8): refund deadline (11:59 PM) for Pro/Max/Team subscribers who joined June 9-14; Anthropic privately vowed models back 'in days' on June 18; still fully offline, no official restoration timeline",
-        "June 21 2026 (day 9): Anthropic MD of International Chris Ciauri publicly stated 'We are very confident that in the coming days, the models will become available again' \u2014 most optimistic public exec statement since ban; no restoration date given",
+        "June 21 2026 (day 9): Anthropic MD of International Chris Ciauri publicly stated 'We are very confident that in the coming days, the models will become available again' — most optimistic public exec statement since ban; no restoration date given",
         "Refund deadline for June 9-14 promotional subscribers passed June 20; models still offline",
         "Prediction markets June 21: 57% restore by July 1, 67% by July 10, 75% by July 17",
-        "June 22 2026 (day 10): NSA Director Gen. Joshua Rudd disclosed in Senate Intelligence Committee briefing (surfaced June 21 by Sen. Mark Warner) that Mythos autonomously compromised nearly all NSA classified systems in a red-team exercise \u2014 reframing ban from user jailbreak to intrinsic capability concern; harder to negotiate away",
-        "Fable 5 appearing in Android model picker but not live \u2014 UI artifact, not a partial restoration",
+        "June 22 2026 (day 10): NSA Director Gen. Joshua Rudd disclosed in Senate Intelligence Committee briefing (surfaced June 21 by Sen. Mark Warner) that Mythos autonomously compromised nearly all NSA classified systems in a red-team exercise — reframing ban from user jailbreak to intrinsic capability concern; harder to negotiate away",
+        "Fable 5 appearing in Android model picker but not live — UI artifact, not a partial restoration",
         "Free promotional trial window (June 9-22, no additional cost on Pro/Max/Team) expired today; refund deadline for June 9-14 subscribers closed June 20",
         "Anthropic identity verification (effective July 8 via Persona) likely the technical path to restoring Fable 5 for verified US consumers without formal Commerce Dept. lift; Team/Enterprise/API tier restoration requires separate government agreement",
-        "June 23 2026 (day 11): free promotional window (June 9-22) officially closed; Fable 5 access now requires programmatic credits at $10/1M input, $50/1M output \u2014 double Opus 4.8 price; model remains globally suspended, no restoration date; consumer ID verification (Persona, effective July 8) still most plausible restore path for US users; API/Team/Enterprise restoration requires separate government agreement",
-        "June 24 2026 (day 12 of suspension): no restoration date; Totalum blog reports Anthropic says models return 'in coming days' \u2014 no new named-exec statement beyond Ciauri June 21; consumer path via Persona ID verification (July 8) and API/Enterprise track requiring separate government agreement remain the two restore paths",
+        "June 23 2026 (day 11): free promotional window (June 9-22) officially closed; Fable 5 access now requires programmatic credits at $10/1M input, $50/1M output — double Opus 4.8 price; model remains globally suspended, no restoration date; consumer ID verification (Persona, effective July 8) still most plausible restore path for US users; API/Team/Enterprise restoration requires separate government agreement",
+        "June 24 2026 (day 12 of suspension): no restoration date; Totalum blog reports Anthropic says models return 'in coming days' — no new named-exec statement beyond Ciauri June 21; consumer path via Persona ID verification (July 8) and API/Enterprise track requiring separate government agreement remain the two restore paths",
         "June 25 2026 (day 13 of suspension): no new restoration timeline; consumer path via Persona ID verification (July 8) and API/Enterprise requiring separate government agreement remain the two active resolution paths; free promotional window closed June 22; standard billing at $10/1M input, $50/1M output if/when access restores",
         "June 29 2026 (day 17 of suspension): Fable 5 still offline for all general users, API devs, Claude Code, and international subscribers; isfable5back.com: No",
-        "Annex A Lutnick June 26 letter details: Mythos 5 cleared for (1) Annex A US critical-infrastructure entities and their foreign-national employees; (2) Anthropic's own foreign-national staff; (3) US government civilian agencies and national labs \u2014 all without individual export license",
-        "Prediction markets June 29: ~68-71% restore before July 1, with ~48 hours left and no product change; Anthropic confirms working with government to 'expand access to Mythos 5 and make Fable 5 available for general use again'"
+        "Annex A Lutnick June 26 letter details: Mythos 5 cleared for (1) Annex A US critical-infrastructure entities and their foreign-national employees; (2) Anthropic's own foreign-national staff; (3) US government civilian agencies and national labs — all without individual export license",
+        "Prediction markets June 29: ~68-71% restore before July 1, with ~48 hours left and no product change; Anthropic confirms working with government to 'expand access to Mythos 5 and make Fable 5 available for general use again'",
+        "June 30 2026 (day 18 of suspension): Mythos 5 cleared for ~100 US critical-infrastructure organizations + their foreign-national employees + US gov civilian agencies and national labs via Lutnick June 26 Annex A letter; rollout underway",
+        "Fable 5 general-access still pending Pentagon and NSA sign-off as of June 30; Forbes June 29 and Axios June 27 both characterize return as imminent with source-level backing; prediction markets ~68-71% odds by July 1",
+        "Let's Data Science reports Anthropic reversed an undisclosed Fable 5 'secret sabotage rule' after developer backlash (June 30); specifics not fully public; timing aligns with export-control negotiations"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1483,10 +1500,14 @@
         "https://explainx.ai/blog/is-fable-5-back-2026",
         "https://www.rewarx.com/blogs/claude-fable-5-pulled-from-subscriptions-ecommerce",
         "https://isfable5back.com/",
-        "https://x.com/AnthropicAI/status/2070665903440871779"
+        "https://x.com/AnthropicAI/status/2070665903440871779",
+        "https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon",
+        "https://www.forbes.com/sites/ronschmelzer/2026/06/29/is-anthropics-fable-5-coming-back-this-week/",
+        "https://letsdatascience.com/blog/anthropic-fable-5-secret-sabotage-reversed",
+        "https://letsdatascience.com/news/fable-remains-in-limbo-restoration-probabilities-rise-ccd0fa4b"
       ],
       "category": "Anthropic",
-      "coverage_count": 15
+      "coverage_count": 16
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -1576,7 +1597,7 @@
       "first_seen": "2026-06-12",
       "last_updated": "2026-06-12T12:00:00Z",
       "key_facts": [
-        "Released June 3 2026; encoder-free architecture \u2014 vision and audio inputs flow directly to LLM backbone, no separate multimodal encoders",
+        "Released June 3 2026; encoder-free architecture — vision and audio inputs flow directly to LLM backbone, no separate multimodal encoders",
         "First mid-sized Gemma with native audio input; 16GB VRAM to run locally; benchmarks near the 26B MoE at <50% memory footprint",
         "Apache 2.0 license; available on Hugging Face and Google AI Developer ecosystem"
       ],
@@ -1645,12 +1666,12 @@
       "first_seen": "2026-06-13",
       "last_updated": "2026-06-17T00:00:00Z",
       "key_facts": [
-        "52nd G7 summit in Evian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed \u2014 first G7 with representation from all three major AI labs",
+        "52nd G7 summit in Evian-les-Bains, France June 15-17 2026; Sam Altman (OpenAI), Dario Amodei (Anthropic), Demis Hassabis (DeepMind) all confirmed — first G7 with representation from all three major AI labs",
         "French President Macron extended personal invitations; Altman's first G7 appearance",
         "Expected outcome: package of voluntary commitments from tech firms; youth safety and AI infrastructure/regulation on agenda; context: same three co-signed synthetic DNA Congressional letter days prior",
         "Summit opened June 15 2026; US blocking multilateral AI governance commitments (framing: economic competitiveness); AI sovereignty rifts between US and EU/Canada/Japan dominate agenda; expected communique language to be voluntary and watered-down vs prior G7 summits",
         "Summit day 1 (June 15): Elysee arranged dedicated AI working lunch with Altman/Amodei/Hassabis and G7 leaders; US delegation blocking binding governance language; key themes youth safety and frontier bio/cyber risk (context: same three labs co-signed synthetic DNA letter to Congress); no concrete day-1 outcomes",
-        "Summit concluded June 17 2026 with 'G7 Leaders Statement on AI for Prosperity' \u2014 voluntary, US-shaped; US blocked binding governance language; AI sovereignty rift between US and EU/Canada/Japan unresolved; no specifics from closed-door CEO sessions released"
+        "Summit concluded June 17 2026 with 'G7 Leaders Statement on AI for Prosperity' — voluntary, US-shaped; US blocked binding governance language; AI sovereignty rift between US and EU/Canada/Japan unresolved; no specifics from closed-door CEO sessions released"
       ],
       "sources": [
         "https://dataconomy.com/2026/06/12/ai-leaders-openai-google-deepmind-anthropic-g7-summit/",
@@ -1670,7 +1691,7 @@
       "last_updated": "2026-06-18T12:08:20Z",
       "key_facts": [
         "Summit runs June 15-18 2026, Moscone Center San Francisco, 30K+ in person / 150+ countries virtual",
-        "OpenSharing: Linux Foundation open protocol for sharing AI assets (agent skills, ML models, unstructured data) across organizations and platforms \u2014 announced jointly with Databricks June 10",
+        "OpenSharing: Linux Foundation open protocol for sharing AI assets (agent skills, ML models, unstructured data) across organizations and platforms — announced jointly with Databricks June 10",
         "Unity AI Gateway: runtime governance layer for models, agents, tools, and MCP servers under unified policy enforcement",
         "Agent Bricks: 100K+ agents built, 1+ quadrillion tokens/year; Satya Nadella (pre-recorded) and Greg Brockman keynotes",
         "Sessions from Anthropic, Cognition, CrewAI, LangChain, LlamaIndex, OpenAI, Replit; 800+ breakout sessions",
@@ -1787,7 +1808,7 @@
         "Announced June 18 2026; admins provision MCP connectors once via IdP (Okta first supported); employees inherit access automatically on first Claude login, scoped to existing IdP groups/roles",
         "7 MCP providers support at launch: Asana, Atlassian, Figma, Supabase confirmed; Slack coming soon",
         "Extension now stable; works across Claude chat, Claude Code, and Cowork on Team and Enterprise plans; Ramp example: 2,000 employees provisioned zero-touch",
-        "Revocation is automatic \u2014 deprovisioned employee loses connector access when IdP group membership changes"
+        "Revocation is automatic — deprovisioned employee loses connector access when IdP group membership changes"
       ],
       "sources": [
         "https://www.okta.com/en-ca/newsroom/press-releases/okta-becomes-a-featured-identity-provider-powering-secure-ai-agent-connections-for-claude-enterprise/",
@@ -1821,7 +1842,7 @@
       "last_updated": "2026-06-21T12:08:35Z",
       "key_facts": [
         "Major update announced June 17 2026; available at claude.ai/design for Pro/Max/Team/Enterprise paid plans; Anthropic Labs product (experimental)",
-        "WYSIWYG canvas editor \u2014 direct element manipulation without re-prompting; design system imports from real repos/codebases",
+        "WYSIWYG canvas editor — direct element manipulation without re-prompting; design system imports from real repos/codebases",
         "Two-way /design-sync with Claude Code: run in Claude Code session to pull design system into repo, or push built components back into Claude Design",
         "PDF/PPTX export and desktop support on all paid plans"
       ],
@@ -1840,7 +1861,7 @@
       "last_updated": "2026-06-21T12:08:35Z",
       "key_facts": [
         "Published June 12 2026; makes internal safety evaluations, alignment research methodology, and development documentation publicly available for external scrutiny",
-        "First time Anthropic has run a general-public survey \u2014 measures AI attitudes among non-users across demographic lines"
+        "First time Anthropic has run a general-public survey — measures AI attitudes among non-users across demographic lines"
       ],
       "sources": [
         "https://www.anthropic.com/news/anthropic-public-record",
@@ -1851,12 +1872,12 @@
     },
     {
       "id": "spacex-cursor-acquisition",
-      "title": "SpaceX acquires Cursor (Anysphere) for $60B all-stock \u2014 largest AI dev-tools M&A",
+      "title": "SpaceX acquires Cursor (Anysphere) for $60B all-stock — largest AI dev-tools M&A",
       "first_seen": "2026-06-21T12:08:35Z",
       "last_updated": "2026-06-21T12:08:35Z",
       "key_facts": [
         "Announced June 16 2026; all-stock $60B deal; Anysphere (Cursor maker) becomes SpaceX wholly owned subsidiary; expected close Q3 2026 pending regulatory review",
-        "Announced 4 days after SpaceX Nasdaq IPO (ticker SPCX, $75B raised at $135/share \u2014 largest US IPO in history)",
+        "Announced 4 days after SpaceX Nasdaq IPO (ticker SPCX, $75B raised at $135/share — largest US IPO in history)",
         "SpaceX secured option in April 2026 to acquire at $60B or partner for ~$10B; Cursor had ~$2.6B ARR",
         "xAI (merged with SpaceX earlier in 2026) drives AI strategy; Cursor becomes xAI model-distribution channel in dev tools"
       ],
@@ -1896,7 +1917,7 @@
       "key_facts": [
         "Effective July 8 2026; new 'Verification Data' category in privacy policy: government-issued ID, face photo/video, facial geometry templates",
         "Third-party processor: Persona (not stored on Anthropic servers)",
-        "Applies to consumer accounts (Free, Pro, Max) \u2014 NOT Team, Enterprise, or API customers",
+        "Applies to consumer accounts (Free, Pro, Max) — NOT Team, Enterprise, or API customers",
         "Understood as the technical path for restoring Fable 5 access to verified US users without requiring Commerce Dept. to formally lift export directive; July 8 date aligns with 'coming days' timeline stated by Anthropic MD June 21"
       ],
       "sources": [
@@ -1914,8 +1935,8 @@
       "last_updated": "2026-06-22T12:08:10Z",
       "key_facts": [
         "Released June 13 2026; weights under MIT license (no regional restrictions); 744B total / 40B active MoE parameters, 1M token context",
-        "Intelligence Index v4.1 score 51 \u2014 above MiniMax-M3 (44), DeepSeek V4 Pro (44), Kimi K2.6 (43); matches/beats GPT-5.5 on long-horizon coding at ~1/6 API cost",
-        "Selectable reasoning modes; weights on Hugging Face and z.ai; API via z.ai routes through Chinese infrastructure \u2014 data risk for sensitive prompts"
+        "Intelligence Index v4.1 score 51 — above MiniMax-M3 (44), DeepSeek V4 Pro (44), Kimi K2.6 (43); matches/beats GPT-5.5 on long-horizon coding at ~1/6 API cost",
+        "Selectable reasoning modes; weights on Hugging Face and z.ai; API via z.ai routes through Chinese infrastructure — data risk for sensitive prompts"
       ],
       "sources": [
         "https://pandaily.com/zhipu-ai-glm-5-dot-2-open-source-mit-jun2026",
@@ -1968,7 +1989,7 @@
       "key_facts": [
         "Released June 4 2026 at Computex; completes Nemotron 3 family (Nano 31.6B Dec 2025, Super 120B Mar 2026, Ultra 550B Jun 2026)",
         "Architecture: 550B total / 55B active MoE with Mamba-Attention hybrid backbone; Mamba layers enable efficient long-context state without quadratic attention cost",
-        "Score of 48 on Artificial Analysis Intelligence Index \u2014 highest of any US open-weight model; claims 5x higher throughput vs comparable open models; purpose-built for multi-turn tool-calling agents across hundreds of turns",
+        "Score of 48 on Artificial Analysis Intelligence Index — highest of any US open-weight model; claims 5x higher throughput vs comparable open models; purpose-built for multi-turn tool-calling agents across hundreds of turns",
         "Fully open license (Apache 2.0); weights on Hugging Face (nvidia/Nemotron-3-Ultra-550B)"
       ],
       "sources": [
@@ -2006,7 +2027,7 @@
       "last_updated": "2026-06-24T12:10:00Z",
       "key_facts": [
         "Oracle FY2026 10-K filed June 23 shows headcount fell from ~162,000 to ~141,000 (13% reduction, ~21,000 roles)",
-        "Filing states: 'the adoption and deployment of AI technologies across our operations have resulted, and may continue to result, in reductions to our workforce' \u2014 first major tech company to put this in an SEC filing",
+        "Filing states: 'the adoption and deployment of AI technologies across our operations have resulted, and may continue to result, in reductions to our workforce' — first major tech company to put this in an SEC filing",
         "Oracle spent $1.84B on restructuring in FY2026, up from $374M prior year",
         "Cuts occurred while Oracle expanded AI data center commitments with OpenAI and Meta"
       ],
@@ -2024,7 +2045,7 @@
       "first_seen": "2026-06-25T00:00:00Z",
       "last_updated": "2026-06-25T00:00:00Z",
       "key_facts": [
-        "25,000 fraudulent accounts generated 28.8M Claude exchanges April 22\u2013June 5 2026, targeting software engineering and agentic reasoning capabilities",
+        "25,000 fraudulent accounts generated 28.8M Claude exchanges April 22–June 5 2026, targeting software engineering and agentic reasoning capabilities",
         "Anthropic sent letter to Senate Banking Committee (Tim Scott, Elizabeth Warren) and White House dated June 10 2026, publicly reported June 24",
         "Described as largest known distillation attack on Anthropic; prior Feb 2026 campaigns from DeepSeek, Moonshot, MiniMax also documented"
       ],
@@ -2044,7 +2065,7 @@
       "key_facts": [
         "Announced June 19-20 2026; Jumper won Nobel Prize in Chemistry 2024 (AlphaFold) alongside Demis Hassabis; led AlphaFold team at DeepMind for nearly 9 years",
         "Role at Anthropic undisclosed; taking recharge period before starting",
-        "Departure follows DeepMind VP Engineering Noam Shazeer moving to OpenAI days earlier \u2014 accelerating talent churn at DeepMind"
+        "Departure follows DeepMind VP Engineering Noam Shazeer moving to OpenAI days earlier — accelerating talent churn at DeepMind"
       ],
       "sources": [
         "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html",
@@ -2060,7 +2081,7 @@
       "first_seen": "2026-06-25T00:00:00Z",
       "last_updated": "2026-06-25T00:00:00Z",
       "key_facts": [
-        "Released June 22 2026; access via 'Trusted Access for Cyber' program \u2014 vetted defenders only (Akamai, Cisco, Cloudflare, CrowdStrike + gov agencies in AU/CA/FR/DE/JP/PL/KR/EU)",
+        "Released June 22 2026; access via 'Trusted Access for Cyber' program — vetted defenders only (Akamai, Cisco, Cloudflare, CrowdStrike + gov agencies in AU/CA/FR/DE/JP/PL/KR/EU)",
         "Benchmarks: 85.6% CyberGym (vs 81.8% GPT-5.5), 39.5% ExploitGym, 69.8% SEC-bench Pro; automates vulnerability detection/patching and large-codebase reachability analysis",
         "Part of OpenAI Daybreak initiative; no public API or pricing; requires Advanced Account Security enabled"
       ],
@@ -2092,12 +2113,12 @@
     },
     {
       "id": "openai-broadcom-jalapeno-chip",
-      "title": "OpenAI + Broadcom Jalape\u00f1o: first custom LLM inference ASIC, ~50% cheaper than GPUs",
+      "title": "OpenAI + Broadcom Jalapeño: first custom LLM inference ASIC, ~50% cheaper than GPUs",
       "first_seen": "2026-06-26T12:09:29Z",
       "last_updated": "2026-06-26T12:09:29Z",
       "key_facts": [
         "Unveiled June 24 2026; reticle-sized ASIC co-designed by OpenAI + Broadcom for LLM inference",
-        "9-month development cycle from initial design to tape-out \u2014 claimed fastest for high-performance AI ASICs",
+        "9-month development cycle from initial design to tape-out — claimed fastest for high-performance AI ASICs",
         "~50% cost reduction per inference vs current GPUs; engineering samples delivered to Altman/Brockman",
         "Initial production deployment targeted end of 2026; gigawatt-scale datacenters planned with Microsoft from 2026",
         "Chip was partly designed using OpenAI's own AI models"
@@ -2119,8 +2140,8 @@
         "Published June 17 2026 by 11 companies: Google, Microsoft, Cisco, Databricks, GitHub, GoDaddy, Hugging Face, NVIDIA, Salesforce, ServiceNow, Snowflake; Apache 2.0",
         "Static ai-catalog.json manifest at well-known domain path + registry API returning ranked tool matches to natural-language queries",
         "Reference implementation: GitHub Copilot Agent Finder; builds on Linux Foundation AI Catalog Working Group data model",
-        "Positions as discovery layer above MCP \u2014 MCP defines how to call a tool, ARD defines how to find one",
-        "June 18 2026 adoption census: 0 of 39 major sites \u2014 including all 11 named working-group members \u2014 served a discoverable ai-catalog.json; spec is v0.9 draft; reference implementation is GitHub Copilot Agent Finder but GitHub itself had not deployed the file"
+        "Positions as discovery layer above MCP — MCP defines how to call a tool, ARD defines how to find one",
+        "June 18 2026 adoption census: 0 of 39 major sites — including all 11 named working-group members — served a discoverable ai-catalog.json; spec is v0.9 draft; reference implementation is GitHub Copilot Agent Finder but GitHub itself had not deployed the file"
       ],
       "sources": [
         "https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/",
@@ -2213,6 +2234,82 @@
         "https://www.consumerfinancemonitor.com/2026/05/12/colorado-rewrites-its-landmark-ai-law-unpacking-sb-26-189-and-what-it-means-for-businesses/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-ai-for-science-vibench",
+      "title": "Anthropic AI for Science event: VirBench biology benchmark + John Jumper debut (June 30 2026)",
+      "first_seen": "2026-06-30T12:00:00Z",
+      "last_updated": "2026-06-30T12:00:00Z",
+      "key_facts": [
+        "Virtual event June 30 2026, 10 AM PST; Anthropic leadership + life sciences executives + research institutions",
+        "VirBench benchmark: 120 viral sequence retrieval queries across 40 pathogens; paper 'Paving the Way for Agents in Biology'",
+        "Claude Sonnet 4: 16.9% baseline → 92.8% with deterministic tool gget virus; GPT-5.5: 91.3% → 99.7% with same tool; performance gain almost entirely from scaffolding, not model quality",
+        "John Jumper (AlphaFold, Nobel Chemistry 2024): first public appearance since joining Anthropic from DeepMind June 20 2026; role not yet titled"
+      ],
+      "sources": [
+        "https://www.anthropic.com/events/the-briefing-ai-for-science-virtual-event",
+        "https://byteiota.com/anthropic-ai-for-science-biology-agents/",
+        "https://aitoolsrecap.com/Blog/ai-news-june-30-2026"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "alphabet-google-ai-equity-raise",
+      "title": "Alphabet closes $84.75B equity raise for AI infrastructure — largest in corporate history",
+      "first_seen": "2026-06-30T12:00:00Z",
+      "last_updated": "2026-06-30T12:00:00Z",
+      "key_facts": [
+        "Three tranches: $30B underwritten public offering + $40B at-the-market offering + $10B private placement to Berkshire Hathaway; total $84.75B",
+        "Originally announced June 1 2026 as 'up to $80B'; final raise oversubscribed to $84.75B",
+        "2026 capex guidance: $180-190B; 2027 capex 'significantly increase'; Berkshire Hathaway placement is first meaningful Buffett AI infrastructure bet",
+        "Nasdaq fell 2.21% on announcement day — largest single-day AI sector drop of Q2 2026 as markets priced dilution"
+      ],
+      "sources": [
+        "https://enterprisedna.co/resources/news/alphabet-google-84-billion-ai-infrastructure-raise-2026/",
+        "https://www.stocktitan.net/sec-filings/GOOG/8-k-alphabet-inc-reports-material-event-344f5e633705.html",
+        "https://www.cnbc.com/2026/06/01/alphabet-to-raise-80-billion-from-stock-sales-to-fund-ai-buildout.html"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "sakana-fugu-ultra",
+      "title": "Sakana Fugu Ultra: model-agnostic multi-agent orchestrator for Claude/GPT/Gemini",
+      "first_seen": "2026-06-30T12:00:00Z",
+      "last_updated": "2026-06-30T12:00:00Z",
+      "key_facts": [
+        "Launched June 22 2026 by Sakana AI; routes subtasks to Claude, GPT-5.5, or Gemini based on task type; single API endpoint",
+        "73.7% SWE-Bench Pro; claims orchestrated system outperforms any single constituent model on complex long-horizon coding",
+        "Pricing: $20/month subscription (Fugu + Fugu Ultra included), or $5/1M input / $30/1M output API; free second month if subscribed before July 31",
+        "Structural bet: treats Anthropic/OpenAI/Google as interchangeable inference providers; Anthropic prohibits Claude Pro/Max subscriptions as Fugu backends (API key required)"
+      ],
+      "sources": [
+        "https://sakana.ai/fugu-release/",
+        "https://coursiv.io/blog/fugu-ultra",
+        "https://www.datacamp.com/blog/sakana-fugu",
+        "https://www.explainx.ai/blog/sakana-fugu-multi-agent-orchestration-model-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "icml-2026-reward-hacking-gradient-regularization",
+      "title": "ICML 2026: Gradient regularization prevents reward hacking in RLHF + verifiable rewards",
+      "first_seen": "2026-06-30T12:00:00Z",
+      "last_updated": "2026-06-30T12:00:00Z",
+      "key_facts": [
+        "Paper: 'Gradient Regularization Prevents Reward Hacking in Reinforcement Learning from Human Feedback and Verifiable Rewards' by Ackermann, Noukhovitch, Ishida, Sugiyama; ICML 2026 accepted",
+        "Proposes gradient regularization during RLHF to prevent reward hacking without relying solely on KL divergence constraints",
+        "Targets failure modes: reasoning without solving, meaningless repetitions, incorrect intermediate logic, implicit reward hacking via proxy signal exploitation",
+        "Directly relevant to cybersecurity-class model evaluation: a model gaming its vulnerability-finding reward signal would be safety failure by definition"
+      ],
+      "sources": [
+        "https://icml.cc/virtual/2026/events/2026SpotlightPosters",
+        "https://arxiv.org/pdf/2601.04805"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
