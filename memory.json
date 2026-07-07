@@ -1491,7 +1491,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-07-05T12:00:00Z",
+      "last_updated": "2026-07-07T12:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1531,7 +1531,10 @@
         "Mythos 5 restored separately to approved US organizations only (Glasswing Annex A entities); not generally available",
         "Pro/Max/Team: Fable 5 included up to 50% of weekly usage limits through July 7 at no extra cost; usage credits ($10/1M input, $50/1M output) after July 7",
         "Anthropic committed compute allocation for government AI security testing and scaling dedicated teams for government priority work",
-        "July 5 2026: post-restoration Anthropic statement confirms some routine coding/debugging tasks temporarily fall back to Opus 4.8 while new cybersecurity classifiers are calibrated; broad classifier net catching some legitimate coding prompts — temporary while tuning; 50%-of-weekly-limits complimentary Fable 5 window expires July 7 for Pro/Max/Team/Enterprise, then usage credits apply at $10/1M input, $50/1M output"
+        "July 5 2026: post-restoration Anthropic statement confirms some routine coding/debugging tasks temporarily fall back to Opus 4.8 while new cybersecurity classifiers are calibrated; broad classifier net catching some legitimate coding prompts — temporary while tuning; 50%-of-weekly-limits complimentary Fable 5 window expires July 7 for Pro/Max/Team/Enterprise, then usage credits apply at $10/1M input, $50/1M output",
+        "July 7 2026 (today): last day Fable 5 is included in Pro/Max/Team subscription limits; July 8 onward, every Fable 5 token bills via usage credits at $10/1M input, $50/1M output",
+        "Anthropic confirmed via BleepingComputer that Fable 5 moving to usage credits is NOT permanent — will return to subscription plans once compute capacity scales",
+        "Usage credits setup: Settings → Usage → Enable credits; $2,000 daily cap, configurable monthly cap, auto-reload available"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1574,7 +1577,7 @@
         "https://x.com/AnthropicAI/status/2072163884430229756"
       ],
       "category": "Anthropic",
-      "coverage_count": 18
+      "coverage_count": 19
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -2534,13 +2537,16 @@
       "id": "un-ai-governance-dialogue-2026",
       "title": "UN Global Dialogue on AI Governance: July 6-7 Geneva, 193 Member States",
       "first_seen": "2026-07-05",
-      "last_updated": "2026-07-06T12:07:09Z",
+      "last_updated": "2026-07-07T12:00:00Z",
       "key_facts": [
         "Global Dialogue on AI Governance, July 6-7 2026, Palexpo Geneva; established by UN General Assembly under Global Digital Compact; 193 Member States + private sector, civil society, academia, technical community",
         "Co-located with WSIS Forum 2026 (July 6-10) and ITU AI for Good Global Summit (July 7-10); second session planned New York May 2027",
         "No binding commitments expected; first UN-level multilateral forum specifically for AI governance under GDC; distinct from UN AI for Good Global Commission (Benioff/Kagame, launched July 1)",
         "July 6 2026: first session opened in Geneva; all 193 UN member states attending; independent scientific panel warned 'no technical guarantee of safety currently exists' for AI systems; capabilities accelerating faster than any government can regulate",
-        "UNESCO and commentators called it 'the historic inflection point where the international community acknowledged AI is no longer a technology issue but a geopolitical one'; no binding commitments expected; second session planned for New York"
+        "UNESCO and commentators called it 'the historic inflection point where the international community acknowledged AI is no longer a technology issue but a geopolitical one'; no binding commitments expected; second session planned for New York",
+        "July 7 2026 closing: Guterres statement 'Machines can inform, but humans must decide, and answer'; AI Child Safety Pledge proposed",
+        "Guterres called for all AI data centers to be powered by renewable energy by 2030",
+        "Second Global Dialogue session confirmed for New York, May 2027"
       ],
       "sources": [
         "https://www.un.org/global-dialogue-ai-governance/en",
@@ -2550,7 +2556,7 @@
         "https://faq.com.tw/en/policy/2026-07-06-un-global-dialogue-ai-governance-geneva-en/"
       ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "llamaindex-workflows-1-0",
@@ -2569,6 +2575,66 @@
         "https://pypi.org/project/llama-index-workflows/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "terawulf-anthropic-19b-lease",
+      "title": "Anthropic signs 20-year, $19B data center lease with TeraWulf (Hawesville KY)",
+      "first_seen": "2026-07-07T12:00:00Z",
+      "last_updated": "2026-07-07T12:00:00Z",
+      "key_facts": [
+        "20-year lease at Justified Data campus, Hawesville KY; ~$19B contracted revenue over lease term",
+        "401 MW critical IT load; multi-phase build-out: initial capacity H2 2027, full 401 MW by early 2028",
+        "Concurrent deal: TeraWulf sold 50.1% Abernathy JV stake to Fluidstack for ~$530M (premium on ~$450M investment)"
+      ],
+      "sources": [
+        "https://www.datacenterdynamics.com/en/news/anthropic-signs-19bn-20-year-lease-for-kentucky-data-center-with-terawulf/",
+        "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+        "https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "longcat-2-0-meituan",
+      "title": "LongCat-2.0: Meituan 1.6T MoE, open-source, Chinese chips, 59.5% SWE-bench Pro",
+      "first_seen": "2026-07-07T12:00:00Z",
+      "last_updated": "2026-07-07T12:00:00Z",
+      "key_facts": [
+        "Open-sourced July 5 2026; had been running anonymously as 'Owl Alpha' on OpenRouter, leading its coding leaderboard",
+        "1.6T total parameters, ~48B active per token (LongCat Sparse Attention MoE), native 1M context",
+        "SWE-bench Pro: 59.5% (self-reported) — beats GPT-5.5 (58.6%) and Gemini 3.1 Pro (54.2%); behind Fable 5 (80.3%) and Opus 4.8",
+        "Trained on 50,000+ Chinese ASICs; zero Nvidia GPUs — first trillion-parameter model built entirely on domestic Chinese compute",
+        "Open license, weights released; made by Meituan AI"
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips",
+        "https://www.marktechpost.com/2026/07/05/meituan-releases-longcat-2-0-a-1-6t-parameter-open-moe-model-with-native-1m-context-and-longcat-sparse-attention/",
+        "https://www.longcatai.org/models/longcat-2"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "jadepuffer-agentic-ransomware",
+      "title": "JADEPUFFER: first documented end-to-end agentic ransomware (Sysdig, July 2026)",
+      "first_seen": "2026-07-07T12:00:00Z",
+      "last_updated": "2026-07-07T12:00:00Z",
+      "key_facts": [
+        "Sysdig TRT published analysis of JADEPUFFER: LLM-agent-driven complete extortion operation, no human in core attack loop",
+        "Initial access via CVE-2025-3248 (unauthenticated RCE in Langflow); pivoted to MySQL/Nacos production server",
+        "Exploited CVE-2021-29441 (Nacos auth bypass) to create rogue admin; encrypted 1,342 service config items then deleted originals",
+        "Agent annotated its own bash payloads with natural-language rationale ('ROI prioritization', 'largest database') — LLM code-gen fingerprint",
+        "Adapted in real-time: failed login diagnosed and retried within 31 seconds",
+        "TechCrunch caveat: human still set up and launched attack — 'first autonomous agentic exfil loop' is more precise than 'fully autonomous ransomware'"
+      ],
+      "sources": [
+        "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+        "https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/",
+        "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
+        "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
