@@ -333,7 +333,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-09T12:00:00Z",
+      "last_updated": "2026-07-10T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -370,7 +370,8 @@
         "v2.1.203 (July 7 2026): Auto Mode now requires explicit opt-in — default reverts to human approval (Manual mode) for all new sessions; login-expiry warning fires before background sessions interrupt; VS Code remote control toggle added in Settings; fixed agent session status display flipping between Done/Needs input",
         "v2.1.204 (July 8 2026): Fixed SessionStart hook events not streaming in headless sessions",
         "VS Code 1.128 (July 8 2026): Multi-Chat Agent Sessions GA — multiple related chats inside one Claude session; fork from any prior turn, switch between peers; read-only subagent transcripts surface in Agents panel",
-        "VS Code 1.128: Quick Chats without workspace open; 1M-token context support for Opus 4.7; Copilot Vision GA (image/PDF attach)"
+        "VS Code 1.128: Quick Chats without workspace open; 1M-token context support for Opus 4.7; Copilot Vision GA (image/PDF attach)",
+        "July 10 2026: /doctor check proposes trimming checked-in CLAUDE.md files; /cd now shows directory path autocomplete (matching /add-dir behavior); /commit-push-pr auto-allows git push to repo's configured push remote; background agent reliability improvements; startup/model-picker/MCP/desktop/Windows bug fixes"
       ],
       "sources": [
         "https://dev.classmethod.jp/en/articles/20260609-cc-updates-v2-1-170/",
@@ -384,10 +385,12 @@
         "https://signoz.io/docs/claude-code-monitoring/",
         "https://pasqualepillitteri.it/en/news/2494/claude-code-weekly-limits-50-percent-anti-codex-anthropic-2026",
         "https://dev.classmethod.jp/en/articles/20260702-cc-updates-v2-1-198/",
-        "https://code.visualstudio.com/updates/v1_128"
+        "https://code.visualstudio.com/updates/v1_128",
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://claudefa.st/blog/guide/changelog"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 43
+      "coverage_count": 44
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -632,7 +635,7 @@
       "id": "mcp-2026-roadmap",
       "title": "MCP 2026 roadmap: stateless Streamable HTTP, Tasks lifecycle",
       "first_seen": "2026-05-18",
-      "last_updated": "2026-07-03T12:09:34Z",
+      "last_updated": "2026-07-10T12:00:00Z",
       "key_facts": [
         "Roadmap organized around Working Groups ",
         "2026-07 RC published; GA target July 28: stateless protocol core, MCP Apps (server-rendered UI), Tasks extension graduated, OAuth 2.1/OIDC auth hardening",
@@ -643,7 +646,11 @@
         "Breaking changes; 10-week validation window for Tier 1 SDK maintainers before July 28 final; server-initiated requests now constrained to only fire during active client request processing",
         "Tasks API fully rebuilt in RC: tasks/list removed (statelessness eliminates server-side scope); server returns a task handle from tools/call; client drives via tasks/get, tasks/update, tasks/cancel",
         "Tool input schemas upgraded to full JSON Schema 2020-12: oneOf, anyOf, allOf, conditionals, and $ref now formally supported — servers can compose complex input types without flat-schema workarounds",
-        "Error code -32002 (resource-not-found) renamed to standard -32602 (invalid params) per spec cleanup; half the Tier 1 SDK 10-week migration window (from May 21 RC lock) is elapsed as of July 3"
+        "Error code -32002 (resource-not-found) renamed to standard -32602 (invalid params) per spec cleanup; half the Tier 1 SDK 10-week migration window (from May 21 RC lock) is elapsed as of July 3",
+        "July 2026 security sweep: 5,832 vulnerable public MCP servers found (Adversa AI), 2,259 with confirmed exploitable vulnerabilities — file access, command injection, SSRF, SQL injection via natural-language queries",
+        "NSA released official MCP hardening guidelines — first government-level guidance on securing MCP deployments; covers tool vetting, auth layering, restricting server-initiated requests",
+        "SecurityWeek: new stateless spec shifts all security responsibility from protocol to developer/implementer layer; protocol no longer enforces session boundaries",
+        "Microsoft documented production fintech enterprise tool-poisoning and description-injection attack via MCP; defensive playbook published; Amazon Q auto-execution vulnerability also found and patched"
       ],
       "sources": [
         "https://aaif.io/blog/mcp-is-now-enterprise-infrastructure-everything-that-happened-at-mcp-dev-summit-north-america-2026/",
@@ -654,29 +661,36 @@
         "https://byteiota.com/mcp-stateless-2026-release-candidate/",
         "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/",
         "https://dev.to/akaranjkar08/mcp-spec-ships-july-28-every-breaking-change-and-how-to-migrate-4co8",
-        "https://www.thefalcon.dev/writing/mcp-2026-stateless-spec-what-breaks"
+        "https://www.thefalcon.dev/writing/mcp-2026-stateless-spec-what-breaks",
+        "https://www.securityweek.com/new-enterprise-ready-mcp-specification-brings-new-security-challenges/",
+        "https://adversa.ai/blog/top-mcp-security-resources-july-2026/",
+        "https://gbhackers.com/thousands-of-mcp-servers-found-vulnerable/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "meta-avocado-delayed",
       "title": "Meta Avocado delayed past May; benchmarks below GPT-5.5",
       "first_seen": "2026-05-18",
-      "last_updated": "2026-07-04T12:07:10Z",
+      "last_updated": "2026-07-10T12:00:00Z",
       "key_facts": [
         "Meta's flagship proprietary model delayed",
         "Avocado shipped publicly as 'Muse Spark' in April 2026; benchmarks below GPT-5.5 at launch",
         "Next model codenamed Watermelon is in training as of early July 2026",
         "Alexandr Wang (Meta superintelligence chief) told internal briefing Watermelon benchmarks match GPT-5.5 on current evaluations",
-        "Watermelon uses approximately 10x more compute than Avocado/Muse Spark; no release date announced"
+        "Watermelon uses approximately 10x more compute than Avocado/Muse Spark; no release date announced",
+        "July 9 2026: Muse Spark 1.1 released — first paid Meta model API (first time Meta charges businesses for model access); 1M token context, native multi-agent orchestration (model natively coordinates sub-agents), computer-use across multi-app workflows; developer preview via Meta Model API",
+        "Muse Spark 1.1: Meta-reported benchmarks beat Gemini on coding/reasoning; SWE-bench Pro not published; Watermelon (10x compute) still in training as the next flagship"
       ],
       "sources": [
         "https://americanbazaaronline.com/2026/07/03/meta-ai-chief-says-watermelon-model-has-caught-up-to-gpt-5-5-484022/",
-        "https://www.benzinga.com/markets/tech/26/07/60264651/metas-upcoming-watermelon-ai-model-matches-openais-gpt-5-5-on-key-benchmarks-alexandr-wang-reportedly-tells-employees"
+        "https://www.benzinga.com/markets/tech/26/07/60264651/metas-upcoming-watermelon-ai-model-matches-openais-gpt-5-5-on-key-benchmarks-alexandr-wang-reportedly-tells-employees",
+        "https://fortune.com/2026/07/09/meta-muse-spark-1-1-release-alexandr-wang-superintelligence-labs-mark-zuckerberg/",
+        "https://www.bloomberg.com/news/articles/2026-07-09/meta-starts-charging-for-ai-with-muse-spark-1-1-agentic-model"
       ],
       "category": "Model Releases",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "subq-1m-subquadratic-llm",
@@ -1364,7 +1378,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "GPT-5.6 Sol/Terra/Luna: public GA July 9 (from limited preview June 26)",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-07-09T12:00:00Z",
+      "last_updated": "2026-07-10T12:00:00Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1386,7 +1400,9 @@
         "July 9 2026: public GA launch for all ChatGPT subscribers and API developers; Sol /$30, Terra $2.50/$15, Luna $1/$6 per 1M tokens; 1.4-1.5M context window",
         "Terminal-Bench 2.1: Sol 88.8% (91.9% ultra config), beats Fable 5 83.4%; SWE-bench Pro not published in official benchmark card",
         "METR pre-release assessment: reward-hacking at record rates in Sol; cybersecurity capability uplift (automated vuln exploitation, code reachability) flagged as baseline",
-        "gpt-realtime-2.1 and gpt-realtime-2.1-mini also shipped: at least 25% lower p95 latency, better noise handling"
+        "gpt-realtime-2.1 and gpt-realtime-2.1-mini also shipped: at least 25% lower p95 latency, better noise handling",
+        "July 9 2026: ChatGPT Work launched alongside GPT-5.6 GA — new agentic mode that takes an outcome, gathers context across apps/workflows, and completes complex multi-hour projects independently; powered by Sol/Terra/Luna tier based on subscription",
+        "Codex merged into unified ChatGPT desktop app (macOS and Windows): Chat, Work, and Codex as three distinct modes; old ChatGPT desktop renamed 'ChatGPT Classic'; all three modes available on every plan including Free"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
@@ -1402,10 +1418,12 @@
         "https://www.techtimes.com/articles/319802/20260706/gpt-56-release-nears-ultra-mode-spawns-subagents-terra-cuts-cost-metr-flags-risk.htm",
         "https://www.techtimes.com/articles/319808/20260707/gpt-56-sol-review-faster-coding-half-fable-5-cost-benchmark-problem.htm",
         "https://emergent.sh/news/gpt-5-6-release-date",
-        "https://explainx.ai/blog/gpt-5-6-release-date-features-benchmarks-2026"
+        "https://explainx.ai/blog/gpt-5-6-release-date-features-benchmarks-2026",
+        "https://the-decoder.com/openai-pairs-its-gpt-5-6-public-rollout-with-chatgpt-work-a-new-agent-that-handles-entire-workflows/",
+        "https://cryptobriefing.com/chatgpt-work-launches-with-gpt-5-6-as-openai-merges-codex-into-desktop-app/"
       ],
       "category": "Model Releases",
-      "coverage_count": 15
+      "coverage_count": 16
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -2733,6 +2751,26 @@
         "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
         "https://aicommission.org/2026/07/chinese-ai-models-now-capture-up-to-46-of-us-enterprise-token-usage/",
         "https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "illinois-ai-safety-measures-act",
+      "title": "Illinois AI Safety Measures Act: nation's first mandatory third-party audit law",
+      "first_seen": "2026-07-10T12:00:00Z",
+      "last_updated": "2026-07-10T12:00:00Z",
+      "key_facts": [
+        "Signed July 6 2026 by Gov. Pritzker (SB 315); effective January 1, 2027",
+        "First US state law requiring mandatory annual independent third-party safety audits of frontier AI models",
+        "Developers must publish catastrophic-risk plan (updated annually); 'catastrophic risk' defined as >50 deaths, >50 serious injuries, or >$1M property damage from a single AI incident",
+        "Both OpenAI and Anthropic supported the bill; bipartisan passage in both chambers",
+        "IL joins CA and NY — three states estimated to cover ~40% of US AI market, creating defacto national standard absent federal regulation"
+      ],
+      "sources": [
+        "https://capitolnewsillinois.com/news/pritzker-signs-landmark-ai-regulation-bill-that-aims-to-mitigate-risks/",
+        "https://news.wttw.com/2026/07/06/pritzker-signs-landmark-ai-regulation-bill-aims-mitigate-risks",
+        "https://www.transparencycoalition.ai/news/illinois-gov-pritzker-signs-landmark-ai-safety-measures-act-into-law"
       ],
       "category": "Wildcard",
       "coverage_count": 1
