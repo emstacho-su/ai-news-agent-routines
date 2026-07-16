@@ -163,15 +163,24 @@
     },
     {
       "id": "anthropic-goldman-blackstone-jv",
-      "title": "Anthropic forms $1.5B enterprise AI services JV with Goldman",
+      "title": "Ode with Anthropic: $1.5B enterprise AI services JV officially launches (July 15 2026)",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-07-16T00:00:00Z",
       "key_facts": [
-        "AI-native services firm announced May 4 "
+        "AI-native services firm announced May 4 ",
+        "July 15 2026: company named \"Ode with Anthropic\" publicly launched; CEO Chris Taylor (Fractional AI co-founder), CTO Eddie Siegel (Fractional AI co-founder); Fractional AI acquired to form Ode's 100-engineer core team",
+        "Capital structure: Anthropic, Blackstone, H&F each ~$300M; Goldman Sachs ~$150M; additional investors: General Atlantic, Leonard Green & Partners, Apollo Global Management, GIC, Sequoia; $1.5B total committed",
+        "Anthropic is an equity stakeholder (not just API provider); participates in Ode's services upside",
+        "Embeds engineers inside PE-backed mid-market companies (healthcare, manufacturing, financial services) to build custom Claude-powered workflows",
+        "Thesis: durable AI value accrues to deployment/implementation layer, not raw model providers"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.businesswire.com/news/home/20260715205134/en/Anthropic-Blackstone-and-Hellman-Friedman-Introduce-Ode-with-Anthropic-an-Enterprise-AI-Services-Firm",
+        "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+        "https://www.hpcwire.com/aiwire/2026/07/15/anthropic-blackstone-and-hellman-friedman-introduce-ode-with-anthropic-an-enterprise-ai-services-firm/"
+      ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-code-oauth-mcp-hijacking",
@@ -333,7 +342,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-15T00:00:00Z",
+      "last_updated": "2026-07-16T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -377,7 +386,10 @@
         "v2.1.207: default model on Bedrock and Claude Platform on AWS updated to Claude Opus 4.8",
         "v2.1.208 (July 14 2026): screen reader mode (--ax-screen-reader / CLAUDE_AX_SCREEN_READER=1 / axScreenReader:true setting); vimInsertModeRemaps for two-key sequences (e.g. jj\u2192Escape); CLAUDE_CODE_PROCESS_WRAPPER routes all sub-spawns through a corporate wrapper executable; mouse-click support in fullscreen multi-select menus; 45 total changes",
         "v2.1.208: large markdown table fix (200+ rows capped with '\u2026 N more rows' notice; previously could stall rendering); fast mode now auto-restores when switching back to supporting model; background agent reply-loss bug fixed",
-        "July 13 2026: 50% weekly usage limit increase (Pro, Max, Team, seat-based Enterprise) extended through July 19 at 11:59 PM PT; original end date was July 13 at 6PM PDT; free plan excluded"
+        "July 13 2026: 50% weekly usage limit increase (Pro, Max, Team, seat-based Enterprise) extended through July 19 at 11:59 PM PT; original end date was July 13 at 6PM PDT; free plan excluded",
+        "July 2026: admin console gets two new tabs \u2014 \"Usage\" (active devs, session counts, top commands, updated daily) and \"Value\" (cost/usage summary); enterprise/team admin feature",
+        "July 2026: subagent text streaming added \u2014 background subagents now stream output tokens in real time rather than buffering to completion",
+        "July 2026: background agent upgrade behavior improved \u2014 agents upgrade after update, not on next attach"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -391,10 +403,11 @@
         "https://github.com/anthropics/claude-code/releases",
         "https://pasqualepillitteri.it/en/news/2494/claude-code-weekly-limits-50-percent-anti-codex-anthropic-2026",
         "https://dev.classmethod.jp/en/articles/20260611-cc-updates-v2-1-172/",
-        "https://claudefa.st/blog/guide/changelog"
+        "https://claudefa.st/blog/guide/changelog",
+        "https://blog.mean.ceo/claude-code-news-july-2026/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 48
+      "coverage_count": 49
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1543,7 +1556,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-07-11T12:00:00Z",
+      "last_updated": "2026-07-16T00:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1588,7 +1601,10 @@
         "Anthropic confirmed via BleepingComputer that Fable 5 moving to usage credits is NOT permanent \u2014 will return to subscription plans once compute capacity scales",
         "Usage credits setup: Settings \u2192 Usage \u2192 Enable credits; $2,000 daily cap, configurable monthly cap, auto-reload available",
         "July 8 2026: Grace period extended through July 12 \u2014 Fable 5 remains in Pro/Max/Team at 50% of weekly limits through July 12 (5-day extension from announced July 7 cutover); after July 12, usage credits required at $10/1M input, $50/1M output; no user action required until July 12",
-        "July 12 2026: grace-period extension ends; Fable 5 moves to usage-credits-only billing at $10/1M input, $50/1M output on all plans including Pro/Max/Team; enable at Settings \u2192 Usage \u2192 Enable credits; Anthropic confirmed temporary \u2014 returns to subscription limits once compute scales"
+        "July 12 2026: grace-period extension ends; Fable 5 moves to usage-credits-only billing at $10/1M input, $50/1M output on all plans including Pro/Max/Team; enable at Settings \u2192 Usage \u2192 Enable credits; Anthropic confirmed temporary \u2014 returns to subscription limits once compute scales",
+        "July 16 2026: Fable 5 free access extended to July 19 \u2014 third extension in five weeks; explicit competitive response to GPT-5.6 Sol pricing undercuts",
+        "Developer cost benchmarks circulating July 16: Grok 4.5 ~$2.49/completed agentic task vs ~$11.80 for Fable 5; one dev reported $16 on GPT-5.6 Sol vs $63 on Fable 5 for equivalent work",
+        "[RUMOR] \"Claude Honeycomb EAP\" appeared in Cursor model picker July 16 \u2014 fueling speculation about Opus 5 or next-generation model in early-access testing; not confirmed by Anthropic"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1630,10 +1646,12 @@
         "https://www.macrumors.com/2026/07/01/anthropic-fable-5-relaunch/",
         "https://x.com/AnthropicAI/status/2072163884430229756",
         "https://fable5.app/fable-5-usage-limits/",
-        "https://www.androidauthority.com/anthropic-claude-fable-5-credits-usage-july-3684840/"
+        "https://www.androidauthority.com/anthropic-claude-fable-5-credits-usage-july-3684840/",
+        "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx",
+        "https://dentro.de/ai/news/"
       ],
       "category": "Anthropic",
-      "coverage_count": 21
+      "coverage_count": 22
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -3157,6 +3175,69 @@
         "https://memeburn.com/gemini-3-5-pro-targets-july-17-with-2m-token-context/"
       ],
       "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "mcp-spec-2026-07-28-rc",
+      "title": "MCP 2026-07-28 specification RC: stateless core, Extensions, Tasks, MCP Apps, OAuth/OIDC",
+      "first_seen": "2026-07-16T00:00:00Z",
+      "last_updated": "2026-07-16T00:00:00Z",
+      "key_facts": [
+        "RC locked May 21 2026; final spec ships July 28 2026; announced by lead maintainers David Soria Parra and Den Delimarsky",
+        "Stateless core: initialize/initialized handshake removed (SEP-2575); Mcp-Session-Id header removed (SEP-2567); protocol version/client info now in _meta on every request; new mandatory server/discover RPC; traffic routable via Mcp-Method header \u2014 load balancers no longer need sticky sessions",
+        "Extensions framework: modular independently-versioned opt-in capability blocks with reverse-DNS IDs; Tasks extension (async task lifecycle via tasks/get, tasks/update, tasks/cancel) and MCP Apps extension (server-rendered HTML UIs in sandboxed iframes) ship with RC",
+        "OAuth/OIDC hardening: mandatory iss validation (RFC 9207), OpenID Connect application_type declaration, credential binding to auth server issuer, scope accumulation on step-up; aligns with OAuth 2.1",
+        "Full JSON Schema 2020-12 for tool schemas; Roots, Sampling, Logging deprecated (12-month sunset window)",
+        "SDK betas: Python mcp 2.0.0b1 (PyPI); TypeScript split into @modelcontextprotocol/server and @modelcontextprotocol/client at 2.0.0-beta.1; automated codemod @modelcontextprotocol/codemod@beta v1-to-v2; FastMCP renamed to MCPServer in Python"
+      ],
+      "sources": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+        "https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/",
+        "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
+        "https://workos.com/blog/mcp-2026-spec-agent-authentication",
+        "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-api-managed-agents-july-2026",
+      "title": "Google Gemini API Managed Agents: background tasks, remote MCP, free tier (July 7 2026)",
+      "first_seen": "2026-07-16T00:00:00Z",
+      "last_updated": "2026-07-16T00:00:00Z",
+      "key_facts": [
+        "July 7 2026 announcement (Logan Kilpatrick): four new capabilities added to Gemini API Managed Agents",
+        "Background task execution: background:true parameter returns interaction_id for async polling/streaming without holding HTTP connection",
+        "Remote MCP server integration: agents can attach to private/external MCP servers alongside built-in sandbox tools",
+        "Custom function calling: client-side business logic pauses interaction mid-run, executes locally, resumes; network credential refresh preserves sandbox filesystem (packages, repos, files) across OAuth/API key rotation",
+        "Free tier access added during preview (1-day history retention vs 55 days on paid); sandbox free; model inference billed at standard Gemini rates",
+        "Powered by \"Antigravity\" agent on Gemini 3.5 Flash; SDK: google-genai >= 2.0.0 (Python), @google/genai >= 2.0.0 (JS/TS); single client.interactions.create() call provisions isolated Linux sandbox"
+      ],
+      "sources": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+        "https://the-decoder.com/google-deepmind-adds-background-execution-and-mcp-support-to-gemini-api-managed-agents/",
+        "https://www.nxcode.io/resources/news/gemini-managed-agents-background-remote-mcp-production-guide-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-noetra-japan-2026",
+      "title": "NVIDIA + Noetra: Jensen Huang in Tokyo, Japan's \u00a51T physical AI initiative (July 16 2026)",
+      "first_seen": "2026-07-16T00:00:00Z",
+      "last_updated": "2026-07-16T00:00:00Z",
+      "key_facts": [
+        "July 16 2026: Jensen Huang visited Japan for METI event; declared \"This is the beginning of AI in Japan\"",
+        "Noetra: Japan national physical AI initiative led by SoftBank, 44 companies (Honda, NEC, others), backed by \u00a51 trillion (~$6.2B) Japanese government subsidies",
+        "RTX Spark AI platform debuted at the Tokyo event",
+        "NVIDIA celebrated 30-year Sega partnership at the same event"
+      ],
+      "sources": [
+        "https://asia.nikkei.com/business/technology/artificial-intelligence/nvidia-cashes-in-on-sovereign-ai-setting-sights-on-japan-for-latest-tie-up",
+        "https://wccftech.com/jensen-huang-lands-in-japan-the-birthplace-of-humanoid-robots-as-nvidia-kickstarts-physical-ai-era/",
+        "https://blogs.nvidia.com/blog/japan-ecosystem-2026/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
