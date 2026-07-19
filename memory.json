@@ -342,7 +342,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-18T12:07:07Z",
+      "last_updated": "2026-07-19T12:10:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -397,7 +397,10 @@
         "Auto-retry on transient server-side rate-limit errors for subscribers",
         "MCP tool calls running longer than 2 minutes auto-move to background (CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS to configure threshold) \u2014 long MCP ops no longer block the interactive session",
         "Per-session subagent spawn cap: 200 default, override via CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION \u2014 stops runaway delegation loops similar to the existing WebSearch cap",
-        "Improved MCP error messages: URL-typed servers missing 'type': 'http' now get a precise fix hint instead of misleading 'command: expected string' error"
+        "Improved MCP error messages: URL-typed servers missing 'type': 'http' now get a precise fix hint instead of misleading 'command: expected string' error",
+        "July 18 2026: dir/** allow rules (e.g. Edit(src/**)) were auto-approving writes to any nested path in the tree \u2014 now scoped correctly to the configured directory only",
+        "July 18 2026: Windows PowerShell 5.1 permission-check bypass patched",
+        "July 18 2026: Bash permission checks now fail closed on file-descriptor redirect forms; commands >10,000 chars always prompt; zsh subscripts/modifiers in [[ ]] comparisons no longer treated as inert; help/man invocations with unsafe options or command substitutions now prompt"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -416,7 +419,7 @@
         "https://www.gradually.ai/en/changelogs/claude-code/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 51
+      "coverage_count": 52
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -434,13 +437,16 @@
       "id": "deepseek-v4-pro-flash",
       "title": "DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-05-12",
+      "last_updated": "2026-07-19T12:10:00Z",
       "key_facts": [
-        "V4 Pro: 1.6T total / 49B active paramete"
+        "V4 Pro: 1.6T total / 49B active paramete",
+        "Legacy deepseek-chat and deepseek-reasoner endpoints retire July 24 2026 at 15:59 UTC \u2014 integrations must migrate to deepseek-v4-pro or deepseek-v4-flash before deadline"
       ],
-      "sources": [],
+      "sources": [
+        "https://api-docs.deepseek.com/news/news260424/"
+      ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "salesforce-data-360-mcp-server",
@@ -3170,23 +3176,27 @@
       "id": "gemini-3-5-pro-rebuild",
       "title": "Gemini 3.5 Pro: full architecture rebuild, targeting July 17 2026 release",
       "first_seen": "2026-07-15",
-      "last_updated": "2026-07-18T12:07:07Z",
+      "last_updated": "2026-07-19T12:10:00Z",
       "key_facts": [
         "Google scrapped original Gemini 3.5 Pro base model after early Vertex AI testers flagged performance gaps vs. GPT-5.6 Sol and Fable 5 in: mathematical reasoning, SVG scene generation, and image quality",
         "Full ground-up rebuild; target release date July 17 2026 (unconfirmed by Google)",
         "Leaked specs (unconfirmed): 2M token context window, Deep Think Reasoning Layer for multi-step math/logic, autonomous workflow capabilities",
         "No official benchmarks, system card, or pricing disclosed as of July 13 2026",
         "July 17 2026 (third GA target date): no official Google model card, API listing, or pricing page published as of this date; TechTimes notes every spec unconfirmed; one low-credibility source reports soft launch; WAIC Shanghai opens July 17 (Xi attends in person for first time since 2018); fallback window July 24",
-        "July 17 2026: GA launched; 2M-token context window confirmed (double current frontier ceiling); Deep Think Reasoning Layer for multi-step math/logic; autonomous workflow capabilities for multi-file coding; no official system card or benchmark card published as of July 18"
+        "July 17 2026: GA launched; 2M-token context window confirmed (double current frontier ceiling); Deep Think Reasoning Layer for multi-step math/logic; autonomous workflow capabilities for multi-file coding; no official system card or benchmark card published as of July 18",
+        "Google blog post 'Gemini 3.5: frontier intelligence with action' appeared July 17 2026, consistent with GA launch as targeted",
+        "[RUMOR] Pricing: $15/Mtok input, $60/Mtok output; Deep Think mode gated to Ultra ($250/mo); 2M token context window \u2014 specs leaked, not confirmed in API docs as of July 19"
       ],
       "sources": [
         "https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm",
         "https://startupfortune.com/google-delays-gemini-35-pro-launch-to-july-17-after-scrapping-its-base-model/",
         "https://www.geeky-gadgets.com/google-gemini-3-5-pro-leaks/",
-        "https://memeburn.com/gemini-3-5-pro-targets-july-17-with-2m-token-context/"
+        "https://memeburn.com/gemini-3-5-pro-targets-july-17-with-2m-token-context/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+        "https://enterprisedna.co/resources/news/gemini-35-pro-july-17-rebuild-vs-deepseek-v4-2026/"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "mcp-spec-2026-07-28-rc",
@@ -3340,6 +3350,41 @@
         "https://asapai.co.kr/en/self-compacting-agents/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-hipaa-self-serve",
+      "title": "Claude HIPAA self-serve configuration for Enterprise orgs",
+      "first_seen": "2026-07-19T12:10:00Z",
+      "last_updated": "2026-07-19T12:10:00Z",
+      "key_facts": [
+        "Eligible Enterprise/API org admins can review BAA, download implementation guide, and enable HIPAA config in a single in-product flow \u2014 no sales cycle required",
+        "Feature is gated to Enterprise plan orgs that opt to process PHI through Claude",
+        "HIPAA-ready config includes BAA, safeguards, and functionality designed to support HIPAA compliance requirements"
+      ],
+      "sources": [
+        "https://support.claude.com/en/articles/13296973-hipaa-ready-enterprise-plans",
+        "https://www.anthropic.com/news/healthcare-life-sciences",
+        "https://releasebot.io/updates/anthropic/claude"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "kimi-k3-2-8t-moe",
+      "title": "Kimi K3: Moonshot AI 2.8T MoE, #1 Frontend Code Arena (76% win rate vs Fable 5)",
+      "first_seen": "2026-07-19T12:10:00Z",
+      "last_updated": "2026-07-19T12:10:00Z",
+      "key_facts": [
+        "Released July 16 2026; 2.8 trillion parameter Mixture-of-Experts architecture \u2014 largest open-track release to date",
+        "76% pairwise win rate on Arena.ai Frontend Code Arena, reaching #1 and outperforming Claude Fable 5",
+        "Open-track release, enabling self-hosted options"
+      ],
+      "sources": [
+        "https://aiagentstore.ai/ai-agent-news/this-week",
+        "https://thursdai.news/releases/2026-07"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
