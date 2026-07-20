@@ -1571,7 +1571,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-07-16T00:00:00Z",
+      "last_updated": "2026-07-20T12:10:17Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1619,7 +1619,8 @@
         "July 12 2026: grace-period extension ends; Fable 5 moves to usage-credits-only billing at $10/1M input, $50/1M output on all plans including Pro/Max/Team; enable at Settings \u2192 Usage \u2192 Enable credits; Anthropic confirmed temporary \u2014 returns to subscription limits once compute scales",
         "July 16 2026: Fable 5 free access extended to July 19 \u2014 third extension in five weeks; explicit competitive response to GPT-5.6 Sol pricing undercuts",
         "Developer cost benchmarks circulating July 16: Grok 4.5 ~$2.49/completed agentic task vs ~$11.80 for Fable 5; one dev reported $16 on GPT-5.6 Sol vs $63 on Fable 5 for equivalent work",
-        "[RUMOR] \"Claude Honeycomb EAP\" appeared in Cursor model picker July 16 \u2014 fueling speculation about Opus 5 or next-generation model in early-access testing; not confirmed by Anthropic"
+        "[RUMOR] \"Claude Honeycomb EAP\" appeared in Cursor model picker July 16 \u2014 fueling speculation about Opus 5 or next-generation model in early-access testing; not confirmed by Anthropic",
+        "July 20 2026: Fable 5 access permanently restructured \u2014 Max and Team Premium: included at 50% of weekly limits with no expiry; Pro and Team Standard: pay-as-you-go usage credits at $10/1M input, $50/1M output; all Pro users receive one-time $100 credit; third extension (through July 19 11:59 PM PT) officially ended"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1663,10 +1664,13 @@
         "https://fable5.app/fable-5-usage-limits/",
         "https://www.androidauthority.com/anthropic-claude-fable-5-credits-usage-july-3684840/",
         "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx",
-        "https://dentro.de/ai/news/"
+        "https://dentro.de/ai/news/",
+        "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm",
+        "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/",
+        "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan"
       ],
       "category": "Anthropic",
-      "coverage_count": 22
+      "coverage_count": 23
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -2129,19 +2133,22 @@
       "id": "claude-code-artifacts",
       "title": "Claude Code Artifacts: live shareable web pages from coding sessions (June 18 2026)",
       "first_seen": "2026-06-23T12:09:56Z",
-      "last_updated": "2026-06-23T12:09:56Z",
+      "last_updated": "2026-07-20T12:10:17Z",
       "key_facts": [
         "Launched June 18 2026 for Team and Enterprise (CLI + desktop app v1.13576.0+); not available on Pro/Max/Free",
         "Artifacts publish Claude Code session work as live, auto-updating HTML pages constructed from: repo snapshot, connected MCP tools, and conversation history; page refreshes in-place when Claude makes updates",
-        "Every publish creates a version at the same URL; full version history with point-in-time restore; access restricted to authenticated org members (no public links); designed for PR walkthroughs, incident pages, release checklists, internal dashboards"
+        "Every publish creates a version at the same URL; full version history with point-in-time restore; access restricted to authenticated org members (no public links); designed for PR walkthroughs, incident pages, release checklists, internal dashboards",
+        "July 16 2026: Artifacts can now call MCP connectors on each page view \u2014 viewers use their own connector credentials (no credential sharing), must approve on first load; enables live-data dashboards that refresh without re-running the session; expanded availability to Pro/Max/Team/Enterprise (previously Team/Enterprise only); not available on publicly-shared artifacts"
       ],
       "sources": [
         "https://claude.com/blog/artifacts-in-claude-code",
         "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises",
-        "https://www.techtimes.com/articles/318691/20260619/claude-code-artifacts-turns-ai-coding-sessions-live-shareable-browser-pages.htm"
+        "https://www.techtimes.com/articles/318691/20260619/claude-code-artifacts-turns-ai-coding-sessions-live-shareable-browser-pages.htm",
+        "https://code.claude.com/docs/en/whats-new/2026-w29",
+        "https://alternativeto.net/news/2026/7/claude-code-artifacts-add-mcp-connector-support-for-dynamic-data/"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "nvidia-nemotron-3-ultra",
@@ -3385,6 +3392,79 @@
         "https://thursdai.news/releases/2026-07"
       ],
       "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "hugging-face-agentic-breach-july-2026",
+      "title": "Hugging Face agentic AI breach: 17,000+ attacker actions, dataset pipeline attack surface",
+      "first_seen": "2026-07-20",
+      "last_updated": "2026-07-20T12:10:17Z",
+      "key_facts": [
+        "Dataset pipeline breach July 2026: malicious dataset exploited code-execution vuln in remote loader + config template injection for initial foothold on a processing worker",
+        "Autonomous AI agent logged 17,000+ actions across short-lived sandboxes over a single weekend; escalated privileges, harvested cloud/cluster credentials, moved laterally across internal infrastructure",
+        "Impact: unauthorized access to internal datasets and several service credentials; no evidence of tampering with public-facing models, datasets, or Spaces; software supply chain verified clean",
+        "Detection: Hugging Face's LLM-based anomaly-detection pipeline correlated signals and flagged intrusion; blue team used LLM analysis agents to reconstruct full attack timeline",
+        "Frontier-model commercial APIs requested by defenders during live incident were blocked by provider safety guardrails"
+      ],
+      "sources": [
+        "https://huggingface.co/blog/security-incident-july-2026",
+        "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
+        "https://www.neowin.net/news/hugging-face-experienced-cyberattack-carried-out-end-to-end-by-agentic-ai/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "waic-2026-waico",
+      "title": "WAIC 2026 closes: China launches 29-nation WAICO AI governance bloc; Huawei Atlas 950 SuperPoD",
+      "first_seen": "2026-07-20",
+      "last_updated": "2026-07-20T12:10:17Z",
+      "key_facts": [
+        "2026 World Artificial Intelligence Conference (Shanghai July 16-20): closed July 20; Xi Jinping keynote, first since 2018; 140+ forums, 1,100+ exhibitors, 300+ product debuts",
+        "World Artificial Intelligence Cooperation Organization (WAICO) launched: 29 founding nations including Russia, Cuba, Brazil, Venezuela, Pakistan, Indonesia, Kazakhstan; headquartered Shanghai; positioned as alternative to US/EU AI governance frameworks",
+        "Huawei Atlas 950 SuperPoD unveiled: 1,024 base / 8,192 max Ascend 950DT NPUs; UnifiedBus 2.0 interconnect; Huawei claims 6.7x compute and 15x memory vs. NVIDIA NVL144; Q4 2026 availability"
+      ],
+      "sources": [
+        "https://www.techtimes.com/articles/320812/20260717/china-launches-rival-ai-governance-bloc-waic-2026-opens-300-product-debuts.htm",
+        "https://www.digitimes.com/news/a20260714VL214/huawei-ascend-atlas-infrastructure-display.html"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "eu-dma-google-ai-assistants-2026",
+      "title": "EU DMA: Google must open 11 Android features to rival AI assistants; search data sharing from January 2027",
+      "first_seen": "2026-07-20",
+      "last_updated": "2026-07-20T12:10:17Z",
+      "key_facts": [
+        "EC binding DMA specification measures July 16 2026: two sets targeting Google",
+        "Android AI interoperability: 11 features opened to rival AI assistants (voice invocation, app-level actions, context access, device resources); deadline Android 18 + August 1 2027; concurrent wake words (e.g. 'Hey Claude') by August 1 2028",
+        "Search data sharing: Google must share search data with eligible third-party search engines from January 2027; multi-layer GDPR-aligned anonymization",
+        "Aims to let Claude, ChatGPT, and others compete with Gemini on Android at the OS level"
+      ],
+      "sources": [
+        "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1634",
+        "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en",
+        "https://www.techi.com/eu-google-ai-interoperability-android-dma/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "current-ai-nonprofit-400m",
+      "title": "Current AI nonprofit: $400M public-interest AI infrastructure from French government, DeepMind, foundations",
+      "first_seen": "2026-07-20",
+      "last_updated": "2026-07-20T12:10:17Z",
+      "key_facts": [
+        "$400M total commitments: $100M anchor from French government; Ford Foundation, MacArthur Foundation, DeepMind, and Salesforce as additional backers",
+        "CEO Ayah Bdeir (co-founder littleBits, ex-Senior Advisor Mozilla Foundation, joined January 2026); founded February 2025 by Martin Tisne",
+        "Mission: build public AI infrastructure as open alternative to Big Tech AI stack (analogy: open Web)",
+        "Existing launches: Suno Sutra (pocket offline device, AI in 22 Indian languages, no internet); $3.2M grants program; open-source chatbot at AI for Good Summit Geneva"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
