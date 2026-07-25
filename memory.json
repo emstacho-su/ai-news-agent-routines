@@ -345,7 +345,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-24T00:00:00Z",
+      "last_updated": "2026-07-25T12:08:51Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -405,7 +405,8 @@
         "July 18 2026: Windows PowerShell 5.1 permission-check bypass patched",
         "July 18 2026: Bash permission checks now fail closed on file-descriptor redirect forms; commands >10,000 chars always prompt; zsh subscripts/modifiers in [[ ]] comparisons no longer treated as inert; help/man invocations with unsafe options or command substitutions now prompt",
         "July 21 2026: /verify and /code-review skills no longer auto-run autonomously \u2014 must be invoked directly by user; eliminates unexpected review runs in background/Routine sessions",
-        "July 24 2026: fast mode for claude-opus-4-7 removed \u2014 speed:'fast' on that model string now returns an error; migrate to claude-opus-4-8"
+        "July 24 2026: fast mode for claude-opus-4-7 removed \u2014 speed:'fast' on that model string now returns an error; migrate to claude-opus-4-8",
+        "v2.1.219 (July 24 2026): claude-opus-5 default Opus model; sandbox.network.strictAllowlist denies non-allowlisted hosts without prompt; DirectoryAdded hook on /add-dir; mcp_server_errors in headless stream-json init; workflowSizeGuideline settings key; nested subagent forwarding depth-2+"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -424,7 +425,7 @@
         "https://www.gradually.ai/en/changelogs/claude-code/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 54
+      "coverage_count": 55
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -3212,7 +3213,7 @@
       "id": "gemini-3-5-pro-rebuild",
       "title": "Gemini 3.5 Pro: full architecture rebuild, targeting July 17 2026 release",
       "first_seen": "2026-07-15",
-      "last_updated": "2026-07-19T12:10:00Z",
+      "last_updated": "2026-07-25T12:08:51Z",
       "key_facts": [
         "Google scrapped original Gemini 3.5 Pro base model after early Vertex AI testers flagged performance gaps vs. GPT-5.6 Sol and Fable 5 in: mathematical reasoning, SVG scene generation, and image quality",
         "Full ground-up rebuild; target release date July 17 2026 (unconfirmed by Google)",
@@ -3221,7 +3222,8 @@
         "July 17 2026 (third GA target date): no official Google model card, API listing, or pricing page published as of this date; TechTimes notes every spec unconfirmed; one low-credibility source reports soft launch; WAIC Shanghai opens July 17 (Xi attends in person for first time since 2018); fallback window July 24",
         "July 17 2026: GA launched; 2M-token context window confirmed (double current frontier ceiling); Deep Think Reasoning Layer for multi-step math/logic; autonomous workflow capabilities for multi-file coding; no official system card or benchmark card published as of July 18",
         "Google blog post 'Gemini 3.5: frontier intelligence with action' appeared July 17 2026, consistent with GA launch as targeted",
-        "[RUMOR] Pricing: $15/Mtok input, $60/Mtok output; Deep Think mode gated to Ultra ($250/mo); 2M token context window \u2014 specs leaked, not confirmed in API docs as of July 19"
+        "[RUMOR] Pricing: $15/Mtok input, $60/Mtok output; Deep Think mode gated to Ultra ($250/mo); 2M token context window \u2014 specs leaked, not confirmed in API docs as of July 19",
+        "July 17 target missed (third missed deadline); TechCrunch July 21 confirmed Google shipped Gemini 3.6 Flash, 3.5 Flash-Lite, Flash Cyber but not 3.5 Pro; no new GA date"
       ],
       "sources": [
         "https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm",
@@ -3232,20 +3234,21 @@
         "https://enterprisedna.co/resources/news/gemini-35-pro-july-17-rebuild-vs-deepseek-v4-2026/"
       ],
       "category": "Model Releases",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "mcp-spec-2026-07-28-rc",
       "title": "MCP 2026-07-28 specification RC: stateless core, Extensions, Tasks, MCP Apps, OAuth/OIDC",
       "first_seen": "2026-07-16T00:00:00Z",
-      "last_updated": "2026-07-16T00:00:00Z",
+      "last_updated": "2026-07-25T12:08:51Z",
       "key_facts": [
         "RC locked May 21 2026; final spec ships July 28 2026; announced by lead maintainers David Soria Parra and Den Delimarsky",
         "Stateless core: initialize/initialized handshake removed (SEP-2575); Mcp-Session-Id header removed (SEP-2567); protocol version/client info now in _meta on every request; new mandatory server/discover RPC; traffic routable via Mcp-Method header \u2014 load balancers no longer need sticky sessions",
         "Extensions framework: modular independently-versioned opt-in capability blocks with reverse-DNS IDs; Tasks extension (async task lifecycle via tasks/get, tasks/update, tasks/cancel) and MCP Apps extension (server-rendered HTML UIs in sandboxed iframes) ship with RC",
         "OAuth/OIDC hardening: mandatory iss validation (RFC 9207), OpenID Connect application_type declaration, credential binding to auth server issuer, scope accumulation on step-up; aligns with OAuth 2.1",
         "Full JSON Schema 2020-12 for tool schemas; Roots, Sampling, Logging deprecated (12-month sunset window)",
-        "SDK betas: Python mcp 2.0.0b1 (PyPI); TypeScript split into @modelcontextprotocol/server and @modelcontextprotocol/client at 2.0.0-beta.1; automated codemod @modelcontextprotocol/codemod@beta v1-to-v2; FastMCP renamed to MCPServer in Python"
+        "SDK betas: Python mcp 2.0.0b1 (PyPI); TypeScript split into @modelcontextprotocol/server and @modelcontextprotocol/client at 2.0.0-beta.1; automated codemod @modelcontextprotocol/codemod@beta v1-to-v2; FastMCP renamed to MCPServer in Python",
+        "Beta SDKs for 2026-07-28 spec published July 2026; GA confirmed July 28; 12-month deprecation window for legacy features"
       ],
       "sources": [
         "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
@@ -3255,7 +3258,7 @@
         "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gemini-api-managed-agents-july-2026",
@@ -3655,6 +3658,57 @@
         "https://aiweekly.co/alerts/anthropic-details-200m-research-agenda-on-ais-labor-impact"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-opus-5",
+      "title": "Claude Opus 5: outperforms Fable 5 on most benchmarks, half the price",
+      "first_seen": "2026-07-25T12:08:51Z",
+      "last_updated": "2026-07-25T12:08:51Z",
+      "key_facts": [
+        "43.3% on Frontier-Bench v0.1 (vs 33.7% Fable 5, 18.7% Opus 4.8); ~3x ARC-AGI 3 score vs next-best",
+        "$5/$25 per M input/output tokens (same as Opus 4.8, half Fable 5 input); Fast mode $10/$50 ~2.5x faster; 1M context",
+        "ASL-3 (same as Opus 4.8); cyber exploitation below Mythos 5; system card published July 24 2026"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+        "https://www-cdn.anthropic.com/c5fbac3f0b1280a933ebd26d3cb8bb9f5bdeaf48/Claude%20Opus%205%20System%20Card.pdf",
+        "https://thenextweb.com/news/anthropic-claude-opus-5-launch-frontier-bench-coding"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-voice-mode-sonnet-opus",
+      "title": "Claude Voice Mode expands to Sonnet and Opus with tools and 18 languages",
+      "first_seen": "2026-07-25T12:08:51Z",
+      "last_updated": "2026-07-25T12:08:51Z",
+      "key_facts": [
+        "Shipped July 23 2026; previously Haiku-only; paid plans can use Sonnet or Opus for voice",
+        "Mid-conversation model picker; defaults to last text model used",
+        "Paid plan voice access to connected tools (Gmail, Docs, Calendar) mid-conversation; 18 languages on all plans"
+      ],
+      "sources": [
+        "https://thenextweb.com/news/anthropic-claude-voice-mode-opus-sonnet-tools",
+        "https://techbriefly.com/2026/07/24/claude-voice-mode-adds-sonnet-and-opus-models/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-stt-1-0",
+      "title": "Grok STT 1.0: xAI speech-to-text broadly available via OpenRouter and Vercel AI Gateway",
+      "first_seen": "2026-07-25T12:08:51Z",
+      "last_updated": "2026-07-25T12:08:51Z",
+      "key_facts": [
+        "Went live OpenRouter July 23 2026; 25 languages, word timestamps, speaker diarization, multichannel",
+        "$0.10/hr batch, $0.20/hr streaming; 5.0% entity error rate vs ElevenLabs 12%, Deepgram 13.5%"
+      ],
+      "sources": [
+        "https://openrouter.ai/x-ai/grok-stt-1.0",
+        "https://vercel.com/ai-gateway/models/grok-stt"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
