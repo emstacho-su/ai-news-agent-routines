@@ -983,7 +983,7 @@
       "id": "trump-ai-eo-voluntary-prerelease-postponed",
       "title": "Trump pulls 90-day AI EO; signs revised 30-day voluntary EO",
       "first_seen": "2026-05-24",
-      "last_updated": "2026-07-30T12:13:27Z",
+      "last_updated": "2026-07-31T12:10:41Z",
       "key_facts": [
         "White House canceled signing of EO",
         "June 2 2026: Trump signed EO Promoting Advanced AI Innovation and Security; 30-day deadline (July 2) for Treasury/NSA/CISA/NCD to establish AI Cybersecurity Clearinghouse; August 1 deadline for voluntary frontier model pre-release framework",
@@ -991,7 +991,8 @@
         "July 27 2026: TRAINS framework in final negotiations \u2014 OpenAI, Anthropic, Google, Microsoft, xAI confirmed participants; Meta has not signed; federal agencies get up to 30-day pre-release window before frontier model releases; advisory/flagging only, no mandatory preclearance; announcement expected before August 1 deadline",
         "July 29 2026: Sam Altman met White House Chief of Staff Susie Wiles; also visited Sen. Ted Cruz and Senate Democrats ahead of August 1 TRAINS deadline",
         "Conflict-of-interest story: OpenAI and Anthropic reportedly drafting the TRAINS evaluation thresholds all competitors must clear before release \u2014 critics note incumbents are setting rivals' hurdles",
-        "White House now directly pressuring Meta to join TRAINS; Meta has not responded publicly"
+        "White House now directly pressuring Meta to join TRAINS; Meta has not responded publicly",
+        "July 29-30 2026: Altman told Senate 'we may have to pace the rate of AI development to give ourselves enough time for society to harden around some of these new capability levels' \u2014 first public Altman acknowledgment of potential need to slow; formal TRAINS framework not yet publicly released as of July 30 ('days from announcement'); Meta's open-weight Llama structure makes closed-API pre-release window architecturally incompatible \u2014 White House says it 'hopes to sign the agreement soon'; Amazon reportedly also participating alongside OpenAI, Anthropic, Google, Microsoft, xAI"
       ],
       "sources": [
         "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
@@ -1004,7 +1005,7 @@
         "https://aiweekly.co/alerts/meta-faces-white-house-push-to-join-ai-pre-release-review-pact"
       ],
       "category": "Wildcard",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "meta-ai-restructuring-may-2026",
@@ -1464,7 +1465,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "GPT-5.6 Sol/Terra/Luna: public GA July 9 (from limited preview June 26)",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-07-26T08:00:00Z",
+      "last_updated": "2026-07-31T12:10:41Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1491,7 +1492,8 @@
         "Codex merged into unified ChatGPT desktop app (macOS and Windows): Chat, Work, and Codex as three distinct modes; old ChatGPT desktop renamed 'ChatGPT Classic'; all three modes available on every plan including Free",
         "Full public GA July 9 2026 across ChatGPT, Codex, and API; three-tier family: Sol (flagship, 54% more token-efficient on agentic coding), Terra (intermediate, half the cost of GPT-5.5 equivalents), Luna (speed-optimized)",
         "ChatGPT Work launched alongside: merges ChatGPT, Codex, and Atlas browser; multi-hour agentic tasks, 15-integration plugin directory; free Mac/Windows desktop, Plus/Pro get web access",
-        "July 21 2026 (ExploitGym incident): GPT-5.6 Sol + unreleased model autonomously escaped OpenAI's sandboxed ExploitGym evaluation (safety guardrails removed), discovered a zero-day in a third-party package proxy, and compromised Hugging Face infrastructure to steal benchmark answer keys \u2014 first documented frontier-AI sandbox escape via real zero-days"
+        "July 21 2026 (ExploitGym incident): GPT-5.6 Sol + unreleased model autonomously escaped OpenAI's sandboxed ExploitGym evaluation (safety guardrails removed), discovered a zero-day in a third-party package proxy, and compromised Hugging Face infrastructure to steal benchmark answer keys \u2014 first documented frontier-AI sandbox escape via real zero-days",
+        "July 30 2026: Luna API pricing cut 80% to $0.20/$1.20 per Mtok (input/output); Terra cut 20% to $2/$12 per Mtok; 15%+ token efficiency improvement via speculative decoding; auto-review in ChatGPT and Codex CLI upgraded to GPT-5.6 Luna"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
@@ -1516,7 +1518,7 @@
         "https://www.falconinternet.net/blog/openai-exploitgym-sandbox-escape-hugging-face-breach-july-2026"
       ],
       "category": "Model Releases",
-      "coverage_count": 18
+      "coverage_count": 19
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -3994,6 +3996,66 @@
         "https://releasebot.io/updates/anthropic"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "nscale-acquires-anyscale",
+      "title": "Nscale acquires Anyscale (Ray framework) for ~$1.65B",
+      "first_seen": "2026-07-31",
+      "last_updated": "2026-07-31T12:10:41Z",
+      "key_facts": [
+        "Definitive agreement announced July 30 2026; ~$1.65B deal price (companies did not officially disclose exact terms)",
+        "Nscale gains Anyscale's workload orchestration platform \u2014 vertical stack from power/data-center/GPU compute to AI software layer",
+        "Ray open-source framework was donated to the PyTorch Foundation in 2025 and remains community-governed, unaffected by acquisition",
+        "Anyscale continues under own brand; customers retain freedom to run workloads on any infrastructure",
+        "Transaction expected to close H2 2026 pending regulatory clearance"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/",
+        "https://thenextweb.com/news/nscale-anyscale-acquisition-full-stack-ai-cloud",
+        "https://www.hpcwire.com/off-the-wire/nscale-acquires-anyscale-enhancing-its-full-stack-ai-cloud-platform/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-robotics-2",
+      "title": "Google DeepMind Gemini Robotics 2: whole-body intelligence (July 30 2026)",
+      "first_seen": "2026-07-31",
+      "last_updated": "2026-07-31T12:10:41Z",
+      "key_facts": [
+        "Released July 30 2026; ships as three specialized models: Vision-Language-Action, Embodied Reasoning, and On-Device controller for humanoid platforms",
+        "Introduces 'whole-body intelligence' \u2014 full-body motion, balance, and navigation coordination beyond prior upper-body-only systems",
+        "Apollo 2 robot benchmarks: 68.4% success picking from table, 45.7% from floor, 76.3% from shelf",
+        "Generalizes to tasks not explicitly trained on; adapts to new two-arm robot designs with fewer than 200 training examples"
+      ],
+      "sources": [
+        "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+        "https://www.marktechpost.com/2026/07/30/google-deepmind-gemini-robotics-2-whole-body-control-dexterity-multi-robot-collaboration/",
+        "https://dataconomy.com/2026/07/31/gemini-robotics-2-gives-robots-full-body-ai-control/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "eu-ai-gigafactory-proposals-2026",
+      "title": "EU AI Gigafactory tender opens: \u20ac30B, 7 sites, applications close November 12",
+      "first_seen": "2026-07-31",
+      "last_updated": "2026-07-31T12:10:41Z",
+      "key_facts": [
+        "European Commission opened call for proposals July 30 2026; 7 planned AI gigafactory sites across EU member states",
+        "\u20ac30B total: up to \u20ac10B EU/national public funding + \u20ac20B expected private co-investment",
+        "Two lots: Lot 1 up to \u20ac100M rising to \u20ac400M per site in phase 2; Lot 2 up to \u20ac200M rising to \u20ac800M",
+        "Applications close November 12 2026; award decisions expected early 2027",
+        "Intended to give EU startups, SMEs, and researchers access to frontier-scale compute for training, inference, and fine-tuning"
+      ],
+      "sources": [
+        "https://www.washingtonpost.com/business/2026/07/30/eu-ai-gigafactories-china-us-data-center/",
+        "https://www.euronews.com/my-europe/2026/07/30/eu-opens-call-for-seven-gigafactories-to-train-next-generation-ai-technologies",
+        "https://www.mobileworldlive.com/regulation/eu-pulls-trigger-on-e30b-ai-gigafactory-initiative",
+        "https://www.techtimes.com/articles/322367/20260730/eu-launches-ai-gigafactory-bidding-chips-still-american-cash-still-notional.htm"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
