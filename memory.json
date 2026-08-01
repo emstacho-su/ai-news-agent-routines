@@ -983,7 +983,7 @@
       "id": "trump-ai-eo-voluntary-prerelease-postponed",
       "title": "Trump pulls 90-day AI EO; signs revised 30-day voluntary EO",
       "first_seen": "2026-05-24",
-      "last_updated": "2026-07-31T12:10:41Z",
+      "last_updated": "2026-08-01T12:10:41Z",
       "key_facts": [
         "White House canceled signing of EO",
         "June 2 2026: Trump signed EO Promoting Advanced AI Innovation and Security; 30-day deadline (July 2) for Treasury/NSA/CISA/NCD to establish AI Cybersecurity Clearinghouse; August 1 deadline for voluntary frontier model pre-release framework",
@@ -992,7 +992,9 @@
         "July 29 2026: Sam Altman met White House Chief of Staff Susie Wiles; also visited Sen. Ted Cruz and Senate Democrats ahead of August 1 TRAINS deadline",
         "Conflict-of-interest story: OpenAI and Anthropic reportedly drafting the TRAINS evaluation thresholds all competitors must clear before release \u2014 critics note incumbents are setting rivals' hurdles",
         "White House now directly pressuring Meta to join TRAINS; Meta has not responded publicly",
-        "July 29-30 2026: Altman told Senate 'we may have to pace the rate of AI development to give ourselves enough time for society to harden around some of these new capability levels' \u2014 first public Altman acknowledgment of potential need to slow; formal TRAINS framework not yet publicly released as of July 30 ('days from announcement'); Meta's open-weight Llama structure makes closed-API pre-release window architecturally incompatible \u2014 White House says it 'hopes to sign the agreement soon'; Amazon reportedly also participating alongside OpenAI, Anthropic, Google, Microsoft, xAI"
+        "July 29-30 2026: Altman told Senate 'we may have to pace the rate of AI development to give ourselves enough time for society to harden around some of these new capability levels' \u2014 first public Altman acknowledgment of potential need to slow; formal TRAINS framework not yet publicly released as of July 30 ('days from announcement'); Meta's open-weight Llama structure makes closed-API pre-release window architecturally incompatible \u2014 White House says it 'hopes to sign the agreement soon'; Amazon reportedly also participating alongside OpenAI, Anthropic, Google, Microsoft, xAI",
+        "August 1 2026 (deadline met): White House formally published TRAINS voluntary pre-release framework \u2014 OpenAI, Anthropic, Google, Microsoft, xAI confirmed participants; Meta excluded (open-weight architecture incompatible with closed pre-release window); framework gives government up to 30 days pre-release access before frontier model public release; advisory/flagging only, no mandatory preclearance",
+        "NSA's classified cybersecurity benchmarking process for assessing frontier model capabilities delivered to White House August 1 (second EO 14409 August 1 deliverable)"
       ],
       "sources": [
         "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
@@ -1002,10 +1004,12 @@
         "https://easternherald.com/2026/07/06/white-house-voluntary-ai-frontier-model-standards/",
         "https://www.cnbc.com/2026/07/29/altman-white-house-wiles-ai-framework.html",
         "https://www.techtimes.com/articles/321917/20260728/openai-anthropic-are-writing-threshold-their-rivals-must-clear-launch.htm",
-        "https://aiweekly.co/alerts/meta-faces-white-house-push-to-join-ai-pre-release-review-pact"
+        "https://aiweekly.co/alerts/meta-faces-white-house-push-to-join-ai-pre-release-review-pact",
+        "https://vorplabs.com/ai-regulatory-updates/frontier-model-review-framework",
+        "https://www.wiley.law/alert-New-AI-Executive-Order-Addresses-Frontier-Models-and-Cybersecurity-Vulnerabilities"
       ],
       "category": "Wildcard",
-      "coverage_count": 8
+      "coverage_count": 9
     },
     {
       "id": "meta-ai-restructuring-may-2026",
@@ -1582,7 +1586,7 @@
       "id": "eu-ai-act-august-2026-enforcement",
       "title": "EU AI Act full enforcement August 2, 2026: GPAI obligations live",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-07-28T12:00:00Z",
+      "last_updated": "2026-08-01T12:10:41Z",
       "key_facts": [
         "August 2, 2026 = full EU AI Act applies including GPAI model obligations",
         "June 2026: Code of Practice on AI-generated content marking due for publication",
@@ -1592,7 +1596,8 @@
         "June 16 2026 EU Parliament Omnibus vote finalized (Council agreement secured): Annex III high-risk AI rules (hiring, credit scoring, education, law enforcement) delayed from August 2, 2026 \u2192 December 2, 2027 (16-month extension); Annex I (medical devices, vehicles) delayed to August 2028",
         "August 2, 2026 actual enforcement scope: Article 50 transparency obligations (mandatory AI chatbot disclosure, all AI-generated/synthetic content must be labeled) + full GPAI enforcement powers (AI Office can request docs, evaluate models, restrict/withdraw from EU market)",
         "Fines on August 2: up to \u20ac15M or 3% global turnover for transparency violations; up to \u20ac35M or 7% for most serious breaches; watermarking for AI-generated content implementation deadline set at December 2, 2026",
-        "78% of organizations had not taken meaningful compliance steps as of April 2026"
+        "78% of organizations had not taken meaningful compliance steps as of April 2026",
+        "August 1 2026: enforcement date is tomorrow (August 2); Article 50 chatbot-disclosure and GPAI enforcement powers now imminent; 78% non-compliance rate as of April 2026 suggests early enforcement actions likely"
       ],
       "sources": [
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
@@ -1600,10 +1605,12 @@
         "https://www.techtimes.com/articles/318417/20260615/g7-privacy-regulators-head-paris-ai-enforcement-deadline-48-days-out.htm",
         "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
         "https://artificialintelligenceact.eu/",
-        "https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks"
+        "https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks",
+        "https://olakai.ai/blog/eu-ai-act-enforcement-august-2026/",
+        "https://responsibleailabs.ai/knowledge-hub/articles/eu-ai-act-august-2026-compliance"
       ],
       "category": "Wildcard",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "claude-foundation-models-swift-package",
@@ -4056,6 +4063,59 @@
         "https://www.techtimes.com/articles/322367/20260730/eu-launches-ai-gigafactory-bidding-chips-still-american-cash-still-notional.htm"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-workbench-prompt-api-sunset",
+      "title": "Anthropic legacy Workbench and experimental prompt APIs retire August 17 2026",
+      "first_seen": "2026-08-01T12:10:41Z",
+      "last_updated": "2026-08-01T12:10:41Z",
+      "key_facts": [
+        "Legacy Workbench (platform.claude.com/workbench) in Claude Console shuts down August 17 2026",
+        "Three experimental endpoints retired simultaneously: /v1/experimental/generate_prompt, /v1/experimental/improve_prompt, /v1/experimental/templatize_prompt \u2014 requests return errors after cutoff",
+        "Saved prompts, variables, and evals not migrated to new Workbench \u2014 must export manually from org settings banner before August 17"
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/release-notes/overview",
+        "https://releasebot.io/updates/anthropic/claude-developer-platform"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepmind-alphafold-team-disbanded",
+      "title": "Google DeepMind dissolves AlphaFold team, reassigns researchers to Gemini (July 2026)",
+      "first_seen": "2026-08-01T12:10:41Z",
+      "last_updated": "2026-08-01T12:10:41Z",
+      "key_facts": [
+        "July 29-30 2026 (FT report): Google DeepMind disbanded dedicated AlphaFold team; remaining researchers reassigned to Gemini, enzyme design, nuclear fusion, genomics, and Isomorphic Labs",
+        "~25% of original AlphaFold paper's full-time DeepMind authors have left the company: Nobel laureate John Jumper (\u2192 Anthropic, June), co-authors Jonas Adler and Alexander Pritzel also departed",
+        "AlphaFold protein structure database (200M+ predictions) and public server remain operational; VP Research Pushmeet Kohli framed as 'evolution of strategy' away from grand-challenge research programs"
+      ],
+      "sources": [
+        "https://www.engadget.com/2225849/google-shuts-down-alphafold/",
+        "https://thenextweb.com/news/deepmind-alphafold-team-dismantled-gemini-anthropic",
+        "https://www.technology.org/2026/07/30/google-deepmind-alphafold-team-disbanded-gemini/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "icml-2026-outstanding-paper-awards",
+      "title": "ICML 2026 Outstanding Paper Awards: diffusion models dominate, alignment warning wins position paper",
+      "first_seen": "2026-08-01T12:10:41Z",
+      "last_updated": "2026-08-01T12:10:41Z",
+      "key_facts": [
+        "Two Outstanding Paper awards: 'The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models' and 'High-Precision Sampling for Diffusion Models and Log-Concave Distributions' \u2014 latter proves more efficient accurate sampling than previously established",
+        "Outstanding Position Paper: 'Position: The Alignment Community is Unintentionally Building a Censor's Toolkit' (Sarah Ball, Phil Hackemann) \u2014 argues alignment techniques risk enabling state-level censorship infrastructure",
+        "Test of Time: Mnih et al. 2016 A3C paper; conference held Seoul July 6-11 2026"
+      ],
+      "sources": [
+        "https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/",
+        "https://aiweekly.co/alerts/icml-2026-awards-two-diffusion-models-and-an-alignment-criterion",
+        "https://www.kucoin.com/news/flash/icml-2026-awards-announced-diffusion-models-dominate-deepmind-paper-honored"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
