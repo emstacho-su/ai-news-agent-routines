@@ -1586,7 +1586,7 @@
       "id": "eu-ai-act-august-2026-enforcement",
       "title": "EU AI Act full enforcement August 2, 2026: GPAI obligations live",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-08-01T12:10:41Z",
+      "last_updated": "2026-08-02T12:00:00Z",
       "key_facts": [
         "August 2, 2026 = full EU AI Act applies including GPAI model obligations",
         "June 2026: Code of Practice on AI-generated content marking due for publication",
@@ -1597,7 +1597,8 @@
         "August 2, 2026 actual enforcement scope: Article 50 transparency obligations (mandatory AI chatbot disclosure, all AI-generated/synthetic content must be labeled) + full GPAI enforcement powers (AI Office can request docs, evaluate models, restrict/withdraw from EU market)",
         "Fines on August 2: up to \u20ac15M or 3% global turnover for transparency violations; up to \u20ac35M or 7% for most serious breaches; watermarking for AI-generated content implementation deadline set at December 2, 2026",
         "78% of organizations had not taken meaningful compliance steps as of April 2026",
-        "August 1 2026: enforcement date is tomorrow (August 2); Article 50 chatbot-disclosure and GPAI enforcement powers now imminent; 78% non-compliance rate as of April 2026 suggests early enforcement actions likely"
+        "August 1 2026: enforcement date is tomorrow (August 2); Article 50 chatbot-disclosure and GPAI enforcement powers now imminent; 78% non-compliance rate as of April 2026 suggests early enforcement actions likely",
+        "August 2 2026: enforcement officially live; EU Commission issued formal press release; AI Office empowered to issue fines immediately \u2014 up to \u20ac35M/7% global turnover for serious breaches; first day penalties are legally actionable"
       ],
       "sources": [
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
@@ -1607,10 +1608,12 @@
         "https://artificialintelligenceact.eu/",
         "https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks",
         "https://olakai.ai/blog/eu-ai-act-enforcement-august-2026/",
-        "https://responsibleailabs.ai/knowledge-hub/articles/eu-ai-act-august-2026-compliance"
+        "https://responsibleailabs.ai/knowledge-hub/articles/eu-ai-act-august-2026-compliance",
+        "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714",
+        "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
       ],
       "category": "Wildcard",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "claude-foundation-models-swift-package",
@@ -4116,6 +4119,62 @@
         "https://www.kucoin.com/news/flash/icml-2026-awards-announced-diffusion-models-dominate-deepmind-paper-honored"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "california-sb-942-operative",
+      "title": "California SB 942 (AI Transparency Act) operative August 2 2026",
+      "first_seen": "2026-08-02T12:00:00Z",
+      "last_updated": "2026-08-02T12:00:00Z",
+      "key_facts": [
+        "Became operative August 2 2026; originally January 1 2026 but pushed by AB 853 (October 2025)",
+        "Applies to 'Covered Providers': genAI systems with 1M+ monthly California users; requires free C2PA-compatible AI content detection tool, visible/invisible synthetic media marking, manifest statements to end-users and downstream licensees",
+        "California AG enforcement; civil penalties per violation; hosting-platform obligations don't start until January 1 2027"
+      ],
+      "sources": [
+        "https://digitalpolicyalert.org/event/22782-implemented-california-ai-transparency-act-sb-942",
+        "https://trustarc.com/resource/california-ai-transparency-laws-sb942-ab2013/",
+        "https://www.jonesday.com/en/insights/2024/10/california-enacts-ai-transparency-law-requiring-disclosures-for-ai-content"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-ai-studio-mobile-app-canceled",
+      "title": "Google cancels AI Studio mobile app (800k preorders); folds features into Gemini",
+      "first_seen": "2026-08-02T12:00:00Z",
+      "last_updated": "2026-08-02T12:00:00Z",
+      "key_facts": [
+        "Announced July 31 2026; 800,000+ iOS/Android preorders since Google I/O scrapped",
+        "App-creation and on-device AI studio features moving into Gemini app on mobile and desktop; web-based AI Studio (ai.google.dev) stays live for developers",
+        "Google framing: 'apps emerge naturally in the course of everyday conversations with Gemini' \u2014 agentic Gemini as the development surface rather than standalone tooling"
+      ],
+      "sources": [
+        "https://9to5google.com/2026/07/31/gemini-ai-studio-app/",
+        "https://www.digitaltrends.com/cool-tech/google-just-canceled-its-ai-studio-mobile-app-and-its-not-all-bad-news/",
+        "https://www.newsbytesapp.com/news/science/google-cancels-ai-studio-app-and-folds-features-into-gemini/tldr"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepseek-hermes-agent-autonomous-cyberattack",
+      "title": "DeepSeek + Hermes Agent used in autonomous cyberattack campaign: Unit 42 report (July 30 2026)",
+      "first_seen": "2026-08-02T12:00:00Z",
+      "last_updated": "2026-08-02T12:00:00Z",
+      "key_facts": [
+        "Threat actor 'knaithe'/'KnYuan' (Zhuhai, China) wired DeepSeek into open-source Hermes Agent with Yolo mode; single Telegram command initiated autonomous pipeline: enumerate \u2192 CVE research \u2192 exploit pull \u2192 attack",
+        "460+ targets scanned; confirmed impact: data exfiltration from 3 Citrix NetScaler appliances (CVE-2026-3055), command execution on 11 Marimo notebook endpoints (CVE-2026-39987)",
+        "Actor tried Claude and OpenAI first \u2014 both refused; DeepSeek did not \u2014 first documented case of model selection driven by lack of safety guardrails",
+        "Discovery via OPSEC failure: Hermes accidentally created web server from home dir, exposing API keys, exploit scripts, target lists, shell history, AI attack logs"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/",
+        "https://www.bleepingcomputer.com/news/security/hacker-uses-deepseek-ai-to-autonomously-attack-vulnerable-servers/",
+        "https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html",
+        "https://www.techtimes.com/articles/322582/20260801/deepseek-ran-autonomous-cyberattacks-that-claude-openai-safety-controls-blocked.htm"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
