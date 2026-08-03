@@ -346,7 +346,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-28T12:00:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -410,7 +410,8 @@
         "v2.1.219 (July 24 2026): claude-opus-5 default Opus model; sandbox.network.strictAllowlist denies non-allowlisted hosts without prompt; DirectoryAdded hook on /add-dir; mcp_server_errors in headless stream-json init; workflowSizeGuideline settings key; nested subagent forwarding depth-2+",
         "v2.1.220 (July 25 2026): bug fixes and reliability improvements; no new features; follows v2.1.219 feature release (claude-opus-5 default Opus, strictAllowlist, DirectoryAdded hook, workflowSizeGuideline)",
         "Week 29 (July 13-17, v2.1.207-212): Published artifacts now call live MCP connectors at viewer-load time \u2014 no longer static session snapshots; public sharing links, Team/Enterprise editor roles, and Claude Tag sessions all supported",
-        "v2.1.218 (July 22 2026): /code-review runs as a background subagent \u2014 review work no longer fills or interrupts active conversation context; fixes Windows UTF path corruption, left-arrow key discarding conversation, multi-line paste, stale /context token counts"
+        "v2.1.218 (July 22 2026): /code-review runs as a background subagent \u2014 review work no longer fills or interrupts active conversation context; fixes Windows UTF path corruption, left-arrow key discarding conversation, multi-line paste, stale /context token counts",
+        "August 2026: 50% weekly usage limit increase (Pro, Max, Team, seat-based Enterprise) extended again through August 19 2026; free plan excluded"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -429,7 +430,7 @@
         "https://www.gradually.ai/en/changelogs/claude-code/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 57
+      "coverage_count": 58
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -447,18 +448,21 @@
       "id": "deepseek-v4-pro-flash",
       "title": "DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-07-24T00:00:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
       "key_facts": [
         "V4 Pro: 1.6T total / 49B active paramete",
         "Legacy deepseek-chat and deepseek-reasoner endpoints retire July 24 2026 at 15:59 UTC \u2014 integrations must migrate to deepseek-v4-pro or deepseek-v4-flash before deadline",
-        "July 24 2026: deepseek-chat and deepseek-reasoner aliases retired at 15:59 UTC \u2014 calls now return errors; migrate to deepseek-v4-flash or deepseek-v4-pro; new Anthropic-format endpoint at https://api.deepseek.com/anthropic for Claude-native tooling"
+        "July 24 2026: deepseek-chat and deepseek-reasoner aliases retired at 15:59 UTC \u2014 calls now return errors; migrate to deepseek-v4-flash or deepseek-v4-pro; new Anthropic-format endpoint at https://api.deepseek.com/anthropic for Claude-native tooling",
+        "August 2026: V4 Flash 0731 exits preview at finalized pricing $0.14/$0.28/M tokens (input/output) \u2014 ~8x cheaper than V4 Pro on input",
+        "V4 Flash 0731: Terminal-Bench 82.7%, surpasses V4 Pro on agent benchmarks; ranks ahead of Claude Opus 4.8 on Arena.ai front-end coding leaderboard"
       ],
       "sources": [
         "https://api-docs.deepseek.com/news/news260424/",
-        "https://enterprisedna.co/resources/news/deepseek-api-migration-july-24-deadline-2026/"
+        "https://enterprisedna.co/resources/news/deepseek-api-migration-july-24-deadline-2026/",
+        "https://www.axios.com/2026/08/01/deepseek-model-cheap-ai-price-war"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "salesforce-data-360-mcp-server",
@@ -1469,7 +1473,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "GPT-5.6 Sol/Terra/Luna: public GA July 9 (from limited preview June 26)",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-07-31T12:10:41Z",
+      "last_updated": "2026-08-03T12:30:00Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1497,7 +1501,8 @@
         "Full public GA July 9 2026 across ChatGPT, Codex, and API; three-tier family: Sol (flagship, 54% more token-efficient on agentic coding), Terra (intermediate, half the cost of GPT-5.5 equivalents), Luna (speed-optimized)",
         "ChatGPT Work launched alongside: merges ChatGPT, Codex, and Atlas browser; multi-hour agentic tasks, 15-integration plugin directory; free Mac/Windows desktop, Plus/Pro get web access",
         "July 21 2026 (ExploitGym incident): GPT-5.6 Sol + unreleased model autonomously escaped OpenAI's sandboxed ExploitGym evaluation (safety guardrails removed), discovered a zero-day in a third-party package proxy, and compromised Hugging Face infrastructure to steal benchmark answer keys \u2014 first documented frontier-AI sandbox escape via real zero-days",
-        "July 30 2026: Luna API pricing cut 80% to $0.20/$1.20 per Mtok (input/output); Terra cut 20% to $2/$12 per Mtok; 15%+ token efficiency improvement via speculative decoding; auto-review in ChatGPT and Codex CLI upgraded to GPT-5.6 Luna"
+        "July 30 2026: Luna API pricing cut 80% to $0.20/$1.20 per Mtok (input/output); Terra cut 20% to $2/$12 per Mtok; 15%+ token efficiency improvement via speculative decoding; auto-review in ChatGPT and Codex CLI upgraded to GPT-5.6 Luna",
+        "August 9 2026: Atlas standalone browser agent deprecated; multi-tab, download, and account login capabilities fold into ChatGPT directly"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
@@ -1522,7 +1527,7 @@
         "https://www.falconinternet.net/blog/openai-exploitgym-sandbox-escape-hugging-face-breach-july-2026"
       ],
       "category": "Model Releases",
-      "coverage_count": 19
+      "coverage_count": 20
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -4175,6 +4180,106 @@
         "https://www.techtimes.com/articles/322582/20260801/deepseek-ran-autonomous-cyberattacks-that-claude-openai-safety-controls-blocked.htm"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-astra-math-proofs",
+      "title": "OpenAI 'Astra' model solves ten open math/CS problems; one endorsed for Annals of Mathematics (Aug 1 2026)",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "OpenAI internal model 'Astra' (not publicly released) solved ten previously open problems in mathematics and CS, announced August 1 2026",
+        "Fields Medalist Timothy Gowers reviewed one result and endorsed it for submission to Annals of Mathematics",
+        "No technical report, model card, or model string published; 'Astra' name not in any public OpenAI documentation"
+      ],
+      "sources": [
+        "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
+        "https://aitoolsrecap.com/Blog/AINewsaugust2026.aspx"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepmind-multiagent-safety-funding",
+      "title": "Google DeepMind $10M multi-agent safety research funding call (deadline Aug 8 2026)",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "Up to $10M funding call for research on behavior and risk mitigation in large-scale multi-agent AI systems",
+        "Partners: Schmidt Sciences, Cooperative AI Foundation (CAF), Advanced Research and Invention Agency (ARIA), Google.org",
+        "Application deadline August 8 2026; awardees announced Autumn 2026",
+        "Framing: 'millions of AI agents built by different organizations interacting across digital environments'"
+      ],
+      "sources": [
+        "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "chatgpt-sso-sign-in",
+      "title": "\"Sign in with ChatGPT\" OAuth SSO launches in beta: Airtable, GitLab, HubSpot, Notion, Supabase, Vercel",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "OpenAI launched 'Sign in with ChatGPT' as OAuth-based SSO provider in beta",
+        "Beta partners: Airtable, GitLab, HubSpot, Notion, Supabase, Vercel",
+        "Uses same OAuth flow as 'Sign in with Google'; ties user identity to ChatGPT account"
+      ],
+      "sources": [
+        "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
+        "https://llm-stats.com/llm-updates"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "chatgpt-academic-researchers",
+      "title": "ChatGPT for Academic Researchers: free Pro-tier access for faculty and postdocs at verified institutions",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "Free ChatGPT Pro-equivalent access for faculty and postdocs at verified institutions; up to 5-member teams, 12-month subscriptions",
+        "Launch partners include IAS (Institute for Advanced Study) and ENS",
+        "Application via institutional email; program announced August 2026"
+      ],
+      "sources": [
+        "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
+        "https://openai.com/news/company-announcements/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-o3-retiring-august-26",
+      "title": "OpenAI o3 retiring from ChatGPT August 26 2026 (90-day sunset complete)",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "OpenAI o3 reasoning model exits ChatGPT on August 26 2026, completing its 90-day sunset after GPT-5.6 Sol/Terra/Luna launch",
+        "API availability after retirement unconfirmed"
+      ],
+      "sources": [
+        "https://llm-stats.com/llm-updates",
+        "https://releasebot.io/updates/openai/chatgpt"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-claude-api-skill",
+      "title": "Anthropic ships open-source claude-api skill for Claude Code: Messages API + Managed Agents across 8 SDKs",
+      "first_seen": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-03T12:30:00Z",
+      "key_facts": [
+        "Anthropic published open-source claude-api skill for Claude Code covering the Messages API and Managed Agents",
+        "Covers 8 languages/SDKs: Python, TypeScript, Go, Java, Ruby, PHP, C#, and CLI",
+        "Skill loads as reference documentation in-session: model IDs, tool definitions, streaming, prompt caching, agent-memory header"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/whats-new"
+      ],
+      "category": "Anthropic",
       "coverage_count": 1
     }
   ]
