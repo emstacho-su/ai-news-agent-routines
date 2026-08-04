@@ -309,14 +309,19 @@
       "id": "claude-sonnet-5",
       "title": "Claude Sonnet 5: 92.4% SWE-bench Verified, 88.3% OSWorld-Ver",
       "first_seen": "2026-05-10",
-      "last_updated": "2026-07-01T12:06:41Z",
+      "last_updated": "2026-08-04T12:00:00Z",
       "key_facts": [
         "Released April 1 2026; model string clau",
-        "July 1 2026: Claude Sonnet 5 set as default model in Claude Code v2.1.197; native 1M-token context window; promotional pricing $2/$10 per Mtok through August 31"
+        "July 1 2026: Claude Sonnet 5 set as default model in Claude Code v2.1.197; native 1M-token context window; promotional pricing $2/$10 per Mtok through August 31",
+        "August 31 2026: introductory pricing $2/$10 per Mtok ends; standard $3/$15 takes effect September 1 (50% sticker increase)",
+        "New tokenizer encodes same text as 0-35% more tokens than Sonnet 4.6 tokenizer \u2014 effective cost increase at standard prices can exceed 50% headline number"
       ],
-      "sources": [],
+      "sources": [
+        "https://finopsllm.com/research/sonnet-5-intro-pricing-deadline",
+        "https://moclaw.ai/blog/claude-sonnet-5-tokenizer-cost-migration"
+      ],
       "category": "Model Releases",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "nvidia-40b-ai-equity-strategy-2026",
@@ -346,7 +351,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-04T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -411,7 +416,10 @@
         "v2.1.220 (July 25 2026): bug fixes and reliability improvements; no new features; follows v2.1.219 feature release (claude-opus-5 default Opus, strictAllowlist, DirectoryAdded hook, workflowSizeGuideline)",
         "Week 29 (July 13-17, v2.1.207-212): Published artifacts now call live MCP connectors at viewer-load time \u2014 no longer static session snapshots; public sharing links, Team/Enterprise editor roles, and Claude Tag sessions all supported",
         "v2.1.218 (July 22 2026): /code-review runs as a background subagent \u2014 review work no longer fills or interrupts active conversation context; fixes Windows UTF path corruption, left-arrow key discarding conversation, multi-line paste, stale /context token counts",
-        "August 2026: 50% weekly usage limit increase (Pro, Max, Team, seat-based Enterprise) extended again through August 19 2026; free plan excluded"
+        "August 2026: 50% weekly usage limit increase (Pro, Max, Team, seat-based Enterprise) extended again through August 19 2026; free plan excluded",
+        "v2.1.221 (August 4 2026): Focus view toggle (Ctrl+Alt+F) hides tool activity behind per-turn expandable summary with live running-tool indicator",
+        "v2.1.221: mode:\"mask\" for sandbox credential files on Linux/WSL \u2014 proxy substitutes real value on egress; macOS falls back to deny",
+        "v2.1.221: claude plugin validate warns when plugin/marketplace name would be rejected by Claude Desktop managed marketplace sync"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -430,7 +438,7 @@
         "https://www.gradually.ai/en/changelogs/claude-code/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 58
+      "coverage_count": 59
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -3284,7 +3292,7 @@
       "id": "mcp-spec-2026-07-28-rc",
       "title": "MCP 2026-07-28 specification RC: stateless core, Extensions, Tasks, MCP Apps, OAuth/OIDC",
       "first_seen": "2026-07-16T00:00:00Z",
-      "last_updated": "2026-07-29T12:13:01Z",
+      "last_updated": "2026-08-04T12:00:00Z",
       "key_facts": [
         "RC locked May 21 2026; final spec ships July 28 2026; announced by lead maintainers David Soria Parra and Den Delimarsky",
         "Stateless core: initialize/initialized handshake removed (SEP-2575); Mcp-Session-Id header removed (SEP-2567); protocol version/client info now in _meta on every request; new mandatory server/discover RPC; traffic routable via Mcp-Method header \u2014 load balancers no longer need sticky sessions",
@@ -3299,17 +3307,21 @@
         "Response caching: ttlMs and cacheScope parameters (modeled on HTTP Cache-Control) allow servers to declare tool-call cache validity",
         "Standard error codes: resource-not-found errors now return JSON-RPC -32602 (was custom -32002)",
         "Ecosystem at ship: 10,000+ production MCP servers, ~97M monthly SDK downloads",
-        "July 28-29 2026: spec 2026-07-28 officially finalized; 10-week Tier-1 SDK validation window closed; all three Tier-1 SDKs (Python, TypeScript, Go) have beta builds on new stateless protocol; GitHub MCP server live on stateless spec since July 23 as first major production implementation"
+        "July 28-29 2026: spec 2026-07-28 officially finalized; 10-week Tier-1 SDK validation window closed; all three Tier-1 SDKs (Python, TypeScript, Go) have beta builds on new stateless protocol; GitHub MCP server live on stateless spec since July 23 as first major production implementation",
+        "August 2026: Anthropic confirms MCP 2026-07-28 stateless spec is rolling out to Claude products; AWS AgentCore Gateway is first major cloud deployment live on new stateless protocol",
+        "Migration path: @modelcontextprotocol/codemod@beta v1-to-v2 auto-migrates existing server code; round-robin load balancers work without sticky sessions on new spec"
       ],
       "sources": [
         "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
         "https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/",
         "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
         "https://workos.com/blog/mcp-2026-spec-agent-authentication",
-        "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/"
+        "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/",
+        "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "gemini-api-managed-agents-july-2026",
@@ -4186,18 +4198,25 @@
       "id": "openai-astra-math-proofs",
       "title": "OpenAI 'Astra' model solves ten open math/CS problems; one endorsed for Annals of Mathematics (Aug 1 2026)",
       "first_seen": "2026-08-03T12:30:00Z",
-      "last_updated": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-04T12:00:00Z",
       "key_facts": [
         "OpenAI internal model 'Astra' (not publicly released) solved ten previously open problems in mathematics and CS, announced August 1 2026",
         "Fields Medalist Timothy Gowers reviewed one result and endorsed it for submission to Annals of Mathematics",
-        "No technical report, model card, or model string published; 'Astra' name not in any public OpenAI documentation"
+        "No technical report, model card, or model string published; 'Astra' name not in any public OpenAI documentation",
+        "Sam Altman demoed Astra to DC policymakers and regulators in early August 2026",
+        "Total compute cost to produce ten open math/CS problem solutions: $2,000; Lean certificates published on GitHub under open license",
+        "Astra confirmed as new model class positioned after the GPT-5 Sol/Terra/Luna family (not GPT-5.x or GPT-6); no public release date announced",
+        "Astra architecture: multi-agent coordination \u2014 agents can work together for hours or days; not a single-model system"
       ],
       "sources": [
         "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
-        "https://aitoolsrecap.com/Blog/AINewsaugust2026.aspx"
+        "https://aitoolsrecap.com/Blog/AINewsaugust2026.aspx",
+        "https://finance.biggo.com/news/991763e3-7527-49a1-8c1d-bab99af1df55",
+        "https://www.forbes.com/sites/jonmarkman/2026/08/03/openais-astra-solved-10-decades-old-math-problems-for-just-2000/",
+        "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-problems/"
       ],
       "category": "Research & Technical",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "deepmind-multiagent-safety-funding",
@@ -4280,6 +4299,23 @@
         "https://code.claude.com/docs/en/whats-new"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "fli-ai-safety-index-summer-2026",
+      "title": "Anthropic tops Future of Life Institute AI Safety Index Summer 2026: highest overall grade, leads 5 of 6 domains",
+      "first_seen": "2026-08-04T12:00:00Z",
+      "last_updated": "2026-08-04T12:00:00Z",
+      "key_facts": [
+        "Future of Life Institute Summer 2026 AI Safety Index: Anthropic earns highest overall grade",
+        "Anthropic leads in 5 of 6 evaluated domains: transparency, safety framework, technical research, model evaluations, deployment practices",
+        "Meta improved from 6th to 4th place in the rankings",
+        "Failing grades: xAI (US), DeepSeek (China), Mistral (Europe)"
+      ],
+      "sources": [
+        "https://futureoflife.org/ai-safety-index-summer-2026/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
