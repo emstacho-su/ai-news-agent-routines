@@ -356,7 +356,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-06T12:30:00Z",
+      "last_updated": "2026-08-07T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -428,7 +428,10 @@
         "v2.1.222 (August 4 2026): worktree-isolated sessions and their subagents can no longer run destructive git commands (reset --hard, clean -f) against main checkout \u2014 isolation now applies to file edits and Bash in every session type; PreToolUse auto-allow hooks no longer bypass tool restrictions in background agent tasks (summaries, compaction, renames); /usage-credits fix for Team/Enterprise dismissed requests; startup connectivity check HTTPS proxy hang fixed; false 'Connection closed mid-response' errors on completed responses fixed",
         "v2.1.221 (Aug 4 2026): Focus view \u2014 toggle (Ctrl+Alt+F) collapses per-turn tool activity into expandable summary with live running-tool indicator",
         "39 bug fixes: stronger worktree isolation (subagents blocked from destructive git on main checkout), auto-allow hardening, Vertex AI tool search re-enabled for Claude 4.5+ models",
-        "50% weekly usage boost extended through August 19; Claude Sonnet 5 promo pricing ends August 31"
+        "50% weekly usage boost extended through August 19; Claude Sonnet 5 promo pricing ends August 31",
+        "v2.1.223 (Aug 5\u20136 2026): Bash permission bypass via invisible/tab Unicode characters patched \u2014 crafted commands could hide themselves from permission scanner",
+        "v2.1.223: owner/* wildcard for strictKnownMarketplaces/blockedMarketplaces managed settings (block/allow all repos under a GitHub org)",
+        "v2.1.223: warning fires when workflow agent/forked skill/background agent's requested subagent model is restricted and parent model runs instead"
       ],
       "sources": [
         "https://blog.mean.ceo/claude-code-news-july-2026/",
@@ -449,7 +452,7 @@
         "https://dev.classmethod.jp/en/articles/20260804-cc-updates-v2-1-221/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 61
+      "coverage_count": 62
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -3067,21 +3070,26 @@
     },
     {
       "id": "meta-muse-spark-1-1-api",
-      "title": "Meta Muse Spark 1.1: Meta's first public model API, public preview July 9 2026",
+      "title": "Meta Muse Spark 1.1/1.2 + Muse Code: Meta's public model API (July\u2013Aug 2026)",
       "first_seen": "2026-07-13T12:30:00Z",
-      "last_updated": "2026-07-13T12:30:00Z",
+      "last_updated": "2026-08-07T12:00:00Z",
       "key_facts": [
         "Meta Model API launched in public preview for US developers July 9 2026; first public model API from Meta",
         "Muse Spark 1.1: multimodal reasoning model, 1M-token context, agentic focus (tool use, computer use, coding); $1.25/Mtok input, $4.25/Mtok output; $20 free credits",
-        "Muse Image (consumer image gen: photo restoration, style transforms, room restyling) ships inside Meta AI apps only \u2014 no public API confirmed as of July 2026"
+        "Muse Image (consumer image gen: photo restoration, style transforms, room restyling) ships inside Meta AI apps only \u2014 no public API confirmed as of July 2026",
+        "Muse Spark 1.2 (Aug 5 2026): coding-focused retrain; DeepSWE 1.1: 59.3%, Terminal-Bench 2.1: 82.9%; API pricing unchanged ($1.25/$4.25 per Mtok)",
+        "Muse Code beta (Aug 5 2026): terminal coding agent co-trained with Muse Spark 1.2; coordinates persistent async subagents for multi-step engineering tasks",
+        "muse-spark-1.2-contributor tier: $0.10 input / $0.20 output in exchange for consent to train future Meta models on prompts and completions"
       ],
       "sources": [
         "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
         "https://www.datacamp.com/blog/muse-spark-1-1",
-        "https://www.axios.com/2026/07/07/ai-meta-image-generator"
+        "https://www.axios.com/2026/07/07/ai-meta-image-generator",
+        "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "zai-zcode-open-weight",
@@ -4475,6 +4483,59 @@
         "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-copilot-super-app",
+      "title": "Microsoft Copilot super-app: GitHub Copilot + Cowork + consumer Copilot merge; AutoPilot paid background agent tier",
+      "first_seen": "2026-08-07T12:00:00Z",
+      "last_updated": "2026-08-07T12:00:00Z",
+      "key_facts": [
+        "Announced July 29 2026 earnings call: consumer Copilot, GitHub Copilot, and Copilot Cowork collapsing into a single app with personal/work context toggle; target end of 2026",
+        "New paid AutoPilot tier for background agentic jobs: scheduling across calendars, email summarization, repeating workflows",
+        "Copilot Podcasts and Copilot Labs cut; overhaul led by Jacob Andreou (EVP Copilot since March 2026, formerly Snap)"
+      ],
+      "sources": [
+        "https://mlq.ai/news/microsoft-merges-consumer-and-enterprise-copilot-into-single-app-launches-paid-autopilot-agents/",
+        "https://techweez.com/2026/07/30/microsoft-to-merge-copilot-github-copilot-and-ai-agents-into-one-app/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-voice-think-fast-2",
+      "title": "Grok Voice Think Fast 2.0: 0.70s first-audio latency, 21 voices, new default voice API Aug 5",
+      "first_seen": "2026-08-07T12:00:00Z",
+      "last_updated": "2026-08-07T12:00:00Z",
+      "key_facts": [
+        "Launched July 29 2026; became default voice API Aug 5 (grok-voice-latest alias now resolves to Think Fast 2.0)",
+        "First-audio latency: ~0.70s vs ~1.25s for Think Fast 1.0; 1.5\u20132x transcription WER improvement on 24-language eval; ~60% fewer reasoning tokens",
+        "21 voices; $0.08/min speech-to-speech + $0.004/text-input token; Think Fast 1.0 still selectable by model ID"
+      ],
+      "sources": [
+        "https://x.ai/news/grok-voice-think-fast-2",
+        "https://www.explainx.ai/blog/grok-voice-think-fast-2-speech-to-speech-july-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "chaindrop-npm-worm",
+      "title": "ChainDrop npm supply-chain worm: 400+ packages, Claude Code / VS Code config files weaponized (Aug 4 2026)",
+      "first_seen": "2026-08-07T12:00:00Z",
+      "last_updated": "2026-08-07T12:00:00Z",
+      "key_facts": [
+        "Aug 4 2026: self-propagating worm compromised keyv maintainer, poisoned 2,212 versions across 444 packages in <4 hours (keyv@6.0.0 150M+/wk, flat-cache@6.1.24, file-entry-cache@11.1.6)",
+        "Novel attack: malware planted in .claude/ and .vscode/ project config directories; executes when AI coding agent or developer opens the repo",
+        "C2 via Ethereum smart contract dead-drop (evades domain blocklists); token-rotation watcher triggers attacker code when defender tries to revoke credentials",
+        "Steals npm tokens, GitHub Actions tokens, Kubernetes credentials, HashiCorp Vault secrets from compromised developer environments"
+      ],
+      "sources": [
+        "https://cycode.com/blog/keyv-cacheable-npm-worm-ai-coding-agents/",
+        "https://www.microsoft.com/en-us/security/blog/2026/08/04/chaindrop-supply-chain-compromise-anatomy-self-propagating-worm/",
+        "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
