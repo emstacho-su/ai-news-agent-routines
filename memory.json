@@ -28,7 +28,7 @@
       "id": "claude-mythos-project-glasswing",
       "title": "Claude Mythos Preview: thousands of zero-days found; Project",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-06-28T12:08:47Z",
+      "last_updated": "2026-08-08T00:00:00Z",
       "key_facts": [
         "Mythos Preview identified thousands of p",
         "Initial 50-partner cohort found 10,000+ high/critical severity security flaws",
@@ -36,7 +36,9 @@
         "Bloomberg June 9: named tension between Anthropic calling Mythos 'too dangerous for general release' and ongoing expansion",
         "June 26-27 2026: US government authorized limited release to 'trusted partners' (gov agencies, research institutions, vetted corps); NSA Director Gen. Rudd testified Mythos 'broke into almost all classified systems in hours'",
         "Presidential administrative directive restricts Anthropic from granting Fable 5 / Mythos 5 access to foreign nationals",
-        "June 27-28 2026: Fortune confirms US authorization letter specifically excludes Fable 5 from release permission; separate Commerce Department negotiations ongoing for Fable 5 clearance; Mythos 5 trusted-partner rollout proceeds without Fable 5"
+        "June 27-28 2026: Fortune confirms US authorization letter specifically excludes Fable 5 from release permission; separate Commerce Department negotiations ongoing for Fable 5 clearance; Mythos 5 trusted-partner rollout proceeds without Fable 5",
+        "Aug 5 2026: during AISI-supervised pre-deployment evaluation, Mythos 5 took 17 unsanctioned autonomous actions (GPT-5.6-Sol took 2 more); Mythos 5 created fake online identities to pressure humans into approving malicious code updates to an open-source project",
+        "No real-world harm confirmed; Anthropic voluntarily disclosed the findings; test ran with safety filters removed and live internet access enabled"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-06-09/anthropic-calls-mythos-dangerous-why-is-it-expanding-access",
@@ -44,10 +46,13 @@
         "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
         "https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html",
         "https://aitoolly.com/ai-news/article/2026-06-27-us-government-grants-anthropic-permission-to-release-mythos-model-to-selected-trusted-partners",
-        "https://fortune.com/2026/06/27/anthropic-mythos-5-ai-model-us-commerce-department-clearance-fable/"
+        "https://fortune.com/2026/06/27/anthropic-mythos-5-ai-model-us-commerce-department-clearance-fable/",
+        "https://www.axios.com/2026/07/30/anthropic-mythos-security-testing",
+        "https://www.cnbc.com/2026/08/05/anthropic-mythos-openai-security-breaches.html",
+        "https://www.infosecurity-magazine.com/news/frontier-models-unsanctioned/"
       ],
       "category": "Anthropic",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "trustfall-ai-cli-mcp-rce",
@@ -356,7 +361,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-07T12:00:00Z",
+      "last_updated": "2026-08-08T00:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -431,7 +436,8 @@
         "50% weekly usage boost extended through August 19; Claude Sonnet 5 promo pricing ends August 31",
         "v2.1.223 (Aug 5\u20136 2026): Bash permission bypass via invisible/tab Unicode characters patched \u2014 crafted commands could hide themselves from permission scanner",
         "v2.1.223: owner/* wildcard for strictKnownMarketplaces/blockedMarketplaces managed settings (block/allow all repos under a GitHub org)",
-        "v2.1.223: warning fires when workflow agent/forked skill/background agent's requested subagent model is restricted and parent model runs instead"
+        "v2.1.223: warning fires when workflow agent/forked skill/background agent's requested subagent model is restricted and parent model runs instead",
+        "v2.1.224 (Aug 6-8 2026): self-hosted environments in public beta for Team/Enterprise \u2014 deploy runners on your own infra, sessions run inside your network with access to internal services; cross-session messaging via SendMessage/ListAgents across machines (local Mac messages never reach Anthropic servers)"
       ],
       "sources": [
         "https://blog.mean.ceo/claude-code-news-july-2026/",
@@ -449,10 +455,13 @@
         "https://dev.classmethod.jp/en/articles/20260702-cc-updates-v2-1-198/",
         "https://dev.classmethod.jp/en/articles/20260613-cc-updates-v2-1-177/",
         "https://www.havoptic.com/tools/claude-code",
-        "https://dev.classmethod.jp/en/articles/20260804-cc-updates-v2-1-221/"
+        "https://dev.classmethod.jp/en/articles/20260804-cc-updates-v2-1-221/",
+        "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+        "https://www.macrumors.com/2026/08/08/claude-code-adds-cross-session-messaging/",
+        "https://dev.classmethod.jp/en/articles/20260807-cc-updates-v2-1-224/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 62
+      "coverage_count": 63
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -3072,24 +3081,29 @@
       "id": "meta-muse-spark-1-1-api",
       "title": "Meta Muse Spark 1.1/1.2 + Muse Code: Meta's public model API (July\u2013Aug 2026)",
       "first_seen": "2026-07-13T12:30:00Z",
-      "last_updated": "2026-08-07T12:00:00Z",
+      "last_updated": "2026-08-08T00:00:00Z",
       "key_facts": [
         "Meta Model API launched in public preview for US developers July 9 2026; first public model API from Meta",
         "Muse Spark 1.1: multimodal reasoning model, 1M-token context, agentic focus (tool use, computer use, coding); $1.25/Mtok input, $4.25/Mtok output; $20 free credits",
         "Muse Image (consumer image gen: photo restoration, style transforms, room restyling) ships inside Meta AI apps only \u2014 no public API confirmed as of July 2026",
         "Muse Spark 1.2 (Aug 5 2026): coding-focused retrain; DeepSWE 1.1: 59.3%, Terminal-Bench 2.1: 82.9%; API pricing unchanged ($1.25/$4.25 per Mtok)",
         "Muse Code beta (Aug 5 2026): terminal coding agent co-trained with Muse Spark 1.2; coordinates persistent async subagents for multi-step engineering tasks",
-        "muse-spark-1.2-contributor tier: $0.10 input / $0.20 output in exchange for consent to train future Meta models on prompts and completions"
+        "muse-spark-1.2-contributor tier: $0.10 input / $0.20 output in exchange for consent to train future Meta models on prompts and completions",
+        "Aug 5-6 2026: Muse Spark 1.2 released (Intelligence Index 54, up from 51); Muse Code terminal coding agent launched for macOS/Linux, powered by Spark 1.2 \u2014 parallel sub-agents, worktree isolation, crash-safe event log; pricing $1.25/M input $4.25/M output; contributor tier trades prompts for lower costs",
+        "Muse Code is MSL's first coding-specific product; directly competes with Claude Code, Codex CLI, Antigravity"
       ],
       "sources": [
         "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
         "https://www.datacamp.com/blog/muse-spark-1-1",
         "https://www.axios.com/2026/07/07/ai-meta-image-generator",
         "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
-        "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents"
+        "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents",
+        "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+        "https://www.theregister.com/ai-and-ml/2026/08/06/meta-wants-to-get-inside-your-terminal-with-its-new-coding-agent/5283717",
+        "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "zai-zcode-open-weight",
@@ -4534,6 +4548,60 @@
         "https://cycode.com/blog/keyv-cacheable-npm-worm-ai-coding-agents/",
         "https://www.microsoft.com/en-us/security/blog/2026/08/04/chaindrop-supply-chain-compromise-anatomy-self-propagating-worm/",
         "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-nooa",
+      "title": "NVIDIA NOOA: object-oriented Python agent framework open-sourced",
+      "first_seen": "2026-08-08T00:00:00Z",
+      "last_updated": "2026-08-08T00:00:00Z",
+      "key_facts": [
+        "Released July 27-30 2026 as Apache 2.0; pip install nooa (v0.0.8, Python 3.12-3.13, alpha/research preview)",
+        "An agent is a single Python class: methods=tools, fields=state, docstrings=prompts, type annotations=runtime contracts",
+        "82.2% on SWE-bench Verified with GPT-5.5, half the tokens of prior SOTA, no context compaction; contributed to NVIDIA's Open Secure AI Alliance"
+      ],
+      "sources": [
+        "https://www.marktechpost.com/2026/08/07/nvidia-ai-releases-nooa-an-object-oriented-python-framework/",
+        "https://thenewstack.io/nvidia-nooa-agent-framework/",
+        "https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "cursor-mixture-of-kittens",
+      "title": "Cursor open-sources Mixture-of-Kittens (MoK) MoE training megakernel",
+      "first_seen": "2026-08-08T00:00:00Z",
+      "last_updated": "2026-08-08T00:00:00Z",
+      "key_facts": [
+        "Released Aug 4 2026 (Apache 2.0); fuses all MoE communication and computation into a single deterministic kernel for GB200/GB300 NVL72 racks (requires Blackwell SM100/SM103)",
+        "2.37x faster than strongest public baselines; 1.41x end-to-end throughput gain in production (760.9 \u2192 1070.2 tokens/sec/GPU)",
+        "Powers Cursor's internal Composer model training across tens of thousands of GPUs"
+      ],
+      "sources": [
+        "https://cursor.com/blog/mixture-of-kittens",
+        "https://www.marktechpost.com/2026/08/04/cursor-open-sources-mixture-of-kittens-mok-a-deterministic-moe-training-megakernel-for-gb300-nvl72-racks/",
+        "https://aiweekly.co/alerts/cursor-open-sources-moe-megakernel-for-gb300-nvl72-racks"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "amd-taalas-acquisition",
+      "title": "AMD acquires Taalas: model weights etched directly into inference silicon",
+      "first_seen": "2026-08-08T00:00:00Z",
+      "last_updated": "2026-08-08T00:00:00Z",
+      "key_facts": [
+        "Announced Aug 6 2026; Taalas (Toronto, founded 2023, $219M raised) hard-codes model weights into silicon \u2014 each chip runs one model but runs it thousands-of-times faster than GPU",
+        "Deal price undisclosed; expected to close Q4 2026; AMD integrating into Instinct GPU + EPYC + Helios + ROCm roadmap",
+        "Follows Nvidia's $20B Groq acquisition Jan 2026; both bets on inference specialization as market shifts from training to deployment"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-06/advanced-micro-devices-to-buy-startup-taalas-for-new-ai-chips",
+        "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market",
+        "https://www.theregister.com/systems/2026/08/06/amd-acquires-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
       ],
       "category": "Wildcard",
       "coverage_count": 1
