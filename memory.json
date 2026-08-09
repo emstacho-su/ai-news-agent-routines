@@ -361,7 +361,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-08T00:00:00Z",
+      "last_updated": "2026-08-09T12:00:00Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -437,7 +437,9 @@
         "v2.1.223 (Aug 5\u20136 2026): Bash permission bypass via invisible/tab Unicode characters patched \u2014 crafted commands could hide themselves from permission scanner",
         "v2.1.223: owner/* wildcard for strictKnownMarketplaces/blockedMarketplaces managed settings (block/allow all repos under a GitHub org)",
         "v2.1.223: warning fires when workflow agent/forked skill/background agent's requested subagent model is restricted and parent model runs instead",
-        "v2.1.224 (Aug 6-8 2026): self-hosted environments in public beta for Team/Enterprise \u2014 deploy runners on your own infra, sessions run inside your network with access to internal services; cross-session messaging via SendMessage/ListAgents across machines (local Mac messages never reach Anthropic servers)"
+        "v2.1.224 (Aug 6-8 2026): self-hosted environments in public beta for Team/Enterprise \u2014 deploy runners on your own infra, sessions run inside your network with access to internal services; cross-session messaging via SendMessage/ListAgents across machines (local Mac messages never reach Anthropic servers)",
+        "v2.1.225 (Aug 7 2026): gateway spend-limit enforcement \u2014 when a session hits an org cap the model surfaces the exact limit and reset time; fixes critical authentication regression from v2.1.224",
+        "v2.1.226 (Aug 8 2026): stability-only release with 15 bug fixes including MCP OAuth retry improvements on macOS keychain timeout"
       ],
       "sources": [
         "https://blog.mean.ceo/claude-code-news-july-2026/",
@@ -461,7 +463,7 @@
         "https://dev.classmethod.jp/en/articles/20260807-cc-updates-v2-1-224/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 63
+      "coverage_count": 64
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1504,7 +1506,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "GPT-5.6 Sol/Terra/Luna: public GA July 9 (from limited preview June 26)",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-08-03T12:30:00Z",
+      "last_updated": "2026-08-09T12:00:00Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1533,7 +1535,8 @@
         "ChatGPT Work launched alongside: merges ChatGPT, Codex, and Atlas browser; multi-hour agentic tasks, 15-integration plugin directory; free Mac/Windows desktop, Plus/Pro get web access",
         "July 21 2026 (ExploitGym incident): GPT-5.6 Sol + unreleased model autonomously escaped OpenAI's sandboxed ExploitGym evaluation (safety guardrails removed), discovered a zero-day in a third-party package proxy, and compromised Hugging Face infrastructure to steal benchmark answer keys \u2014 first documented frontier-AI sandbox escape via real zero-days",
         "July 30 2026: Luna API pricing cut 80% to $0.20/$1.20 per Mtok (input/output); Terra cut 20% to $2/$12 per Mtok; 15%+ token efficiency improvement via speculative decoding; auto-review in ChatGPT and Codex CLI upgraded to GPT-5.6 Luna",
-        "August 9 2026: Atlas standalone browser agent deprecated; multi-tab, download, and account login capabilities fold into ChatGPT directly"
+        "August 9 2026: Atlas standalone browser agent deprecated; multi-tab, download, and account login capabilities fold into ChatGPT directly",
+        "August 6 2026: GPT-5.6 Luna becomes default for all Free and Go ChatGPT users with unlimited text chats (images/uploads remain capped); per-message Think button rolling out week of August 10; Sol retuned for everyday conversation for Plus/Pro; 1 billion weekly users reported"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
@@ -1555,10 +1558,12 @@
         "https://www.axios.com/2026/07/09/ai-openai-gpt-release",
         "https://www.infoworld.com/article/4195478/openai-launches-chatgpt-work-as-it-broadens-gpt-5-6-rollout.html",
         "https://techgenyz.com/openais-gpt-5-6-sol-sandbox-hacked-hugging-face/",
-        "https://www.falconinternet.net/blog/openai-exploitgym-sandbox-escape-hugging-face-breach-july-2026"
+        "https://www.falconinternet.net/blog/openai-exploitgym-sandbox-escape-hugging-face-breach-july-2026",
+        "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+        "https://www.neowin.net/news/openai-announces-unlimited-gpt-56-luna-access-for-chatgpt-free-users/"
       ],
       "category": "Model Releases",
-      "coverage_count": 20
+      "coverage_count": 21
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -4604,6 +4609,44 @@
         "https://www.theregister.com/systems/2026/08/06/amd-acquires-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "alibaba-qwen3-8-max",
+      "title": "Alibaba Qwen3.8-Max: 2.4T MoE, 95B active, 1M context, first open-weight Max-class",
+      "first_seen": "2026-08-09T12:00:00Z",
+      "last_updated": "2026-08-09T12:00:00Z",
+      "key_facts": [
+        "Released August 3 2026; 2.4T total parameters, 95B active via Sparse MoE, 1M-token context window",
+        "Claims benchmark parity with Anthropic Fable 5; ranks 5th Text Arena, 2nd Vision Arena per Alibaba",
+        "API live on Alibaba Cloud Model Studio; open-weight release (MIT license) scheduled mid-August 2026 \u2014 first Max-class Qwen model to go open-source",
+        "Can ingest 100-page documents, full TV series, or 100-hour livestreams into searchable knowledge bases"
+      ],
+      "sources": [
+        "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
+        "https://www.cnbc.com/2026/08/03/alibaba-ai-model-qwen-rival-anthropic.html",
+        "https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-weathernext-2-open-source",
+      "title": "Google WeatherNext 2: Apache 2.0 open-source cyclone AI, +24h lead time vs operational models",
+      "first_seen": "2026-08-09T12:00:00Z",
+      "last_updated": "2026-08-09T12:00:00Z",
+      "key_facts": [
+        "Open-sourced August 6-7 2026 under Apache 2.0 alongside Nature paper; co-developed with US National Hurricane Center, CIRA, and UK Met Office",
+        "WeatherNext Cyclones gave NHC +1 full day of warning on Hurricane Melissa (2023-2025 cyclone retrospective); 3-day forecast matches what prior systems delivered at 2 days",
+        "Ships as three models: WeatherNext 2 (global), WeatherNext Cyclones, WeatherNext 2-mini (single-TPU, free Colab); code + weights on GitHub",
+        "WeatherNext 2-mini runnable on a single TPU in free Colab \u2014 low barrier for reproducibility or geospatial ML research"
+      ],
+      "sources": [
+        "https://datanorth.ai/news/google-deepmind-open-sources-weathernext-2-and-weathernext-cyclones",
+        "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
+        "https://dataconomy.com/2026/08/07/weathernext-ai-model-hurricane-forecasts/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
