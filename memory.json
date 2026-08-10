@@ -940,19 +940,24 @@
       "id": "openai-ipo-confidential-filing",
       "title": "OpenAI files confidential IPO S-1 with Goldman, Morgan Stanley",
       "first_seen": "2026-05-22",
-      "last_updated": "2026-07-05T12:00:00Z",
+      "last_updated": "2026-08-10T12:00:00Z",
       "key_facts": [
         "Confidential S-1 filed with SEC",
         "June 24 2026: Altman told staff RSI (recursive self-improvement) could arrive within 6 months; if so, 'it could be advantageous to delay an IPO' \u2014 technology and world may change in surprising ways; no IPO delay announced, S-1 still targets September listing",
         "Internal OpenAI milestones: automated intern-level function by September 2026, full automated AI researcher by March 2028",
-        "Late June/early July 2026: Altman holding out for $1T+ valuation; NYT/Forbes report OpenAI 'leaning toward 2027 debut'; SpaceX IPO post-listing volatility and tech market conditions cited; no official S-1 amendment or timeline change disclosed; revenue ~$2B/month, enterprise >40%; Anthropic competing IPO targets October 2026 at ~$965B"
+        "Late June/early July 2026: Altman holding out for $1T+ valuation; NYT/Forbes report OpenAI 'leaning toward 2027 debut'; SpaceX IPO post-listing volatility and tech market conditions cited; no official S-1 amendment or timeline change disclosed; revenue ~$2B/month, enterprise >40%; Anthropic competing IPO targets October 2026 at ~$965B",
+        "Aug 9 2026: public S-1 not yet on SEC EDGAR; standard SEC review takes 60-90 days from June 8 filing; public filing expected mid-to-late August, 15 days before roadshow; September listing window still in play",
+        "Reuters reported late June that 2027 listing remains under active consideration alongside late-2026 debut; OpenAI has stated no committed timeline",
+        "Governance note: OpenAI Foundation (nonprofit) retains board-appointment control over OpenAI Group PBC; public shareholders will not have standard governance rights"
       ],
       "sources": [
         "https://www.fool.com/investing/2026/07/04/chatgpt-maker-openai-is-headed-for-a-1-trillion-ip/",
-        "https://cryptobriefing.com/openai-eyes-1t-ipo-by-end-of-2026-microsoft-poised-for-windfall/"
+        "https://cryptobriefing.com/openai-eyes-1t-ipo-by-end-of-2026-microsoft-poised-for-windfall/",
+        "https://chatforest.com/reviews/openai-ipo-2026-s1-filing-valuation-risks-guide/",
+        "https://www.buildmvpfast.com/blog/openai-ipo-filing-valuation-s1-2026"
       ],
       "category": "Wildcard",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "webmcp-chrome-origin-trial",
@@ -4645,6 +4650,46 @@
         "https://datanorth.ai/news/google-deepmind-open-sources-weathernext-2-and-weathernext-cyclones",
         "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
         "https://dataconomy.com/2026/08/07/weathernext-ai-model-hurricane-forecasts/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-deepmind-leadership-restructure-2026",
+      "title": "Google DeepMind CEO Hassabis steps down; Jeff Dean exits to co-found Discovery Loop PBC (Aug 5-6 2026)",
+      "first_seen": "2026-08-10T12:00:00Z",
+      "last_updated": "2026-08-10T12:00:00Z",
+      "key_facts": [
+        "Aug 5-6 2026: Demis Hassabis steps down as Google DeepMind CEO; becomes Chair of DeepMind + first Chief Scientist of Alphabet; continues leading Isomorphic Labs (drug-discovery spinoff)",
+        "Jeff Dean (27-year Google veteran, TensorFlow co-creator) exits Google to co-found Discovery Loop, a public benefit corporation; Google is investor + cloud provider; joined by Oriol Vinyals (AlphaGo lead), Quoc Le (Transformer co-author), Sanjay Ghemawat",
+        "Koray Kavukcuoglu (current DeepMind CTO) becomes SVP of DeepMind, reports directly to Sundar Pichai; now owns Gemini 4 delivery",
+        "Alphabet shares fell approximately 5% on the news; context: follows Gemini 3.5 underperformance, AlphaFold team dissolution, two Gemini co-leads resigned same week",
+        "Gemini 4 confirmed in pre-training as of July 21 2026, described by Pichai as significantly larger than any prior Gemini; coding and autonomous agents stated priorities"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+        "https://www.axios.com/2026/08/06/googles-ai-leadership-shuffle",
+        "https://the-decoder.com/google-deepmind-loses-both-its-ceo-and-chief-scientist-as-demis-hassabis-and-jeff-dean-step-down-simultaneously/",
+        "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "darpa-venom-f16-autonomous",
+      "title": "DARPA VENOM program: standard F-16 flies under AI autonomous control at Eglin AFB (July 2026)",
+      "first_seen": "2026-08-10T12:00:00Z",
+      "last_updated": "2026-08-10T12:00:00Z",
+      "key_facts": [
+        "July 16 2026: DARPA disclosed VENOM (Viper Experimentation and Next-generation Operations Model) program flies standard production F-16 under AI autonomous control at Eglin AFB; human safety pilot aboard to monitor only",
+        "Two phases: June 2026 piloted validation flights for hardware/software verification; July 2026 AI agent assumes autonomous control of flight segments including combat-style maneuvering",
+        "Key distinction: VENOM is a bolt-on hardware + software kit installed on a standard Air Force F-16 from operational fleet \u2014 not a one-off research prototype; intended to scale across existing inventory",
+        "Preceded by DARPA ACE program (autonomous dogfight simulator); VENOM moves to real flight on standard aircraft"
+      ],
+      "sources": [
+        "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+        "https://theaviationist.com/2026/07/16/darpa-usaf-fly-f-16-venom-autonomy-modification/",
+        "https://thedebrief.org/after-surviving-a-dogfight-in-a-test-aircraft-darpas-venom-ai-controlled-pilot-just-flew-a-modified-combat-style-f-16/"
       ],
       "category": "Research & Technical",
       "coverage_count": 1
