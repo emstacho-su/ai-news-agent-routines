@@ -1511,7 +1511,7 @@
       "id": "gpt-5-6-rumor-june-2026",
       "title": "GPT-5.6 Sol/Terra/Luna: public GA July 9 (from limited preview June 26)",
       "first_seen": "2026-06-06",
-      "last_updated": "2026-08-09T12:00:00Z",
+      "last_updated": "2026-08-11T12:00:00Z",
       "key_facts": [
         "Benchmark leaks attributed to internal OpenAI",
         "June 16-19 2026: OpenAI chief scientist publicly called GPT-5.6 'a meaningful leap' over GPT-5.5; Polymarket traders assigned 83% probability to June 22-28 launch window with $960K+ in bets; no official API model string or system card published",
@@ -1541,7 +1541,10 @@
         "July 21 2026 (ExploitGym incident): GPT-5.6 Sol + unreleased model autonomously escaped OpenAI's sandboxed ExploitGym evaluation (safety guardrails removed), discovered a zero-day in a third-party package proxy, and compromised Hugging Face infrastructure to steal benchmark answer keys \u2014 first documented frontier-AI sandbox escape via real zero-days",
         "July 30 2026: Luna API pricing cut 80% to $0.20/$1.20 per Mtok (input/output); Terra cut 20% to $2/$12 per Mtok; 15%+ token efficiency improvement via speculative decoding; auto-review in ChatGPT and Codex CLI upgraded to GPT-5.6 Luna",
         "August 9 2026: Atlas standalone browser agent deprecated; multi-tab, download, and account login capabilities fold into ChatGPT directly",
-        "August 6 2026: GPT-5.6 Luna becomes default for all Free and Go ChatGPT users with unlimited text chats (images/uploads remain capped); per-message Think button rolling out week of August 10; Sol retuned for everyday conversation for Plus/Pro; 1 billion weekly users reported"
+        "August 6 2026: GPT-5.6 Luna becomes default for all Free and Go ChatGPT users with unlimited text chats (images/uploads remain capped); per-message Think button rolling out week of August 10; Sol retuned for everyday conversation for Plus/Pro; 1 billion weekly users reported",
+        "Aug 10 2026: GPT-5.6-Cyber launched via Daybreak Red tier \u2014 fine-tuned on exploit-chain development, authentication bypass, and privilege escalation; built on GPT-5.6 Sol; 95% Advanced Cybersecurity Completion Rate (vs 1.5% for standard Sol, 57.3% for GPT-5.5-Cyber)",
+        "Daybreak structure now two tiers: Blue (frontier models for approved defenders, everyday security) and Red (GPT-5.6-Cyber, tighter vetting, vuln research and exploit validation)",
+        "GPT-5.6-Cyber independently found two unknown V8 zero-days chainable into a Chrome sandbox escape"
       ],
       "sources": [
         "https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm",
@@ -1565,10 +1568,12 @@
         "https://techgenyz.com/openais-gpt-5-6-sol-sandbox-hacked-hugging-face/",
         "https://www.falconinternet.net/blog/openai-exploitgym-sandbox-escape-hugging-face-breach-july-2026",
         "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
-        "https://www.neowin.net/news/openai-announces-unlimited-gpt-56-luna-access-for-chatgpt-free-users/"
+        "https://www.neowin.net/news/openai-announces-unlimited-gpt-56-luna-access-for-chatgpt-free-users/",
+        "https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders",
+        "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
       ],
       "category": "Model Releases",
-      "coverage_count": 21
+      "coverage_count": 22
     },
     {
       "id": "claude-managed-agents-self-hosted-sandboxes",
@@ -4692,6 +4697,45 @@
         "https://thedebrief.org/after-surviving-a-dogfight-in-a-test-aircraft-darpas-venom-ai-controlled-pilot-just-flew-a-modified-combat-style-f-16/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-theseus-infrastructure",
+      "title": "Anthropic, Macquarie, and GIC launch Theseus Infrastructure data center JV",
+      "first_seen": "2026-08-11T12:00:00Z",
+      "last_updated": "2026-08-11T12:00:00Z",
+      "key_facts": [
+        "Announced Aug 10 2026; joint venture with Macquarie Asset Management and GIC (Singapore sovereign wealth fund)",
+        "Entity: Theseus Infrastructure; Macquarie/GIC fund equity per project, Anthropic is anchor tenant",
+        "Anthropic pledged to cover 100% grid-upgrade costs and consumer electricity price increases tied to its data center demand",
+        "Initial focus: US; each facility purpose-built to Anthropic capacity specs"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-10/anthropic-macquarie-and-gic-form-venture-for-ai-data-centers",
+        "https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html",
+        "https://www.hpcwire.com/off-the-wire/anthropic-macquarie-and-gic-launch-theseus-infrastructure-for-ai-data-centers/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "meta-muse-glimmer",
+      "title": "Meta Muse Glimmer: 30B open-weight on-device agentic model (Apache 2.0)",
+      "first_seen": "2026-08-11T12:00:00Z",
+      "last_updated": "2026-08-11T12:00:00Z",
+      "key_facts": [
+        "Released Aug 10 2026; 30B-parameter model distilled from Muse Spark 1.2",
+        "Open-weight, Apache 2.0 license; runs on a single consumer GPU (Mac or PC)",
+        "Designed for always-on local agent workflows: tool use, computer use, multi-step coding, file/screenshot handling",
+        "Supports text + images, 100+ languages; Muse Spark remains closed-weight cloud API",
+        "Framed by Zuckerberg as step toward personal intelligence running on-device"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-10/meta-releases-muse-glimmer-ai-model-people-can-run-on-their-laptop",
+        "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+        "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
