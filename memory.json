@@ -4246,7 +4246,7 @@
       "id": "openai-astra-math-proofs",
       "title": "OpenAI 'Astra' model solves ten open math/CS problems; one endorsed for Annals of Mathematics (Aug 1 2026)",
       "first_seen": "2026-08-03T12:30:00Z",
-      "last_updated": "2026-08-04T12:00:00Z",
+      "last_updated": "2026-08-12T12:09:31Z",
       "key_facts": [
         "OpenAI internal model 'Astra' (not publicly released) solved ten previously open problems in mathematics and CS, announced August 1 2026",
         "Fields Medalist Timothy Gowers reviewed one result and endorsed it for submission to Annals of Mathematics",
@@ -4254,7 +4254,10 @@
         "Sam Altman demoed Astra to DC policymakers and regulators in early August 2026",
         "Total compute cost to produce ten open math/CS problem solutions: $2,000; Lean certificates published on GitHub under open license",
         "Astra confirmed as new model class positioned after the GPT-5 Sol/Terra/Luna family (not GPT-5.x or GPT-6); no public release date announced",
-        "Astra architecture: multi-agent coordination \u2014 agents can work together for hours or days; not a single-model system"
+        "Astra architecture: multi-agent coordination \u2014 agents can work together for hours or days; not a single-model system",
+        "Aug 7 2026: OpenAI announced Astra development paused \u2014 internal Preparedness Framework tests could not rule out Critical-level cybersecurity capabilities (autonomous zero-day discovery + exploit delivery without human direction)",
+        "Expanded safety testing, isolated evaluation environments, and universal agentic monitoring required before any release; no revised timeline given",
+        "Current GPT-5.6 Sol/Terra/Luna products unaffected by the pause"
       ],
       "sources": [
         "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
@@ -4264,7 +4267,7 @@
         "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-problems/"
       ],
       "category": "Research & Technical",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "deepmind-multiagent-safety-funding",
@@ -4625,12 +4628,13 @@
       "id": "alibaba-qwen3-8-max",
       "title": "Alibaba Qwen3.8-Max: 2.4T MoE, 95B active, 1M context, first open-weight Max-class",
       "first_seen": "2026-08-09T12:00:00Z",
-      "last_updated": "2026-08-09T12:00:00Z",
+      "last_updated": "2026-08-12T12:09:31Z",
       "key_facts": [
         "Released August 3 2026; 2.4T total parameters, 95B active via Sparse MoE, 1M-token context window",
         "Claims benchmark parity with Anthropic Fable 5; ranks 5th Text Arena, 2nd Vision Arena per Alibaba",
         "API live on Alibaba Cloud Model Studio; open-weight release (MIT license) scheduled mid-August 2026 \u2014 first Max-class Qwen model to go open-source",
-        "Can ingest 100-page documents, full TV series, or 100-hour livestreams into searchable knowledge bases"
+        "Can ingest 100-page documents, full TV series, or 100-hour livestreams into searchable knowledge bases",
+        "Aug 12 2026: open weights (MIT) have not shipped as of the week of Aug 10 as previously announced; companion Qwen3.8-27B (for consumer GPU inference) also pending with no revised date from Alibaba"
       ],
       "sources": [
         "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
@@ -4638,7 +4642,7 @@
         "https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "google-weathernext-2-open-source",
@@ -4734,6 +4738,42 @@
         "https://www.bloomberg.com/news/articles/2026-08-10/meta-releases-muse-glimmer-ai-model-people-can-run-on-their-laptop",
         "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-compliance-api-cowork-code",
+      "title": "Claude Compliance API extended to Cowork and Claude Code (Enterprise beta)",
+      "first_seen": "2026-08-12T12:09:31Z",
+      "last_updated": "2026-08-12T12:09:31Z",
+      "key_facts": [
+        "Compliance API now covers Cowork (desktop, web, mobile) and Claude Code (CLI + desktop) in beta for Claude Enterprise customers",
+        "Uses existing Compliance Access Key \u2014 no new integration required; same API interface as Claude chat session auditing",
+        "Security and compliance teams can pull session content and metadata from both products for audits and eDiscovery"
+      ],
+      "sources": [
+        "https://claude.com/blog/compliance-api-cowork-and-claude-code",
+        "https://enterprisedna.co/resources/news/anthropic-claude-code-self-hosted-runner-enterprise-2026/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-doug-pretraining",
+      "title": "[RUMOR] OpenAI codenamed pre-training run \"Doug\": largest base-model run to date, Nov 2026 target",
+      "first_seen": "2026-08-12T12:09:31Z",
+      "last_updated": "2026-08-12T12:09:31Z",
+      "key_facts": [
+        "Multiple leakers and commentators (Aug 9-10) report OpenAI running an internal pre-training job codenamed Doug \u2014 largest pre-training run OpenAI has ever attempted",
+        "Not Astra (next-gen model announced Aug 1) and not GPT-6; framed as full-scale training after Garlic intermediate job validated pre-training fixes",
+        "Reported November 2026 target window; OpenAI has not confirmed Doug, its scale, or timeline",
+        "Context: OpenAI previously hit scaling bottlenecks requiring intermediate validation runs; Doug reportedly signals those bottlenecks resolved"
+      ],
+      "sources": [
+        "https://www.kucoin.com/news/flash/openai-developing-doug-its-largest-pre-training-model-to-date",
+        "https://finance.biggo.com/news/5ed990e1-8bd9-4c4b-a5a8-e4029b26a040",
+        "https://thewincentral.com/openai-doug-ai-model-gpt-6-successor/"
       ],
       "category": "Model Releases",
       "coverage_count": 1
