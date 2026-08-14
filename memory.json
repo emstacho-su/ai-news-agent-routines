@@ -362,7 +362,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-13T12:11:33Z",
+      "last_updated": "2026-08-14T12:12:57Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -443,7 +443,8 @@
         "v2.1.226 (Aug 8 2026): stability-only release with 15 bug fixes including MCP OAuth retry improvements on macOS keychain timeout",
         "Aug 13 2026 changelog: server-supplied hook support added for self-hosted runner sessions (SessionStart/PreToolUse/PostToolUse), matching managed-environment behavior \u2014 closes config-parity gap",
         "Aug 13 2026: SSE keepalive pings added to gateway streaming responses during long thinking pauses \u2014 prevents idle-timeout disconnects on Vertex AI and Bedrock upstreams",
-        "Aug 13 2026: `claude remote-control --continue` command documented for resuming most recent Remote Control session; plugin marketplace command sources extension point added"
+        "Aug 13 2026: `claude remote-control --continue` command documented for resuming most recent Remote Control session; plugin marketplace command sources extension point added",
+        "Aug 14 2026: Auto mode becomes default for Pro/Max/Team \u2014 safety classifier screens each tool call; users who've already set a personal default keep it (one-time switch prompt); org-managed defaults unaffected. v2.1.231 (Aug 13): MCP OAuth sign-in failure fixed for pre-registered OAuth clients (redirect URI mismatch, e.g. Slack)"
       ],
       "sources": [
         "https://blog.mean.ceo/claude-code-news-july-2026/",
@@ -467,7 +468,7 @@
         "https://dev.classmethod.jp/en/articles/20260807-cc-updates-v2-1-224/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 65
+      "coverage_count": 66
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -3344,7 +3345,7 @@
       "id": "mcp-spec-2026-07-28-rc",
       "title": "MCP 2026-07-28 specification RC: stateless core, Extensions, Tasks, MCP Apps, OAuth/OIDC",
       "first_seen": "2026-07-16T00:00:00Z",
-      "last_updated": "2026-08-04T12:00:00Z",
+      "last_updated": "2026-08-14T12:12:57Z",
       "key_facts": [
         "RC locked May 21 2026; final spec ships July 28 2026; announced by lead maintainers David Soria Parra and Den Delimarsky",
         "Stateless core: initialize/initialized handshake removed (SEP-2575); Mcp-Session-Id header removed (SEP-2567); protocol version/client info now in _meta on every request; new mandatory server/discover RPC; traffic routable via Mcp-Method header \u2014 load balancers no longer need sticky sessions",
@@ -3361,19 +3362,22 @@
         "Ecosystem at ship: 10,000+ production MCP servers, ~97M monthly SDK downloads",
         "July 28-29 2026: spec 2026-07-28 officially finalized; 10-week Tier-1 SDK validation window closed; all three Tier-1 SDKs (Python, TypeScript, Go) have beta builds on new stateless protocol; GitHub MCP server live on stateless spec since July 23 as first major production implementation",
         "August 2026: Anthropic confirms MCP 2026-07-28 stateless spec is rolling out to Claude products; AWS AgentCore Gateway is first major cloud deployment live on new stateless protocol",
-        "Migration path: @modelcontextprotocol/codemod@beta v1-to-v2 auto-migrates existing server code; round-robin load balancers work without sticky sessions on new spec"
+        "Migration path: @modelcontextprotocol/codemod@beta v1-to-v2 auto-migrates existing server code; round-robin load balancers work without sticky sessions on new spec",
+        "Aug 2026: monthly SDK downloads crossed 400M (4x growth from ~97M at July 28 spec ship); TypeScript and Python SDKs each crossed 1B total downloads; Google, AWS, and Azure rolling out 2026-07-28 stateless spec in their infrastructure tooling"
       ],
       "sources": [
         "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
-        "https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/",
-        "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
-        "https://workos.com/blog/mcp-2026-spec-agent-authentication",
         "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/",
+        "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
         "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
-        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/"
+        "https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/",
+        "https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/",
+        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/",
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "https://workos.com/blog/mcp-2026-spec-agent-authentication"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "gemini-api-managed-agents-july-2026",
@@ -4250,7 +4254,7 @@
       "id": "openai-astra-math-proofs",
       "title": "OpenAI 'Astra' model solves ten open math/CS problems; one endorsed for Annals of Mathematics (Aug 1 2026)",
       "first_seen": "2026-08-03T12:30:00Z",
-      "last_updated": "2026-08-12T12:09:31Z",
+      "last_updated": "2026-08-14T12:12:57Z",
       "key_facts": [
         "OpenAI internal model 'Astra' (not publicly released) solved ten previously open problems in mathematics and CS, announced August 1 2026",
         "Fields Medalist Timothy Gowers reviewed one result and endorsed it for submission to Annals of Mathematics",
@@ -4261,17 +4265,21 @@
         "Astra architecture: multi-agent coordination \u2014 agents can work together for hours or days; not a single-model system",
         "Aug 7 2026: OpenAI announced Astra development paused \u2014 internal Preparedness Framework tests could not rule out Critical-level cybersecurity capabilities (autonomous zero-day discovery + exploit delivery without human direction)",
         "Expanded safety testing, isolated evaluation environments, and universal agentic monitoring required before any release; no revised timeline given",
-        "Current GPT-5.6 Sol/Terra/Luna products unaffected by the pause"
+        "Current GPT-5.6 Sol/Terra/Luna products unaffected by the pause",
+        "Aug 2026: UK AI Security Institute and US government agencies now conducting external audits; all Astra work confined to air-gapped environments; model weights under stronger encryption; chain-of-thought outputs under automated monitoring; no release date \u2014 blog language implies multi-month delay"
       ],
       "sources": [
-        "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
-        "https://aitoolsrecap.com/Blog/AINewsaugust2026.aspx",
-        "https://finance.biggo.com/news/991763e3-7527-49a1-8c1d-bab99af1df55",
         "https://www.forbes.com/sites/jonmarkman/2026/08/03/openais-astra-solved-10-decades-old-math-problems-for-just-2000/",
-        "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-problems/"
+        "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
+        "https://aitoolsrecap.com/Blog/AINewsaugust2026.aspx",
+        "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-problems/",
+        "https://finance.biggo.com/news/991763e3-7527-49a1-8c1d-bab99af1df55",
+        "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026",
+        "https://www.bloomberg.com/news/articles/2026-08-07/openai-pauses-some-work-on-new-astra-model-over-cyber-concerns",
+        "https://www.cnbc.com/2026/08/10/openai-astra-cybersecurity-risks.html"
       ],
       "category": "Research & Technical",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "deepmind-multiagent-safety-funding",
@@ -4798,6 +4806,42 @@
         "https://www.euronews.com/next/2026/08/11/eu-compliance-delivered-globally-anthropic-to-watermark-claudes-output-worldwide"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-4-6",
+      "title": "Grok 4.6: post-training refinement on V9 base for long-running agents",
+      "first_seen": "2026-08-14T12:12:57Z",
+      "last_updated": "2026-08-14T12:12:57Z",
+      "key_facts": [
+        "Released Aug 12 2026; built on same V9 1.5T-param foundation as Grok 4.5; all improvements from post-training (SFT + RL), not new base model",
+        "Scores 61/100 on Artificial Analysis Intelligence Index, matching GPT-5.6 Sol Max; 500K context window; $2/$6M input/output pricing; cached input at $0.50/M",
+        "[RUMOR] Grok 4.7 on new 2.1T-param foundation expected late August or early September 2026"
+      ],
+      "sources": [
+        "https://x.ai/news/grok-4-6",
+        "https://docs.x.ai/developers/release-notes",
+        "https://www.testingcatalog.com/icymi-xai-releases-grok-4-6-for-long-running-agent-work/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "ai-designed-bacteriophages-evo-2",
+      "title": "AI-designed bacteriophages: Evo-2 creates 16 viable phages from scratch (Stanford + Arc Institute)",
+      "first_seen": "2026-08-14T12:12:57Z",
+      "last_updated": "2026-08-14T12:12:57Z",
+      "key_facts": [
+        "Evo-2 genome language model (trained on 2M bacteriophage sequences) generated 16 complete phage genomes from scratch with no natural template; published in Science Aug 6 2026",
+        "Stanford + Arc Institute; some AI-designed phages kill E. coli faster than natural variants; training dataset excluded all human/animal/plant-infecting virus sequences",
+        "Biosecurity concern: genome design now requires only a language model + commercial DNA synthesis, not phage biology expertise; immediate application target is antibiotic-resistant infection therapy"
+      ],
+      "sources": [
+        "https://news.stanford.edu/stories/2026/08/evo-2-ai-tool-e-coli-killer-bacteriophages",
+        "https://www.axios.com/2026/08/06/ai-virus-designed-bacteria-viruses",
+        "https://betanews.com/article/ai-designed-viruses-stanford-arc-institute/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
