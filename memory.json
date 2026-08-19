@@ -94,7 +94,7 @@
       "id": "microsoft-agent-framework-1-0",
       "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-08-17T12:00:00Z",
+      "last_updated": "2026-08-19T12:12:26Z",
       "key_facts": [
         "Released April 3 2026; open-source, prod",
         "v1.8.0 (June 2026): McpSkillsSource for MCP-based skills discovery (agents enumerate and invoke any MCP server's tools as first-class skills); FunctionInvocationContext for progressive tool exposure; background agent support in harness agent; AgentFileStore and FileAccessProvider for file access; provider updates: Bedrock, Foundry, Mistral, A2A, GitHub Copilot, OpenAI",
@@ -103,17 +103,21 @@
         "Hosted Agents GA: sandboxed sessions, managed state, filesystem access, framework flexibility",
         "Python 1.13.0 + dotnet 1.17.0 in same cycle: Durable Task/Azure Functions integration, workflow replay fixes",
         "v1.14.0: Mistral chat client (first native non-OpenAI/Google provider), workflow checkpoint resume (serialize state mid-run, restart from checkpoint on failure), new hooks and storage options, Azure integration updates",
-        "Agent Harness and Foundry Hosted Agents confirmed GA August 2026; ships as single binary across local dev, containers, and hosted environments"
+        "Agent Harness and Foundry Hosted Agents confirmed GA August 2026; ships as single binary across local dev, containers, and hosted environments",
+        ".NET 1.18.0: concurrent tool invocation support \u2014 agents fire multiple tool calls in parallel within a single turn",
+        ".NET 1.18.0: Foundry hosted session and user identity pass-through for per-user authorization in multi-tenant setups",
+        ".NET 1.18.0: Cosmos DB chat history retrieval API; sample and build fixes"
       ],
       "sources": [
         "https://devblogs.microsoft.com/agent-framework/",
         "https://releasebot.io/updates/microsoft",
         "https://www.infoq.com/news/2026/08/agent-framework-harness-ga/",
         "https://nerdleveltech.com/agent-harness-ga-microsoft-agent-framework",
-        "https://devblogs.microsoft.com/agent-framework/the-microsoft-agent-framework-harness-is-now-released/"
+        "https://devblogs.microsoft.com/agent-framework/the-microsoft-agent-framework-harness-is-now-released/",
+        "https://github.com/microsoft/agent-framework/releases"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "gpt-5-5-instant-chatgpt-default",
@@ -224,22 +228,26 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
       "first_seen": "2026-05-09",
-      "last_updated": "2026-07-21T12:10:54Z",
+      "last_updated": "2026-08-19T12:12:26Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900",
         "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
         "$965B post-money valuation; $47B ARR as of May 2026",
         "Q2 2026 projected $10.9B revenue, $559M operating profit (~5% margin); IPO target October 2026",
-        "July 15 2026: Goldman Sachs, Morgan Stanley, and JPMorgan begin scheduling pre-roadshow investor education meetings with prospective institutional investors; standard step between S-1 and public registration; October 2026 Nasdaq target intact"
+        "July 15 2026: Goldman Sachs, Morgan Stanley, and JPMorgan begin scheduling pre-roadshow investor education meetings with prospective institutional investors; standard step between S-1 and public registration; October 2026 Nasdaq target intact",
+        "Aug 13-16 2026: investor sources target $2 trillion IPO valuation for October Nasdaq listing \u2014 would surpass SpaceX's $1.77T offering as largest IPO in history; Anthropic has not confirmed figure",
+        "Institutional backers project $100-120B annual revenue by year-end 2026 (vs $11.5B actual Q2)"
       ],
       "sources": [
         "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
         "https://www.anthropic.com/news/confidential-draft-s1-sec",
         "https://www.bloomberg.com/news/articles/2026-07-15/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears",
-        "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html"
+        "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
+        "https://fortune.com/2026/08/13/anthropic-ipo-2-trillion-october-largest-ever-spacex/",
+        "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
       ],
       "category": "Anthropic",
-      "coverage_count": 9
+      "coverage_count": 10
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -365,7 +373,7 @@
       "id": "claude-code-v2-1-139-goal-agent-view",
       "title": "Claude Code v2.1.139+: /goal, agent view, fallbackModel",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-15T12:00:00Z",
+      "last_updated": "2026-08-19T12:12:26Z",
       "key_facts": [
         "/goal sets a completion condition and ru",
         "v2.1.169 (June 8 2026): --safe-mode / CLAUDE_CODE_SAFE_MODE disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for clean troubleshooting",
@@ -448,7 +456,11 @@
         "Aug 13 2026: SSE keepalive pings added to gateway streaming responses during long thinking pauses \u2014 prevents idle-timeout disconnects on Vertex AI and Bedrock upstreams",
         "Aug 13 2026: `claude remote-control --continue` command documented for resuming most recent Remote Control session; plugin marketplace command sources extension point added",
         "Aug 14 2026: Auto mode becomes default for Pro/Max/Team \u2014 safety classifier screens each tool call; users who've already set a personal default keep it (one-time switch prompt); org-managed defaults unaffected. v2.1.231 (Aug 13): MCP OAuth sign-in failure fixed for pre-registered OAuth clients (redirect URI mismatch, e.g. Slack)",
-        "Aug 14-15 2026: GitLab merge request URL support added to --worktree flag and claude agents view (MRs display as !N); /deep-research now manual-only (no longer auto-fires in background/Routine sessions); claude --teleport shows which repo checkout points to; opt-in forward_user_identity setting on Anthropic upstreams sends signed-in user identity headers for per-user spend attribution"
+        "Aug 14-15 2026: GitLab merge request URL support added to --worktree flag and claude agents view (MRs display as !N); /deep-research now manual-only (no longer auto-fires in background/Routine sessions); claude --teleport shows which repo checkout points to; opt-in forward_user_identity setting on Anthropic upstreams sends signed-in user identity headers for per-user spend attribution",
+        "Aug 18-19 2026: expanded Remote Control syncing; automatic session continuation at weekly usage limits; optional spellcheck in prompt input",
+        "Aug 18-19 2026: built-in claude-api skill context cost reduced from ~200k to ~25k tokens by loading reference docs on demand",
+        "Aug 18-19 2026: mode:mask sandbox credential files support narrower pattern on Linux/WSL; terminal UI readability and list rendering improvements",
+        "50% weekly usage boost expires August 19, 2026; Claude Sonnet 5 promo pricing ($2/$10/Mtok) runs through August 31"
       ],
       "sources": [
         "https://blog.mean.ceo/claude-code-news-july-2026/",
@@ -473,7 +485,7 @@
         "https://code.claude.com/docs/en/whats-new"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 67
+      "coverage_count": 68
     },
     {
       "id": "gemini-agent-web-may-2026",
@@ -1655,7 +1667,7 @@
       "id": "eu-ai-act-august-2026-enforcement",
       "title": "EU AI Act full enforcement August 2, 2026: GPAI obligations live",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-08-02T12:00:00Z",
+      "last_updated": "2026-08-19T12:12:26Z",
       "key_facts": [
         "August 2, 2026 = full EU AI Act applies including GPAI model obligations",
         "June 2026: Code of Practice on AI-generated content marking due for publication",
@@ -1667,7 +1679,8 @@
         "Fines on August 2: up to \u20ac15M or 3% global turnover for transparency violations; up to \u20ac35M or 7% for most serious breaches; watermarking for AI-generated content implementation deadline set at December 2, 2026",
         "78% of organizations had not taken meaningful compliance steps as of April 2026",
         "August 1 2026: enforcement date is tomorrow (August 2); Article 50 chatbot-disclosure and GPAI enforcement powers now imminent; 78% non-compliance rate as of April 2026 suggests early enforcement actions likely",
-        "August 2 2026: enforcement officially live; EU Commission issued formal press release; AI Office empowered to issue fines immediately \u2014 up to \u20ac35M/7% global turnover for serious breaches; first day penalties are legally actionable"
+        "August 2 2026: enforcement officially live; EU Commission issued formal press release; AI Office empowered to issue fines immediately \u2014 up to \u20ac35M/7% global turnover for serious breaches; first day penalties are legally actionable",
+        "Aug 19 2026: EU AI Office issues first formal enforcement fines under AI Act \u2014 \u20ac47M total across three companies; first significant penalties since August 2 enforcement date"
       ],
       "sources": [
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
@@ -1679,10 +1692,11 @@
         "https://olakai.ai/blog/eu-ai-act-enforcement-august-2026/",
         "https://responsibleailabs.ai/knowledge-hub/articles/eu-ai-act-august-2026-compliance",
         "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714",
-        "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+        "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+        "https://skycrumbs.com/blog/ai-regulation-august-2026"
       ],
       "category": "Wildcard",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "claude-foundation-models-swift-package",
@@ -5077,6 +5091,27 @@
         "https://thenextweb.com/news/openai-preparedness-team-disbanded-ipo-streamlining",
         "https://techbriefly.com/2026/08/18/openai-disband-preparedness-team-after-ai-breakout-test/",
         "https://cryptobriefing.com/openai-disbands-preparedness-safety-team/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-chatgpt-for-teens",
+      "title": "OpenAI ChatGPT for Teens: age-prediction routing, Study Mode, parental Quiet Hours (Aug 18 2026)",
+      "first_seen": "2026-08-19T12:12:26Z",
+      "last_updated": "2026-08-19T12:12:26Z",
+      "key_facts": [
+        "Launched August 18, 2026; targets users aged 13-17",
+        "Age-prediction routing: OpenAI systems estimate user age and auto-apply teen mode without self-declaration",
+        "Blocks suicide/self-harm, graphic/sexual content, eating disorder content",
+        "Study Mode: homework reminders, quizzes, configurable study hours; parental Quiet Hours (linked parent account sets time windows and usage duration limits)",
+        "Break reminders surface AI-disclosure notices at regular intervals",
+        "OpenAI updated Model Spec to reflect teen protections: https://openai.com/index/updating-model-spec-with-teen-protections/"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+        "https://www.cnn.com/2026/08/18/tech/openai-chatgpt-for-teens",
+        "https://openai.com/index/updating-model-spec-with-teen-protections/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
