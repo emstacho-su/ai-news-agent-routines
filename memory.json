@@ -5137,18 +5137,20 @@
       "id": "anthropic-65b-arr-ipo-prep",
       "title": "Anthropic hits $65B ARR (up from $47B in May); IPO preparations advancing, gaining on OpenAI in prediction markets",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-20T00:00:00Z",
+      "last_updated": "2026-08-22T12:05:41Z",
       "key_facts": [
         "ARR crossed $65B as of July 2026, up from $47B in May \u2014 nearly doubled in one quarter",
         "Preparing for IPO; prediction markets show Anthropic gaining on OpenAI for first-to-file",
-        "OpenAI S-1 prospectus expected within weeks"
+        "OpenAI S-1 prospectus expected within weeks",
+        "End-of-August S-1 filing expected; Anthropic targets IPO valuation matching or exceeding SpaceX's record public debut"
       ],
       "sources": [
         "https://www.bloomberg.com/latest/anthropic",
-        "https://money.whatfinger.com/2026/08/18/anthropic-is-gaining-ground-in-the-ipo-race-according-to-prediction-markets/"
+        "https://money.whatfinger.com/2026/08/18/anthropic-is-gaining-ground-in-the-ipo-race-according-to-prediction-markets/",
+        "https://techstartups.com/2026/08/21/top-tech-news-today-august-21-2026-anthropic-apple-broadcom-google-nvidia-openai-tesla-more/"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "anthropic-life-sciences-block-access-program",
@@ -5169,19 +5171,23 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-20T00:00:00Z",
+      "last_updated": "2026-08-22T12:05:41Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
         "v2.1.236: claude-api skill context cut from ~200k to ~25k tokens via on-demand doc loading",
-        "v2.1.237 (Aug 20): built-in Concise output style in /config; prompt caching fix for LLM gateway/custom base URL sessions"
+        "v2.1.237 (Aug 20): built-in Concise output style in /config; prompt caching fix for LLM gateway/custom base URL sessions",
+        "v2.1.238 (Aug 22): MCP elicitation form clipping fixed in fullscreen \u2014 form fits viewport, Accept/Decline always visible",
+        "v2.1.238 (Aug 22): remote MCP servers no longer stay failed after transient 5xx mid-session reconnect (cloud sessions + SDK setMcpServers)"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
-        "https://dev.classmethod.jp/en/articles/20260820-cc-updates-v2-1-237/"
+        "https://dev.classmethod.jp/en/articles/20260820-cc-updates-v2-1-237/",
+        "https://www.gradually.ai/en/changelogs/claude-code/",
+        "https://releasebot.io/updates/anthropic/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -5302,6 +5308,60 @@
       ],
       "sources": [
         "https://arxiv.org/abs/2608.20318"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "cloudflare-kitesurf",
+      "title": "Cloudflare Kitesurf: agent-native browser runtime in V8 isolates on Workers (Aug 6 2026)",
+      "first_seen": "2026-08-22T12:05:41Z",
+      "last_updated": "2026-08-22T12:05:41Z",
+      "key_facts": [
+        "Launched Aug 6 2026; built in Rust \u2192 WebAssembly; runs in V8 isolates on Cloudflare Workers \u2014 no Chromium",
+        "Passes 235,000+ Web Platform Tests (97% DOM, 96% HTML); 3-7x less CPU/memory than Chromium for agentic tasks",
+        "Exposes Chrome DevTools Protocol endpoint; compatible with existing Playwright, Puppeteer, and MCP clients",
+        "Free in beta under Cloudflare Browser Run; 12-week build (May \u2192 Aug 2026)"
+      ],
+      "sources": [
+        "https://blog.cloudflare.com/kitesurf/",
+        "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+        "https://developers.cloudflare.com/browser-run/kitesurf/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "ox-alpha-stealth-model",
+      "title": "OX Alpha (stealth/ox-alpha): anonymous model on OpenRouter claims 80% DeepSWE, likely Zhipu GLM flagship",
+      "first_seen": "2026-08-22T12:05:41Z",
+      "last_updated": "2026-08-22T12:05:41Z",
+      "key_facts": [
+        "Appeared Aug 20 2026 on OpenRouter as stealth/ox-alpha; 1M-token context, text/image/video input, free for one week",
+        "User test: 80% Pass@1 DeepSWE vs Fable 5 65%, GLM-5.3 62%, GPT-5.6-sol 52% \u2014 10-task test, not audited leaderboard",
+        "Technical fingerprints (video encoder token patterns, tokenizer, audio rejection, emoji rates) point to Zhipu unreleased GLM flagship; no company claim as of Aug 21"
+      ],
+      "sources": [
+        "https://finance.biggo.com/news/9dc856ba-634d-467a-bea2-6ba70233113c",
+        "https://local-ai-zone.github.io/blog/ox-alpha-stealth-model-comprehensive-analysis.html",
+        "https://startupfortune.com/a-mystery-model-called-ox-alpha-just-topped-coding-benchmarks-for-free/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "reconstruction-benchmark-arxiv-2608-16645",
+      "title": "Reconstruction (arXiv 2608.16645): blind benchmark \u2014 frontier LLMs recover research ideas from bibliographies at 3-15%",
+      "first_seen": "2026-08-22T12:05:41Z",
+      "last_updated": "2026-08-22T12:05:41Z",
+      "key_facts": [
+        "643 papers, 6 scientific domains, 7 frontier models; task: recover original research hypotheses from reference list alone (no title/abstract/contemporaneous literature)",
+        "Solo frontier model scores: 3-15%; deliberately contamination-resistant since reference lists predate the paper",
+        "Multi-agent Swiss-tournament pipeline (top-4 aggregation): reaches 42% \u2014 shows diverse-proposal aggregation partly compensates for individual model ceiling"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2608.16645",
+        "https://www.techtimes.com/articles/324932/20260819/blind-benchmark-catches-frontier-ai-just-three-percent-research-idea-recovery.htm"
       ],
       "category": "Research & Technical",
       "coverage_count": 1
