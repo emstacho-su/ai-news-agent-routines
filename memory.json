@@ -94,7 +94,7 @@
       "id": "microsoft-agent-framework-1-0",
       "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-08-19T12:12:26Z",
+      "last_updated": "2026-08-23T12:00:00Z",
       "key_facts": [
         "Released April 3 2026; open-source, prod",
         "v1.8.0 (June 2026): McpSkillsSource for MCP-based skills discovery (agents enumerate and invoke any MCP server's tools as first-class skills); FunctionInvocationContext for progressive tool exposure; background agent support in harness agent; AgentFileStore and FileAccessProvider for file access; provider updates: Bedrock, Foundry, Mistral, A2A, GitHub Copilot, OpenAI",
@@ -106,7 +106,10 @@
         "Agent Harness and Foundry Hosted Agents confirmed GA August 2026; ships as single binary across local dev, containers, and hosted environments",
         ".NET 1.18.0: concurrent tool invocation support \u2014 agents fire multiple tool calls in parallel within a single turn",
         ".NET 1.18.0: Foundry hosted session and user identity pass-through for per-user authorization in multi-tenant setups",
-        ".NET 1.18.0: Cosmos DB chat history retrieval API; sample and build fixes"
+        ".NET 1.18.0: Cosmos DB chat history retrieval API; sample and build fixes",
+        "v1.18.0 GA: concurrent tool invocation (agents fire multiple tool calls in parallel and join results, previously sequential only)",
+        "v1.18.0: Cosmos DB chat history + vector memory as drop-in persistent memory store for multi-session agents",
+        "v1.18.0: hosted session support (production-grade remote session management for .NET agents); telemetry and diagnostics improvements"
       ],
       "sources": [
         "https://devblogs.microsoft.com/agent-framework/",
@@ -117,7 +120,7 @@
         "https://github.com/microsoft/agent-framework/releases"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "gpt-5-5-instant-chatgpt-default",
@@ -171,13 +174,16 @@
       "id": "claude-security-public-beta",
       "title": "Claude Security enters public beta: Opus 4.7 vulnerability s",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-06-06",
+      "last_updated": "2026-08-23T12:00:00Z",
       "key_facts": [
-        "Available at claude.ai/security for Ente"
+        "Available at claude.ai/security for Ente",
+        "Aug 2026: Claude Security upgraded from Opus 4.7 to Mythos 5 \u2014 substantially deeper scanning depth and exploit-chain reasoning"
       ],
-      "sources": [],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude"
+      ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "anthropic-goldman-blackstone-jv",
@@ -5171,14 +5177,18 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-22T12:05:41Z",
+      "last_updated": "2026-08-23T12:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
         "v2.1.236: claude-api skill context cut from ~200k to ~25k tokens via on-demand doc loading",
         "v2.1.237 (Aug 20): built-in Concise output style in /config; prompt caching fix for LLM gateway/custom base URL sessions",
         "v2.1.238 (Aug 22): MCP elicitation form clipping fixed in fullscreen \u2014 form fits viewport, Accept/Decline always visible",
-        "v2.1.238 (Aug 22): remote MCP servers no longer stay failed after transient 5xx mid-session reconnect (cloud sessions + SDK setMcpServers)"
+        "v2.1.238 (Aug 22): remote MCP servers no longer stay failed after transient 5xx mid-session reconnect (cloud sessions + SDK setMcpServers)",
+        "v2.1.233 (Aug 14): TaskCreate/TaskGet/TaskUpdate/TaskList/TodoWrite deprecated on Opus 4.8, Sonnet 5, Fable 5, Mythos 5+; restore with CLAUDE_CODE_ENABLE_TODO_TOOLS=1",
+        "v2.1.233: CLAUDE_CODE_TOOL_MEMORY_LIMIT env var \u2014 opt-in Linux memory cgroup for Bash tool to cap runaway build-command memory",
+        "v2.1.233: CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS configures WebFetch session URL cache TTL (default 15 min)",
+        "v2.1.233: GitLab token families fully redacted (glrt-, gloas-, glptt-, glagent-, glimt-, glsoat-, glcbt-, glft-, glffct- masked; glpat- and gldt- fully redacted)"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5187,7 +5197,7 @@
         "https://releasebot.io/updates/anthropic/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -5364,6 +5374,49 @@
         "https://www.techtimes.com/articles/324932/20260819/blind-benchmark-catches-frontier-ai-just-three-percent-research-idea-recovery.htm"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-gmail-gdrive-write-actions",
+      "title": "Claude Gmail + Google Drive write actions: send email, manage Drive files (all paid plans, Aug 18 2026)",
+      "first_seen": "2026-08-23T12:00:00Z",
+      "last_updated": "2026-08-23T12:00:00Z",
+      "key_facts": [
+        "Gmail connector upgraded from read-only to write actions: send new emails, reply, forward; approval-before-send on by default",
+        "Google Drive connector upgraded from read/summarize to active management: share, move, trash files; approval-before-action on by default",
+        "Team/Enterprise owners can enforce approval policy org-wide; Anthropic does not train on Workspace connector data",
+        "Cowork now available on mobile and web across all paid plans (previously desktop-only)",
+        "Available to all paid Claude plans (Pro, Team, Enterprise) via Connectors settings"
+      ],
+      "sources": [
+        "https://www.forbes.com/sites/quickerbettertech/2026/08/23/claude-has-more-google-workspace-integrationsand-other-business-technology-news-this-week/",
+        "https://www.androidauthority.com/claude-gmail-google-drive-integrations-3700330/",
+        "https://alternativeto.net/news/2026/8/claude-adds-gmail-reply-and-google-drive-management-to-paid-plans/",
+        "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "glm-5-3-emergent-exploit-chains",
+      "title": "GLM-5.3 (Z.ai): emergent exploit-chain capability, 1,097 critical CVEs, weights delayed to ~Aug 28",
+      "first_seen": "2026-08-23T12:00:00Z",
+      "last_updated": "2026-08-23T12:00:00Z",
+      "key_facts": [
+        "Launched Aug 14 2026; coding-focused post-training update over GLM-5.2; offensive security capability emerged unintended during training",
+        "2,436 total vulnerabilities found across 269 open-source projects; 1,097 rated critical/high; 53 CVEs assigned at launch; 2,383 under embargo",
+        "Affected software: Linux kernel (use-after-free), Apple WebKit, FreeBSD, GStreamer, Suricata, Joomla, Cursor AI editor",
+        "Z.ai launched public Security Disclosure Ledger at cvd.z.ai; weights delayed ~2 weeks (targeting Aug 28) for 'safety evaluation and hardening'",
+        "First Chinese AI lab to cite emergent offensive capabilities as explicit reason for weights delay",
+        "Caveats: all numbers are Z.ai's own claims; independent spot-checks found matching CVE records but aggregate framing criticized as product-launch narrative"
+      ],
+      "sources": [
+        "https://www.techtimes.com/articles/324426/20260814/glm-53-post-training-produced-exploit-chains-zai-never-planned-finds-1097-critical-bugs.htm",
+        "https://mlq.ai/news/zai-delays-glm-53-weights-after-cybersecurity-tests-show-strong-exploit-capability/",
+        "https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor/",
+        "https://www.unite.ai/z-ai-launches-glm-5-3-with-frontier-coding-and-a-cyber-capability-that-outgrew-its-training/"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
