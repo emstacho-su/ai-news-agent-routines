@@ -1487,13 +1487,18 @@
       "id": "a2a-protocol-v1",
       "title": "Agent-to-Agent (A2A) Protocol v1.0 GA: 7-vendor support",
       "first_seen": "2026-06-04",
-      "last_updated": "2026-06-04",
+      "last_updated": "2026-08-24T12:00:00Z",
       "key_facts": [
-        "A2A Protocol reached v1.0 GA"
+        "A2A Protocol reached v1.0 GA",
+        "Aug 20 2026: Google A2A formally joined Linux Foundation-directed Agentic AI Foundation (AAIF); 250+ members including AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI; governance moved from Google-controlled to neutral-foundation"
       ],
-      "sources": [],
+      "sources": [
+        "https://aiagentstore.ai/ai-agent-news/this-week",
+        "https://dev.to/alexmercedcoder/the-state-of-agentic-ai-standards-in-2026-mcp-a2a-webmcp-osi-and-the-protocol-stack-taking-3o2l",
+        "https://aaif.io/blog/mcp-is-growing-up"
+      ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "fastmcp-3-4-remote",
@@ -3389,7 +3394,7 @@
       "id": "mcp-spec-2026-07-28-rc",
       "title": "MCP 2026-07-28 specification RC: stateless core, Extensions, Tasks, MCP Apps, OAuth/OIDC",
       "first_seen": "2026-07-16T00:00:00Z",
-      "last_updated": "2026-08-14T12:12:57Z",
+      "last_updated": "2026-08-24T12:00:00Z",
       "key_facts": [
         "RC locked May 21 2026; final spec ships July 28 2026; announced by lead maintainers David Soria Parra and Den Delimarsky",
         "Stateless core: initialize/initialized handshake removed (SEP-2575); Mcp-Session-Id header removed (SEP-2567); protocol version/client info now in _meta on every request; new mandatory server/discover RPC; traffic routable via Mcp-Method header \u2014 load balancers no longer need sticky sessions",
@@ -3407,21 +3412,24 @@
         "July 28-29 2026: spec 2026-07-28 officially finalized; 10-week Tier-1 SDK validation window closed; all three Tier-1 SDKs (Python, TypeScript, Go) have beta builds on new stateless protocol; GitHub MCP server live on stateless spec since July 23 as first major production implementation",
         "August 2026: Anthropic confirms MCP 2026-07-28 stateless spec is rolling out to Claude products; AWS AgentCore Gateway is first major cloud deployment live on new stateless protocol",
         "Migration path: @modelcontextprotocol/codemod@beta v1-to-v2 auto-migrates existing server code; round-robin load balancers work without sticky sessions on new spec",
-        "Aug 2026: monthly SDK downloads crossed 400M (4x growth from ~97M at July 28 spec ship); TypeScript and Python SDKs each crossed 1B total downloads; Google, AWS, and Azure rolling out 2026-07-28 stateless spec in their infrastructure tooling"
+        "Aug 2026: monthly SDK downloads crossed 400M (4x growth from ~97M at July 28 spec ship); TypeScript and Python SDKs each crossed 1B total downloads; Google, AWS, and Azure rolling out 2026-07-28 stateless spec in their infrastructure tooling",
+        "Aug 22-23 2026: monthly SDK downloads crossed 400M (4x from ~97M at July 28 ship); TypeScript and Python each crossed 1B total downloads; next roadmap priorities: agent identity, progressive discovery, HTTP transport options beyond WebSocket baseline"
       ],
       "sources": [
-        "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
-        "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/",
-        "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
-        "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
-        "https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/",
         "https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/",
-        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/",
+        "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+        "https://www.developersdigest.tech/blog/mcp-2026-07-28-breaking-changes",
+        "https://toloka.ai/blog/the-future-of-mcp-enterprise-adoption/",
+        "https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/",
+        "https://workos.com/blog/mcp-2026-spec-agent-authentication",
+        "https://chatforest.com/builders-log/mcp-spec-2026-07-28-release-candidate-stateless-breaking-changes-builder-guide/",
         "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
-        "https://workos.com/blog/mcp-2026-spec-agent-authentication"
+        "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "gemini-api-managed-agents-july-2026",
@@ -5417,6 +5425,57 @@
         "https://www.unite.ai/z-ai-launches-glm-5-3-with-frontier-coding-and-a-cyber-capability-that-outgrew-its-training/"
       ],
       "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-build-open-source",
+      "title": "Grok Build v1.0 open source: xAI terminal coding agent goes Apache 2.0",
+      "first_seen": "2026-08-24T12:00:00Z",
+      "last_updated": "2026-08-24T12:00:00Z",
+      "key_facts": [
+        "v1.0 reached August 7 2026; open source Apache 2.0; reads codebases, edits files, runs commands, spawns up to 8 subagents in isolated git worktrees",
+        "Requires SuperGrok or X Premium+ subscription for API access; open source license covers client code only",
+        "Entered AI dev tool power rankings late August 2026 per LogRocket analysis"
+      ],
+      "sources": [
+        "https://explainx.ai/blog/grok-build-open-source-spacexai-july-2026",
+        "https://www.alphamatch.ai/blog/xai-grok-build-open-source-2026",
+        "https://blog.logrocket.com/ai-dev-tool-power-rankings/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "aws-bedrock-agentcore-websearch-ga",
+      "title": "AWS Bedrock AgentCore Web Search GA (Aug 21, 2026)",
+      "first_seen": "2026-08-24T12:00:00Z",
+      "last_updated": "2026-08-24T12:00:00Z",
+      "key_facts": [
+        "GA August 21 2026; managed server-side web search tool for agents on Bedrock AgentCore",
+        "No data leaves customer AWS account; IAM-scoped per agent; no external API key management needed",
+        "Part of Bedrock AgentCore platform alongside managed agent execution and memory"
+      ],
+      "sources": [
+        "https://aiagentstore.ai/ai-agent-news/this-week",
+        "https://agentic.ai/news"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "visual-studio-2026-august-ai",
+      "title": "Visual Studio 2026 August update: thinking-effort controls for AI models in IDE",
+      "first_seen": "2026-08-24T12:00:00Z",
+      "last_updated": "2026-08-24T12:00:00Z",
+      "key_facts": [
+        "August 2026 update adds thinking-effort controls (low/medium/high) for supported AI models directly in IDE UI",
+        "No prompt or API changes needed; token budget awareness built into the control",
+        "Also ships expanded AI model integration and large-solution performance improvements"
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
