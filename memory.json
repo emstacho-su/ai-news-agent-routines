@@ -5199,7 +5199,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-08-27T12:11:17Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5219,7 +5219,8 @@
         "v2.1.245: promptCacheTtl and subagentPromptCacheTtl settings allow separate 1-hour/5-min cache TTLs for orchestrator vs subagents",
         "v2.1.245: modelPricing managed setting injects org's contracted per-model rates and discount multiplier into /cost and telemetry",
         "v2.1.245: claude-api skill context cost dropped from ~200k+ to ~25k tokens \u2014 reference docs now load on demand",
-        "v2.1.245: remote MCP servers in non-interactive (-p) and SDK sessions now auto-reconnect or report-as-failed after dropped connection"
+        "v2.1.245: remote MCP servers in non-interactive (-p) and SDK sessions now auto-reconnect or report-as-failed after dropped connection",
+        "v2.1.243 (Aug 24): per-task token breakdown in agentic loops \u2014 shows which spawned subtask consumed the most tokens; surfaces inside each loop run"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5230,7 +5231,7 @@
         "https://www.havoptic.com/tools/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -5378,19 +5379,24 @@
       "id": "ox-alpha-stealth-model",
       "title": "OX Alpha (stealth/ox-alpha): anonymous model on OpenRouter claims 80% DeepSWE, likely Zhipu GLM flagship",
       "first_seen": "2026-08-22T12:05:41Z",
-      "last_updated": "2026-08-22T12:05:41Z",
+      "last_updated": "2026-08-27T12:11:17Z",
       "key_facts": [
         "Appeared Aug 20 2026 on OpenRouter as stealth/ox-alpha; 1M-token context, text/image/video input, free for one week",
         "User test: 80% Pass@1 DeepSWE vs Fable 5 65%, GLM-5.3 62%, GPT-5.6-sol 52% \u2014 10-task test, not audited leaderboard",
-        "Technical fingerprints (video encoder token patterns, tokenizer, audio rejection, emoji rates) point to Zhipu unreleased GLM flagship; no company claim as of Aug 21"
+        "Technical fingerprints (video encoder token patterns, tokenizer, audio rejection, emoji rates) point to Zhipu unreleased GLM flagship; no company claim as of Aug 21",
+        "Aug 26 2026: Z.ai confirmed Ox Alpha = GLM-5.3-Flash; MIT open weights released on Hugging Face",
+        "Specs confirmed: 320B total / 18B active MoE; first natively multimodal GLM-5 model (text/image/video input); 1M-token context, 131K-token max output",
+        "API pricing: $0.15 / $0.50 per Mtok input/output; 50%-off promo ($0.075/$0.25) through Sep 9 2026; live on Cloudflare Workers AI"
       ],
       "sources": [
         "https://finance.biggo.com/news/9dc856ba-634d-467a-bea2-6ba70233113c",
         "https://local-ai-zone.github.io/blog/ox-alpha-stealth-model-comprehensive-analysis.html",
-        "https://startupfortune.com/a-mystery-model-called-ox-alpha-just-topped-coding-benchmarks-for-free/"
+        "https://startupfortune.com/a-mystery-model-called-ox-alpha-just-topped-coding-benchmarks-for-free/",
+        "https://siliconangle.com/2026/08/26/z-ai-open-sources-ox-alpha-model-as-glm-5-3-flash/",
+        "https://developers.cloudflare.com/changelog/post/2026-08-26-glm-5.3-flash-workers-ai/"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "reconstruction-benchmark-arxiv-2608-16645",
@@ -5541,20 +5547,43 @@
       "id": "nvidia-vera-cpu-hot-chips-2026",
       "title": "Nvidia Vera CPU full architectural disclosure at Hot Chips 2026",
       "first_seen": "2026-08-26T12:00:00Z",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-08-27T12:11:17Z",
       "key_facts": [
         "88 custom Olympus cores (ARMv9.2-compatible) on a monolithic die \u2014 no chiplets",
         "1.2 TB/s memory bandwidth via 8x 128-bit LPDDR5X controllers (SOCAMM2 interface)",
         "Spatial multithreading: core resources split across two pipelines, data/cache can migrate between threads \u2014 designed for agentic workloads",
         "Up to 1.9x IPC vs AMD Turin; 2.3x more branch predictions per cycle",
-        "Pairs with Groq 3 LPX inference accelerators (now in production) in Vera Rubin platform, up to 256 LPX per rack"
+        "Pairs with Groq 3 LPX inference accelerators (now in production) in Vera Rubin platform, up to 256 LPX per rack",
+        "Hot Chips 2026 deep-dive (ServeTheHome): Vera compiles Linux kernel 14-22% faster than AMD EPYC 9655P 96-core; first SPEC CPU 2026 results published",
+        "Nvidia claims 1.8x agentic AI performance improvement on internal workload suite; Olympus cores competitive with AMD Turin per-core"
       ],
       "sources": [
         "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-nvidia-breaks-down-88-core-vera-cpu-spatial-multithreading-benchmarked-1-2-tb-s-socamm2-memory-agentic-workloads-detailed-and-more",
         "https://www.servethehome.com/nvidia-vera-cpu-at-hot-chips-2026/",
-        "https://cryptobriefing.com/nvidia-vera-cpu-agentic-ai-hot-chips-2026/"
+        "https://cryptobriefing.com/nvidia-vera-cpu-agentic-ai-hot-chips-2026/",
+        "https://www.servethehome.com/diving-deeper-on-nvidias-vera-cpu-new-architectural-details-and-spec-cpu-2026-benchmarks/"
       ],
       "category": "Wildcard",
+      "coverage_count": 2
+    },
+    {
+      "id": "qwen3-8-flash-next-qwen4-preview",
+      "title": "Qwen3.8-Flash-Next: Alibaba's public preview of the Qwen4 architecture (Aug 26, 2026)",
+      "first_seen": "2026-08-27T12:11:17Z",
+      "last_updated": "2026-08-27T12:11:17Z",
+      "key_facts": [
+        "Released Aug 26 2026; 125B total parameters, 6B active per token via MoE (512 experts, 10 routed + 1 shared + 51B n-gram embedding table)",
+        "48-layer hybrid stack: 36 linear-attention (Gated Delta Network) + 12 full-attention (Qwen Sparse Attention); at 1M-token context QSA is 7.6x faster in prefill, 4.9x faster in decode vs standard attention",
+        "Native context 262K tokens, extensible to 1M; vision encoder included; open weights on Hugging Face under qwen-community-1.0 license",
+        "Framed explicitly as an early preview of the Qwen4 architecture \u2014 natively multimodal MoE with hybrid linear/full attention; production API pricing announced at $0.16/$0.47 per Mtok when QwenCloud rolls out"
+      ],
+      "sources": [
+        "https://www.unite.ai/qwen3-8-flash-next-previews-qwen4-architecture-with-6b-active-parameters/",
+        "https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "https://github.com/QwenLM/Qwen3.8-Flash-Next/",
+        "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
