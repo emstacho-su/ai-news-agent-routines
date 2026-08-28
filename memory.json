@@ -5237,18 +5237,20 @@
       "id": "gpt-5-6-luna-terra-price-cut",
       "title": "GPT-5.6 Luna 80% API price cut; Terra -20%: new model pricing tiers (July 30, 2026)",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-20T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
       "key_facts": [
         "GPT-5.6 Luna: $0.20/$1.20 per million input/output tokens (was $1/$6); effective July 30",
         "GPT-5.6 Terra: $2/$12 per million (was $2.50/$15); Sol unchanged at $5/$30",
-        "OpenAI credited efficiency gains from model self-optimizing production code during dev"
+        "OpenAI credited efficiency gains from model self-optimizing production code during dev",
+        "Aug 21 2026: Sol also cut \u2014 input $4 (was $5), output $20 (was $30) per million tokens; 3-month promo through Nov 21; applies to API, Codex credits, ChatGPT Work plans"
       ],
       "sources": [
         "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
-        "https://www.cnbc.com/2026/07/30/open-ai-price-cut-gpt.html"
+        "https://www.cnbc.com/2026/07/30/open-ai-price-cut-gpt.html",
+        "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-astra-math-breakthrough",
@@ -5584,6 +5586,90 @@
         "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-model-hardware-standard",
+      "title": "Anthropic Model Hardware Standard (MHS): AI agents for physical lab/factory equipment",
+      "first_seen": "2026-08-28T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
+      "key_facts": [
+        "Research preview announced Aug 27 2026; spec for AI agents to safely operate physical equipment (microscopes, liquid handlers, robotic arms, quantum computing rigs) in parallel",
+        "Model-agnostic; works with any programmable device interface; agents access via MCP or other standard protocols",
+        "Reduces hardware integration from weeks to hours; developed with HHMI Janelia Research Campus; Anthropic plans to open-source the spec"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+        "https://www.cnbc.com/2026/08/27/anthropic-pushes-into-physical-world-with-new-standard-to-help-ai-agents-operate-machines.html",
+        "https://fortune.com/2026/08/27/anthropic-makes-first-move-into-physical-ai-with-universal-standard-for-scientists-manufacturing/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-memory-unified-chat-cowork",
+      "title": "Claude Memory unified across Chat + Cowork: editable topics, sensitive-subject opt-in",
+      "first_seen": "2026-08-28T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
+      "key_facts": [
+        "Announced Aug 25 2026; memory persists across both Chat and Cowork sessions automatically",
+        "Redesigned UI exposes memory topic-by-topic; users can open, edit, delete, pause, or reset individual topics",
+        "Sensitive subjects (health, race/ethnicity, gender identity, religion, political beliefs) excluded by default, opt-in per-topic"
+      ],
+      "sources": [
+        "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
+        "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
+        "https://siliconangle.com/2026/08/25/anthropic-updates-claudes-memory-to-enhance-customization-and-protect-sensitive-topics/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-for-scientists-team-plan",
+      "title": "Claude for Scientists: 10,000 free/discounted Team seats, AI for Science credits expand beyond biology",
+      "first_seen": "2026-08-28T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
+      "key_facts": [
+        "Aug 27 2026: 10,000 verified researcher seats on Claude Team \u2014 free standard, $15/mo premium (5x limits), pricing fixed 1 year",
+        "Eligibility: PI at academic/nonprofit institution; PI can add lab members after verification",
+        "AI for Science credit program expanded from biology to all scientific fields; Mythos restricted tier enrolled first life-science researchers"
+      ],
+      "sources": [
+        "https://claude.com/programs/team-plan-for-scientists",
+        "https://www.unite.ai/anthropic-opens-10000-free-and-discounted-claude-seats-for-scientists/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepmind-visual-general-intelligence",
+      "title": "DeepMind 'Visual General Intelligence' white paper: VGI as AGI pathway",
+      "first_seen": "2026-08-28T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
+      "key_facts": [
+        "Published Aug 26 2026; proposes VGI \u2014 capacity to acquire usable world knowledge from visual experience and apply to prediction, imagination, action \u2014 as AGI pathway",
+        "Argues vision-grounded world models are more tractable route to generalizable intelligence than text-only or multimodal-fusion approaches"
+      ],
+      "sources": [
+        "https://deepmind.google/research/publications/",
+        "https://deeplearn.org/arxiv/812875/visual-general-intelligence:-a-white-paper"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "india-am-intelligence-vera-rubin-order",
+      "title": "Greenko AM Intelligence orders 9,000 Nvidia Vera Rubin NVL72 racks; $8B India AI infra push",
+      "first_seen": "2026-08-28T00:00:00Z",
+      "last_updated": "2026-08-28T00:00:00Z",
+      "key_facts": [
+        "Hyderabad-based AM Intelligence (Greenko Group) binding order for ~9,000 Nvidia Vera Rubin NVL72 rack-scale systems, Q1 2027 delivery",
+        "~$8B capex; 200 MW near-term scaling to 1 GW of compute-as-a-service across India, US, Finland, Malaysia"
+      ],
+      "sources": [
+        "https://aiweekly.co/ai-news-today"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
