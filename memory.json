@@ -94,7 +94,7 @@
       "id": "microsoft-agent-framework-1-0",
       "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-08-30T12:00:00Z",
       "key_facts": [
         "Released April 3 2026; open-source, prod",
         "v1.8.0 (June 2026): McpSkillsSource for MCP-based skills discovery (agents enumerate and invoke any MCP server's tools as first-class skills); FunctionInvocationContext for progressive tool exposure; background agent support in harness agent; AgentFileStore and FileAccessProvider for file access; provider updates: Bedrock, Foundry, Mistral, A2A, GitHub Copilot, OpenAI",
@@ -111,7 +111,8 @@
         "v1.18.0: Cosmos DB chat history + vector memory as drop-in persistent memory store for multi-session agents",
         "v1.18.0: hosted session support (production-grade remote session management for .NET agents); telemetry and diagnostics improvements",
         "Python 1.15.0: A2UI (agent-to-UI) event streaming support, resilient Foundry Hosted Agent reconnection, workflow checkpoint registry updates",
-        ".NET 1.19.0: session-persisted chat routing, Azure Blob Storage session persistence, experimental agent-hooks interception (middleware between agent steps), updated MCP long-running task support"
+        ".NET 1.19.0: session-persisted chat routing, Azure Blob Storage session persistence, experimental agent-hooks interception (middleware between agent steps), updated MCP long-running task support",
+        "Python 1.16.0: configurable first-task wait timeouts (prevents premature timeouts during slow agent bootstrap), richer OpenTelemetry and OTLP setup, safety improvements to core execution, provider metadata and finish-reason preservation fixes"
       ],
       "sources": [
         "https://devblogs.microsoft.com/agent-framework/",
@@ -122,7 +123,7 @@
         "https://github.com/microsoft/agent-framework/releases"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 9
+      "coverage_count": 10
     },
     {
       "id": "gpt-5-5-instant-chatgpt-default",
@@ -5205,7 +5206,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-27T12:11:17Z",
+      "last_updated": "2026-08-30T12:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5226,7 +5227,10 @@
         "v2.1.245: modelPricing managed setting injects org's contracted per-model rates and discount multiplier into /cost and telemetry",
         "v2.1.245: claude-api skill context cost dropped from ~200k+ to ~25k tokens \u2014 reference docs now load on demand",
         "v2.1.245: remote MCP servers in non-interactive (-p) and SDK sessions now auto-reconnect or report-as-failed after dropped connection",
-        "v2.1.243 (Aug 24): per-task token breakdown in agentic loops \u2014 shows which spawned subtask consumed the most tokens; surfaces inside each loop run"
+        "v2.1.243 (Aug 24): per-task token breakdown in agentic loops \u2014 shows which spawned subtask consumed the most tokens; surfaces inside each loop run",
+        "v2.1.248 (Aug 28): restricted mode (--restricted / CLAUDE_CODE_RESTRICTED=1) \u2014 removes command/code execution tools, drops WebFetch unless explicitly whitelisted, confines file tools to working directory, ignores user/project settings; designed for CI and untrusted-input environments",
+        "v2.1.248\u2013251: cross-session messaging (SendMessage/ListAgents) expanded to Bedrock, Vertex, Foundry, and telemetry-disabled setups (was macOS/Linux local only)",
+        "v2.1.251: sandbox and MCP servers now initialize asynchronously \u2014 prompt composition available during startup; subcommands that skip full runtime short-circuit init path entirely"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5237,20 +5241,21 @@
         "https://www.havoptic.com/tools/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
       "title": "GPT-5.6 Luna 80% API price cut; Terra -20%: new model pricing tiers (July 30, 2026)",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-29T00:00:00Z",
+      "last_updated": "2026-08-30T12:00:00Z",
       "key_facts": [
         "GPT-5.6 Luna: $0.20/$1.20 per million input/output tokens (was $1/$6); effective July 30",
         "GPT-5.6 Terra: $2/$12 per million (was $2.50/$15); Sol unchanged at $5/$30",
         "OpenAI credited efficiency gains from model self-optimizing production code during dev",
         "Aug 21 2026: Sol also cut \u2014 input $4 (was $5), output $20 (was $30) per million tokens; 3-month promo through Nov 21; applies to API, Codex credits, ChatGPT Work plans",
         "Aug 2026: ChatGPT free tier consolidated to GPT-5.6 Luna exclusively (one model); unlimited text chats added; Think button gives reasoning mode access",
-        "GPT-5.6 Sol updated in ChatGPT for improved coherence and instruction-following; Luna expanded as stepping-stone tier"
+        "GPT-5.6 Sol updated in ChatGPT for improved coherence and instruction-following; Luna expanded as stepping-stone tier",
+        "Aug 30 2026: DALL-E GPT plugin within ChatGPT retired; users redirected to native ChatGPT Images (custom GPTs with image generation unaffected); Sol receives coherence and instruction-following retune; Luna becomes sole default for Free and Go plans"
       ],
       "sources": [
         "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
@@ -5260,7 +5265,7 @@
         "https://www.engadget.com/2234173/chatgpt-free-features-2026/"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "openai-astra-math-breakthrough",
@@ -5701,6 +5706,25 @@
         "https://qz.com/amazon-mechanical-turk-shutting-down-082626"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-agent-lightning",
+      "title": "Microsoft Agent Lightning v1.0 \u2014 RL for production agents via Training-Agent Disaggregation",
+      "first_seen": "2026-08-30T12:00:00Z",
+      "last_updated": "2026-08-30T12:00:00Z",
+      "key_facts": [
+        "Open-sourced by Microsoft Research Aug 17 2026; trains agents with RL/prompt-opt/SFT using Training-Agent Disaggregation (TA-D) \u2014 no code changes to the production agent required",
+        "TA-D architecture: RL training loop runs in a separate process from inference, so the agent trains in its exact production harness (no environment mismatch)",
+        "SWE-bench Verified: Qwen3.5-9B improved 41.8% \u2192 56.4% (+14.6pp absolute) with RL using 6K training examples on modest compute; arXiv paper 2508.03680"
+      ],
+      "sources": [
+        "https://thenewstack.io/microsoft-agent-lightning-harness/",
+        "https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/",
+        "https://arxiv.org/pdf/2508.03680",
+        "https://cryptobriefing.com/microsoft-agent-lightning-agentic-rl/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
