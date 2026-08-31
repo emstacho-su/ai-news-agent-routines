@@ -342,21 +342,25 @@
       "id": "claude-sonnet-5",
       "title": "Claude Sonnet 5: 92.4% SWE-bench Verified, 88.3% OSWorld-Ver",
       "first_seen": "2026-05-10",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
       "key_facts": [
         "Released April 1 2026; model string clau",
         "July 1 2026: Claude Sonnet 5 set as default model in Claude Code v2.1.197; native 1M-token context window; promotional pricing $2/$10 per Mtok through August 31",
         "New tokenizer encodes same text as 0-35% more tokens than Sonnet 4.6 tokenizer \u2014 effective cost increase at standard prices can exceed 50% headline number",
         "August 10 2026: Anthropic made Sonnet 5 introductory pricing permanent \u2014 $2/$10 per Mtok locked in; September 1 price increase to $3/$15 canceled; subscription plan prices unchanged",
-        "Promotional pricing ($2/$10 per M tokens) expires August 31, 2026; standard rates ($3/$15) take effect September 1"
+        "Promotional pricing ($2/$10 per M tokens) expires August 31, 2026; standard rates ($3/$15) take effect September 1",
+        "Aug 31 2026: introductory pricing ($2/M input, $10/M output) confirmed permanent; planned $3/$15 Sept 1 step-up canceled",
+        "Anthropic deleted and republished a Claude Code blog post correcting '17% cost cut' framing that understated new-tokenizer overhead"
       ],
       "sources": [
         "https://finopsllm.com/research/sonnet-5-intro-pricing-deadline",
         "https://moclaw.ai/blog/claude-sonnet-5-tokenizer-cost-migration",
-        "https://explainx.ai/blog/anthropic-sonnet-5-permanent-pricing-august-2026"
+        "https://explainx.ai/blog/anthropic-sonnet-5-permanent-pricing-august-2026",
+        "https://datafloq.com/anthropic-confirms-claude-sonnet-5-prices-rise-50-on-september-1/",
+        "https://enterprisedna.co/resources/news/anthropic-claude-sonnet-5-pricing-permanent-reversal-august-2026/"
       ],
       "category": "Model Releases",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "nvidia-40b-ai-equity-strategy-2026",
@@ -5725,6 +5729,109 @@
         "https://cryptobriefing.com/microsoft-agent-lightning-agentic-rl/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-mhs-model-hardware-standard",
+      "title": "Anthropic Model Hardware Standard (MHS) research preview \u2014 AI agents for physical lab/manufacturing devices",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "Research preview opened Aug 27 2026; shared protocol for AI agents to operate physical instruments (microscopes, liquid handlers, robotic arms) \u2014 'USB-C for hardware'",
+        "Cuts instrument integration from days/weeks to hours/minutes; spec is device-agnostic, requires only a programmable interface",
+        "Partners: Genentech, Carnegie Mellon, AWS, Doosan Robotics, Tecan, Universal Robots, Hugging Face, Raspberry Pi; Anthropic plans to open-source spec after preview"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+        "https://www.cnbc.com/2026/08/27/anthropic-pushes-into-physical-world-with-new-standard-to-help-ai-agents-operate-machines.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-music-publisher-copyright-suits",
+      "title": "Sony Music Publishing and Warner Chappell sue Anthropic for copyright infringement over Claude training data",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "Filed Aug 29 2026 in USDC N.D. Cal.; allege mass torrenting/scraping/downloading of copyrighted compositions for Claude training; Dario Amodei and Ben Mann named individually",
+        "Seek up to $150K per willfully infringed work + $25K per CMI removal; 'one of the largest ongoing IP thefts in history' per complaint",
+        "Chain: BMG sued March 2026 (493 compositions); Round Hill Music filed Aug 17; Sony/Warner filed Aug 29; Anthropic: 'We disagree and will defend ourselves robustly'"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+        "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+        "https://www.axios.com/2026/08/29/anthropic-sony-warner-music-copyright"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "salesforce-claudeforce-partnership",
+      "title": "Salesforce Claudeforce \u2014 37-skill CRM plugin integrates Salesforce data into Claude sessions",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "Announced Aug 26 2026; 'Salesforce in Claude' plugin with 37 prebuilt sales skills (meeting prep, deal health, pipeline review) that surface live Salesforce data and enable governed write-back actions in Claude",
+        "Framed as Benioff's answer to 'SaaSpocalypse' (AI agents making CRM UX irrelevant); Claude also deploys into Salesforce's harness as reasoning model",
+        "In pilot with select customers now; open beta targeted September 2026"
+      ],
+      "sources": [
+        "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/",
+        "https://www.cnbc.com/2026/08/26/salesforce-anthropic-partnership-claudeforce.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-in-chrome-ga",
+      "title": "Claude in Chrome \u2014 official extension GA with autonomous browser actions and Cowork side panel",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "GA Aug 26 2026 on Pro/Max/Team/Enterprise; autonomous action mode \u2014 Claude takes multi-step browser actions (read, type, click, navigate, fill forms) without per-step approval; inline safety classifier validates each action",
+        "Cowork sessions now run in a Chrome side panel alongside any page; uses existing user logins, no separate credential handoff"
+      ],
+      "sources": [
+        "https://claude.com/blog/claude-in-chrome-generally-available",
+        "https://gigazine.net/gsc_news/en/20260827-claude-chrome-available/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-cursor-spacex-termination",
+      "title": "OpenAI terminates Cursor model access Nov 12 after SpaceX acquisition of Anysphere",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "Announced Aug 29 2026; OpenAI invoked change-of-control contract clause after Cursor's parent Anysphere acquired by SpaceX (Elon Musk); Nov 12 2026 hard cutoff",
+        "OpenAI cites precedent: Twitter violated TOS post-Musk acquisition; xAI used OpenAI data in TOS-violating manner acknowledged under oath; OpenAI will not supply future models to Cursor",
+        "Cursor already supports Claude (Anthropic) as an alternative; Nov 12 gives developers ~75 days to migrate"
+      ],
+      "sources": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+        "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "https://www.neowin.net/news/openai-terminates-contract-with-cursor-following-acquisition-by-elon-musks-spacex/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepseek-74b-funding-round",
+      "title": "DeepSeek closes ~$7.4B funding round at ~$74B valuation, targeting 2027 STAR Market IPO",
+      "first_seen": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-08-31T00:00:00Z",
+      "key_facts": [
+        "Second external round: ~$7.4B (50B yuan) at ~$74B pre-money (500B yuan); investors include China national AI fund, NetEase, JD.com, IDG Capital, Loyal Valley, Shixiang; signing expected end of August 2026",
+        "Round paused in July after leaked remarks by founder Liang Wenfeng; resumed early August; proceeds for model R&D + compute infra",
+        "IPO filing potentially late 2026; debut targeted 2027 on Shanghai STAR Market"
+      ],
+      "sources": [
+        "https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/",
+        "https://aiweekly.co/alerts/deepseek-restarts-8b-funding-round-at-74b-valuation"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
