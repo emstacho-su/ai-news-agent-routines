@@ -1685,7 +1685,7 @@
       "id": "pentagon-anthropic-dod-blacklist",
       "title": "Pentagon blacklists Anthropic; DoD tests OpenAI/Gemini/Grok as replacements",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-09-01T12:16:19Z",
+      "last_updated": "2026-09-05T00:00:00Z",
       "key_facts": [
         "March 2026: DoD designated Anthropic supply-chain risk after Anthropic refused to remove restrictions on mass surveillance/lethal autonomous weapons",
         "180-day deadline (expires ~September 2026) to phase Claude out of all DoD workflows; defense vendors must certify non-use",
@@ -1693,7 +1693,8 @@
         "Federal judge blocked the supply-chain-risk designation on First Amendment grounds (government cannot compel Anthropic to alter its AUP as a contracting condition); injunction halts phase-out clock",
         "DoD has formalized contracts with OpenAI, Google, and Microsoft as multi-vendor AI fallback regardless of lawsuit outcome",
         "August 31 2026: DoD added OpenAI ChatGPT Mil and xAI Grok for Government to GenAI.mil; all ~3M DoD personnel now have access to three frontier models alongside Google Gemini",
-        "September 2026: 180-day deadline (from March 2026) for DoD contractors to phase out Claude expires this month; court injunction on supply-chain-risk designation remains in place"
+        "September 2026: 180-day deadline (from March 2026) for DoD contractors to phase out Claude expires this month; court injunction on supply-chain-risk designation remains in place",
+        "Aug 27 2026: federal court entered FINAL JUDGMENT (59-page merits opinion) holding DoD designation unlawful First Amendment retaliation \u2014 no stay, no bond; supersedes March preliminary injunction"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-05-21/pentagon-tests-rival-ai-models-in-race-to-replace-anthropic",
@@ -1702,10 +1703,12 @@
         "https://www.axios.com/2026/03/09/anthropic-sues-pentagon-supply-chain-risk-label",
         "https://www.cnn.com/2026/03/09/tech/anthropic-sues-pentagon",
         "https://www.airforcetimes.com/industry/techwatch/2026/08/31/the-militarys-chatgpt-is-now-live-via-the-pentagons-genai-platform/",
-        "https://www.aroged.com/2026/09/01/pentagon-receives-its-own-versions-of-chatgpt-and-grok/"
+        "https://www.aroged.com/2026/09/01/pentagon-receives-its-own-versions-of-chatgpt-and-grok/",
+        "https://www.eff.org/deeplinks/2026/09/judge-rules-dod-unlawfully-retaliated-against-anthropic",
+        "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
       ],
       "category": "Wildcard",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "eu-ai-act-august-2026-enforcement",
@@ -5215,7 +5218,7 @@
       "id": "anthropic-65b-arr-ipo-prep",
       "title": "Anthropic hits $65B ARR (up from $47B in May); IPO preparations advancing, gaining on OpenAI in prediction markets",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-04T00:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
       "key_facts": [
         "ARR crossed $65B as of July 2026, up from $47B in May \u2014 nearly doubled in one quarter",
         "Preparing for IPO; prediction markets show Anthropic gaining on OpenAI for first-to-file",
@@ -5225,7 +5228,9 @@
         "October Nasdaq listing targeted at ~$965B post-money valuation; would be largest IPO in history, surpassing SpaceX $1.77T",
         "Q2 2026 revenue: $10.9B (up from $4.8B in Q1); Q2 operating profit $559M (first ever)",
         "Public prospectus publishing after Labor Day (first week Sept); investor day mid-September; targeted listing late Sept / early Oct 2026",
-        "Target raise $130B+ at $2T+ valuation \u2014 would be one of largest tech IPOs ever"
+        "Target raise $130B+ at $2T+ valuation \u2014 would be one of largest tech IPOs ever",
+        "Sept 7 2026: specific date for public prospectus publication; underwriters: Morgan Stanley, Goldman Sachs, JPMorgan",
+        "Target valuation $1.5-2T; positioned as potentially largest US tech IPO on record, surpassing prior records"
       ],
       "sources": [
         "https://www.bloomberg.com/latest/anthropic",
@@ -5235,10 +5240,11 @@
         "https://finance.yahoo.com/markets/stocks/articles/anthropic-sets-fall-ipo-eyeing-185032639.html",
         "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
         "https://finance.yahoo.com/markets/stocks/articles/anthropic-reportedly-planning-unveil-ipo-151235633.html",
-        "https://www.ventureatlas.org/news/2026-09-03-anthropic-ipo-prospectus-labor-day"
+        "https://www.ventureatlas.org/news/2026-09-03-anthropic-ipo-prospectus-labor-day",
+        "https://www.anthropic.com/news/confidential-draft-s1-sec"
       ],
       "category": "Anthropic",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "anthropic-life-sciences-block-access-program",
@@ -5259,7 +5265,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-30T12:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5283,7 +5289,11 @@
         "v2.1.243 (Aug 24): per-task token breakdown in agentic loops \u2014 shows which spawned subtask consumed the most tokens; surfaces inside each loop run",
         "v2.1.248 (Aug 28): restricted mode (--restricted / CLAUDE_CODE_RESTRICTED=1) \u2014 removes command/code execution tools, drops WebFetch unless explicitly whitelisted, confines file tools to working directory, ignores user/project settings; designed for CI and untrusted-input environments",
         "v2.1.248\u2013251: cross-session messaging (SendMessage/ListAgents) expanded to Bedrock, Vertex, Foundry, and telemetry-disabled setups (was macOS/Linux local only)",
-        "v2.1.251: sandbox and MCP servers now initialize asynchronously \u2014 prompt composition available during startup; subcommands that skip full runtime short-circuit init path entirely"
+        "v2.1.251: sandbox and MCP servers now initialize asynchronously \u2014 prompt composition available during startup; subcommands that skip full runtime short-circuit init path entirely",
+        "Sept 1 2026 release: Claude Fable 5.1 set as default Fable model (1M context, $10/$50/M, $0.25/M cache reads)",
+        "Sept 1: Containment Escape rule in auto mode \u2014 cloud metadata-credential fetches, egress evasion, cross-tenant reach no longer auto-approved",
+        "Sept 1: timeFormat and timeZone settings for turn-end clock and transcript timestamps (12h, 24h, 24h UTC, strftime)",
+        "Sept 1: CLAUDE_CODE_SUBAGENT_MODEL_FORCE env var forces all subagents to specified model, overriding per-spawn agent-definition model overrides"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5294,7 +5304,7 @@
         "https://www.havoptic.com/tools/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -6013,20 +6023,27 @@
       "id": "gpt-6-astra-ga",
       "title": "GPT-6 Astra GA (Sept 4 2026): 99.9% ARC-AGI-3, autonomous computer use, two zero-days found",
       "first_seen": "2026-09-04T00:00:00Z",
-      "last_updated": "2026-09-04T00:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
       "key_facts": [
         "Released Sept 3 (announced) / Sept 4 (GA) 2026 to ChatGPT Plus/Pro/Business/Enterprise and API; model id: gpt-6-astra",
         "Benchmarks: 99.9% ARC-AGI-3, 72.6% OSWorld 2.0 (vs 65.7% Sol), 41.4% AutomationBench (vs 31.4% Fable 5.1), 39.0% arbitrary code exec (vs 5.5% Sol)",
         "Discovered two novel zero-day vulnerabilities during cybersecurity eval; disclosing to maintainers",
-        "1.05M context window, 128K output tokens; knowledge cutoff April 30 2026"
+        "1.05M context window, 128K output tokens; knowledge cutoff April 30 2026",
+        "API pricing: $10/M input, $50/M output; $1/M cached input; $12.50/M cache writes; fast mode ~2x price for 2.5x speed",
+        "Context above 272K triggers higher tier: $20/$2/$25/$75/M input/cache/output/cache-write",
+        "Sept 4-5 2026: rolling to ChatGPT Plus, Pro, Business, Enterprise plans and OpenAI API + AWS Bedrock",
+        "OpenAI president Greg Brockman told Axios it 'could eventually be seen as the arrival of AGI'"
       ],
       "sources": [
         "https://openai.com/index/gpt-6-astra/",
         "https://thenewstack.io/openai-gpt6-astra-benchmarks/",
-        "https://winbuzzer.com/2026/09/04/gpt-6-astra-arrives-with-major-gains-staged-access-and-new-questions-about-its-benchmarks-xcxwbn/"
+        "https://winbuzzer.com/2026/09/04/gpt-6-astra-arrives-with-major-gains-staged-access-and-new-questions-about-its-benchmarks-xcxwbn/",
+        "https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman",
+        "https://www.mindstudio.ai/blog/gpt6-astra-pricing-api-access",
+        "https://www.yottalabs.ai/post/gpt-6-release-date-rumors-what-is-known-2026"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gemini-3-8-flash",
@@ -6092,6 +6109,58 @@
         "https://openai.com/index/daybreak-for-frontline-defenders/",
         "https://www.helpnetsecurity.com/2026/09/04/openai-daybreak-frontline-defenders-access/",
         "https://www.theregister.com/security/2026/09/04/openai-commits-1b-in-ai-credits-to-frontline-cyber-defenders/5294382"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-academy",
+      "title": "Claude Academy: Anthropic's free AI learning platform with 31 courses for beginners through developers",
+      "first_seen": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
+      "key_facts": [
+        "Launched Aug 21 2026 at academy.claude.com; consolidates Anthropic Academy (March 2026, 13 courses) into unified Claude-branded platform",
+        "31 structured courses across 4 tracks: AI fundamentals, Claude productivity, Claude API development, Claude Code/MCP development",
+        "355+ short tutorials and prompting tips; completion badges exportable to LinkedIn; Claude recommends next course",
+        "Free, no login required to browse; developer track covers Claude Code, API, and MCP server design"
+      ],
+      "sources": [
+        "https://cryptobriefing.com/anthropic-launches-claude-academy/",
+        "https://www.superhuman.ai/p/anthropic-launches-the-claude-academy-with-355-resources",
+        "https://www.edtechinnovationhub.com/news/anthropic-opens-claude-academy-with-free-ai-courses-and-workplace-rollout-guides"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-hugging-face-acquisition",
+      "title": "Nvidia acquires Hugging Face for $12.9B (announced September 3, 2026)",
+      "first_seen": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
+      "key_facts": [
+        "Definitive agreement announced Sept 3 2026; $11.93B to shareholders + $1B employee equity retention; expected to close H1 2027 pending regulatory approval",
+        "Hugging Face hosts 3M models, 1M apps, 500K datasets, 18M registered developers; Nvidia's second-largest acquisition after $20B Groq purchase",
+        "Jensen Huang committed to maintaining open-model neutrality \u2014 continuing to support all silicon vendors, not only Nvidia"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+        "https://www.bloomberg.com/news/articles/2026-09-03/nvidia-agrees-to-13-billion-deal-for-ai-platform-hugging-face/",
+        "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "soundhound-liveperson-acquisition",
+      "title": "SoundHound AI completes LivePerson acquisition (September 4, 2026)",
+      "first_seen": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-05T00:00:00Z",
+      "key_facts": [
+        "Closed Sept 4 2026 two days after shareholder approval; LivePerson digital messaging network reaches 25 of Fortune 100",
+        "Combines SoundHound voice/agentic AI with LivePerson enterprise messaging for unified voice+text agent customer service"
+      ],
+      "sources": [
+        "https://aiagentstore.ai/ai-agent-news/this-week"
       ],
       "category": "Wildcard",
       "coverage_count": 1
