@@ -1685,7 +1685,7 @@
       "id": "pentagon-anthropic-dod-blacklist",
       "title": "Pentagon blacklists Anthropic; DoD tests OpenAI/Gemini/Grok as replacements",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-06T00:00:00Z",
       "key_facts": [
         "March 2026: DoD designated Anthropic supply-chain risk after Anthropic refused to remove restrictions on mass surveillance/lethal autonomous weapons",
         "180-day deadline (expires ~September 2026) to phase Claude out of all DoD workflows; defense vendors must certify non-use",
@@ -1694,7 +1694,9 @@
         "DoD has formalized contracts with OpenAI, Google, and Microsoft as multi-vendor AI fallback regardless of lawsuit outcome",
         "August 31 2026: DoD added OpenAI ChatGPT Mil and xAI Grok for Government to GenAI.mil; all ~3M DoD personnel now have access to three frontier models alongside Google Gemini",
         "September 2026: 180-day deadline (from March 2026) for DoD contractors to phase out Claude expires this month; court injunction on supply-chain-risk designation remains in place",
-        "Aug 27 2026: federal court entered FINAL JUDGMENT (59-page merits opinion) holding DoD designation unlawful First Amendment retaliation \u2014 no stay, no bond; supersedes March preliminary injunction"
+        "Aug 27 2026: federal court entered FINAL JUDGMENT (59-page merits opinion) holding DoD designation unlawful First Amendment retaliation \u2014 no stay, no bond; supersedes March preliminary injunction",
+        "Sept 3 2026: DoD official Emil Michael publicly reaffirmed 'supply-chain-risk' label one day after Commerce Sec. Howard Lutnick said Anthropic is 'back on the right side'; Trump administration openly divided on enforcement",
+        "180-day phase-out deadline expired Sept 2026 while court injunction bars enforcement; supply-chain-risk label stays on books pending D.C. Circuit appeal"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-05-21/pentagon-tests-rival-ai-models-in-race-to-replace-anthropic",
@@ -1705,10 +1707,12 @@
         "https://www.airforcetimes.com/industry/techwatch/2026/08/31/the-militarys-chatgpt-is-now-live-via-the-pentagons-genai-platform/",
         "https://www.aroged.com/2026/09/01/pentagon-receives-its-own-versions-of-chatgpt-and-grok/",
         "https://www.eff.org/deeplinks/2026/09/judge-rules-dod-unlawfully-retaliated-against-anthropic",
-        "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
+        "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+        "https://www.axios.com/2026/09/03/pentagon-reaffirms-anthropic-blacklist",
+        "https://politicalwire.com/2026/09/03/top-pentagon-official-reaffirms-anthropic-blacklist/"
       ],
       "category": "Wildcard",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "eu-ai-act-august-2026-enforcement",
@@ -5265,7 +5269,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-06T00:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5293,7 +5297,13 @@
         "Sept 1 2026 release: Claude Fable 5.1 set as default Fable model (1M context, $10/$50/M, $0.25/M cache reads)",
         "Sept 1: Containment Escape rule in auto mode \u2014 cloud metadata-credential fetches, egress evasion, cross-tenant reach no longer auto-approved",
         "Sept 1: timeFormat and timeZone settings for turn-end clock and transcript timestamps (12h, 24h, 24h UTC, strftime)",
-        "Sept 1: CLAUDE_CODE_SUBAGENT_MODEL_FORCE env var forces all subagents to specified model, overriding per-spawn agent-definition model overrides"
+        "Sept 1: CLAUDE_CODE_SUBAGENT_MODEL_FORCE env var forces all subagents to specified model, overriding per-spawn agent-definition model overrides",
+        "Sept 2 2026: managedMcpServers org setting \u2014 admins push HTTP/SSE MCP servers to all users without per-user config; fixes /mcp reconnect bypassing allow/deny list and mcp remove leaving OAuth credentials",
+        "v2.1.261 (Sept 4): bashOutputMaxChars and taskOutputMaxChars settings up to 128K characters \u2014 previously truncated build/test output now fully visible to Claude",
+        "v2.1.261: /skill-doctor shows unused loaded skills and their token cost in the current session",
+        "v2.1.261: --append-subagent-system-prompt-file reads subagent system prompt from file; 'Organization policy' line added to /status and claude doctor",
+        "v2.1.261: diff panel in fullscreen mode shows uncommitted changes alongside conversation as Claude edits",
+        "Sept 6 2026: bug fixes and reliability improvements only"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5304,7 +5314,7 @@
         "https://www.havoptic.com/tools/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 8
+      "coverage_count": 9
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -5811,11 +5821,12 @@
       "id": "anthropic-music-publisher-copyright-suits",
       "title": "Sony Music Publishing and Warner Chappell sue Anthropic for copyright infringement over Claude training data",
       "first_seen": "2026-08-31T00:00:00Z",
-      "last_updated": "2026-08-31T00:00:00Z",
+      "last_updated": "2026-09-06T00:00:00Z",
       "key_facts": [
         "Filed Aug 29 2026 in USDC N.D. Cal.; allege mass torrenting/scraping/downloading of copyrighted compositions for Claude training; Dario Amodei and Ben Mann named individually",
         "Seek up to $150K per willfully infringed work + $25K per CMI removal; 'one of the largest ongoing IP thefts in history' per complaint",
-        "Chain: BMG sued March 2026 (493 compositions); Round Hill Music filed Aug 17; Sony/Warner filed Aug 29; Anthropic: 'We disagree and will defend ourselves robustly'"
+        "Chain: BMG sued March 2026 (493 compositions); Round Hill Music filed Aug 17; Sony/Warner filed Aug 29; Anthropic: 'We disagree and will defend ourselves robustly'",
+        "Universal Music Publishing Group already in litigation prior to Sony/Warner filing \u2014 as of Sept 2026 all three major music publishing conglomerates (Sony, Warner, Universal) are simultaneously suing Anthropic, first time all three have pursued a single defendant at once"
       ],
       "sources": [
         "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
@@ -5823,7 +5834,7 @@
         "https://www.axios.com/2026/08/29/anthropic-sony-warner-music-copyright"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "salesforce-claudeforce-partnership",
