@@ -3202,7 +3202,7 @@
       "id": "meta-muse-spark-1-1-api",
       "title": "Meta Muse Spark 1.1/1.2 + Muse Code: Meta's public model API (July\u2013Aug 2026)",
       "first_seen": "2026-07-13T12:30:00Z",
-      "last_updated": "2026-08-08T00:00:00Z",
+      "last_updated": "2026-09-07T12:09:27Z",
       "key_facts": [
         "Meta Model API launched in public preview for US developers July 9 2026; first public model API from Meta",
         "Muse Spark 1.1: multimodal reasoning model, 1M-token context, agentic focus (tool use, computer use, coding); $1.25/Mtok input, $4.25/Mtok output; $20 free credits",
@@ -3211,7 +3211,10 @@
         "Muse Code beta (Aug 5 2026): terminal coding agent co-trained with Muse Spark 1.2; coordinates persistent async subagents for multi-step engineering tasks",
         "muse-spark-1.2-contributor tier: $0.10 input / $0.20 output in exchange for consent to train future Meta models on prompts and completions",
         "Aug 5-6 2026: Muse Spark 1.2 released (Intelligence Index 54, up from 51); Muse Code terminal coding agent launched for macOS/Linux, powered by Spark 1.2 \u2014 parallel sub-agents, worktree isolation, crash-safe event log; pricing $1.25/M input $4.25/M output; contributor tier trades prompts for lower costs",
-        "Muse Code is MSL's first coding-specific product; directly competes with Claude Code, Codex CLI, Antigravity"
+        "Muse Code is MSL's first coding-specific product; directly competes with Claude Code, Codex CLI, Antigravity",
+        "Muse Spark 1.3 (Sept 2 2026): 20% fewer tool calls, 25% fewer tokens vs 1.2 on comparable engineering tasks; video input added; 1M context unchanged; $1.25/$4.25 pricing unchanged",
+        "Muse Spark 1.3 ranks #6 of 636 on Artificial Analysis Intelligence Index \u2014 highest Meta model has charted; multimodal (text, image, video); Max Reasoning tier announced, pending safety testing",
+        "Muse Spark 1.3 is Meta's 4th Muse Spark model release in five months; rolling out to Instagram, Facebook, Meta AI"
       ],
       "sources": [
         "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
@@ -3221,10 +3224,13 @@
         "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents",
         "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
         "https://www.theregister.com/ai-and-ml/2026/08/06/meta-wants-to-get-inside-your-terminal-with-its-new-coding-agent/5283717",
-        "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html"
+        "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+        "https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals",
+        "https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues",
+        "https://artificialanalysis.ai/articles/muse-spark-1-3"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "zai-zcode-open-weight",
@@ -4762,24 +4768,30 @@
       "id": "alibaba-qwen3-8-max",
       "title": "Alibaba Qwen3.8-Max: 2.4T MoE, 95B active, 1M context, first open-weight Max-class",
       "first_seen": "2026-08-09T12:00:00Z",
-      "last_updated": "2026-08-15T12:00:00Z",
+      "last_updated": "2026-09-07T12:09:27Z",
       "key_facts": [
         "Released August 3 2026; 2.4T total parameters, 95B active via Sparse MoE, 1M-token context window",
         "Claims benchmark parity with Anthropic Fable 5; ranks 5th Text Arena, 2nd Vision Arena per Alibaba",
         "API live on Alibaba Cloud Model Studio; open-weight release (MIT license) scheduled mid-August 2026 \u2014 first Max-class Qwen model to go open-source",
         "Can ingest 100-page documents, full TV series, or 100-hour livestreams into searchable knowledge bases",
         "Aug 12 2026: open weights (MIT) have not shipped as of the week of Aug 10 as previously announced; companion Qwen3.8-27B (for consumer GPU inference) also pending with no revised date from Alibaba",
-        "Aug 15 2026: Qwen3.8-27B open weights shipped on Hugging Face under Apache 2.0; 27B dense model distilled from Qwen3.8-Max, 262K native context, integrated vision, runs on single consumer GPU; Alibaba claims beats Muse Glimmer 30B on several benchmarks"
+        "Aug 15 2026: Qwen3.8-27B open weights shipped on Hugging Face under Apache 2.0; 27B dense model distilled from Qwen3.8-Max, 262K native context, integrated vision, runs on single consumer GPU; Alibaba claims beats Muse Glimmer 30B on several benchmarks",
+        "Qwen3.8-Max-0902 (Sept 2-3 2026): post-training snapshot with no architecture/pricing changes ($2/$6 per Mtok)",
+        "0902 snapshot: #1 in Code Arena WebDev at 1,691 pts (3 pts above Claude Opus 5 Max at 1,687; 22 above prior Qwen3.8-Max); all 8 coding benchmarks improved",
+        "0902: TerminalBench 3.0 more than doubled (11.3 \u2192 29.0); ProgramBench Almost Solved doubled (10.5 \u2192 28.0); gains suggest post-training targeted long-horizon agentic/terminal tasks"
       ],
       "sources": [
         "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
         "https://www.cnbc.com/2026/08/03/alibaba-ai-model-qwen-rival-anthropic.html",
         "https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance",
         "https://cryptobriefing.com/alibaba-qwen3-27b-open-weights-release/",
-        "https://officechai.com/miscellaneous/alibaba-releases-qwen-3-8-27b-beats-muse-glimmer-30b-on-many-benchmarks/"
+        "https://officechai.com/miscellaneous/alibaba-releases-qwen-3-8-27b-beats-muse-glimmer-30b-on-many-benchmarks/",
+        "https://technode.com/2026/09/02/alibaba-upgrades-qwen38-max-with-new-0902-snapshot/",
+        "https://openrouter.ai/qwen/qwen3.8-max-0902",
+        "https://cellcog.ai/blog/qwen3-8-max-0902/"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "google-weathernext-2-open-source",
@@ -5222,7 +5234,7 @@
       "id": "anthropic-65b-arr-ipo-prep",
       "title": "Anthropic hits $65B ARR (up from $47B in May); IPO preparations advancing, gaining on OpenAI in prediction markets",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-05T00:00:00Z",
+      "last_updated": "2026-09-07T12:09:27Z",
       "key_facts": [
         "ARR crossed $65B as of July 2026, up from $47B in May \u2014 nearly doubled in one quarter",
         "Preparing for IPO; prediction markets show Anthropic gaining on OpenAI for first-to-file",
@@ -5234,7 +5246,8 @@
         "Public prospectus publishing after Labor Day (first week Sept); investor day mid-September; targeted listing late Sept / early Oct 2026",
         "Target raise $130B+ at $2T+ valuation \u2014 would be one of largest tech IPOs ever",
         "Sept 7 2026: specific date for public prospectus publication; underwriters: Morgan Stanley, Goldman Sachs, JPMorgan",
-        "Target valuation $1.5-2T; positioned as potentially largest US tech IPO on record, surpassing prior records"
+        "Target valuation $1.5-2T; positioned as potentially largest US tech IPO on record, surpassing prior records",
+        "Sept 7 2026: public S-1 prospectus expected today per prior reports; as of morning run no EDGAR filing confirmed \u2014 filing described as 'imminent' in financial media post-Labor Day"
       ],
       "sources": [
         "https://www.bloomberg.com/latest/anthropic",
@@ -5248,7 +5261,7 @@
         "https://www.anthropic.com/news/confidential-draft-s1-sec"
       ],
       "category": "Anthropic",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "anthropic-life-sciences-block-access-program",
