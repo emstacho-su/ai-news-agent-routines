@@ -5216,25 +5216,27 @@
       "id": "anthropic-developer-platform-aug-2026",
       "title": "Anthropic Claude Developer Platform: Files API GA, Admin API enterprise beta, Managed Agents session budgets + geo-pinning",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-09-08T00:00:00Z",
       "key_facts": [
         "Files API now GA: beta header dropped, 1 TB per org, 500 req/min, stable pagination with ids[] filter",
         "Admin API (Enterprise beta): manage org members by email, role changes, invites, group membership via API",
         "Managed Agents: session spend budgets (budget_reached stop reason), advisor models, inference geo-pinning, GitHub-hosted skills",
-        "Added session budget controls (cap total tokens per agent session), advisor models (separate smaller model vets agent steps), inference geo pinning (lock compute to region for data-residency), and GitHub-hosted skills (skill source lives in a GitHub repo path)"
+        "Added session budget controls (cap total tokens per agent session), advisor models (separate smaller model vets agent steps), inference geo pinning (lock compute to region for data-residency), and GitHub-hosted skills (skill source lives in a GitHub repo path)",
+        "Sept 2026: Admin API user-management endpoints (members, invites, groups, custom roles) out of beta \u2014 now GA for Claude Enterprise orgs",
+        "Sept 2026: Managed Agents web_search and web_fetch now support per-agent allowed_domains and blocked_domains for server-side domain filtering"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-developer-platform",
         "https://platform.claude.com/docs/en/release-notes/overview"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "anthropic-65b-arr-ipo-prep",
       "title": "Anthropic hits $65B ARR (up from $47B in May); IPO preparations advancing, gaining on OpenAI in prediction markets",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-07T12:09:27Z",
+      "last_updated": "2026-09-08T00:00:00Z",
       "key_facts": [
         "ARR crossed $65B as of July 2026, up from $47B in May \u2014 nearly doubled in one quarter",
         "Preparing for IPO; prediction markets show Anthropic gaining on OpenAI for first-to-file",
@@ -5247,7 +5249,8 @@
         "Target raise $130B+ at $2T+ valuation \u2014 would be one of largest tech IPOs ever",
         "Sept 7 2026: specific date for public prospectus publication; underwriters: Morgan Stanley, Goldman Sachs, JPMorgan",
         "Target valuation $1.5-2T; positioned as potentially largest US tech IPO on record, surpassing prior records",
-        "Sept 7 2026: public S-1 prospectus expected today per prior reports; as of morning run no EDGAR filing confirmed \u2014 filing described as 'imminent' in financial media post-Labor Day"
+        "Sept 7 2026: public S-1 prospectus expected today per prior reports; as of morning run no EDGAR filing confirmed \u2014 filing described as 'imminent' in financial media post-Labor Day",
+        "Sept 8 2026: public S-1 not yet on EDGAR \u2014 slipped past Sept 7 target; filing described as 'imminent' in financial media; once filed, 15-day quiet period before road show; investor day mid-September"
       ],
       "sources": [
         "https://www.bloomberg.com/latest/anthropic",
@@ -5261,7 +5264,7 @@
         "https://www.anthropic.com/news/confidential-draft-s1-sec"
       ],
       "category": "Anthropic",
-      "coverage_count": 6
+      "coverage_count": 7
     },
     {
       "id": "anthropic-life-sciences-block-access-program",
@@ -6187,6 +6190,62 @@
         "https://aiagentstore.ai/ai-agent-news/this-week"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-agent-workdays-pachocki-alien-mind",
+      "title": "OpenAI: 3.1 agent-workdays per human; Pachocki 'Alien Mind' slowdown call",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_updated": "2026-09-08T00:00:00Z",
+      "key_facts": [
+        "By mid-August 2026, OpenAI's research org consumes 3.1 agent-workdays of runtime per 1 human workday \u2014 faster code iteration and more experiments, but design/evaluation bottlenecks shift upstream",
+        "Chief scientist Jakub Pachocki publishes 'An Alien Mind' (Sept 6): calls for voluntary slowdowns across all labs while alignment and monitoring are unsolved; describes frontier model reasoning as 'alien to human introspection'",
+        "OpenAI explicitly notes the 3.1x is a compute ratio, not a throughput/speed ratio for research output"
+      ],
+      "sources": [
+        "https://thenextweb.com/news/openai-slowdown-pachocki-alien-mind-research-intern-compute",
+        "https://the-decoder.com/openai-reports-ai-research-interns-and-warns-about-its-own-pace-at-the-same-time/",
+        "https://mlq.ai/news/openai-says-its-researchers-now-use-31-agent-workdays-for-every-human-workday/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "glm-5-3-flash-multimodal",
+      "title": "Z.ai GLM-5.3-Flash: native multimodal MoE, open weights, Aug 26 release",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_updated": "2026-09-08T00:00:00Z",
+      "key_facts": [
+        "Released Aug 26 2026: 320B/18B MoE, native image+video input, 1M context, open weights on HuggingFace",
+        "DeepSWE 57.0 vs GLM-5.2-Flash 46.2; hybrid sparse+linear attention for long-context accuracy",
+        "Pricing: $0.075/Mtok input launch promo through Sept 9 2026, then $0.15/$0.50; ~$0.045/task per Artificial Analysis",
+        "Distinct from glm-5-3-emergent-exploit-chains (Aug 14 security-focused post-training with CVE disclosures)"
+      ],
+      "sources": [
+        "https://openrouter.ai/z-ai/glm-5.3-flash",
+        "https://datanorth.ai/news/z-ai-releases-glm-5-3-flash",
+        "https://www.eesel.ai/blog/glm-5-3-flash"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "hiddenlayer-100m-series-b-2026",
+      "title": "HiddenLayer $100M Series B for AI agent runtime security (Sept 2 2026)",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_updated": "2026-09-08T00:00:00Z",
+      "key_facts": [
+        "Raised $100M Series B Sept 2 2026, led by Delta-v Capital; investors: Ten Eleven Ventures, M12, Morgan Stanley, Booz Allen Ventures; total raised >$155M",
+        "New product: Agent Harness Security \u2014 runtime interception between coding agent and environment (fs, shell, network) to catch malicious tool calls and sandboxed escapes",
+        "10x ARR growth YoY; 50+ new enterprise customers across banking, insurance, US DoD/IC",
+        "Selected for DoE $60M Prometheus initiative (AI + nuclear energy safety) in August 2026"
+      ],
+      "sources": [
+        "https://www.securityweek.com/hiddenlayer-raises-100-million-for-ai-runtime-security/",
+        "https://www.unite.ai/hiddenlayer-raises-100m-series-b-to-expand-ai-agent-security-platform/",
+        "https://www.morningstar.com/news/pr-newswire/20260902da38898/hiddenlayer-raises-100m-series-b-to-advance-trustworthy-ai"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
