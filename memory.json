@@ -4797,20 +4797,25 @@
       "id": "google-weathernext-2-open-source",
       "title": "Google WeatherNext 2: Apache 2.0 open-source cyclone AI, +24h lead time vs operational models",
       "first_seen": "2026-08-09T12:00:00Z",
-      "last_updated": "2026-08-09T12:00:00Z",
+      "last_updated": "2026-09-09T00:00:00Z",
       "key_facts": [
         "Open-sourced August 6-7 2026 under Apache 2.0 alongside Nature paper; co-developed with US National Hurricane Center, CIRA, and UK Met Office",
         "WeatherNext Cyclones gave NHC +1 full day of warning on Hurricane Melissa (2023-2025 cyclone retrospective); 3-day forecast matches what prior systems delivered at 2 days",
         "Ships as three models: WeatherNext 2 (global), WeatherNext Cyclones, WeatherNext 2-mini (single-TPU, free Colab); code + weights on GitHub",
-        "WeatherNext 2-mini runnable on a single TPU in free Colab \u2014 low barrier for reproducibility or geospatial ML research"
+        "WeatherNext 2-mini runnable on a single TPU in free Colab \u2014 low barrier for reproducibility or geospatial ML research",
+        "WeatherNext 3 (Sept 3-4 2026): 5km resolution (vs 25km in WN2), hourly refreshes (vs 6-hour), 60% better rain prediction vs predecessor",
+        "WN3 trains on raw satellite observations \u2014 removes 6-hour data lag from physical model intermediates; beats ECMWF, Microsoft, Nvidia on OperationalWeatherBench",
+        "Integrated into Google Search, Maps, Earth Engine, Maps Platform Weather API"
       ],
       "sources": [
         "https://datanorth.ai/news/google-deepmind-open-sources-weathernext-2-and-weathernext-cyclones",
         "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
-        "https://dataconomy.com/2026/08/07/weathernext-ai-model-hurricane-forecasts/"
+        "https://dataconomy.com/2026/08/07/weathernext-ai-model-hurricane-forecasts/",
+        "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+        "https://www.unite.ai/google-deepmind-launches-weathernext-3-with-hourly-5-kilometer-forecasts/"
       ],
       "category": "Research & Technical",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "google-deepmind-leadership-restructure-2026",
@@ -4985,18 +4990,21 @@
       "id": "anthropic-decart-acquisition-talks",
       "title": "Anthropic in talks to acquire Decart for ~$6B (inference optimization)",
       "first_seen": "2026-08-15T12:00:00Z",
-      "last_updated": "2026-08-15T12:00:00Z",
+      "last_updated": "2026-09-09T00:00:00Z",
       "key_facts": [
         "Bloomberg/Reuters Aug 13 2026: Anthropic in early talks to acquire Israeli AI startup Decart for ~$6B \u2014 would be largest-ever Anthropic acquisition",
         "Decart software reduces training/inference cost by optimizing chip utilization; team would join Anthropic inference & performance group",
-        "Talks are early stage and could still collapse; deal not finalized"
+        "Talks are early stage and could still collapse; deal not finalized",
+        "Sept 8 2026: Anthropic walked away after completing due diligence \u2014 $6B acquisition is off; non-acquisition partnership still possible (Bloomberg)"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
-        "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-startup-decart-for-6-billion"
+        "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-startup-decart-for-6-billion",
+        "https://www.bloomberg.com/news/articles/2026-09-08/anthropic-said-to-walk-away-from-6-billion-decart-acquisition",
+        "https://thenextweb.com/news/anthropic-walks-away-decart-6bn-acquisition"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "google-heir-fhe-inference-compiler",
@@ -6246,6 +6254,25 @@
         "https://www.morningstar.com/news/pr-newswire/20260902da38898/hiddenlayer-raises-100m-series-b-to-advance-trustworthy-ai"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-lambda-517b-compute-race",
+      "title": "Anthropic $35B Lambda deal; total 11-month compute commitments reach ~$517B",
+      "first_seen": "2026-09-09",
+      "last_updated": "2026-09-09T00:00:00Z",
+      "key_facts": [
+        "Lambda $35B/6-year deal (Aug 31 2026): Nvidia-backed Lambda secures Hut 8 Texas data center to supply Anthropic compute; Nvidia intermediary in capacity chain",
+        "2026 publicly disclosed contracts: AWS $100B/10yr, Fluidstack $50B, Nscale $45B, SpaceX $45B, Lambda $35B \u2014 total $275B+ announced in 2026 alone",
+        "The Information (Sept 6 2026): total compute capacity reservations since Oct 2025 reach ~$517B over decade \u2014 mostly multiyear take-or-pay agreements, not immediate liabilities",
+        "Commitments made before Anthropic has raised equivalent capital; pre-IPO infrastructure build at unprecedented scale"
+      ],
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda",
+        "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+        "https://www.techrepublic.com/article/news-anthropic-lambda-35-billion-cloud-deal/"
+      ],
+      "category": "Anthropic",
       "coverage_count": 1
     }
   ]
