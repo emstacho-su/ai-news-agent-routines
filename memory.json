@@ -252,7 +252,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
       "first_seen": "2026-05-09",
-      "last_updated": "2026-08-19T12:12:26Z",
+      "last_updated": "2026-09-10T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900",
         "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
@@ -260,7 +260,10 @@
         "Q2 2026 projected $10.9B revenue, $559M operating profit (~5% margin); IPO target October 2026",
         "July 15 2026: Goldman Sachs, Morgan Stanley, and JPMorgan begin scheduling pre-roadshow investor education meetings with prospective institutional investors; standard step between S-1 and public registration; October 2026 Nasdaq target intact",
         "Aug 13-16 2026: investor sources target $2 trillion IPO valuation for October Nasdaq listing \u2014 would surpass SpaceX's $1.77T offering as largest IPO in history; Anthropic has not confirmed figure",
-        "Institutional backers project $100-120B annual revenue by year-end 2026 (vs $11.5B actual Q2)"
+        "Institutional backers project $100-120B annual revenue by year-end 2026 (vs $11.5B actual Q2)",
+        "Sept 2026: IPO prospectus to be released publicly after US Labor Day (Sept 7); investor day scheduled mid-September; Nasdaq listing target late September / early October",
+        "Valuation expectations $1T\u2013$2T; would surpass SpaceX's $1.77T offering as largest US IPO in history if priced at top",
+        "Structure exploring existing-shareholder sell-down in offering alongside lock-up period exceeding 180 days"
       ],
       "sources": [
         "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
@@ -268,10 +271,13 @@
         "https://www.bloomberg.com/news/articles/2026-07-15/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears",
         "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
         "https://fortune.com/2026/08/13/anthropic-ipo-2-trillion-october-largest-ever-spacex/",
-        "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
+        "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html",
+        "https://www.ventureatlas.org/news/2026-09-03-anthropic-ipo-prospectus-labor-day",
+        "https://cryptobriefing.com/anthropic-investor-day-september-ipo/",
+        "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/"
       ],
       "category": "Anthropic",
-      "coverage_count": 10
+      "coverage_count": 11
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -1771,7 +1777,7 @@
       "id": "claude-fable-5-mythos-5",
       "title": "Claude Fable 5 + Mythos 5: first public Mythos-class models (June 9 2026)",
       "first_seen": "2026-06-10",
-      "last_updated": "2026-07-20T12:10:17Z",
+      "last_updated": "2026-09-10T00:00:00Z",
       "key_facts": [
         "Released June 9 2026; Fable 5 is general-use Mythos-class model with classifier-based safeguards routing high-risk requests (<5% of sessions) to Opus 4.8; Mythos 5 is same weights, safeguards partially lifted, Glasswing-only",
         "Benchmarks: 95.0% SWE-bench Verified, 80.3% SWE-bench Pro (+11 pts vs Opus 4.8 69.2%, +21 pts vs GPT-5.5 58.6%), 88.0% Terminal-Bench 2.1, 59.0% HLE; #1 on FrontierCode",
@@ -1820,7 +1826,10 @@
         "July 16 2026: Fable 5 free access extended to July 19 \u2014 third extension in five weeks; explicit competitive response to GPT-5.6 Sol pricing undercuts",
         "Developer cost benchmarks circulating July 16: Grok 4.5 ~$2.49/completed agentic task vs ~$11.80 for Fable 5; one dev reported $16 on GPT-5.6 Sol vs $63 on Fable 5 for equivalent work",
         "[RUMOR] \"Claude Honeycomb EAP\" appeared in Cursor model picker July 16 \u2014 fueling speculation about Opus 5 or next-generation model in early-access testing; not confirmed by Anthropic",
-        "July 20 2026: Fable 5 access permanently restructured \u2014 Max and Team Premium: included at 50% of weekly limits with no expiry; Pro and Team Standard: pay-as-you-go usage credits at $10/1M input, $50/1M output; all Pro users receive one-time $100 credit; third extension (through July 19 11:59 PM PT) officially ended"
+        "July 20 2026: Fable 5 access permanently restructured \u2014 Max and Team Premium: included at 50% of weekly limits with no expiry; Pro and Team Standard: pay-as-you-go usage credits at $10/1M input, $50/1M output; all Pro users receive one-time $100 credit; third extension (through July 19 11:59 PM PT) officially ended",
+        "Sept 1 2026: Fable 5.1 and Mythos 5.1 released \u2014 same architecture, updated weights; knowledge cutoff updated to June 2026; outperforms Fable 5, Opus 5, and GPT-5.6 Sol per Anthropic benchmarks",
+        "Fable 5.1 cache-read pricing cut 75%; input/output unchanged at $10/$50 per million tokens",
+        "Enterprise Frontier Safeguards (EFS) announced Sept 1: customers store conversation data in their own cloud (S3/Azure Blob/GCS) under their own keys; automated misuse detection still runs; no Anthropic human review; no extra charge; rolling out fall 2026"
       ],
       "sources": [
         "https://www.anthropic.com/news/claude-fable-5-mythos-5",
@@ -1867,10 +1876,13 @@
         "https://dentro.de/ai/news/",
         "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm",
         "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/",
-        "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan"
+        "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+        "https://www.anthropic.com/news/enterprise-frontier-safeguards"
       ],
       "category": "Anthropic",
-      "coverage_count": 23
+      "coverage_count": 24
     },
     {
       "id": "ai-ceos-synthetic-dna-congress-2026",
@@ -6273,6 +6285,78 @@
         "https://www.techrepublic.com/article/news-anthropic-lambda-35-billion-cloud-deal/"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-econ-scenario-explorer",
+      "title": "Anthropic Economic Scenario Explorer: GDP +32%, knowledge-worker unemployment 17.9% in extreme case",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-10T00:00:00Z",
+      "key_facts": [
+        "Released Sept 9 2026: interactive web tool projecting AI impact on US GDP, wages, unemployment through 2030",
+        "Three scenarios: modest (4% tasks automated, +1.6% GDP), substantial (12%, +8.3% GDP, 4.6% unemployment), extreme (30%, +32% GDP, 11.9% overall unemployment, 17.9% knowledge-worker unemployment, wages down 11.5%)",
+        "Model omits policy responses, business cycles, financial disruptions; Anthropic explicit about limitations"
+      ],
+      "sources": [
+        "https://www.anthropic.com/institute/econ-scenarios",
+        "https://www.axios.com/2026/09/09/ai-economy-jobs-anthropic"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "gpt-6-astra",
+      "title": "GPT-6 Astra: OpenAI flagship released Sept 3-4 2026",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-10T00:00:00Z",
+      "key_facts": [
+        "Released Sept 3 (limited orgs) / Sept 4 (GA) 2026; ChatGPT stable release on Sept 4",
+        "Claims to beat GPT-5.6 Sol and Claude Fable 5 across reasoning benchmarks; includes computer use, SWE, professional work, science",
+        "API pricing: $10/M input, $50/M output, $1/M cached; staged rollout to ChatGPT Plus/Pro/Business/Enterprise and API then AWS",
+        "Preparedness Framework cites a forthcoming model reaching Critical cybersecurity threshold; unclear if same model"
+      ],
+      "sources": [
+        "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+        "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "title": "Gemini 3.8 Flash: Google's fourth Flash model in four months (Sept 2 2026)",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-10T00:00:00Z",
+      "key_facts": [
+        "Released Sept 2 2026; fourth Flash release in under four months",
+        "73.7% DeepSWE v1.1 (up from 65.3%), 59.0% OSWorld-2.0 (up from 50.6%), 89.4% Terminal-Bench 2.1; Artificial Analysis Intelligence Index 59 (up 3 pts)",
+        "Beats Claude Opus 5 on three Google-published benchmarks",
+        "Pricing: $0.75/$3.75 per million tokens (same as 3.7 Flash); prices double Jan 1 2027"
+      ],
+      "sources": [
+        "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+        "https://www.vellum.ai/blog/gemini-3-8-flash-benchmarks-explained"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "alphagenome-atlas",
+      "title": "DeepMind AlphaGenome Atlas: 9 billion DNA variant predictions, 1 petabyte, free for research",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-10T00:00:00Z",
+      "key_facts": [
+        "Published Sept 8 2026; covers all ~9B single-nucleotide variants across the human genome plus 100M+ observed short indels",
+        "1 petabyte dataset (30x larger than AlphaFold Database); ~27,000 predictions per variant across hundreds of human and mouse cell/tissue types; AVI variant-ranking score",
+        "Free for academic research via web portal; not approved for clinical use",
+        "Early validation: Broad Institute/Exeter surfaced missed DNM1 disease variant; 22% more non-coding associations in UK Biobank data"
+      ],
+      "sources": [
+        "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+        "https://www.nature.com/articles/d41586-026-02835-4",
+        "https://www.scientificamerican.com/article/new-google-deepmind-alphagenome-atlas-could-transform-our-understanding-of-genetic-diseases/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
