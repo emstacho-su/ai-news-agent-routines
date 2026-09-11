@@ -6358,6 +6358,98 @@
       ],
       "category": "Research & Technical",
       "coverage_count": 1
+    },
+    {
+      "id": "anthropic-threat-report-sept-2026",
+      "title": "Anthropic 154-page threat report: bio, cyber, distillation misuse Dec 2025\u2013Aug 2026",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_updated": "2026-09-11T00:00:00Z",
+      "key_facts": [
+        "Published Sept 10 2026; 154 pages; covers cyber, influence, surveillance, fraud, biology, conventional weapons, distillation",
+        "Bio: ~35 distinct research efforts flagged; cases include gain-of-function, bird flu, novel venoms/toxins",
+        "Distillation: Alibaba ran ~3M Claude queries/day via 3,500+ fake accounts, largest undisclosed distillation campaign measured; exposed user names, files, credentials",
+        "Five detailed bio case studies; Anthropic calls bio 'one of the most serious risks of frontier AI'"
+      ],
+      "sources": [
+        "https://edition.cnn.com/2026/09/10/health/anthropic-bioweapons-report",
+        "https://www.thenationalnews.com/future/technology/2026/09/10/anthropic-report-biological-weapons-ai/",
+        "https://www.resultsense.com/news/2026-09-11-anthropic-threat-report-distillation-bio-weapons/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-navier-stokes-10k-agents",
+      "title": "OpenAI 10,000-agent swarm proposes Lean-verified Navier-Stokes proof in 88 hours",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_updated": "2026-09-11T00:00:00Z",
+      "key_facts": [
+        "Sept 8 2026: 10,000 agents in 88-hour autonomous run produced proposed proof of finite-time blowup for forced 3D Navier-Stokes (Clay Millennium Prize Problem, $1M prize)",
+        "Result formalized in Lean (computer-verified proof assistant)",
+        "Provenance dispute: NYU mathematician Tristan Buckmaster and Anthropic researcher Levent Alp\u00f6ge had related work using AI tools; questions raised about de-identified data influence",
+        "OpenAI disputes that it accessed their specific work before publication"
+      ],
+      "sources": [
+        "https://www.coindesk.com/tech/2026/09/09/openai-says-10-000-ai-agents-solved-a-usd1-million-math-problem-now-mathematicians-are-fighting",
+        "https://www.cnn.com/2026/09/09/business/openai-millennium-problems-navier-stokes-hnk",
+        "https://forkast.news/openais-10000-agent-navier-stokes-claim-solves-the-wrong-problem-and-the-right-one-has-a-provenance-controversy/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-agents-api-beta",
+      "title": "OpenAI Agents API public beta: managed Codex harness as single API call",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_updated": "2026-09-11T00:00:00Z",
+      "key_facts": [
+        "Launched public beta Sept 10 2026; exposes managed Codex orchestration (sessions, context compaction, tool dispatch, subagent coordination, recovery) behind one API",
+        "Deployment: OpenAI-managed sandboxes or BYOI; integrations with Cloudflare, DigitalOcean, Oracle",
+        "No additional fees beyond usage during beta",
+        "Developers supply tools and pick execution environments; OpenAI manages the harness"
+      ],
+      "sources": [
+        "https://openai.com/index/introducing-the-agents-api/",
+        "https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-chatgpt-financial-services",
+      "title": "OpenAI ChatGPT for Financial Services: GPT-6 Astra + financial data, Morgan Stanley co-design",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_updated": "2026-09-11T00:00:00Z",
+      "key_facts": [
+        "Launched Sept 10 2026; ChatGPT Work product with built-in financial data feeds and GPT-6 Astra reasoning",
+        "Co-designed with Morgan Stanley and Evercore; targets research, financial modeling, and client materials",
+        "Positioned as tailored ChatGPT Work experience for financial services teams"
+      ],
+      "sources": [
+        "https://openai.com/index/introducing-chatgpt-financial-services/",
+        "https://www.unite.ai/openai-launches-chatgpt-for-financial-services-with-built-in-data/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "positron-ai-asimov-chip",
+      "title": "Positron AI raises $875M at $5B for Asimov memory-first inference chip on TSMC N3P",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_updated": "2026-09-11T00:00:00Z",
+      "key_facts": [
+        "Raised $875M: $375M Series C ($3.5B pre-money) + $500M Series C-1 anchored by NEA and Jim Clark; closed Sept 10 2026",
+        "Asimov chip: commodity LPDDR5X memory (288GB\u20132,304GB per chip), bypasses HBM/advanced packaging supply constraints",
+        "TSMC N3P tapeout end of 2026; production H2 2027",
+        "Titan multi-chip system: 4\u20138 Asimov dies per node; 2MW engineering data center in build-out"
+      ],
+      "sources": [
+        "https://siliconangle.com/2026/09/10/chipmaker-positron-nabs-875m-to-speed-up-inference-with-consumer-grade-memory/",
+        "https://convergedigest.com/positron-ai-raises-875m-asimov-inference-silicon/",
+        "https://forkast.news/positron-ais-875m-bet-commodity-memory-could-break-nvidias-inference-lock/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
     }
   ]
 }
