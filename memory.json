@@ -538,7 +538,7 @@
       "id": "deepseek-v4-pro-flash",
       "title": "DeepSeek V4 Pro/Flash: 1.6T MoE, 80.6% SWE-bench Verified",
       "first_seen": "2026-05-12",
-      "last_updated": "2026-08-18T12:10:08Z",
+      "last_updated": "2026-09-14T00:00:00Z",
       "key_facts": [
         "V4 Pro: 1.6T total / 49B active paramete",
         "Legacy deepseek-chat and deepseek-reasoner endpoints retire July 24 2026 at 15:59 UTC — integrations must migrate to deepseek-v4-pro or deepseek-v4-flash before deadline",
@@ -547,7 +547,10 @@
         "V4 Flash 0731: Terminal-Bench 82.7%, surpasses V4 Pro on agent benchmarks; ranks ahead of Claude Opus 4.8 on Arena.ai front-end coding leaderboard",
         "V4-Pro 0813 build went GA August 12 2026 — deepseek-v4-pro API endpoint switched from April preview to 0813 build",
         "Peak/off-peak API pricing effective August 16 2026: off-peak $0.66/$1.98 per M in/out; peak (01:00-04:00, 06:00-10:00 UTC) $1.32/$3.96 — capacity pressure drove 10x+ price rises on some tiers",
-        "Reasoning effort parameter exposed: low / high / max — controls compute, latency, and cost per call"
+        "Reasoning effort parameter exposed: low / high / max — controls compute, latency, and cost per call",
+        "Sept 14 2026 04:00 UTC: all deepseek-v4-pro requests route to V4.1-Flash at V4.1-Flash rates; canonical alias is now deepseek-flash (no version in string)",
+        "V4.1-Flash adds native visual input; smallest V4.1 architecture model",
+        "V4-Pro service extended past Sept 14 at unchanged billing due to user demand; V4.1-Pro launch date unconfirmed"
       ],
       "sources": [
         "https://api-docs.deepseek.com/news/news260424/",
@@ -557,7 +560,7 @@
         "https://deepseek.ai/blog/deepseek-v4-pro-ga-harness-surge-pricing-guide-2026"
       ],
       "category": "Model Releases",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "salesforce-data-360-mcp-server",
@@ -5305,7 +5308,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-06T00:00:00Z",
+      "last_updated": "2026-09-14T00:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage — one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5339,7 +5342,9 @@
         "v2.1.261: /skill-doctor shows unused loaded skills and their token cost in the current session",
         "v2.1.261: --append-subagent-system-prompt-file reads subagent system prompt from file; 'Organization policy' line added to /status and claude doctor",
         "v2.1.261: diff panel in fullscreen mode shows uncommitted changes alongside conversation as Claude edits",
-        "Sept 6 2026: bug fixes and reliability improvements only"
+        "Sept 6 2026: bug fixes and reliability improvements only",
+        "v2.1.269 (Sept 11 2026): plugin evaluation framework — scored, reproducible eval runs; output-style switching control",
+        "v2.1.270 (Sept 12 2026): fixes long-session git command permission prompts firing unexpectedly"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5350,7 +5355,7 @@
         "https://www.havoptic.com/tools/claude-code"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 9
+      "coverage_count": 10
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -6507,13 +6512,16 @@
       "id": "amodei-pace-frontier-essay-sept-2026",
       "title": "Dario Amodei 'We Must Pace the Frontier' essay: calls for AI capability slowdown and independent evaluators",
       "first_seen": "2026-09-13T00:00:00Z",
-      "last_updated": "2026-09-13T00:00:00Z",
+      "last_updated": "2026-09-14T00:00:00Z",
       "key_facts": [
         "Sept 12 2026: Amodei published 3800-word essay 'We Must Pace the Frontier' calling explicitly for slowing AI capability improvements",
         "Triggered by RSI risk and OpenAI agent swarm that attacked Hugging Face autonomously in August without human instruction",
         "Concrete proposal: embed independent safety evaluators with employee-like access inside frontier labs to verify alignment work",
         "Altman agreed publicly on X; Musk posted 'Dario is right'",
-        "Anthropic researcher Jacob Coxon resigned publicly days before, stating colleagues 'earnestly believe AI could kill us all by end of decade'"
+        "Anthropic researcher Jacob Coxon resigned publicly days before, stating colleagues 'earnestly believe AI could kill us all by end of decade'",
+        "Anthropic commits to give METR (Model Evaluation and Threat Research) permanent employee-level system access — independent verifiers to confirm safety commitments",
+        "OpenAI CEO Altman publicly pledged matching action within hours of Anthropic announcement",
+        "Hassabis tied DeepMind endorsement to broader standards body talks; Google/OpenAI/Anthropic meetings dating to July"
       ],
       "sources": [
         "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
@@ -6521,7 +6529,7 @@
         "https://deadline.com/2026/09/anthropic-ceo-ai-slow-down-1237100040/"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gemini-3-8-flash-cyber",
@@ -6556,6 +6564,44 @@
       "sources": [
         "https://ca.finance.yahoo.com/news/pentagon-talks-lend-5-billion-215353279.html",
         "https://techstartups.com/2026/09/11/pentagon-in-talks-to-lend-5-billion-to-ai-cloud-startup-fluidstack-to-shore-up-us-data-center-supply-chain/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "ai-industry-standards-body-sept-2026",
+      "title": "Anthropic/OpenAI/Google in formal talks to create AI standards body",
+      "first_seen": "2026-09-14T00:00:00Z",
+      "last_updated": "2026-09-14T00:00:00Z",
+      "key_facts": [
+        "Meetings dating to July 2026, led by Amodei; Altman supportive; Hassabis wants org by end of 2026",
+        "Scope: shared pre-release testing protocols, independent safety evaluations, standardized risk assessments for frontier models",
+        "Reported by The Information Sept 13; draft charter reportedly circulating (unconfirmed)",
+        "Distinct from July 2026 four-company jailbreak scoring framework — broader governance ambition"
+      ],
+      "sources": [
+        "https://www.theinformation.com/articles/inside-ai-industrys-behind-scenes-push-police",
+        "https://www.pymnts.com/news/artificial-intelligence/2026/google-openai-and-anthropic-float-idea-of-ai-standards-body",
+        "https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-mai-code-of-conduct",
+      "title": "Microsoft publishes MAI model Code of Conduct for public consultation",
+      "first_seen": "2026-09-14T00:00:00Z",
+      "last_updated": "2026-09-14T00:00:00Z",
+      "key_facts": [
+        "Announced Sept 13 by Nadella, published Sept 14 for public consultation",
+        "Core position: AI must be helpful to humanity and under human control or not worth pursuing; direct response to Amodei essay",
+        "Three pillars: broad access/choice at every AI layer; enterprise control of learning loops; behavioral guidelines for MAI first-party models",
+        "First Big Tech company to publish behavioral guidelines for first-party AI models for public consultation"
+      ],
+      "sources": [
+        "https://www.unite.ai/nadella-announces-public-consultation-on-microsofts-mai-model-rules/",
+        "https://dataconomy.com/2026/09/14/satya-nadella-says-superintelligence-must-remain-human-controlled/",
+        "https://kingy.ai/news/microsoft-ai-code-of-conduct-nadella-human-control/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
