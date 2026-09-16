@@ -2677,21 +2677,26 @@
       "id": "sakana-fugu-ultra",
       "title": "Sakana Fugu Ultra: model-agnostic multi-agent orchestrator for Claude/GPT/Gemini",
       "first_seen": "2026-06-30T12:00:00Z",
-      "last_updated": "2026-06-30T12:00:00Z",
+      "last_updated": "2026-09-16T12:08:24Z",
       "key_facts": [
         "Launched June 22 2026 by Sakana AI; routes subtasks to Claude, GPT-5.5, or Gemini based on task type; single API endpoint",
         "73.7% SWE-Bench Pro; claims orchestrated system outperforms any single constituent model on complex long-horizon coding",
         "Pricing: $20/month subscription (Fugu + Fugu Ultra included), or $5/1M input / $30/1M output API; free second month if subscribed before July 31",
-        "Structural bet: treats Anthropic/OpenAI/Google as interchangeable inference providers; Anthropic prohibits Claude Pro/Max subscriptions as Fugu backends (API key required)"
+        "Structural bet: treats Anthropic/OpenAI/Google as interchangeable inference providers; Anthropic prohibits Claude Pro/Max subscriptions as Fugu backends (API key required)",
+        "Fugu Ultra v2 and Fugu Max released September 11 2026; pricing unchanged for Ultra ($5/$30/M); Fugu Max is new cost tier at $2/$6/M (80% cheaper output)",
+        "Fugu Ultra v2 benchmarks (vendor-reported, unverified): 48.3 Chartography vs 27.3 Opus 5 / 29.5 Fable 5.1; architecture unchanged, v2 is routing-weight tuning",
+        "1M token context window on both variants"
       ],
       "sources": [
         "https://sakana.ai/fugu-release/",
         "https://coursiv.io/blog/fugu-ultra",
         "https://www.datacamp.com/blog/sakana-fugu",
-        "https://www.explainx.ai/blog/sakana-fugu-multi-agent-orchestration-model-2026"
+        "https://www.explainx.ai/blog/sakana-fugu-multi-agent-orchestration-model-2026",
+        "https://pondero.ai/news/2026-09-12-sakana-fugu-max-ultra-v2/",
+        "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "icml-2026-reward-hacking-gradient-regularization",
@@ -5308,7 +5313,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-15T12:07:40Z",
+      "last_updated": "2026-09-16T12:08:24Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5350,7 +5355,10 @@
         "v2.1.271: Per-command allowed_domains for Bash, PowerShell, Monitor in auto mode with sandboxing \u2014 narrower than session-wide allowlist",
         "v2.1.271: omitClaudeMd in agent frontmatter and --agents JSON \u2014 run subagents without loading user/project/local CLAUDE.md files",
         "v2.1.271: claude self-hosted-runner --drain-marker-file <path> \u2014 write file when runner enters drain state for graceful orchestration shutdown",
-        "v2.1.271: VS Code auto-archive inactive sessions (default 14 days); fixes sidebar chat blank after Reload Window for conversations open >10 min"
+        "v2.1.271: VS Code auto-archive inactive sessions (default 14 days); fixes sidebar chat blank after Reload Window for conversations open >10 min",
+        "v2.1.273 (Sept 15 2026): CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 opt-in sends x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction, x-claude-code-context-compacted headers to LLM gateway on every call",
+        "v2.1.273: MCP server disconnect notification added \u2014 when auto-reconnect gives up mid-session, user is notified and pointed to /mcp",
+        "v2.1.273: sessions started with --remote-control can now be forked to run as independent background sessions from the Claude app"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5358,10 +5366,11 @@
         "https://www.gradually.ai/en/changelogs/claude-code/",
         "https://releasebot.io/updates/anthropic/claude-code",
         "https://dev.classmethod.jp/en/articles/20260822-cc-updates-v2-1-239/",
-        "https://www.havoptic.com/tools/claude-code"
+        "https://www.havoptic.com/tools/claude-code",
+        "https://github.com/kouweizhu/agents-radar/issues/66"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 11
+      "coverage_count": 12
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -5634,17 +5643,20 @@
       "id": "visual-studio-2026-august-ai",
       "title": "Visual Studio 2026 August update: thinking-effort controls for AI models in IDE",
       "first_seen": "2026-08-24T12:00:00Z",
-      "last_updated": "2026-08-24T12:00:00Z",
+      "last_updated": "2026-09-16T12:08:24Z",
       "key_facts": [
         "August 2026 update adds thinking-effort controls (low/medium/high) for supported AI models directly in IDE UI",
         "No prompt or API changes needed; token budget awareness built into the control",
-        "Also ships expanded AI model integration and large-solution performance improvements"
+        "Also ships expanded AI model integration and large-solution performance improvements",
+        "Visual Studio 2026 GA released September 15 2026; Microsoft formally designates it the first \"Intelligent Developer Environment (IDE)\"",
+        "BYOK (Bring Your Own Key) in preview \u2014 bring any local or cloud model into VS AI features with or without GitHub sign-in; enabled by default in Community, Professional, Enterprise SKUs"
       ],
       "sources": [
-        "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes"
+        "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+        "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gpt-5-6-kiro",
@@ -6666,6 +6678,81 @@
       "sources": [
         "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
         "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-enterprise-smart-reports-beta",
+      "title": "Claude Enterprise Smart Reports (beta): transcript-level usage analytics, skill candidates",
+      "first_seen": "2026-09-16T12:08:24Z",
+      "last_updated": "2026-09-16T12:08:24Z",
+      "key_facts": [
+        "Launched September 10 2026 in beta on Claude Enterprise plans; excludes CMEK, HIPAA, Access Transparency configs and Claude Code in ZDR orgs",
+        "Claude reads a sample of org transcripts and returns prose+chart report: workstream breakdown, cost attribution, friction points, repeated patterns worth packaging as shared skills",
+        "Looks back up to 28 days; covers chat, Claude Code, and Claude Cowork; up to 10 free reports/month during beta",
+        "Skill candidates surface is the key differentiator: Claude identifies repeated prompting patterns worth systematizing as org-wide skills"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude",
+        "https://claypier.com/en/claude-enterprise-smart-reports-beta/",
+        "https://gaiinsights.substack.com/p/anthropics-new-smart-reports-feature"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "docusign-mcp-server-sept-2026",
+      "title": "Docusign MCP Server GA September 30: agreement workflows callable from any agent",
+      "first_seen": "2026-09-16T12:08:24Z",
+      "last_updated": "2026-09-16T12:08:24Z",
+      "key_facts": [
+        "Announced September 4 2026; GA on September 30; exposes send/track/manage agreements, Iris AI engine, and CLM workflows as MCP tools",
+        "Callable natively from Claude, ChatGPT, Gemini, Copilot, Slack, and any MCP client; account-level admin controls and multilingual support",
+        "Agreement intelligence powered by Iris: negotiation memory, accepted terms, clauses, company policy all accessible to agents"
+      ],
+      "sources": [
+        "https://www.prnewswire.com/news-releases/docusign-agreement-layer-for-the-agentic-enterprise-coming-to-every-agent-302870029.html",
+        "https://signb.ee/blog/docusign-mcp-ga-every-agent",
+        "https://www.nasdaq.com/press-release/docusign-agreement-layer-agentic-enterprise-coming-every-agent-2026-09-04"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "atria-dawn-preview-744b",
+      "title": "Atria Dawn Preview: Shanghai AI Lab 744B-parameter open-weight agentic MoE (MIT)",
+      "first_seen": "2026-09-16T12:08:24Z",
+      "last_updated": "2026-09-16T12:08:24Z",
+      "key_facts": [
+        "Released on GitHub Sept 11 with no announcement; 140-author technical report followed Sept 14; built on GLM-5.2 MoE foundation, trained via Verifiable Experience Pipeline grounding tool use in executable environments",
+        "MIT license; self-hosting requires 756GB\u20131.5TB of weights; no per-token billing",
+        "Full agentic loop: problem analysis, solution design, tool use, code implementation, experiment execution, result analysis, failure recovery; targets long-horizon research and engineering",
+        "Vendor-reported: competitive on 16 benchmarks, highest score on 5 of them; no independent verification from Artificial Analysis or comparable evaluator as of Sept 16 2026"
+      ],
+      "sources": [
+        "https://aiweekly.co/alerts/shanghai-ai-lab-ships-atria-dawn-preview-a-744b-agentic-moe",
+        "https://startupfortune.com/shanghai-ai-lab-quietly-releases-atria-a-free-744-billion-parameter-ai-agent/",
+        "https://github.com/atria-asi/Atria-Dawn-Preview",
+        "https://huggingface.co/internlm/Atria-Dawn-Preview"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-notebook-compute-limits",
+      "title": "Gemini Notebook switches to compute-based usage limits (Sept 2 2026)",
+      "first_seen": "2026-09-16T12:08:24Z",
+      "last_updated": "2026-09-16T12:08:24Z",
+      "key_facts": [
+        "Effective September 2 2026: compute-proportional limits replace fixed daily caps; quota factors prompt complexity, model used, and feature (short query << Video Overview)",
+        "5-hour quota refresh windows until weekly cap hit; live usage indicator below chat window; graceful degradation suggests lower-cost output on limit hit",
+        "Third major AI product in 2026 (after Claude Code and Gemini app) to move to compute-proportional quotas from flat daily caps"
+      ],
+      "sources": [
+        "https://9to5google.com/2026/08/28/gemini-notebook-usage-limits/",
+        "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/",
+        "https://gcn.com/gemini-notebook-switches-compute-based-limits/21309/"
       ],
       "category": "Wildcard",
       "coverage_count": 1
