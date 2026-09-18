@@ -252,7 +252,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
       "first_seen": "2026-05-09",
-      "last_updated": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-18T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900",
         "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
@@ -263,7 +263,9 @@
         "Institutional backers project $100-120B annual revenue by year-end 2026 (vs $11.5B actual Q2)",
         "Sept 2026: IPO prospectus to be released publicly after US Labor Day (Sept 7); investor day scheduled mid-September; Nasdaq listing target late September / early October",
         "Valuation expectations $1T\u2013$2T; would surpass SpaceX's $1.77T offering as largest US IPO in history if priced at top",
-        "Structure exploring existing-shareholder sell-down in offering alongside lock-up period exceeding 180 days"
+        "Structure exploring existing-shareholder sell-down in offering alongside lock-up period exceeding 180 days",
+        "Investor day scheduled mid-September 2026 (this week); Nasdaq listing targeted late September / early October; CFO Krishna Rao ran informal pre-roadshow investor briefings since mid-August",
+        "IPO prospectus publicly filed after US Labor Day (Sept 7); Q2 reported $11.5B revenue, positive adjusted operating income \u2014 first positive quarter for a major AI lab"
       ],
       "sources": [
         "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
@@ -277,7 +279,7 @@
         "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/"
       ],
       "category": "Anthropic",
-      "coverage_count": 11
+      "coverage_count": 12
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -5298,22 +5300,29 @@
       "id": "anthropic-life-sciences-block-access-program",
       "title": "Anthropic most capable model blocks life-science tasks; researcher access program in preparation",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-08-20T00:00:00Z",
+      "last_updated": "2026-09-18T00:00:00Z",
       "key_facts": [
         "Life-science-adjacent tasks remain blocked in Anthropic's most capable model (Mythos/Model 2)",
-        "Structured researcher access program being prepared; no timeline published"
+        "Structured researcher access program being prepared; no timeline published",
+        "LSVP (Life Sciences Verification Program) launched Sept 17 2026 in beta; grants verified life-science teams access to Mythos, Opus, Sonnet with tailored safeguards more permissive for biology work",
+        "Two access tiers: Standard Use and High-risk Use; verification covers research credentials, security standards, and ethical oversight",
+        "Covers drug discovery, research biology, clinical development, manufacturing; accessible via Claude.ai, Claude Code, Claude Science, and API; individual Pro/Max access planned post-beta",
+        "Dozens of organizations onboarded through early-access program; broader life science community applications now open"
       ],
       "sources": [
-        "https://www.anthropic.com/news"
+        "https://www.anthropic.com/news",
+        "https://www.anthropic.com/news/life-sciences-verification-program",
+        "https://www.unite.ai/anthropic-launches-life-sciences-verification-program-in-beta/",
+        "https://alphasignal.ai/news/anthropic-opens-claude-mythos-to-vetted-biology-teams-for-drug-discovery"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-16T12:08:24Z",
+      "last_updated": "2026-09-18T00:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5358,7 +5367,10 @@
         "v2.1.271: VS Code auto-archive inactive sessions (default 14 days); fixes sidebar chat blank after Reload Window for conversations open >10 min",
         "v2.1.273 (Sept 15 2026): CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 opt-in sends x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction, x-claude-code-context-compacted headers to LLM gateway on every call",
         "v2.1.273: MCP server disconnect notification added \u2014 when auto-reconnect gives up mid-session, user is notified and pointed to /mcp",
-        "v2.1.273: sessions started with --remote-control can now be forked to run as independent background sessions from the Claude app"
+        "v2.1.273: sessions started with --remote-control can now be forked to run as independent background sessions from the Claude app",
+        "v2.1.274 (Sept 17 2026): critical-memory warning with steps to free memory or restart safely; sessions stop looping on 'unexpected tool_use_id' 400s (transcripts self-heal or show /rewind); 403 insufficient_scope errors now show missing permissions and link to /mcp for re-auth",
+        "v2.1.274: CLAUDE_CODE_MCP_STARTUP_WAIT_MS env var bounds how long the first non-interactive turn waits for MCP servers to connect; effort attribute added to claude_code.llm_request OpenTelemetry trace span",
+        "v2.1.275: gateway sign-in shows account name for confirmation before saving credentials; send-now key (ctrl+enter or ctrl+x ctrl+s) interrupts current turn and sends queued messages immediately; skills and plugins enabled on claude.ai account now sync to terminal sessions"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5370,7 +5382,7 @@
         "https://github.com/kouweizhu/agents-radar/issues/66"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 12
+      "coverage_count": 13
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -6753,6 +6765,92 @@
         "https://9to5google.com/2026/08/28/gemini-notebook-usage-limits/",
         "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/",
         "https://gcn.com/gemini-notebook-switches-compute-based-limits/21309/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-recursive-self-improvement-26pct",
+      "title": "Claude leads 26% of Anthropic R&D; ~30,000 AI agents on internal workloads",
+      "first_seen": "2026-09-18",
+      "last_updated": "2026-09-18T00:00:00Z",
+      "key_facts": [
+        "Announced Sept 17 2026: Claude leads >26% of Anthropic's model research and development, up from zero in months",
+        "Claude collaborates with human staff on >90% of Anthropic tasks; ~30,000 AI agents on research and engineering workloads",
+        "Anthropic flags governance tension: models accelerating their own development could make human oversight harder",
+        "Published as transparency disclosure to give governments/third parties 'visibility into the pace of AI development' as world 'considers slowing'"
+      ],
+      "sources": [
+        "https://www.washingtonpost.com/technology/2026/09/17/anthropic-says-its-chatbot-claude-is-taking-over-work-building-its-own-successor/",
+        "https://www.anthropic.com/institute/recursive-self-improvement",
+        "https://www.euronews.com/next/2026/09/18/anthropic-warns-ai-is-getting-closer-to-building-its-own-successor/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-alignment-assessment-cyber-incidents",
+      "title": "Anthropic alignment assessment: four Claude models reached real third-party systems during security evals",
+      "first_seen": "2026-09-18",
+      "last_updated": "2026-09-18T00:00:00Z",
+      "key_facts": [
+        "Four incidents: early Opus 4.6 checkpoint (Jan 2026), Opus 4.7, Mythos 5, and internal research model gained unauthorized access to real third-party systems during cybersecurity evaluations",
+        "Root cause: configuration error in eval harness left real internet connectivity active while models were told they were in isolated simulations",
+        "Three incidents disclosed July 30 2026 after scan of ~141,000 transcripts; fourth (Opus 4.6, Jan 2026) found in August while assembling transcripts for METR",
+        "481-million-transcript audit found no additional cases; Anthropic signed independent investigation agreement with METR"
+      ],
+      "sources": [
+        "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+        "https://www.cnbc.com/2026/07/30/anthropic-says-claude-gained-unauthorized-access-to-others-systems.html",
+        "https://www.unite.ai/anthropic-discloses-fourth-cyber-incident-in-alignment-assessment/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepmind-agi-institute-sept-2026",
+      "title": "Google DeepMind launches AGI research institute (Sept 17 2026)",
+      "first_seen": "2026-09-18",
+      "last_updated": "2026-09-18T00:00:00Z",
+      "key_facts": [
+        "Launched Sept 17 2026; directors: Shane Legg (managing director, DeepMind co-founder), James Manyika (Google), Demis Hassabis (chair)",
+        "Designed to surface competing views on AGI \u2014 including internal DeepMind disagreements; inaugural essays cover AGI economic policy and AI transparency",
+        "Rohin Shah and Anca Dragan essay argues AI's shrinking transparency window is not inevitable"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "agntcon-mcpcon-europe-amsterdam-2026",
+      "title": "AGNTCon + MCPCon Europe 2026 in Amsterdam (Sept 17-18)",
+      "first_seen": "2026-09-18",
+      "last_updated": "2026-09-18T00:00:00Z",
+      "key_facts": [
+        "Agentic AI Foundation (AAIF) flagship Europe event; held Sept 17-18 Amsterdam; Linux Foundation hosted",
+        "AAIF governs MCP, goose, and AGENTS.md open standards; North America edition Oct 22-23 San Jose",
+        "No major spec announcement identified from event coverage; primarily ecosystem/community gathering"
+      ],
+      "sources": [
+        "https://events.linuxfoundation.org/agntcon-mcpcon-europe/",
+        "https://aaif.io/news/agentic-ai-foundation-announces-global-2026-events-program"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-sf-protests-sept-2026",
+      "title": "SF protesters target OpenAI and Anthropic offices over AI safety (Sept 17 2026)",
+      "first_seen": "2026-09-18",
+      "last_updated": "2026-09-18T00:00:00Z",
+      "key_facts": [
+        "Dozens marched Sept 17 2026 from OpenAI HQ to Anthropic 500 Howard St calling to 'stop the AI race'",
+        "Timing coincided with Anthropic's recursive self-improvement disclosure same day"
+      ],
+      "sources": [
+        "https://www.euronews.com/video/2026/09/18/protesters-target-openai-and-anthropic-in-san-francisco-over-ai-safety-fears"
       ],
       "category": "Wildcard",
       "coverage_count": 1
