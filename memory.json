@@ -141,13 +141,18 @@
       "id": "gpt-5-5-instant-chatgpt-default",
       "title": "GPT-5.5 Instant replaces GPT-5.3 as ChatGPT default model (M",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-09-19T00:00:00Z",
       "key_facts": [
-        "GPT-5.5 Instant became ChatGPT's default"
+        "GPT-5.5 Instant became ChatGPT's default",
+        "GPT-5.5 retiring from ChatGPT, ChatGPT Work, and Codex on October 14 2026 (all tiers: consumer, Business, Enterprise, Edu); replacement model is GPT-5.6 Sol",
+        "OpenAI API unaffected \u2014 API key-authenticated usage continues past Oct 14; only ChatGPT/Codex-sign-in routes affected"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.gizmochina.com/2026/09/16/openai-retiring-gpt-5-5-on-october-14-you-may-need-to-update-your-workflow/",
+        "https://letsdatascience.com/news/openai-retires-gpt-55-from-chatgpt-and-codex-1a6f69be"
+      ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-opus-4-7",
@@ -657,13 +662,20 @@
       "id": "claude-for-small-business",
       "title": "Claude for Small Business: 15 workflows, 15 skills, 8 connectors",
       "first_seen": "2026-05-14",
-      "last_updated": "2026-05-14",
+      "last_updated": "2026-09-19T00:00:00Z",
       "key_facts": [
-        "Toggle-install package of 15 agentic wor"
+        "Toggle-install package of 15 agentic wor",
+        "Sept 15 2026: expanded to 43 total workflows and 27 new integrations (Shopify, Salesforce, TikTok, Atlassian, Zoom, Xero, Gusto, Square, Stripe, Zapier); 900,000+ installs since May launch",
+        "All workflows default to approval mode \u2014 Claude drafts/stages work, waits for owner sign-off before anything posts, sends, or pays",
+        "Free fall in-person workshops and partner webinars announced to support onboarding"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.unite.ai/anthropic-adds-43-workflows-27-integrations-to-claude-for-small-business/",
+        "https://www.forbes.com/sites/boazsobrado/2026/09/15/anthropic-puts-claude-on-small-business-sales-after-900000-installs/",
+        "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+      ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gemini-intelligence-android-2026",
@@ -6014,7 +6026,7 @@
       "id": "claude-fable-5-1-mythos-5-1",
       "title": "Claude Fable 5.1 + Mythos 5.1: 75% cheaper cache reads, outperforms GPT-5.6 Sol",
       "first_seen": "2026-09-02T00:00:00Z",
-      "last_updated": "2026-09-03T00:00:00+00:00",
+      "last_updated": "2026-09-19T00:00:00Z",
       "key_facts": [
         "Released September 1 2026; Fable 5.1 = general availability, Mythos 5.1 = restricted-access variant for vetted security/life-sciences orgs; same underlying model",
         "Cache read pricing dropped 75% to $0.25/M tokens (Fable 5 was $1.00/M); input/output pricing unchanged at $10/$50 per million tokens",
@@ -6022,7 +6034,8 @@
         "1M-token context window; 128K token max output per response",
         "~25% cheaper for typical workloads, ~45% cheaper for highly agentic workloads (cache-read dominance); base input/output unchanged at $10/$50/M",
         "~60% fewer cybersecurity false positives in Claude Code; vulnerability discovery explicitly allowed, exploit development explicitly blocked by safeguards",
-        "52.6% on Terminal-Bench-Science benchmark"
+        "52.6% on Terminal-Bench-Science benchmark",
+        "Claude Fable 5.1 enters Chatbot Arena leaderboard at 1762 Elo, leading overall rankings (as of Sept 2026); Qwen3.8-Max at 1686 Elo"
       ],
       "sources": [
         "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
@@ -6032,7 +6045,7 @@
         "https://www.marktechpost.com/2026/09/01/anthropic-releases-claude-fable-5-1-and-claude-mythos-5-1-52-6-on-terminal-bench-science-and-75-cheaper-cache-reads/"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "anthropic-enterprise-frontier-safeguards",
@@ -6773,20 +6786,27 @@
       "id": "claude-recursive-self-improvement-26pct",
       "title": "Claude leads 26% of Anthropic R&D; ~30,000 AI agents on internal workloads",
       "first_seen": "2026-09-18",
-      "last_updated": "2026-09-18T00:00:00Z",
+      "last_updated": "2026-09-19T00:00:00Z",
       "key_facts": [
         "Announced Sept 17 2026: Claude leads >26% of Anthropic's model research and development, up from zero in months",
         "Claude collaborates with human staff on >90% of Anthropic tasks; ~30,000 AI agents on research and engineering workloads",
         "Anthropic flags governance tension: models accelerating their own development could make human oversight harder",
-        "Published as transparency disclosure to give governments/third parties 'visibility into the pace of AI development' as world 'considers slowing'"
+        "Published as transparency disclosure to give governments/third parties 'visibility into the pace of AI development' as world 'considers slowing'",
+        "Sept 17 2026: Anthropic published formal methodology paper with R&D Automation Index (AL0-AL5 scale) \u2014 as of Aug 2026, 90%+ of tasks are at or above AI-human collaboration level",
+        "Three agent oversight metrics published: coverage (share of actions passing a monitor), review latency (time from action to review), escalation rate (share blocked/redirected)",
+        "First safety compute snapshot (July 13-20 2026): 6% of total compute toward safety, 12% toward safety-focused AI-driven R&D",
+        "Methodology released publicly so other labs can publish comparable numbers"
       ],
       "sources": [
         "https://www.washingtonpost.com/technology/2026/09/17/anthropic-says-its-chatbot-claude-is-taking-over-work-building-its-own-successor/",
         "https://www.anthropic.com/institute/recursive-self-improvement",
-        "https://www.euronews.com/next/2026/09/18/anthropic-warns-ai-is-getting-closer-to-building-its-own-successor/"
+        "https://www.euronews.com/next/2026/09/18/anthropic-warns-ai-is-getting-closer-to-building-its-own-successor/",
+        "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+        "https://siliconangle.com/2026/09/17/anthropic-details-practical-metrics-to-help-monitor-the-speed-of-ai-development/",
+        "https://www.cnbc.com/2026/09/17/anthropic-shares-3-metrics-to-help-ai-companies-monitor-development.html"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "anthropic-alignment-assessment-cyber-incidents",
@@ -6853,6 +6873,26 @@
         "https://www.euronews.com/video/2026/09/18/protesters-target-openai-and-anthropic-in-san-francisco-over-ai-safety-fears"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-projects-parallel-redesign",
+      "title": "Claude Code Projects redesign: parallel cloud sessions, shared memory, Opus coordinator (Sept 17 2026 beta)",
+      "first_seen": "2026-09-19T00:00:00Z",
+      "last_updated": "2026-09-19T00:00:00Z",
+      "key_facts": [
+        "Beta launched Sept 17 2026 to select Pro/Max cloud users; broader access expected within a week, Team/Enterprise to follow",
+        "Coordinator session breaks high-level goal into parallel worker threads, each a full cloud session on its own branch + repo copy",
+        "Every worker thread runs Opus at high effort by default; workers can run tests and open PRs",
+        "Shared memory and project file library across all threads; coordinator reviews outputs and assembles result",
+        "Each thread draws on subscriber plan \u2014 heavy parallelism hits usage limits faster"
+      ],
+      "sources": [
+        "https://www.unite.ai/anthropic-redesigns-claude-code-projects-to-coordinate-agent-threads/",
+        "https://xenospectrum.com/en/claude-code-projects-redesign/",
+        "https://mlq.ai/news/anthropic-opens-parallel-claude-code-projects-beta-to-select-pro-and-max-users/"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
