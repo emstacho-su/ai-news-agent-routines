@@ -638,13 +638,18 @@
       "id": "trump-xi-beijing-ai-chips-2026",
       "title": "Trump-Xi Beijing summit: Jensen Huang joins, AI chip deals",
       "first_seen": "2026-05-13",
-      "last_updated": "2026-05-14",
+      "last_updated": "2026-09-20T12:07:25Z",
       "key_facts": [
-        "Trump in Beijing for Xi summit; AI chip "
+        "Trump in Beijing for Xi summit; AI chip ",
+        "Sept 24 2026: Xi Jinping visiting Washington; White House state dinner with Sam Altman (OpenAI), Jensen Huang (Nvidia), Sundar Pichai (Google), Tim Cook, Jeff Bezos, Elon Musk, Cristiano Amon (Qualcomm); AI safety confirmed on summit agenda",
+        "Summit coincides with AI-focused session at UN General Assembly; trade, technology, and chip export policy also on agenda"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.foxbusiness.com/markets/tech-power-players-land-seat-table-high-stakes-dinner-trump-xi",
+        "https://abcnews.com/Politics/openai-nvidia-ceos-attend-trump-xi-state-dinner/story?id=136535677"
+      ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "agent-memory-survey-storage-reflection-experience",
@@ -5334,7 +5339,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-18T00:00:00Z",
+      "last_updated": "2026-09-20T12:07:25Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5382,7 +5387,10 @@
         "v2.1.273: sessions started with --remote-control can now be forked to run as independent background sessions from the Claude app",
         "v2.1.274 (Sept 17 2026): critical-memory warning with steps to free memory or restart safely; sessions stop looping on 'unexpected tool_use_id' 400s (transcripts self-heal or show /rewind); 403 insufficient_scope errors now show missing permissions and link to /mcp for re-auth",
         "v2.1.274: CLAUDE_CODE_MCP_STARTUP_WAIT_MS env var bounds how long the first non-interactive turn waits for MCP servers to connect; effort attribute added to claude_code.llm_request OpenTelemetry trace span",
-        "v2.1.275: gateway sign-in shows account name for confirmation before saving credentials; send-now key (ctrl+enter or ctrl+x ctrl+s) interrupts current turn and sends queued messages immediately; skills and plugins enabled on claude.ai account now sync to terminal sessions"
+        "v2.1.275: gateway sign-in shows account name for confirmation before saving credentials; send-now key (ctrl+enter or ctrl+x ctrl+s) interrupts current turn and sends queued messages immediately; skills and plugins enabled on claude.ai account now sync to terminal sessions",
+        "v2.1.275 MCP fixes: Streamable HTTP MCP tool calls no longer time out after ~5 minutes when a longer per-server timeout is configured",
+        "v2.1.275: MCP servers configured as http that speak legacy HTTP+SSE no longer fail to connect on 422 or 4xx initial response",
+        "v2.1.275: MCP sign-in expiry now shows explicit re-auth instructions pointing to /mcp"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5394,7 +5402,7 @@
         "https://github.com/kouweizhu/agents-radar/issues/66"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 13
+      "coverage_count": 14
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -6893,6 +6901,66 @@
         "https://mlq.ai/news/anthropic-opens-parallel-claude-code-projects-beta-to-select-pro-and-max-users/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "plugin4shell-rce-ai-coding-agents",
+      "title": "Plugin4Shell: zero-click RCE supply-chain flaw in Claude Code, Codex, Copilot, Gemini CLI",
+      "first_seen": "2026-09-20",
+      "last_updated": "2026-09-20T12:07:25Z",
+      "key_facts": [
+        "Disclosed Sept 18 2026 by AIR (AI Risk); SHA-pinning bypass \u2014 agents check out a named commit but do not verify code actually landed at that location, allowing redirect to malicious code",
+        "Zero-click: Claude Code and Codex auto-update pinned plugins by default; exploit requires no user interaction once malicious branch is staged",
+        "All four agents inherit developer-level permissions (source code, cloud credentials, SSH keys, repo access); researchers called it 'the first supply chain vulnerability of the AI agent ecosystem'",
+        "AIR found the bug in May 2026, developed PoCs against all four, disclosed to each vendor in June",
+        "Anthropic patched Claude Code in v2.1.179; OpenAI patched Codex v0.146.0; Microsoft has not patched Copilot; Google deprecated Gemini CLI rather than shipping a fix"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/",
+        "https://www.air.security/blog-posts/plugin4shell",
+        "https://cybersecuritynews.com/plugin4shell-zero-click-rce/",
+        "https://easternherald.com/2026/09/20/plugin4shell-ai-coding-agents-supply-chain-vulnerability/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-ai-force-czar",
+      "title": "Trump announces AI Force modeled on Space Force and plans AI czar appointment",
+      "first_seen": "2026-09-20",
+      "last_updated": "2026-09-20T12:07:25Z",
+      "key_facts": [
+        "Announced Sept 19 2026; Trump framed existing AI safety concerns as a 'hoax' and pledged not to hinder industry growth",
+        "AI Force modeled on Space Force (created in Trump's first term); will 'oversee' the AI industry",
+        "AI czar role announced with no timeline, budget, org placement, or specific duties given",
+        "Announced at senior AI-focused session at UN General Assembly; coincides with Xi state dinner planning",
+        "Trump described AI as 'the next Industrial Revolution'; stated 'only High I.Q. individuals need apply' for the czar role"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/09/19/trump-ai-czar-space-force-safety",
+        "https://www.aljazeera.com/news/2026/9/19/trump-says-he-will-create-ai-force-with-new-ai-czar",
+        "https://www.washingtonpost.com/politics/2026/09/19/trump-form-ai-force-name-ai-czar-rejects-calls-constraints/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "medical-ai-clinician-pushback-2026",
+      "title": "Clinician pushback on medical AI: deskilling, hallucinations, governance gaps",
+      "first_seen": "2026-09-20",
+      "last_updated": "2026-09-20T12:07:25Z",
+      "key_facts": [
+        "2026 Wolters Kluwer survey: 355 US doctors and nurses; physician daily AI use tripled YoY",
+        "Top concerns: advertiser-driven bias (72%), deskilling (74%), hallucinations (74%); formal governance awareness barely moved: 21% (2025) \u2192 27% (2026)",
+        "Clinicians pushing back on AI expansion beyond diagnostics/imaging \u2014 insufficient clinical performance data for broader deployment",
+        "~25% of surveyed clinicians not confident they could identify AI hallucinations in clinical outputs",
+        "Early-career clinicians and residents flagged as most at risk of deskilling"
+      ],
+      "sources": [
+        "https://www.healthcaredive.com/news/healthcare-ai-adoption-accelerates-provider-worries-deskilling-wolters-kluwer/821653/",
+        "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1765692/full"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
