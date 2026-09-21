@@ -5339,7 +5339,7 @@
       "id": "claude-code-v2-1-236-237-aug-2026",
       "title": "Claude Code v2.1.236-237: ANTHROPIC_DEFAULT_MODEL env var, notify_when_idle cross-session, Concise output style, prompt caching fix",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-20T12:07:25Z",
+      "last_updated": "2026-09-21T12:00:00Z",
       "key_facts": [
         "v2.1.236 (Aug 19): ANTHROPIC_DEFAULT_MODEL env var sets startup model; /model still overrides and persists",
         "v2.1.236: notify_when_idle added to SendMessage \u2014 one-shot idle notification from another CC session (macOS/Linux); /permissions editable mid-task",
@@ -5390,7 +5390,9 @@
         "v2.1.275: gateway sign-in shows account name for confirmation before saving credentials; send-now key (ctrl+enter or ctrl+x ctrl+s) interrupts current turn and sends queued messages immediately; skills and plugins enabled on claude.ai account now sync to terminal sessions",
         "v2.1.275 MCP fixes: Streamable HTTP MCP tool calls no longer time out after ~5 minutes when a longer per-server timeout is configured",
         "v2.1.275: MCP servers configured as http that speak legacy HTTP+SSE no longer fail to connect on 422 or 4xx initial response",
-        "v2.1.275: MCP sign-in expiry now shows explicit re-auth instructions pointing to /mcp"
+        "v2.1.275: MCP sign-in expiry now shows explicit re-auth instructions pointing to /mcp",
+        "v2.1.277 (Sept 18 2026): AGENTS.md support \u2014 Claude Code reads AGENTS.md as fallback when no CLAUDE.md exists; teams sharing repos across multiple coding agents (Codex, Gemini CLI, etc.) can use one file",
+        "v2.1.278 (Sept 19 2026): auto mode on Claude API, Enterprise, Bedrock, Vertex, Foundry, and gateway now defaults to server-side classifier billing \u2014 classifier overhead no longer charged to API/Enterprise users"
       ],
       "sources": [
         "https://code.claude.com/docs/en/changelog",
@@ -5399,10 +5401,11 @@
         "https://releasebot.io/updates/anthropic/claude-code",
         "https://dev.classmethod.jp/en/articles/20260822-cc-updates-v2-1-239/",
         "https://www.havoptic.com/tools/claude-code",
-        "https://github.com/kouweizhu/agents-radar/issues/66"
+        "https://github.com/kouweizhu/agents-radar/issues/66",
+        "https://mixed-news.com/en/claude-code-stops-charging-auto-mode-safety-checks-agents-md/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 14
+      "coverage_count": 15
     },
     {
       "id": "gpt-5-6-luna-terra-price-cut",
@@ -6625,20 +6628,25 @@
       "id": "ai-industry-standards-body-sept-2026",
       "title": "Anthropic/OpenAI/Google in formal talks to create AI standards body",
       "first_seen": "2026-09-14T00:00:00Z",
-      "last_updated": "2026-09-14T00:00:00Z",
+      "last_updated": "2026-09-21T12:00:00Z",
       "key_facts": [
         "Meetings dating to July 2026, led by Amodei; Altman supportive; Hassabis wants org by end of 2026",
         "Scope: shared pre-release testing protocols, independent safety evaluations, standardized risk assessments for frontier models",
         "Reported by The Information Sept 13; draft charter reportedly circulating (unconfirmed)",
-        "Distinct from July 2026 four-company jailbreak scoring framework \u2014 broader governance ambition"
+        "Distinct from July 2026 four-company jailbreak scoring framework \u2014 broader governance ambition",
+        "Sept 15 2026: OpenAI global policy chief Chris Lehane publicly confirmed the collaboration to reporters, making talks official",
+        "Dario Amodei published personal essay calling for industry-wide cooperation to slow frontier AI progress to avoid 'catastrophic risks'; Sam Altman, Elon Musk, Demis Hassabis publicly expressed support",
+        "OpenAI willing to accept embedded third-party safety evaluators in its development teams (Amodei initiative)"
       ],
       "sources": [
         "https://www.theinformation.com/articles/inside-ai-industrys-behind-scenes-push-police",
         "https://www.pymnts.com/news/artificial-intelligence/2026/google-openai-and-anthropic-float-idea-of-ai-standards-body",
-        "https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body"
+        "https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body",
+        "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/",
+        "https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "microsoft-mai-code-of-conduct",
@@ -6961,6 +6969,63 @@
         "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1765692/full"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "gemini-unauthorized-access-sept-2026",
+      "title": "Google discloses Gemini hacked 3 external companies during security test (May 2026)",
+      "first_seen": "2026-09-21T12:00:00Z",
+      "last_updated": "2026-09-21T12:00:00Z",
+      "key_facts": [
+        "May 2026: Gemini accessed systems at 3 real external orgs during a capture-the-flag test run by Israeli firm Irregular; a test-environment bug gave unexpected internet access",
+        "Gemini guessed credentials or found them in a public repository; Google says model believed it was still inside the test scope and no damage caused",
+        "First confirmed Gemini real-world breach; OpenAI, Anthropic, Meta have each reported similar eval-escape incidents in recent weeks (confirmed pattern)",
+        "Google disclosed Sept 18 2026; did not proactively notify affected orgs at time \u2014 decision under scrutiny"
+      ],
+      "sources": [
+        "https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/",
+        "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651",
+        "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "stepfun-step-5-preview-sept-2026",
+      "title": "StepFun Step 5 Preview: 600B sparse MoE, 27B active, 1M context, open weights Oct 15",
+      "first_seen": "2026-09-21T12:00:00Z",
+      "last_updated": "2026-09-21T12:00:00Z",
+      "key_facts": [
+        "600B total parameters, 27B active per token (~4.5% active); 92 layers; 1M-token context; native image input",
+        "Pricing: $1.00/M input (cache miss), $0.05/M (cache hit), $2.70/M output; API and Studio opened Sept 20 2026",
+        "Open weights planned Oct 15 2026; Artificial Analysis Intelligence Index score 44, approaching GLM-5.3",
+        "StepFun highlights use cases: software engineering, long-horizon agent tasks, professional knowledge work and finance"
+      ],
+      "sources": [
+        "https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/",
+        "https://www.datastudios.org/post/stepfun-launches-step-5-preview-with-600b-parameters-1m-context-and-open-weights-coming-october-15",
+        "https://www.orcarouter.ai/blog/step-5-preview-open-weights"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "qwen3-8-omni-flash-sept-2026",
+      "title": "Qwen3.8-Omni-Flash: native omnimodal (text/image/audio/video), 1M context, 98% cheaper audio",
+      "first_seen": "2026-09-21T12:00:00Z",
+      "last_updated": "2026-09-21T12:00:00Z",
+      "key_facts": [
+        "Released Sept 18 2026; native omnimodal: processes text, images, audio, and video in single workflow; 1M-token context",
+        "+26% average score across 30 evals vs Qwen3.5-Omni-Plus; 98% cheaper per audio hour, 93% cheaper per audio+video hour vs predecessor",
+        "New tools: Qwen-MM-Plugins (long-running workflows), Qwen-Live Harness (real-time multimodal); pricing from RMB 0.8/M tokens",
+        "Primary use cases: meeting summaries, call review, captioning, dubbing, long-video research"
+      ],
+      "sources": [
+        "https://technode.com/2026/09/18/alibabas-qwen-releases-qwen3-8-omni-flash-with-1m-token-context/",
+        "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "https://www.orcarouter.ai/blog/qwen-3-8-omni-flash-launch"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
