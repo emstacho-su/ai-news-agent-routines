@@ -7027,6 +7027,62 @@
       ],
       "category": "Model Releases",
       "coverage_count": 1
+    },
+    {
+      "id": "novo-nordisk-anthropic-drug-discovery",
+      "title": "Novo Nordisk partners with Anthropic to accelerate drug discovery with Claude",
+      "first_seen": "2026-09-22T00:00:00Z",
+      "last_updated": "2026-09-22T00:00:00Z",
+      "key_facts": [
+        "Announced Sept 16 2026; Novo will use frontier Claude models and Claude Science Workbench in R&D workflows for biological reasoning, drug discovery, and clinical development",
+        "Partnership also covers AI-driven software development at Novo as an internal scaling vector",
+        "Named premier partnership \u2014 distinct from LSVP open-access program; jointly designed scientific workflows"
+      ],
+      "sources": [
+        "https://www.globenewswire.com/news-release/2026/09/16/3363106/0/en/novo-and-anthropic-will-collaborate-to-advance-drug-discovery-with-claude",
+        "https://www.bloomberg.com/news/articles/2026-09-16/novo-will-work-with-anthropic-ai-to-speed-drug-development",
+        "https://www.biospace.com/press-releases/novo-and-anthropic-will-collaborate-to-advance-drug-discovery-with-claude"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "grok-4-7",
+      "title": "xAI releases Grok 4.7: 2.1T parameters, SpaceX training data, same pricing",
+      "first_seen": "2026-09-22T00:00:00Z",
+      "last_updated": "2026-09-22T00:00:00Z",
+      "key_facts": [
+        "Released Sept 21 2026; 2.1 trillion parameters (up ~40% from Grok 4.6's 1.5T); $2/$6 per million input/output tokens (unchanged); 500K-token context window",
+        "Trained on supplemental SpaceX/Starlink data: satellite telemetry, manufacturing records, engineering failure logs \u2014 targets hardware/physical-systems reasoning",
+        "Longer RL training run weighted toward multi-hour difficult tasks; model self-verifies answers more aggressively",
+        "Available day-one in Grok app, GitHub Copilot, Cursor, Grok Build, xAI API \u2014 no waitlist"
+      ],
+      "sources": [
+        "https://decrypt.co/378824/xai-launches-grok-4-7",
+        "https://llm-stats.com/blog/research/grok-4-7-launch",
+        "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "us-military-ai-false-nuclear-china",
+      "title": "US military AI chatbot hallucinated nuclear components on Chinese vessel, nearly triggering armed confrontation",
+      "first_seen": "2026-09-22T00:00:00Z",
+      "last_updated": "2026-09-22T00:00:00Z",
+      "key_facts": [
+        "CNN exclusive Sept 18 2026: during spring 2026 Iran conflict, US SOCOM analyst used AI chatbot to review manifest intelligence on Chinese vessel; AI hallucinated nuclear weapon components",
+        "False report circulated through military chain; armed boarding teams staged, aircraft airborne before officials caught the error and stood down",
+        "No AI vendor named in CNN report; incident described as 'almost started a war' by officials",
+        "Incident surfaces days before Trump-Xi Washington summit (Sept 24) with AI safety on the agenda"
+      ],
+      "sources": [
+        "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "https://www.engadget.com/2263043/ai-almost-led-the-us-military-to-attack-china-report-says/",
+        "https://www.deccanherald.com/world/us/ai-almost-started-a-war-between-us-china-4151738"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
     }
   ]
 }
