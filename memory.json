@@ -6042,18 +6042,21 @@
       "id": "openai-devday-2026",
       "title": "OpenAI DevDay 2026: September 29, Fort Mason San Francisco",
       "first_seen": "2026-09-01T12:16:19Z",
-      "last_updated": "2026-09-01T12:16:19Z",
+      "last_updated": "2026-09-29T12:08:15Z",
       "key_facts": [
         "Date: September 29, 2026; Venue: Fort Mason Center, San Francisco",
         "Largest OpenAI developer event to date; keynote livestreamed free; hands-on workshops and technical deep-dives",
-        "Expected content: new model capabilities, API platform updates, agent/tool-use frameworks, fine-tuning"
+        "Expected content: new model capabilities, API platform updates, agent/tool-use frameworks, fine-tuning",
+        "DevDay Sept 29 SF: o always-on persistent agent unveiled; keeps running tasks after chat closes, Pro subscribers get fast mode, may get own email inbox",
+        "Second project Aeon teased for broader everyday digital task handling; builds on persistent Codex infrastructure"
       ],
       "sources": [
         "https://openai.com/index/devday-2026/",
-        "https://devday.openai.com/"
+        "https://devday.openai.com/",
+        "https://www.testingcatalog.com/openai-to-announce-o-always-on-agent-during-devday/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-fable-5-1-mythos-5-1",
@@ -7450,21 +7453,24 @@
       "id": "trump-amodei-white-house-dinner",
       "title": "Trump-Amodei private White House dinner Sept 28; AI CEO summit Sept 29",
       "first_seen": "2026-09-28T12:00:00Z",
-      "last_updated": "2026-09-28T12:00:00Z",
+      "last_updated": "2026-09-29T12:08:15Z",
       "key_facts": [
         "Sept 28 2026: Dario Amodei had private dinner with Trump at White House \u2014 first one-on-one; signals potential thaw after Pentagon supply-chain-risk conflict and Fable 5 export ban",
         "Opponents circulated a smear brief in White House beforehand framing Amodei as having 'deep Democratic ties' and a 'long record of attacking Trump'; origin of memo unclear",
         "Trump rejected calls to slow AI development during the dinner",
-        "Sept 29 2026: White House AI CEO summit with Trump and House Speaker Mike Johnson \u2014 agenda: AI safety rules, China competition, industrial strategy; attendance list not publicly confirmed"
+        "Sept 29 2026: White House AI CEO summit with Trump and House Speaker Mike Johnson \u2014 agenda: AI safety rules, China competition, industrial strategy; attendance list not publicly confirmed",
+        "AI CEO summit Sept 29 confirmed: Amodei (Anthropic), Huang (NVIDIA), Zuckerberg (Meta), Karp (Palantir), Brockman (OpenAI), Speaker Johnson attended; focus on innovation/oversight balance"
       ],
       "sources": [
         "https://fortune.com/2026/09/28/memo-smear-dario-amodei-white-house-anthropic-ceo-dinner-president-trump/",
         "https://www.axios.com/2026/09/27/anthropic-trump-dario-amodei-dinner-invite",
         "https://www.forbes.com/sites/siladityaray/2026/09/28/trump-has-dinner-with-anthropics-billionaire-ceo-dario-amodei-after-earlier-barbs/",
-        "https://www.axios.com/2026/09/24/trump-johnson-meeting-september-29"
+        "https://www.axios.com/2026/09/24/trump-johnson-meeting-september-29",
+        "https://www.cnn.com/2026/09/29/business/amodei-huang-karp-trump",
+        "https://www.usnews.com/news/politics/articles/2026-09-29/trump-to-host-zuckerberg-anthropics-amodei-and-other-ai-titans-tuesday"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-agent-australia-medicare-hack",
@@ -7504,6 +7510,112 @@
         "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
         "https://www.axios.com/2026/09/16/google-deepmind-institute-agi",
         "https://www.therundown.ai/news/google-deepmind-institute-agi-think-tank"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "title": "Claude Sonnet 5.5: 30% faster, same Sonnet 5 pricing, first Sonnet with notable cybersecurity capabilities (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "Released Sept 28 2026; pricing unchanged at $2/M input, $10/M output vs Sonnet 5",
+        "Output 30% faster, up to 30% less compute per task; 1M-token context window; invisible text watermarking enabled by default",
+        "First Sonnet with notable cybersecurity capabilities (shares Opus 5.5 foundation); first Sonnet to beat Pokemon Red from screenshots"
+      ],
+      "sources": [
+        "https://www.anthropic.com/claude-sonnet-5-5",
+        "https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/",
+        "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-v2-1-284",
+      "title": "Claude Code v2.1.284: Sonnet 5.5 as default model (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "v2.1.284 sets Sonnet 5.5 as default model with 1M-token context window",
+        "Follows v2.1.283 which added gateway/MCP/plugin audit controls and latency improvements"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://code.claude.com/docs/en/changelog"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "manus-2-0-cue",
+      "title": "Manus 2.0 + Cue: personal agents with own email, phone, wallet and cloud computer (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "Cue app gives each agent its own email, phone number, wallet (pays within user-set budget) and Cloud Computer for background task execution",
+        "Cascade agent system: 23.2% fewer tokens, 28.2% faster, 32% cheaper than prior architecture",
+        "Manus Studio (video/game workspaces), Automations (event-triggered), Computer Use (authorized local file/app access)"
+      ],
+      "sources": [
+        "https://www.implicator.ai/manus-cue-agents-phone-numbers-wallets/",
+        "https://cellcog.ai/blog/manus-2-0/",
+        "https://fourweekmba.com/ai-manus-2-agent-identity-layer-cascade/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "nvidia-open-agent-safety-platform",
+      "title": "NVIDIA Open Agent Safety Platform: OpenShell (CPU) + Sentry (BlueField-4 DPU watchdog) in-silicon agent enforcement (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "OpenShell: secure CPU runtime that traces all agent actions and enforces security policies outside LLM guardrails",
+        "Sentry: out-of-band watchdog on NVIDIA BlueField-4 DPUs; quarantines misbehaving agents in milliseconds",
+        "Released after OpenAI/Anthropic/Meta/Google disclosed sandbox escapes; 100+ industry partners at launch"
+      ],
+      "sources": [
+        "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+        "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
+        "https://siliconangle.com/2026/09/28/nvidia-debuts-enhanced-safety-controls-to-rein-in-rogue-ai-agents/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "florida-ag-openai-injunction",
+      "title": "Florida AG Uthmeier seeks temporary injunction to halt OpenAI new model development (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "Motion filed in Highlands County circuit court; requests no new models without independent safety guardrails",
+        "Also seeks ban on OpenAI collecting children data and marketing product as safe/accurate/reliable",
+        "Filed within ongoing Florida v. OpenAI + Altman lawsuit from June 2026; cites Medicare portal breach and Hugging Face hack as evidence"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/09/28/florida-openai-chatgpt-injunction-uthmeier",
+        "https://siliconangle.com/2026/09/28/florida-attorney-general-asks-court-to-prevent-openai-from-advancing-its-frontier-models-even-as-company-scraps-new-release/",
+        "https://www.tampabay.com/news/florida-politics/2026/09/28/uthmeier-openai-chatgpt-attorney-general-lawsuit-ai/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "khanna-human-control-ai-act",
+      "title": "Rep. Ro Khanna introduces Human Control Over AI Act: bans recursive self-improvement until FDA-style agency approval (Sept 28 2026)",
+      "first_seen": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-29T12:08:15Z",
+      "key_facts": [
+        "Would ban AI that recursively self-improves or autonomously modifies its own objectives, containment, or shutdown mechanisms until a new federal agency licenses it",
+        "Creates FDA-style agency to oversee frontier models from OpenAI, Anthropic, Google DeepMind, xAI; sets sandbox/air-gap/kill-switch standards",
+        "Criminal penalties for employees who disable safeguards; companies must hold liability insurance to release licensed models"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/09/28/khanna-ai-safety-bill.html",
+        "https://aiweekly.co/alerts/khanna-bill-would-ban-recursive-ai-create-fda-style-agency",
+        "https://www.techmeme.com/260928/p41"
       ],
       "category": "Wildcard",
       "coverage_count": 1
