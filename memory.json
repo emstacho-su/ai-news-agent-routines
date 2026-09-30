@@ -6042,21 +6042,32 @@
       "id": "openai-devday-2026",
       "title": "OpenAI DevDay 2026: September 29, Fort Mason San Francisco",
       "first_seen": "2026-09-01T12:16:19Z",
-      "last_updated": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-30T12:00:00Z",
       "key_facts": [
         "Date: September 29, 2026; Venue: Fort Mason Center, San Francisco",
         "Largest OpenAI developer event to date; keynote livestreamed free; hands-on workshops and technical deep-dives",
         "Expected content: new model capabilities, API platform updates, agent/tool-use frameworks, fine-tuning",
         "DevDay Sept 29 SF: o always-on persistent agent unveiled; keeps running tasks after chat closes, Pro subscribers get fast mode, may get own email inbox",
-        "Second project Aeon teased for broader everyday digital task handling; builds on persistent Codex infrastructure"
+        "Second project Aeon teased for broader everyday digital task handling; builds on persistent Codex infrastructure",
+        "Dots: confirmed name for always-on persistent ChatGPT agents; keep running tasks after chat closes; Pro tier gets own email inbox",
+        "ChatGPT Space: shared team workspace for humans and Dots to collaborate; Pages: co-edited document layer for human-agent joint authorship",
+        "Codex Cloud: Codex runs entirely in the cloud, accessible from any device including phone; Codex CLI accepts voice instructions",
+        "Agents API: OpenAI-hosted browser for computer use, native MCP server connections, parallel subagents, durable session state",
+        "ChatGPT Developer mode (beta): full MCP read/write access for connecting external tools directly from ChatGPT chat UI",
+        "Sign In with ChatGPT: Plus/Pro plan allowance pooled across 16 partner tools including Notion, Vercel, Cognition Devin",
+        "20+ total announcements at Fort Mason SF Sept 29 2026"
       ],
       "sources": [
         "https://openai.com/index/devday-2026/",
         "https://devday.openai.com/",
-        "https://www.testingcatalog.com/openai-to-announce-o-always-on-agent-during-devday/"
+        "https://www.testingcatalog.com/openai-to-announce-o-always-on-agent-during-devday/",
+        "https://www.bgr.com/2272332/openai-devday-2026-announcements/",
+        "https://www.axios.com/2026/09/29/openai-dev-day-2026-dots-space-sol",
+        "https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html",
+        "https://openai.com/index/devday-2026-recap/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "claude-fable-5-1-mythos-5-1",
@@ -7453,13 +7464,15 @@
       "id": "trump-amodei-white-house-dinner",
       "title": "Trump-Amodei private White House dinner Sept 28; AI CEO summit Sept 29",
       "first_seen": "2026-09-28T12:00:00Z",
-      "last_updated": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-09-30T12:00:00Z",
       "key_facts": [
         "Sept 28 2026: Dario Amodei had private dinner with Trump at White House \u2014 first one-on-one; signals potential thaw after Pentagon supply-chain-risk conflict and Fable 5 export ban",
         "Opponents circulated a smear brief in White House beforehand framing Amodei as having 'deep Democratic ties' and a 'long record of attacking Trump'; origin of memo unclear",
         "Trump rejected calls to slow AI development during the dinner",
         "Sept 29 2026: White House AI CEO summit with Trump and House Speaker Mike Johnson \u2014 agenda: AI safety rules, China competition, industrial strategy; attendance list not publicly confirmed",
-        "AI CEO summit Sept 29 confirmed: Amodei (Anthropic), Huang (NVIDIA), Zuckerberg (Meta), Karp (Palantir), Brockman (OpenAI), Speaker Johnson attended; focus on innovation/oversight balance"
+        "AI CEO summit Sept 29 confirmed: Amodei (Anthropic), Huang (NVIDIA), Zuckerberg (Meta), Karp (Palantir), Brockman (OpenAI), Speaker Johnson attended; focus on innovation/oversight balance",
+        "Sept 30 2026: companies signed voluntary self-policing pledge from Sept 29 summit \u2014 internal safety controls, outside auditors, internal review boards; Trump called agreement 'morally binding'; will appoint dedicated AI oversight adviser",
+        "Trump signed executive order directing all federal agencies to replace 'AI' with 'Super Intelligence (SI)' in official communications; non-regulatory, no licensing requirements"
       ],
       "sources": [
         "https://fortune.com/2026/09/28/memo-smear-dario-amodei-white-house-anthropic-ceo-dinner-president-trump/",
@@ -7467,10 +7480,12 @@
         "https://www.forbes.com/sites/siladityaray/2026/09/28/trump-has-dinner-with-anthropics-billionaire-ceo-dario-amodei-after-earlier-barbs/",
         "https://www.axios.com/2026/09/24/trump-johnson-meeting-september-29",
         "https://www.cnn.com/2026/09/29/business/amodei-huang-karp-trump",
-        "https://www.usnews.com/news/politics/articles/2026-09-29/trump-to-host-zuckerberg-anthropics-amodei-and-other-ai-titans-tuesday"
+        "https://www.usnews.com/news/politics/articles/2026-09-29/trump-to-host-zuckerberg-anthropics-amodei-and-other-ai-titans-tuesday",
+        "https://wng.org/podcasts/wednesday-morning-news-september-30-2026-1790702228",
+        "https://news.bloomberglaw.com/tech-and-telecom-law/openai-anthropic-google-to-join-white-house-ai-safety-meeting"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "openai-agent-australia-medicare-hack",
@@ -7616,6 +7631,39 @@
         "https://www.cnbc.com/2026/09/28/khanna-ai-safety-bill.html",
         "https://aiweekly.co/alerts/khanna-bill-would-ban-recursive-ai-create-fda-style-agency",
         "https://www.techmeme.com/260928/p41"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-provable-inference-deadline",
+      "title": "Anthropic Frontier Safety Roadmap Phase 1 provable-inference deadline: Sept 30 2026",
+      "first_seen": "2026-09-30T12:00:00Z",
+      "last_updated": "2026-09-30T12:00:00Z",
+      "key_facts": [
+        "Sept 30 2026 is Phase 1 target for provable-inference prototype per Anthropic's Frontier Safety Roadmap",
+        "Technique: cryptographically signs model outputs so they are verifiably attributable to specific known model weights \u2014 detects unauthorized weight tampering or inference-time manipulation",
+        "Deadline pushed once from May 15 to Sept 30 2026 due to resource reprioritization toward broader security hardening",
+        "As of this run (Sept 30), no public delivery or delay announcement from Anthropic; outcome signals safety-vs-IPO prioritization"
+      ],
+      "sources": [
+        "https://anthropic.com/responsible-scaling-policy/roadmap",
+        "https://finance.yahoo.com/technology/ai/articles/anthropic-self-imposed-safety-deadline-103708422.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "america-gov-ai-portal",
+      "title": "America.gov: Trump AI front door to federal services, powered by Gemini and Grok (Sept 30 2026)",
+      "first_seen": "2026-09-30T12:00:00Z",
+      "last_updated": "2026-09-30T12:00:00Z",
+      "key_facts": [
+        "Trump launched America.gov, a conversational AI portal for citizen access to federal services",
+        "Powered by Gemini and Grok \u2014 not Claude; exclusion tracks with Anthropic-Pentagon dispute and Fable 5 export restrictions"
+      ],
+      "sources": [
+        "https://wng.org/podcasts/wednesday-morning-news-september-30-2026-1790702228"
       ],
       "category": "Wildcard",
       "coverage_count": 1
