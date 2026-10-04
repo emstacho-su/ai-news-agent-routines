@@ -7286,14 +7286,15 @@
       "id": "gemini-4-post-training-announcement",
       "title": "Gemini 4: DeepMind announces post-training phase; October 2026 release targeted",
       "first_seen": "2026-09-24T00:00:00Z",
-      "last_updated": "2026-10-03T00:00:00Z",
+      "last_updated": "2026-10-04T12:09:32Z",
       "key_facts": [
         "DeepMind head Koray Kavukcuoglu confirmed Gemini 4 is in early post-training as of September 24 2026; release expected 'before end of year'",
         "Gemini 4 Pro targeted specifically for October 2026",
         "Expected capabilities: SVG generation, 3D modeling, interactive simulations — stronger multimodal/generative focus vs. Gemini 3.x reasoning focus",
         "Positioned explicitly as response to Anthropic Opus 5.5 and OpenAI GPT-6 Sol/Luna launches",
         "Sept 26 2026: Gemini 4 Pro checkpoint appeared on LMArena disguised as 'Gemini 3.8 Flash'; codename Argon confirmed by leaks",
-        "Leaked specs: 256K token output limit, multi-million token context, high-effort reasoning modes"
+        "Leaked specs: 256K token output limit, multi-million token context, high-effort reasoning modes",
+        "Oct 4 2026: prediction markets at 52% probability of Gemini 4 release before Nov 1; purported leaked image of Gemini 4 Pro surfaced describing 'high-effort compute' scaling and major context upgrades — unverified"
       ],
       "sources": [
         "https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model",
@@ -7302,7 +7303,7 @@
         "https://pasqualepillitteri.it/en/news/18784/gemini-4-pro-checkpoint-arena"
       ],
       "category": "Model Releases",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "flash-dllm-io-aware-kv-diffusion-llm",
@@ -7807,11 +7808,12 @@
       "id": "claude-code-mods-typescript-hooks",
       "title": "Claude Code v2.1.287: Claude Mods — TypeScript Function Hooks for CLI extension",
       "first_seen": "2026-10-03T00:00:00Z",
-      "last_updated": "2026-10-03T00:00:00Z",
+      "last_updated": "2026-10-04T12:09:32Z",
       "key_facts": [
         "v2.1.287 ships Claude Mods: TypeScript Function Hooks to intercept tool calls, modify UI, extend CLI like Express middleware",
         "Mods distributed via claude.ai plugin directory; same submission process as MCP connectors; admin-controlled side effects",
-        "Also: MCP URL prompts for sign-in on 2025-11-25 protocol, fixed hooks skipped during server connect, fixed duplicate MCP connections"
+        "Also: MCP URL prompts for sign-in on 2025-11-25 protocol, fixed hooks skipped during server connect, fixed duplicate MCP connections",
+        "Alongside Mods launch (~Oct 1 2026): broad reliability + UX overhaul shipped — smarter session resume/recovery, hardened plugin and MCP handling, improved permission and auto mode behavior, fixes for cloud/SDK/screen reader/terminal sessions"
       ],
       "sources": [
         "https://ccleaks.com/news/claude-code-2-1-287-oct-2026",
@@ -7819,7 +7821,7 @@
         "https://hermes-ai.net/news/anthropic-wants-claude-code-to-run-typescript-middleware-like-express/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "gpt-6-1-sol",
@@ -7837,6 +7839,58 @@
         "https://thenextweb.com/news/openai-gpt-6-1-sol-price-astra-devday"
       ],
       "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-frontier-academy-paid",
+      "title": "Claude Frontier Academy: $100M Anthropic program to train 10,000 enterprise engineers",
+      "first_seen": "2026-10-04",
+      "last_updated": "2026-10-04T12:09:32Z",
+      "key_facts": [
+        "Announced Oct 2 2026; $100M investment; goal to train 10,000 engineers by end of 2027",
+        "12-week residency; engineers trained to Frontier Deployed Engineer (FDE) standard — same bar as Anthropic internal; Anthropic credential awarded on completion",
+        "Enterprise cohorts; paid program distinct from free Claude Academy (academy.claude.com); first credentials expected early 2027",
+        "Cognizant and other SIs already posting 'Frontier Certified Engineer (FCE)' job roles"
+      ],
+      "sources": [
+        "https://claude.com/programs/frontier-academy",
+        "https://itechnicallykan.com/blog/posts/what-is-anthropic-academy/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-agi-readiness-team-disbanded",
+      "title": "OpenAI AGI Readiness team disbanded after Miles Brundage resignation (Oct 2026)",
+      "first_seen": "2026-10-04",
+      "last_updated": "2026-10-04T12:09:32Z",
+      "key_facts": [
+        "Miles Brundage (head of AGI Readiness team, senior policy advisor) resigned from OpenAI in Oct 2026; team disbanded and members scattered across org",
+        "Fourth dedicated safety-focused team dissolved in ~2 years: Superalignment (May 2025), Mission Alignment (Feb 2026), Safety Systems restructured into research under Mark Chen (Jul 2026), now AGI Readiness (Oct 2026)",
+        "Pattern: each departure coincided with commercial product pressure; safety accountability surface shrinking as OpenAI ships frontier models"
+      ],
+      "sources": [
+        "https://businessinsider.nl/another-safety-researcher-quits-openai-citing-the-dissolution-of-agi-readiness-team/",
+        "https://theaicareerlab.com/blog/openai-four-safety-teams-dissolved-2026/raw"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "apple-macos-26-5-2-ai-security",
+      "title": "Apple macOS 26.5.2: 29 security fixes, accelerated cadence citing AI-assisted hacking threats",
+      "first_seen": "2026-10-04",
+      "last_updated": "2026-10-04T12:09:32Z",
+      "key_facts": [
+        "macOS 26.5.2 released with 29 security patches; Apple cited rising AI-assisted attack capabilities as driver for accelerated cadence",
+        "Context: Anthropic + Calif demo'd two unknown macOS vulns (Memory Integrity Enforcement bypass, privilege escalation) via unreleased Mythos model in Jun 2026",
+        "AI agents routinely request Full Disk Access; Apple has not yet scoped FDA to specific agents — broader permission gating expected in macOS 27 previews"
+      ],
+      "sources": [
+        "https://9to5mac.com/guides/ios-26-5-2/",
+        "https://letsdatascience.com/news/macos-faces-new-malware-and-ai-agent-risks-94a234c6"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
