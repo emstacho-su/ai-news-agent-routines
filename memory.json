@@ -257,7 +257,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
       "first_seen": "2026-05-09",
-      "last_updated": "2026-10-05T12:00:00Z",
+      "last_updated": "2026-10-06T00:00:00Z",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900",
         "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
@@ -277,7 +277,11 @@
         "Oct 14 2026: formal pre-IPO investor day at Anthropic SF HQ for institutional buyers",
         "Roadshow targeting week of Nov 9; IPO before Thanksgiving; valuation expectations $1.8-2T (up from $850-900B)",
         "Would be largest IPO in US history if priced at $2T",
-        "Oct 5 2026: Nvidia reported lining up $10B as anchor investor; roadshow targeting week of Nov 9, first trade before Thanksgiving (Nov 26)"
+        "Oct 5 2026: Nvidia reported lining up $10B as anchor investor; roadshow targeting week of Nov 9, first trade before Thanksgiving (Nov 26)",
+        "October 14 2026: pre-IPO investor day at Anthropic SF HQ for select institutional investors",
+        "Formal IPO roadshow expected to begin week of November 9; November Nasdaq listing target",
+        "Institutional buyer consensus now values Anthropic at $1.8\u20132T (up from ~$900B pre-money)",
+        "Underwriters: Morgan Stanley, Goldman Sachs, JPMorgan, Citigroup"
       ],
       "sources": [
         "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
@@ -295,10 +299,13 @@
         "https://ca.investing.com/news/stock-market-news/anthropic-is-said-to-schedule-preipo-investor-day-oct-14--bloomberg-432SI-4862898",
         "https://www.kucoin.com/news/flash/anthropic-plans-pre-ipo-investor-day-on-october-14-eyes-thanksgiving-window-ipo-with-1-8-2-trillion-valuation",
         "https://finance.yahoo.com/markets/stocks/articles/anthropic-targets-2-trillion-ipo-150408036.html",
-        "https://cryptobriefing.com/anthropic-ipo-mid-november-2-trillion/"
+        "https://cryptobriefing.com/anthropic-ipo-mid-november-2-trillion/",
+        "https://cryptobriefing.com/anthropic-pre-ipo-investor-day-october-14/",
+        "https://www.bloomberg.com/news/articles/2026-10-01/anthropic-is-said-to-plan-pre-ipo-investor-day-as-listing-nears",
+        "https://www.itiger.com/news/1134201499"
       ],
       "category": "Anthropic",
-      "coverage_count": 17
+      "coverage_count": 18
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -7288,7 +7295,7 @@
       "id": "gemini-4-post-training-announcement",
       "title": "Gemini 4: DeepMind announces post-training phase; October 2026 release targeted",
       "first_seen": "2026-09-24T00:00:00Z",
-      "last_updated": "2026-10-04T12:09:32Z",
+      "last_updated": "2026-10-06T00:00:00Z",
       "key_facts": [
         "DeepMind head Koray Kavukcuoglu confirmed Gemini 4 is in early post-training as of September 24 2026; release expected 'before end of year'",
         "Gemini 4 Pro targeted specifically for October 2026",
@@ -7296,16 +7303,20 @@
         "Positioned explicitly as response to Anthropic Opus 5.5 and OpenAI GPT-6 Sol/Luna launches",
         "Sept 26 2026: Gemini 4 Pro checkpoint appeared on LMArena disguised as 'Gemini 3.8 Flash'; codename Argon confirmed by leaks",
         "Leaked specs: 256K token output limit, multi-million token context, high-effort reasoning modes",
-        "Oct 4 2026: prediction markets at 52% probability of Gemini 4 release before Nov 1; purported leaked image of Gemini 4 Pro surfaced describing 'high-effort compute' scaling and major context upgrades \u2014 unverified"
+        "Oct 4 2026: prediction markets at 52% probability of Gemini 4 release before Nov 1; purported leaked image of Gemini 4 Pro surfaced describing 'high-effort compute' scaling and major context upgrades \u2014 unverified",
+        "Oct 2026: new DeepMind CEO Koray Kavukcuoglu confirms Gemini 4 is in fine-tuning; targets release 'as soon as possible, well before end of 2026'",
+        "Pre-training to fine-tuning turnaround ~10 weeks (Jul 21 \u2192 early Oct), faster than Gemini 3 cycle"
       ],
       "sources": [
         "https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model",
         "https://www.geeky-gadgets.com/gemini-4-pro-release-date/",
         "https://digg.com/tech/grj6d8yz",
-        "https://pasqualepillitteri.it/en/news/18784/gemini-4-pro-checkpoint-arena"
+        "https://pasqualepillitteri.it/en/news/18784/gemini-4-pro-checkpoint-arena",
+        "https://emergent.sh/news/gemini-4-release-date",
+        "https://tbreak.com/gemini-4-nearly-ready-google-deepmind-chief/"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "flash-dllm-io-aware-kv-diffusion-llm",
@@ -7933,6 +7944,76 @@
         "https://www.refontelearning.com/blog/ai-coding-agents-leaking-cicd-secrets"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-v2-1-289",
+      "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
+      "first_seen": "2026-10-06T00:00:00Z",
+      "last_updated": "2026-10-06T00:00:00Z",
+      "key_facts": [
+        "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
+        "Adds agent.spawn and new agent state support to programmatic API",
+        "disableClaudeAiConnectors and allowedMcpServers URL rules now correctly applied to .mcp.json, plugin, and agent entries (was silently skipped before)",
+        "MCP servers requesting additional OAuth scope mid-tool-call now trigger re-authentication prompt",
+        "If MCP server stops connecting after update, add bareElicitationCapability: true to its config entry"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://www.gradually.ai/en/changelogs/claude-code/",
+        "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-october-4-2026-3h6o"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-28days-qol-campaign",
+      "title": "OpenAI '28 Days of Quality of Life': GPT-6 Astra + Sol ~50% faster serving-side (Oct 5 start)",
+      "first_seen": "2026-10-06T00:00:00Z",
+      "last_updated": "2026-10-06T00:00:00Z",
+      "key_facts": [
+        "Oct 5 2026: OpenAI announces 28-day daily improvement drip",
+        "Day 1: GPT-6 Astra and GPT-6.1 Sol approximately 50% faster by default across ChatGPT subscriptions and Sign-in-with-ChatGPT partners (OpenCode, Pi, Amp, Devin)",
+        "Speed improvement is serving-side only \u2014 no model change, no API parameter required",
+        "OpenAI Codex 0.160.1 (Oct 6): fixes Windows MCP remote stdio env handling (SYSTEMROOT/TEMP/TMP preserved)"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/openai"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "mizuho-cowork-ai-agent",
+      "title": "Mizuho Financial Group launches 'Mizuho Cowork' internal AI agent platform",
+      "first_seen": "2026-10-06T00:00:00Z",
+      "last_updated": "2026-10-06T00:00:00Z",
+      "key_facts": [
+        "Mizuho Financial Group begins internal trials of autonomous AI agent platform branded Mizuho Cowork",
+        "Targets business operations workflows; closed enterprise deployment (no public SDK)",
+        "Naming suggests Claude/Anthropic Cowork stack underneath; unconfirmed"
+      ],
+      "sources": [
+        "https://note.com/hirokimiyano/n/n02cc6bbaa77a",
+        "https://blog.mean.ceo/ai-news-october-2026"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-text-watermarking-api",
+      "title": "OpenAI text watermarking opt-in for API customers (Oct 6 2026, EU AI Act compliance)",
+      "first_seen": "2026-10-06T00:00:00Z",
+      "last_updated": "2026-10-06T00:00:00Z",
+      "key_facts": [
+        "Oct 6 2026: OpenAI API customers worldwide can opt in to C2PA-compatible text watermarking on select models",
+        "Announced as EU AI Act compliance measure; ChatGPT also to receive watermarks per earlier EU announcement",
+        "Per-token overhead expected but not yet quantified in published benchmarks"
+      ],
+      "sources": [
+        "https://note.com/hirokimiyano/n/n02cc6bbaa77a"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
