@@ -8015,6 +8015,94 @@
       ],
       "category": "Tools & Frameworks",
       "coverage_count": 1
+    },
+    {
+      "id": "anthropic-sf-startup-program-oct-2026",
+      "title": "Anthropic launches Claude Founder House startup program at SF Tech Week",
+      "first_seen": "2026-10-07T00:00:00Z",
+      "last_updated": "2026-10-07T00:00:00Z",
+      "key_facts": [
+        "Claude Founder House SF Tech Week event held October 6, 2026",
+        "Eligible founders get free 1-year Claude Team (up to 5 seats) + $1,000 API credits",
+        "Eligibility: equity funding from institutional investor, founded within 4 years, no prior Anthropic credits",
+        "Presented by Beth Robertson (Head of Startups) and Gaby Wilkerson-Melnick (Global Head of Startup Partnerships)"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
+        "https://www.anthropic.com/events/claude-founder-house-san-francisco"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-mai-surface-local-device-oct-2026",
+      "title": "Microsoft + NVIDIA October 7 SF event: MAI models coming to local device with RTX Spark",
+      "first_seen": "2026-10-07T00:00:00Z",
+      "last_updated": "2026-10-07T00:00:00Z",
+      "key_facts": [
+        "October 7, 2026 San Francisco event: Satya Nadella + Jensen Huang + Pavan Davuluri on stage",
+        "Focus: transitioning MAI models from cloud-only to local on-device execution",
+        "NVIDIA RTX Spark is the paired hardware; Surface Laptop Ultra is reference device",
+        "First joint on-device AI demo at this scale between Microsoft and NVIDIA"
+      ],
+      "sources": [
+        "https://www.thurrott.com/windows/324000/microsoft-to-hold-surface-and-windows-event-on-october-7",
+        "https://forkast.news/microsofts-mai-models-were-built-for-the-cloud-october-7-is-when-they-come-to-the-device"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "embedding-gemma-2",
+      "title": "Google DeepMind releases EmbeddingGemma 2 (740M, Apache 2.0) multimodal embedding model",
+      "first_seen": "2026-10-07T00:00:00Z",
+      "last_updated": "2026-10-07T00:00:00Z",
+      "key_facts": [
+        "740M parameters, Apache 2.0 license",
+        "Encodes text, code, images, video, and audio in a single shared vector space",
+        "Drop-in for local RAG pipelines and cross-modal retrieval without API dependencies"
+      ],
+      "sources": [
+        "https://llm-stats.com/ai-news"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-chatgpt-visual-ads-oct-2026",
+      "title": "OpenAI expands ChatGPT ads to image, video, and conversational formats",
+      "first_seen": "2026-10-07T00:00:00Z",
+      "last_updated": "2026-10-07T00:00:00Z",
+      "key_facts": [
+        "Testing visual ad formats (image, video, native, conversational) in US from late October 2026",
+        "Free and Go ($8/mo) tiers only; Plus, Pro, Business, Enterprise stay ad-free",
+        "ChatGPT reaches 1.2 billion weekly users",
+        "Brand safety: DoubleVerify + IAS; conversion measurement: Hightouch, Tealium, LiveRamp",
+        "Conversational ads let users ask product questions directly in the chat"
+      ],
+      "sources": [
+        "https://www.theatdb.com/news/openai-gives-chatgpt-ads-a-visual-upgrade",
+        "https://leovirlan.substack.com/p/openai-chatgpt-ads-launch-analysis"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-constellation-nuclear-deal",
+      "title": "Google contracts 3,590 MW from Constellation Energy (25% new nuclear) for AI data centers",
+      "first_seen": "2026-10-07T00:00:00Z",
+      "last_updated": "2026-10-07T00:00:00Z",
+      "key_facts": [
+        "3,590 MW deal with Constellation Energy; ~25% from new nuclear capacity",
+        "11 reactor upgrades across Illinois, Pennsylvania, and New Jersey",
+        "One of the largest single corporate nuclear procurement deals on record",
+        "AI power demand is the primary driver \u2014 not consumer demand"
+      ],
+      "sources": [
+        "https://aiweekly.co/ai-news-today"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
     }
   ]
 }
