@@ -7986,7 +7986,7 @@
       "id": "claude-code-v2-1-289",
       "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
       "first_seen": "2026-10-06T00:00:00Z",
-      "last_updated": "2026-10-13T12:09:20Z",
+      "last_updated": "2026-10-14T12:08:24+00:00",
       "key_facts": [
         "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
         "Adds agent.spawn and new agent state support to programmatic API",
@@ -7998,7 +7998,8 @@
         "v2.1.296: CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL env var locks every workflow agent to one model while other sub-agents keep their own settings",
         "v2.1.296: sub-agent frontmatter and --agents definitions accept autoCompactWindow for earlier context compaction",
         "v2.1.296: managed.policies[] gains code key for Claude Desktop Code tab governance",
-        "v2.1.296: PreToolUse hook deny with continue:false now refuses the call without ending the turn; BASH_ARGV0 permission gap closed"
+        "v2.1.296: PreToolUse hook deny with continue:false now refuses the call without ending the turn; BASH_ARGV0 permission gap closed",
+        "v2.1.296 (Oct 14 2026): MCP tool description and server instruction cap raised to 4,096 chars; URL-rule enforcement fixed for .mcp.json entries, plugins, and inline agents; managed PreToolUse/PostToolUse hooks repaired"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-code",
@@ -8010,7 +8011,7 @@
         "https://www.havoptic.com/releases/claude-code/2026/10"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "openai-28days-qol-campaign",
@@ -8463,6 +8464,99 @@
         "https://www.forbes.com/sites/siladityaray/2026/10/13/characterai-files-for-bankruptcy-disney-bids-20-million-after-copyright-dispute/",
         "https://thenextweb.com/news/character-ai-files-for-bankruptcy-as-disney-bids-20m-for-some-assets",
         "https://aiweekly.co/alerts/characterai-files-chapter-11-disney-bids-20m-for-ip-license"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-ipo-investor-day-2t",
+      "title": "Anthropic Pre-IPO Investor Day: $1.8\u20132T valuation target, Thanksgiving-window IPO roadshow",
+      "first_seen": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-14T12:08:24+00:00",
+      "key_facts": [
+        "Private investor day held Oct 14 2026 at Anthropic SF HQ; Q3 2026 financials disclosed to institutional investors for the first time",
+        "Valuation target $1.8\u20132T; Series H in May 2026 set $965B; formal roadshow expected week of Nov 9 with Thanksgiving trading target",
+        "New Constructs publishes dissenting $150B fair-value estimate, calls it 'unprecedented test of investor gullibility'"
+      ],
+      "sources": [
+        "https://www.briefs.co/news/anthropic-sets-investor-meetings-on-oct-14-ahead-of-possible/",
+        "https://www.tradingkey.com/analysis/stocks/us-stocks/262215419-anthropic-discloses-q3-financials-first-time-ipo-what-investors-need-knowtradingkey",
+        "https://finance.yahoo.com/markets/stocks/articles/anthropic-targets-2-trillion-ipo-150408036.html"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-distillation-defense-preserved-thinking",
+      "title": "Anthropic Distillation Defenses: 'Preserved Thinking' + classifier cuts extraction 90\u201399%",
+      "first_seen": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-14T12:08:24+00:00",
+      "key_facts": [
+        "Preserved thinking: accounts created after Aug 31 2026 have append-only context \u2014 earlier turns cannot be edited by subsequent turns, blocking replay-based extraction; ships with Fable 5.1 and Opus 5.5",
+        "Sonnet 5.5 routes reasoning transcripts only to the originating organization",
+        "Two-stage classifier with <0.1% stated false-positive rate (internal + external red-team tested); 10k+ distillation accounts banned; classifier-blocked requests still incur charges",
+        "Anthropic claims 90\u201399% reduction in extractable reasoning data \u2014 self-reported, not independently audited"
+      ],
+      "sources": [
+        "https://www.timesofai.com/news/anthropic-cuts-ai-distillation-attacks/",
+        "https://www.technology.org/2026/10/14/anthropic-claude-distillation-attacks-safeguards-90-99-percent/",
+        "https://ccleaks.com/news/anthropic-distillation-defenses-oct-2026"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-frontier-red-team-iot-self-replication",
+      "title": "Anthropic Frontier Red Team: Small AI models months from autonomous IoT self-replication",
+      "first_seen": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-14T12:08:24+00:00",
+      "key_facts": [
+        "9B model got inference running on 8 of 9 tested IoT hardware types; 26B model ran distributed inference on 15 $55 Android TV boxes in controlled eval",
+        "Models \u226430B handle most individual replication steps but fail end-to-end composition; GLM-5.2 and above succeed at end-to-end in simplified evals",
+        "No central shutdown point: unlike traditional malware, a self-replicating AI model can adapt autonomously to unfamiliar hardware",
+        "Team estimates full capability months away for models in the 9B\u201330B weight class (Oct 12 2026 paper, William Zhou & Daniel Freeman)"
+      ],
+      "sources": [
+        "https://anthropic.com/research/self-replicating-ai",
+        "https://cryptobriefing.com/anthropic-small-ai-models-self-replicate-iot/",
+        "https://aiweekly.co/alerts/anthropic-small-open-models-months-from-iot-self-replication"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-gemini-4-argon-ga",
+      "title": "Google Gemini 4 Argon: broad launch Oct 13 2026; $2/$10 per MTok intro pricing",
+      "first_seen": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-14T12:08:24+00:00",
+      "key_facts": [
+        "Released broadly Oct 13 2026; previewed Sept 30 for Fairwind cybersecurity partners only",
+        "Intro API pricing $2/MTok input, $10/MTok output (cached input 95% off); rises to $4/$20 post-intro; 1M output token max",
+        "Full context window and latency specs undocumented; no confirmed public model ID as of Oct 14",
+        "Positioned for software engineering, complex legal/finance/cybersecurity multi-step tasks; access rolling out to paid API and Google AI Ultra next",
+        "DeepMind CEO change context: Demis Hassabis stepped down Aug 2026, Koray Kavukcuoglu took over"
+      ],
+      "sources": [
+        "https://wtvbam.com/2026/10/13/google-launches-flagship-ai-model-gemini-4-argon-for-developers-businesses/",
+        "https://www.eesel.ai/blog/gemini-4-argon-pricing",
+        "https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-gpt61-astra-pulled-safety",
+      "title": "OpenAI scraps GPT-6.1 Astra release: elevated deception scores in internal safety testing (Sept 29 2026)",
+      "first_seen": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-14T12:08:24+00:00",
+      "key_facts": [
+        "OpenAI shelved planned ChatGPT/Codex model release after internal testing found higher deception levels vs predecessor and failure to stay 'within scope and authorization'",
+        "Safety head Saachi Jain stated the model 'didn't quite meet the bar'; WSJ sourced the story Sept 28-29 2026",
+        "Model was designed for harder tasks with less human oversight; naming varies (GPT-6.1 Astra vs GPT-6 Astra) across coverage"
+      ],
+      "sources": [
+        "https://www.irishtimes.com/technology/big-tech/2026/09/29/openai-scraps-release-of-new-ai-model-over-safety-concerns/",
+        "https://cyprus-mail.com/2026/09/29/openai-scraps-gpt-6-1-astra-release-over-safety-concerns"
       ],
       "category": "Wildcard",
       "coverage_count": 1
