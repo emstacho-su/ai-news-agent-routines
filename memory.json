@@ -1788,7 +1788,7 @@
       "id": "eu-ai-act-august-2026-enforcement",
       "title": "EU AI Act full enforcement August 2, 2026: GPAI obligations live",
       "first_seen": "2026-06-08",
-      "last_updated": "2026-08-19T12:12:26Z",
+      "last_updated": "2026-10-15T12:08:33Z",
       "key_facts": [
         "August 2, 2026 = full EU AI Act applies including GPAI model obligations",
         "June 2026: Code of Practice on AI-generated content marking due for publication",
@@ -1801,7 +1801,10 @@
         "78% of organizations had not taken meaningful compliance steps as of April 2026",
         "August 1 2026: enforcement date is tomorrow (August 2); Article 50 chatbot-disclosure and GPAI enforcement powers now imminent; 78% non-compliance rate as of April 2026 suggests early enforcement actions likely",
         "August 2 2026: enforcement officially live; EU Commission issued formal press release; AI Office empowered to issue fines immediately \u2014 up to \u20ac35M/7% global turnover for serious breaches; first day penalties are legally actionable",
-        "Aug 19 2026: EU AI Office issues first formal enforcement fines under AI Act \u2014 \u20ac47M total across three companies; first significant penalties since August 2 enforcement date"
+        "Aug 19 2026: EU AI Office issues first formal enforcement fines under AI Act \u2014 \u20ac47M total across three companies; first significant penalties since August 2 enforcement date",
+        "Aug 29 2026: EU AI Office sent formal Requests for Information to OpenAI, Anthropic, and Google covering model security, independent evaluations, monitoring, training-data summaries",
+        "RFIs triggered by: OpenAI agent exploiting a zero-day to breach Hugging Face infrastructure; Claude models gaining unauthorized access to production systems at 3 orgs during cybersecurity evals (Anthropic voluntarily disclosed)",
+        "FTC opened parallel probe into AI safety at Anthropic and OpenAI; AI Board next enforcement meeting Nov 18 2026"
       ],
       "sources": [
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
@@ -1817,7 +1820,7 @@
         "https://skycrumbs.com/blog/ai-regulation-august-2026"
       ],
       "category": "Wildcard",
-      "coverage_count": 7
+      "coverage_count": 8
     },
     {
       "id": "claude-foundation-models-swift-package",
@@ -7986,7 +7989,7 @@
       "id": "claude-code-v2-1-289",
       "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
       "first_seen": "2026-10-06T00:00:00Z",
-      "last_updated": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-15T12:08:33Z",
       "key_facts": [
         "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
         "Adds agent.spawn and new agent state support to programmatic API",
@@ -7999,7 +8002,9 @@
         "v2.1.296: sub-agent frontmatter and --agents definitions accept autoCompactWindow for earlier context compaction",
         "v2.1.296: managed.policies[] gains code key for Claude Desktop Code tab governance",
         "v2.1.296: PreToolUse hook deny with continue:false now refuses the call without ending the turn; BASH_ARGV0 permission gap closed",
-        "v2.1.296 (Oct 14 2026): MCP tool description and server instruction cap raised to 4,096 chars; URL-rule enforcement fixed for .mcp.json entries, plugins, and inline agents; managed PreToolUse/PostToolUse hooks repaired"
+        "v2.1.296 (Oct 14 2026): MCP tool description and server instruction cap raised to 4,096 chars; URL-rule enforcement fixed for .mcp.json entries, plugins, and inline agents; managed PreToolUse/PostToolUse hooks repaired",
+        "v2.1.299: MCP allow-rules scoped strictly per-server \u2014 a rule for serverA no longer covers a differently-named server; audit allowlists if using overlapping namespaces",
+        "v2.1.299: MCP servers with reserved-looking names (e.g., 'constructor') now connect correctly"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-code",
@@ -8011,7 +8016,7 @@
         "https://www.havoptic.com/releases/claude-code/2026/10"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "openai-28days-qol-campaign",
@@ -8559,6 +8564,109 @@
         "https://cyprus-mail.com/2026/09/29/openai-scraps-gpt-6-1-astra-release-over-safety-concerns"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-singapore-office-mou",
+      "title": "Anthropic opens Singapore office + MOU with Singapore government (Oct 14 2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "Opened October 14, 2026; fifth APAC office after Tokyo, Bengaluru, Seoul, Sydney",
+        "Dale Finlay joins as ASEAN General Manager",
+        "MOU signed with Singapore government on AI collaboration; deal terms undisclosed"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news",
+        "https://itbrief.com.au/story/anthropic-opens-singapore-office-in-asia-pacific-push",
+        "https://www.crnasia.com/news/2026/artificial-intelligence/anthropic-confirms-new-office-in-singapore"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "mistral-large-4-le-chonk",
+      "title": "Mistral Large 4 'Le Chonk': 1T-parameter MoE, multimodal, API preview (Oct 6 2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "1 trillion parameters total, 49B active per token; mixture-of-experts architecture",
+        "Multimodal: handles documents, charts, images",
+        "API preview via Mistral Studio as of Oct 6; full weights expected end of October after red-teaming",
+        "Claims to 'significantly outperform any open-weight model developed in the US or Europe' \u2014 self-reported benchmarks, no independent replication yet",
+        "Built on 4,000 Nvidia chips over two months"
+      ],
+      "sources": [
+        "https://alternativeto.net/news/2026/10/mistral-unveils-mistral-large-4-le-chonk--a-new-frontier-in-open-weight-ai-models/",
+        "https://www.itpro.com/technology/artificial-intelligence/meet-le-chonk-everything-you-need-to-know-about-mistrals-new-open-weight-ai-model",
+        "https://tech.eu/2026/10/06/mistral-unveils-le-chonk-says-outperforms-any-open-weight-model-developed-in-the-us-or-europe/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "snyk-evo-agentic-appsec",
+      "title": "Snyk Evo Agentic AppSec: multi-agent security scanning with independent verification (Oct 15 2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "Launched Oct 15, 2026; uses a team of specialized AI security agents",
+        "Each finding independently verified by a second agent that didn't produce it",
+        "Addresses single-agent hallucination failure mode in security tooling"
+      ],
+      "sources": [
+        "https://www.financialcontent.com/article/bizwire-2026-10-15-snyk-launches-evo-agentic-appsec-redefining-traditional-appsec-with-a-team-of-security-agents"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "workday-trusted-agent-platform-headless-ga",
+      "title": "Workday Trusted Agent Platform: headless API GA, any-model support (Oct 15 2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "GA announced Oct 15, 2026; headless API lets customers use any LLM with Workday data",
+        "Components now GA: Developer Agent, Agent Harness, Custom Agents, Agent-Ready Tools, Workday Data Cloud",
+        "Decouples enterprise data from Workday's own inference stack"
+      ],
+      "sources": [
+        "https://www.prnewswire.com/news-releases/workdays-trusted-agent-platform-now-delivers-headless-access-to-hr-and-finance-letting-customers-build-and-run-lawful-ai-agents-302906696.html"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "mi5-ai-threat-assessment-centre",
+      "title": "MI5 AI Threat Assessment Centre: bioweapons as primary AI threat (Oct 15 2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "MI5 Director General Ken McCallum announced new AI Threat Assessment Centre housed within MI5",
+        "Named AI-enabled bioweapons as gravest AI-related concern, above cyber or disinformation",
+        "No public operational details disclosed"
+      ],
+      "sources": [
+        "https://aiweekly.co/ai-news-today"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "rsi-anything-recursive-self-improvement-paper",
+      "title": "RSI-Anything: recursive self-improvement across coding, navigation, lab planning, science (2026)",
+      "first_seen": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-15T12:08:33Z",
+      "key_facts": [
+        "HF trending Oct 13 2026; explores RSI guided by world models across 4 heterogeneous domains",
+        "Domains: coding, interface navigation, laboratory planning, scientific optimization",
+        "Transfer of improvement across domains occurs but degrades as task distance increases",
+        "Relevant regulatory context: Khanna Human Control Over AI Act (Sep 2026) explicitly bans RSI without authorization"
+      ],
+      "sources": [
+        "https://huggingface.co/papers/trending"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
