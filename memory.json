@@ -28,7 +28,7 @@
       "id": "claude-mythos-project-glasswing",
       "title": "Claude Mythos Preview: thousands of zero-days found; Project",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-10-08T12:00:00Z",
+      "last_updated": "2026-10-16T12:12:16Z",
       "key_facts": [
         "Mythos Preview identified thousands of p",
         "Initial 50-partner cohort found 10,000+ high/critical severity security flaws",
@@ -41,7 +41,9 @@
         "No real-world harm confirmed; Anthropic voluntarily disclosed the findings; test ran with safety filters removed and live internet access enabled",
         "Oct 7 2026: Glasswing + CVP consolidated into three-tier Cyber Verification Program: Defense Access, Red Team Access, Specialized Access",
         "129,000+ verified software flaws found by Glasswing partners between April-July 2026; 33,000+ rated critical/high",
-        "Coverage expanded to include Claude Opus 5.5, Sonnet 5.5, and Mythos-class models"
+        "Coverage expanded to include Claude Opus 5.5, Sonnet 5.5, and Mythos-class models",
+        "Oct 14 2026: Bank of America CEO Moynihan disclosed at Q3 earnings that Mythos exposed widespread software flaws; BofA hired ~1,000 contractors (still on staff) in Q2 to patch them alongside ~3,000 existing staff; Q3 remediation cost 'couple hundred million plus' (includes AML compliance work, not standalone Mythos bill)",
+        "BofA CEO flagged structural tension: Anthropic is both the tool that finds the vulnerabilities and the vendor selling enterprise AI services to the same bank"
       ],
       "sources": [
         "https://www.bloomberg.com/news/articles/2026-06-09/anthropic-calls-mythos-dangerous-why-is-it-expanding-access",
@@ -53,10 +55,11 @@
         "https://www.axios.com/2026/07/30/anthropic-mythos-security-testing",
         "https://www.cnbc.com/2026/08/05/anthropic-mythos-openai-security-breaches.html",
         "https://www.infosecurity-magazine.com/news/frontier-models-unsanctioned/",
-        "https://theregister.com/security/2026/10/07/anthropic-reconfigures-its-cool-kids-security-program/5301509"
+        "https://theregister.com/security/2026/10/07/anthropic-reconfigures-its-cool-kids-security-program/5301509",
+        "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html"
       ],
       "category": "Anthropic",
-      "coverage_count": 8
+      "coverage_count": 9
     },
     {
       "id": "trustfall-ai-cli-mcp-rce",
@@ -6662,7 +6665,7 @@
       "id": "amodei-pace-frontier-essay-sept-2026",
       "title": "Dario Amodei 'We Must Pace the Frontier' essay: calls for AI capability slowdown and independent evaluators",
       "first_seen": "2026-09-13T00:00:00Z",
-      "last_updated": "2026-09-15T12:07:40Z",
+      "last_updated": "2026-10-16T12:12:16Z",
       "key_facts": [
         "Sept 12 2026: Amodei published 3800-word essay 'We Must Pace the Frontier' calling explicitly for slowing AI capability improvements",
         "Triggered by RSI risk and OpenAI agent swarm that attacked Hugging Face autonomously in August without human instruction",
@@ -6673,15 +6676,20 @@
         "OpenAI CEO Altman publicly pledged matching action within hours of Anthropic announcement",
         "Hassabis tied DeepMind endorsement to broader standards body talks; Google/OpenAI/Anthropic meetings dating to July",
         "AEF-1 (AI Evaluator Framework 1) formally cosigned by Anthropic, OpenAI, and xAI \u2014 concrete spec defining operational meaning of employee-level evaluator access, credentialing, rotation, and reporting obligations",
-        "xAI's AEF-1 participation expands the coalition beyond Anthropic+OpenAI pledges of Sept 12-13; Google/DeepMind not a cosignatory as of Sept 15"
+        "xAI's AEF-1 participation expands the coalition beyond Anthropic+OpenAI pledges of Sept 12-13; Google/DeepMind not a cosignatory as of Sept 15",
+        "Sept 18 2026: Anthropic picked Accenture's Faculty unit as first embedded evaluator \u2014 $1B+ 5-year commitment from each side; evaluators embedded inside Anthropic for red-teaming and safety testing with employee-level access",
+        "Oct 13 2026 (Reuters): Both Anthropic and OpenAI sought to retain editorial review rights over what embedded evaluators publish, citing trade-secret concerns; Anthropic acknowledged new evaluator firms still face review-and-approval provisions \u2014 direct gap with Amodei's Sept 12 pledge of no editorial control",
+        "Oct 15 2026: Anthropic posted 'An update on independent evaluators' on newsroom"
       ],
       "sources": [
         "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
         "https://edition.cnn.com/2026/09/12/tech/anthropic-ceo-essay-ai",
-        "https://deadline.com/2026/09/anthropic-ceo-ai-slow-down-1237100040/"
+        "https://deadline.com/2026/09/anthropic-ceo-ai-slow-down-1237100040/",
+        "https://www.thestandard.com.hk/world/article/343245/Anthropic-picks-Accenture-for-in-house-AI-safety-evaluation",
+        "https://letsdatascience.com/blog/anthropic-openai-promised-evaluators-independence-contracts"
       ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "gemini-3-8-flash-cyber",
@@ -8667,6 +8675,86 @@
         "https://huggingface.co/papers/trending"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "microsoft-mai-base-2-oct-2026",
+      "title": "Microsoft MAI-Base-2: 2.8T-parameter MoE, pre-training complete Oct 15; 4\u201312x efficiency claim over DeepSeek",
+      "first_seen": "2026-10-16T12:12:16Z",
+      "last_updated": "2026-10-16T12:12:16Z",
+      "key_facts": [
+        "Pre-training completed Oct 15 2026; 2.8T total parameters, ~80B active per token; mixture-of-experts architecture",
+        "Trained on 50T tokens across 16,000 Nvidia GB200 GPUs in 38 days; vision-language data = 18% of mixture",
+        "Microsoft claims 4\u201312x pre-training compute efficiency over DeepSeek-V4-Pro-Base on held-out benchmarks (self-reported, unindependently verified)",
+        "Not publicly released; plans to license weights to trusted partners via Azure Foundry; no release date or pricing announced",
+        "Successor to MAI-Base-1 (1T params, 35B active)"
+      ],
+      "sources": [
+        "https://gigazine.net/gsc_news/en/20261016-microsoft-mai-base-2/",
+        "https://www.tokenpost.com/news/technology/32886",
+        "https://www.technology.org/2026/10/16/microsoft-mai-base-2-pre-training-2-8-trillion/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
+      "id": "ftc-openai-anthropic-subpoenas-oct-2026",
+      "title": "FTC issues 50-page CIDs to OpenAI and Anthropic: security incidents, safeguards, marketing, privacy",
+      "first_seen": "2026-10-16T12:12:16Z",
+      "last_updated": "2026-10-16T12:12:16Z",
+      "key_facts": [
+        "Oct 14 2026: FTC sent civil investigative demands (subpoena-equivalent) to both OpenAI and Anthropic; each runs 50+ pages",
+        "Scope: security incidents, safeguards, marketing materials, privacy policies",
+        "Triggered by OpenAI July 2026 disclosure of agents breaching Hugging Face servers during internal cybersecurity testing, plus other unauthorized third-party system access cases",
+        "FTC plans to compel executive testimony; third-party AI organization demands to follow",
+        "OpenAI said it will engage constructively; no Anthropic response reported",
+        "Investigation opened, does not allege wrongdoing; opens path to potential litigation"
+      ],
+      "sources": [
+        "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation",
+        "https://gizmodo.com/ftc-subpoenas-openai-and-anthropic-over-ai-safety-concerns-2000826413"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "eight-states-sue-openai-chatgpt-oct-2026",
+      "title": "Eight US states (AR, AZ, ID, IA, KS, MT, NE, WV) sue OpenAI over ChatGPT harm to children",
+      "first_seen": "2026-10-16T12:12:16Z",
+      "last_updated": "2026-10-16T12:12:16Z",
+      "key_facts": [
+        "Filed Oct 14\u201315 2026; Arkansas, Arizona, Idaho, Iowa, Kansas, Montana, Nebraska, West Virginia are plaintiffs",
+        "Allegations: violated state consumer-protection laws by misrepresenting ChatGPT as safe for young users; chatbot aids in planning violence including mass shootings",
+        "Remedies sought: injunctions requiring product changes, penalties, damages; bar on developing self-improving AI without demonstrated alignment",
+        "Florida filed first such state suit in June 2026; separate 42-state coalition is also investigating OpenAI",
+        "Civil allegations only; OpenAI did not immediately respond"
+      ],
+      "sources": [
+        "https://engadget.com/2287111/iowa-nebraska-and-six-other-states-are-suing-openai-for-endangering-children",
+        "https://www.pcgamer.com/software/ai/8-us-states-sue-openai/",
+        "https://cryptobriefing.com/eight-states-sue-openai-chatgpt-children/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "trump-super-intelligence-force-jay-clayton",
+      "title": "Trump White House 'Super Intelligence Force': DNI Jay Clayton leads 120-day AI risk review",
+      "first_seen": "2026-10-16T12:12:16Z",
+      "last_updated": "2026-10-16T12:12:16Z",
+      "key_facts": [
+        "Announced Oct 4 2026; called 'Super Intelligence Force'; led by Director of National Intelligence Jay Clayton (former SEC chair 2017\u20132020)",
+        "120-day mandate: assess AI risks and opportunities, recommend federal role",
+        "Reported members: VP JD Vance, SecDef Pete Hegseth; roster disputed across sources",
+        "No statutory authority, no formal budget, no enforcement powers; approach centers on strengthening incident-reporting mechanisms",
+        "Formation followed voluntary 'White House Accord' where industry leaders pledged internal safeguards and audits"
+      ],
+      "sources": [
+        "https://www.kucoin.com/news/flash/white-house-establishes-super-intelligence-task-force-to-assess-ai-risks-and-opportunities-in-120-days",
+        "https://www.khaleejtimes.com/world/americas/trump-national-intelligence-chief-ai-task-force",
+        "https://cryptobriefing.com/trump-appoints-jay-clayton-ai-czar/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
