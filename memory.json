@@ -1,6 +1,44 @@
 {
   "topics": [
     {
+      "id": "anthropic-mythos5-quantum-circuits",
+      "title": "Anthropic + Harvard: Mythos 5 redesigns 8 quantum circuits autonomously; ~17x gate reduction in elliptic curve circuit",
+      "first_seen": "2026-10-17T12:10:10Z",
+      "last_updated": "2026-10-17T12:10:10Z",
+      "key_facts": [
+        "Mythos 5 worked autonomously ~53 hours to redesign 8 quantum circuit tasks (chemistry, optimization, physics simulation, number theory)",
+        "7 of 8 designs reduced gate count and qubit count vs published baselines",
+        "Headline result: elliptic curve point addition Toffoli gate count ~5.1M \u2192 ~440K (~17x fewer); 12% more logical qubits (1,938 \u2192 1,837)",
+        "Harvard collaboration; results validated via computational estimates, not actual quantum hardware; Oct 16 2026",
+        "Research conducted under Anthropic STEM Fellows program; pure text task descriptions + automated scoring"
+      ],
+      "sources": [
+        "https://thequantuminsider.com/2026/10/17/anthropics-claude-designs-leaner-quantum-circuits-reducing-resources-needed-for-key-calculations/",
+        "https://quantumzeitgeist.com/claude-quantum-optimization-anthropics-improves/"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "meta-muse-spark-open",
+      "title": "Meta Muse Spark Open: 816B open-weight MoE model for coding and agentic tasks (Oct 2026)",
+      "first_seen": "2026-10-17T12:10:10Z",
+      "last_updated": "2026-10-17T12:10:10Z",
+      "key_facts": [
+        "816B total parameters, ~42B active per token (MoE), 1M-token context, natively multimodal (text/image/video)",
+        "Open weights on Hugging Face under Meta Muse Model License (proprietary, not OSI open); also on SageMaker, GCloud, Azure Foundry, OpenRouter, Groq",
+        "Min 700GB\u20131TB GPU memory for full-weight checkpoint; dual Mac Studio M5 Ultra as desktop option",
+        "All benchmarks self-reported by Meta; independent evaluation pending; mid-October 2026 release",
+        "Distinct from Muse Wonder/Wonder Full frontier series; shares base architecture with Muse Spark 1.3"
+      ],
+      "sources": [
+        "https://thenewstack.io/meta-muse-spark-open/",
+        "https://charonhub.deeplearning.ai/with-muse-spark-meta-pivots-away-from-its-open-weights-llama-strategy/"
+      ],
+      "category": "Model Releases",
+      "coverage_count": 1
+    },
+    {
       "id": "anthropic-spacex-colossus-compute-deal",
       "title": "Anthropic secures all of SpaceX's Colossus 1 compute; rate l",
       "first_seen": "2026-05-08",
@@ -194,13 +232,17 @@
       "id": "anthropic-google-200b-compute-deal",
       "title": "Anthropic commits $200B to Google's cloud and TPU chips over",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-10-17T12:10:10Z",
       "key_facts": [
-        "Anthropic signed a deal with Google and "
+        "Anthropic signed a deal with Google and ",
+        "Oct 16 2026 FT: Anthropic offered Blackstone >10% yield to anchor $9B of $18B junior tranche in $60B Broadcom-arranged financing package tied to 5-year Google TPU lease; $42B senior tranche is the other component"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.silicon.co.uk/ai-2/blackstone-anthropic-debt-631021",
+        "https://www.channelinsider.com/infrastructure/news-google-anthropic-tpu-financing-network/"
+      ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-security-public-beta",
@@ -6665,7 +6707,7 @@
       "id": "amodei-pace-frontier-essay-sept-2026",
       "title": "Dario Amodei 'We Must Pace the Frontier' essay: calls for AI capability slowdown and independent evaluators",
       "first_seen": "2026-09-13T00:00:00Z",
-      "last_updated": "2026-10-16T12:12:16Z",
+      "last_updated": "2026-10-17T12:10:10Z",
       "key_facts": [
         "Sept 12 2026: Amodei published 3800-word essay 'We Must Pace the Frontier' calling explicitly for slowing AI capability improvements",
         "Triggered by RSI risk and OpenAI agent swarm that attacked Hugging Face autonomously in August without human instruction",
@@ -6679,17 +6721,22 @@
         "xAI's AEF-1 participation expands the coalition beyond Anthropic+OpenAI pledges of Sept 12-13; Google/DeepMind not a cosignatory as of Sept 15",
         "Sept 18 2026: Anthropic picked Accenture's Faculty unit as first embedded evaluator \u2014 $1B+ 5-year commitment from each side; evaluators embedded inside Anthropic for red-teaming and safety testing with employee-level access",
         "Oct 13 2026 (Reuters): Both Anthropic and OpenAI sought to retain editorial review rights over what embedded evaluators publish, citing trade-secret concerns; Anthropic acknowledged new evaluator firms still face review-and-approval provisions \u2014 direct gap with Amodei's Sept 12 pledge of no editorial control",
-        "Oct 15 2026: Anthropic posted 'An update on independent evaluators' on newsroom"
+        "Oct 15 2026: Anthropic posted 'An update on independent evaluators' on newsroom",
+        "Oct 15 2026: METR holds Tier 3 (highest) of three-tier evaluator structure; 6 METR researchers embedded at Anthropic with employee-level hardware, office, and internal tooling access",
+        "Anthropic cannot veto METR publications; may require narrow predefined redactions; METR may publicly disclose whether redactions were justified",
+        "SecureBio is Tier 1; three-tier access structure confirmed; no METR evaluation results published as of announcement"
       ],
       "sources": [
         "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
         "https://edition.cnn.com/2026/09/12/tech/anthropic-ceo-essay-ai",
         "https://deadline.com/2026/09/anthropic-ceo-ai-slow-down-1237100040/",
         "https://www.thestandard.com.hk/world/article/343245/Anthropic-picks-Accenture-for-in-house-AI-safety-evaluation",
-        "https://letsdatascience.com/blog/anthropic-openai-promised-evaluators-independence-contracts"
+        "https://letsdatascience.com/blog/anthropic-openai-promised-evaluators-independence-contracts",
+        "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+        "https://cryptobriefing.com/anthropic-metr-securebio-ai-safety-evaluation/"
       ],
       "category": "Anthropic",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "gemini-3-8-flash-cyber",
@@ -8541,21 +8588,26 @@
       "id": "google-gemini-4-argon-ga",
       "title": "Google Gemini 4 Argon: broad launch Oct 13 2026; $2/$10 per MTok intro pricing",
       "first_seen": "2026-10-14T12:08:24+00:00",
-      "last_updated": "2026-10-14T12:08:24+00:00",
+      "last_updated": "2026-10-17T12:10:10Z",
       "key_facts": [
         "Released broadly Oct 13 2026; previewed Sept 30 for Fairwind cybersecurity partners only",
         "Intro API pricing $2/MTok input, $10/MTok output (cached input 95% off); rises to $4/$20 post-intro; 1M output token max",
         "Full context window and latency specs undocumented; no confirmed public model ID as of Oct 14",
         "Positioned for software engineering, complex legal/finance/cybersecurity multi-step tasks; access rolling out to paid API and Google AI Ultra next",
-        "DeepMind CEO change context: Demis Hassabis stepped down Aug 2026, Koray Kavukcuoglu took over"
+        "DeepMind CEO change context: Demis Hassabis stepped down Aug 2026, Koray Kavukcuoglu took over",
+        "Oct 14 2026: Gemini 4 Argon Safety & Security Report: GCI v1 index across 123 models/92 benchmarks shows 0.091 pts/month pre-April, 0.118 pts/month post-April \u2014 no statistically significant structural speedup in AI research pace",
+        "75%+ production code at DeepMind is AI-written; 88% still requires human review; autonomous code deployments rose 7.5% \u2192 11.9%",
+        "Gemini 4 Argon solved ~50% of internal research engineering tasks (below 90% full-automation red flag threshold); survey of 12 senior researchers: struggles with open-ended ideation"
       ],
       "sources": [
         "https://wtvbam.com/2026/10/13/google-launches-flagship-ai-model-gemini-4-argon-for-developers-businesses/",
         "https://www.eesel.ai/blog/gemini-4-argon-pricing",
-        "https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html"
+        "https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html",
+        "https://decrypt.co/381061/google-deepmind-ai-isnt-building-itself-writes-most-code",
+        "https://cryptobriefing.com/google-deepmind-no-ai-research-acceleration/"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-gpt61-astra-pulled-safety",
