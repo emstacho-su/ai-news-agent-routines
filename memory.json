@@ -311,7 +311,7 @@
       "id": "anthropic-900b-valuation-round",
       "title": "Anthropic in talks for $30B raise at ~$900B valuation; IPO p",
       "first_seen": "2026-05-09",
-      "last_updated": "2026-10-19T12:08:37Z",
+      "last_updated": "2026-10-20T12:09:37.527350+00:00",
       "key_facts": [
         "Multiple preemptive offers at $850B-$900",
         "S-1 confidentially filed June 1 2026; $65B Series H closed May 28 2026",
@@ -342,7 +342,8 @@
         "Oct 15-17 2026: Reuters reports investors discussing ~$1.5T valuation \u2014 ~25% cut from ~$2T consensus \u2014 after Q3 revenue disclosed at $16.8B (+45% QoQ from $11.6B Q2); investors disappointed by slower sequential growth rate",
         "Anthropic says it is profitable on an adjusted basis in Q3 2026",
         "At $1.5T the listing would still be the largest US IPO in history (SpaceX listed at $1.77T in June 2026)",
-        "Oct 18-19 2026: Anthropic commits 5% of shares to new Anthropic Public Benefit Fund; additional 2% discretionary per 50% value step-up above baseline; subject to stockholder approval"
+        "Oct 18-19 2026: Anthropic commits 5% of shares to new Anthropic Public Benefit Fund; additional 2% discretionary per 50% value step-up above baseline; subject to stockholder approval",
+        "Oct 18-19 2026: Anthropic Public Benefit Fund announced \u2014 5% of shares committed, subject to stockholder approval; additional 2% discretionary per 50% value step-up above baseline; designed to lock in PBC mission pre-IPO"
       ],
       "sources": [
         "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/",
@@ -367,10 +368,12 @@
         "https://financefeeds.com/anthropics-14-october-investor-day-nears-but-its-s-1-still-isnt-public-the-ipo-timeline-explained/",
         "https://finance.yahoo.com/markets/stocks/articles/anthropic-investors-now-see-1-122407498.html",
         "https://cryptobriefing.com/anthropic-ipo-valuation-drops-1-5-trillion/",
-        "https://www.unite.ai/anthropic-commits-5-of-its-shares-to-new-public-benefit-fund/"
+        "https://www.unite.ai/anthropic-commits-5-of-its-shares-to-new-public-benefit-fund/",
+        "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+        "https://aljazeera.com/economy/2026/10/19/anthropic-says-it-will-commit-5-of-shares-to-public-benefit-fund"
       ],
       "category": "Anthropic",
-      "coverage_count": 21
+      "coverage_count": 22
     },
     {
       "id": "anthropic-finance-agents-m365",
@@ -8919,6 +8922,47 @@
         "https://aiweekly.co/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "dhs-deepseek-federal-ban-oct-2026",
+      "title": "DHS bans DeepSeek from all federal civilian agency IT systems under FASCSA (Oct 20 2026)",
+      "first_seen": "2026-10-20T12:09:37.527350+00:00",
+      "last_updated": "2026-10-20T12:09:37.527350+00:00",
+      "key_facts": [
+        "DHS invoked Federal Acquisition Supply Chain Security Act of 2018 (FASCSA) to permanently ban DeepSeek from federal civilian agency IT systems; Federal Register docket DHS-2026-0628, published Oct 20 2026",
+        "Three cited threat vectors: PRC server data transfer, intelligence collection on US persons/agencies, potential malware in model weights",
+        "Ban extends to third-party software products and services built on DeepSeek implementations \u2014 not just direct API use; specific product list not published",
+        "Order does not extend to private companies; scope limited to federal civilian agencies"
+      ],
+      "sources": [
+        "https://www.securitymagazine.com/articles/102669-dhs-banning-deepseek-from-us-federal-civilian-agencies",
+        "https://www.bankinfosecurity.com/dhs-bans-deepseek-from-federal-civilian-agencies-a-33146",
+        "https://www.pymnts.com/news/artificial-intelligence/2026/dhs-bans-deepseek-across-federal-government-networks/",
+        "https://www.tftc.io/deepseek-dhs-exclusion-removal-order-civilian-federal-it",
+        "https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/"
+      ],
+      "category": "Policy & Regulation",
+      "coverage_count": 1
+    },
+    {
+      "id": "metis-reasoning-graepel-startup",
+      "title": "Metis Reasoning: AlphaGo co-creator Thore Graepel raises tens of millions for reasoning AI startup",
+      "first_seen": "2026-10-20T12:09:37.527350+00:00",
+      "last_updated": "2026-10-20T12:09:37.527350+00:00",
+      "key_facts": [
+        "Thore Graepel (AlphaGo co-creator, former Google DeepMind principal researcher) left DeepMind summer 2026; founding Metis Reasoning in London",
+        "Raising initial round in tens of millions; possible second tranche in hundreds of millions at higher valuation (Bloomberg Sept 24 2026); terms not confirmed closed",
+        "Focus: AlphaGo-style plan-and-act reasoning for frontier AI \u2014 handling unfamiliar problems and choosing actions under uncertainty; target domains: robotics, science, engineering",
+        "Architecture, product, and commercial model not publicly disclosed; follows David Silver's exit to Ineffable Intelligence (Jan 2026)"
+      ],
+      "sources": [
+        "https://aiweekly.co/alerts/alphago-co-creator-thore-graepel-raises-tens-of-millions-for-ai-reasoning",
+        "https://www.pymnts.com/?p=4229172",
+        "https://cryptobriefing.com/deepmind-graepel-ai-reasoning-startup/",
+        "https://runtimewire.com/article/thore-graepel-ai-reasoning-startup-fundraise"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
