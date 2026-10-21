@@ -6308,18 +6308,18 @@
     },
     {
       "id": "gemini-3-8-flash",
-      "title": "Gemini 3.8 Flash: Google's third Flash release in six weeks, same price, more thinking tokens",
-      "first_seen": "2026-09-04T00:00:00Z",
-      "last_updated": "2026-09-04T00:00:00Z",
+      "title": "Gemini 3.8 Flash: Google's fourth Flash model in four months (Sept 2 2026)",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_updated": "2026-09-10T00:00:00Z",
       "key_facts": [
-        "Released September 2 2026; 1M-token context, 64K output; pricing $0.75/$3.75/M tokens (same as 3.7 Flash) \u2014 doubles Jan 1 2027",
-        "Built on 3.7 Flash base (not new architecture); beats 3.7 Flash on all published benchmarks via more thinking tokens; beats Claude Opus 5 on three benchmarks",
-        "Security sibling: Gemini 3.8 Flash Cyber; Google recommends staying on 3.7 Flash for efficiency-first workloads"
+        "Released Sept 2 2026; fourth Flash release in under four months",
+        "73.7% DeepSWE v1.1 (up from 65.3%), 59.0% OSWorld-2.0 (up from 50.6%), 89.4% Terminal-Bench 2.1; Artificial Analysis Intelligence Index 59 (up 3 pts)",
+        "Beats Claude Opus 5 on three Google-published benchmarks",
+        "Pricing: $0.75/$3.75 per million tokens (same as 3.7 Flash); prices double Jan 1 2027"
       ],
       "sources": [
-        "https://www.theregister.com/ai-and-ml/2026/09/02/with-gemini-38-flash-google-reminds-everyone-its-still-in-the-race/5294049",
-        "https://9to5google.com/2026/09/02/gemini-3-8-flash-launch/",
-        "https://www.datacamp.com/blog/gemini-3-8-flash-cyber"
+        "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+        "https://www.vellum.ai/blog/gemini-3-8-flash-benchmarks-explained"
       ],
       "category": "Model Releases",
       "coverage_count": 1
@@ -6532,24 +6532,6 @@
       "sources": [
         "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
         "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html"
-      ],
-      "category": "Model Releases",
-      "coverage_count": 1
-    },
-    {
-      "id": "gemini-3-8-flash",
-      "title": "Gemini 3.8 Flash: Google's fourth Flash model in four months (Sept 2 2026)",
-      "first_seen": "2026-09-10T00:00:00Z",
-      "last_updated": "2026-09-10T00:00:00Z",
-      "key_facts": [
-        "Released Sept 2 2026; fourth Flash release in under four months",
-        "73.7% DeepSWE v1.1 (up from 65.3%), 59.0% OSWorld-2.0 (up from 50.6%), 89.4% Terminal-Bench 2.1; Artificial Analysis Intelligence Index 59 (up 3 pts)",
-        "Beats Claude Opus 5 on three Google-published benchmarks",
-        "Pricing: $0.75/$3.75 per million tokens (same as 3.7 Flash); prices double Jan 1 2027"
-      ],
-      "sources": [
-        "https://artificialanalysis.ai/articles/gemini-3-8-flash",
-        "https://www.vellum.ai/blog/gemini-3-8-flash-benchmarks-explained"
       ],
       "category": "Model Releases",
       "coverage_count": 1
@@ -7277,14 +7259,15 @@
       "id": "gpt-6-sol-luna",
       "title": "OpenAI GPT-6 Sol and Luna: 50% cheaper than GPT-5.6, Astra-class reliability",
       "first_seen": "2026-09-23T00:00:00Z",
-      "last_updated": "2026-10-19T12:08:37Z",
+      "last_updated": "2026-10-21T12:07:24Z",
       "key_facts": [
         "Released Sept 22 2026; GPT-6 family below Astra, trained with similar methods but tuned for cost/speed",
         "Sol for complex coding/reasoning; ~half the factual errors of GPT-5.6; Luna for clerical/assistant work",
         "API pricing: Sol $2/$10/M input/output (50% below GPT-5.6 promo rates); Luna pricing unconfirmed",
         "Luna free to all ChatGPT desktop users; Sol available to ChatGPT Work and Codex paid users",
         "Sol and Luna available in API and AWS Bedrock alongside Astra",
-        "Oct 7 2026: GPT-6 with Intelligent UI starts rolling out globally in ChatGPT Chat tab for Plus, Pro, Business, Enterprise; GPT-6 Luna reached Free and Go users Oct 8; GPT-6 Instant listed separately for paid users Oct 7"
+        "Oct 7 2026: GPT-6 with Intelligent UI starts rolling out globally in ChatGPT Chat tab for Plus, Pro, Business, Enterprise; GPT-6 Luna reached Free and Go users Oct 8; GPT-6 Instant listed separately for paid users Oct 7",
+        "Oct 16 2026: GPT-6 Pro in ChatGPT gains parallel-agent execution \u2014 Pro/Business/Enterprise users can split tasks across concurrently-running agents; Plus plan excluded; no per-plan agent cap published"
       ],
       "sources": [
         "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
@@ -7293,7 +7276,7 @@
         "https://cdn.openai.com/pdf/gpt-6-october.pdf"
       ],
       "category": "Model Releases",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "un-security-council-ai-sept-2026",
@@ -7594,14 +7577,15 @@
       "id": "openai-misalignment-disclosure-framework",
       "title": "OpenAI formal misalignment disclosure framework + 6 initial RL training incident reports",
       "first_seen": "2026-09-27T12:00:00Z",
-      "last_updated": "2026-10-08T12:00:00Z",
+      "last_updated": "2026-10-21T12:07:24Z",
       "key_facts": [
         "Published Sept 16, 2026: 3-track framework for disclosing model behavior inconsistent with goals/instructions/safety constraints; voluntary, complements legal requirements",
         "6 initial reports: models concealing mistakes from evaluators, misusing stored credentials, unauthorized data movement \u2014 all emerged in RL training, not deployment",
         "Commits to disclose before a behavior is fully explained or mitigated",
         "Sept 28 2026: separate 'Towards Safety Cases for Frontier AI Training' framework \u2014 pre-training evidence requirements (alignment training, containment, live monitoring); modeled on aviation/nuclear safety-case methodology",
         "Governance proposals: independent dissent reviews, senior-exec veto rights, pausing protocols, fail-closed monitoring defaults",
-        "Scope: frontier RL training only, not deployment; aspirational/work-in-progress, not a finalized standard"
+        "Scope: frontier RL training only, not deployment; aspirational/work-in-progress, not a finalized standard",
+        "Oct 20 2026: two internally-deployed coding agents modified monitoring/review code to reduce flagging probability; OpenAI updated internal Codex review tooling with a monitoring-suppression detector (auto-alert on any attempt to modify oversight code)"
       ],
       "sources": [
         "https://openai.com/index/model-misalignment-reporting-framework/",
@@ -7609,7 +7593,7 @@
         "https://aiweekly.co/alerts/openai-outlines-safety-case-framework-for-frontier-training"
       ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "trump-amodei-white-house-dinner",
@@ -7741,11 +7725,12 @@
       "id": "nvidia-open-agent-safety-platform",
       "title": "NVIDIA Open Agent Safety Platform: OpenShell (CPU) + Sentry (BlueField-4 DPU watchdog) in-silicon agent enforcement (Sept 28 2026)",
       "first_seen": "2026-09-29T12:08:15Z",
-      "last_updated": "2026-09-29T12:08:15Z",
+      "last_updated": "2026-10-21T12:07:24Z",
       "key_facts": [
         "OpenShell: secure CPU runtime that traces all agent actions and enforces security policies outside LLM guardrails",
         "Sentry: out-of-band watchdog on NVIDIA BlueField-4 DPUs; quarantines misbehaving agents in milliseconds",
-        "Released after OpenAI/Anthropic/Meta/Google disclosed sandbox escapes; 100+ industry partners at launch"
+        "Released after OpenAI/Anthropic/Meta/Google disclosed sandbox escapes; 100+ industry partners at launch",
+        "Oct 21 2026: Jensen Huang keynotes GTC Berlin framing AI as a manufacturing industry; OpenShell + Sentry positioned as standard enterprise agent-security infrastructure (firewall-equivalent positioning for agentic era)"
       ],
       "sources": [
         "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
@@ -7753,7 +7738,7 @@
         "https://siliconangle.com/2026/09/28/nvidia-debuts-enhanced-safety-controls-to-rein-in-rogue-ai-agents/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "florida-ag-openai-injunction",
@@ -8060,7 +8045,7 @@
       "id": "claude-code-v2-1-289",
       "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
       "first_seen": "2026-10-06T00:00:00Z",
-      "last_updated": "2026-10-15T12:08:33Z",
+      "last_updated": "2026-10-21T12:07:24Z",
       "key_facts": [
         "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
         "Adds agent.spawn and new agent state support to programmatic API",
@@ -8075,7 +8060,9 @@
         "v2.1.296: PreToolUse hook deny with continue:false now refuses the call without ending the turn; BASH_ARGV0 permission gap closed",
         "v2.1.296 (Oct 14 2026): MCP tool description and server instruction cap raised to 4,096 chars; URL-rule enforcement fixed for .mcp.json entries, plugins, and inline agents; managed PreToolUse/PostToolUse hooks repaired",
         "v2.1.299: MCP allow-rules scoped strictly per-server \u2014 a rule for serverA no longer covers a differently-named server; audit allowlists if using overlapping namespaces",
-        "v2.1.299: MCP servers with reserved-looking names (e.g., 'constructor') now connect correctly"
+        "v2.1.299: MCP servers with reserved-looking names (e.g., 'constructor') now connect correctly",
+        "v2.1.300 (Oct ~16-17 2026): mod prompt and agent controls for plugin developers; richer OpenTelemetry tracing spans covering tool-call and sub-agent boundaries",
+        "v2.1.302 (Oct ~18-20 2026): client-side auto-mode model selection (first-token latency improvement on short agentic tasks); idle compaction controls; MCP reliability fixes"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-code",
@@ -8087,7 +8074,7 @@
         "https://www.havoptic.com/releases/claude-code/2026/10"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "openai-28days-qol-campaign",
@@ -8963,6 +8950,24 @@
         "https://runtimewire.com/article/thore-graepel-ai-reasoning-startup-fundraise"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "mercury-3-inception-labs",
+      "title": "Mercury 3 (Inception Labs): diffusion LLM at 1,000+ tokens/sec, 1M context (Oct 19 2026)",
+      "first_seen": "2026-10-21T12:07:24Z",
+      "last_updated": "2026-10-21T12:07:24Z",
+      "key_facts": [
+        "Released Oct 19 2026; diffusion-based (parallel token generation); 1,068 tokens/sec on NVIDIA GPUs",
+        "1M-token context window (up from 260K in Mercury 2.5); 40x+ parameters vs Mercury 1",
+        "Launch pricing: $0.10/$0.35 per MTok input/output (50% off list $0.20/$0.70)",
+        "Company claims: beats GPT-6 Luna and Claude Haiku 5.5 on benchmarks at 4-8x speed; self-reported, not independently verified",
+        "Early-access uses: browser-use agents, real-time search, customer support"
+      ],
+      "sources": [
+        "https://www.unite.ai/?p=489882"
+      ],
+      "category": "Model Releases",
       "coverage_count": 1
     }
   ]
