@@ -9076,6 +9076,26 @@
       ],
       "category": "Research & Technical",
       "coverage_count": 1
+    },
+    {
+      "id": "1password-for-agents",
+      "title": "1Password for Agents: multi-agent credential autofill GA (Oct 22 2026)",
+      "first_seen": "2026-10-24T12:00:00Z",
+      "last_updated": "2026-10-24T12:00:00Z",
+      "key_facts": [
+        "GA launch Oct 22 2026; supports Meta Muse, OpenAI Dots, SpaceXSI Grok Bot, Town's Townie; Claude Duet integration announced as coming soon",
+        "Agent presents digital key to 1Password \u2192 user confirms on device \u2192 1Password fills credentials directly into browser form; agent never sees password/OTP/passkey",
+        "Per-session, per-item approval; opt-in vault access only; agents cannot access vault without explicit connector setup",
+        "Expands July 2026 Claude-only browser login beta to full multi-agent product; caution: authenticated session can still allow agent to take actions beyond credential access"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "https://1password.com/blog/1password-for-ai-agents",
+        "https://thenextweb.com/news/1password-for-agents-ai-agent-logins",
+        "https://www.esecurityplanet.com/artificial-intelligence/news-1password-ai-agent-login-password-security/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
     }
   ]
 }
