@@ -246,21 +246,30 @@
     },
     {
       "id": "claude-security-public-beta",
-      "title": "Claude Security enters public beta: Opus 4.7 vulnerability s",
+      "title": "Claude Security Enterprise public beta: continuous scanning, fix tracking, API/MCP integrations (Oct 2026)",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-08-26T12:00:00Z",
+      "last_updated": "2026-10-25T12:05:48Z",
       "key_facts": [
         "Available at claude.ai/security for Ente",
         "Aug 2026: Claude Security upgraded from Opus 4.7 to Mythos 5 \u2014 substantially deeper scanning depth and exploit-chain reasoning",
         "Mythos 5 added to Claude Security for Enterprise \u2014 codebase scans, vulnerability findings, and suggested patches now run on Mythos 5",
         "Defender Advantage Fund launched: credits and support for security teams using Claude Security",
-        "Cyber Verification Program expanding to additional organizations"
+        "Cyber Verification Program expanding to additional organizations",
+        "Oct 21 2026 Enterprise public beta: continuous scanning (baseline on first connect, delta on each commit, frequency scales to risk/complexity)",
+        "Fix tracking: findings mark resolved when a fix commit lands; automatically reopen if the issue regresses",
+        "Multi-repo project support via Claude GitHub App (incl. GitHub Enterprise Server), GitLab, or Git access token",
+        "API and MCP integrations for programmatic consumption of findings by external tools",
+        "Role-based access controls: separate roles for view, triage, and create project permissions",
+        "$25,000/month usage credits for eligible Enterprise orgs through December 31 2026",
+        "1M+ vulnerabilities found across thousands of organizations since April 2026 beta"
       ],
       "sources": [
-        "https://releasebot.io/updates/anthropic/claude"
+        "https://releasebot.io/updates/anthropic/claude",
+        "https://claude.com/blog/claude-security-now-scans-continuously-and-tracks-fixes",
+        "https://cryptobriefing.com/anthropic-claude-security-continuous-scanning/"
       ],
       "category": "Anthropic",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "anthropic-goldman-blackstone-jv",
@@ -5371,21 +5380,22 @@
       "id": "anthropic-developer-platform-aug-2026",
       "title": "Anthropic Claude Developer Platform: Files API GA, Admin API enterprise beta, Managed Agents session budgets + geo-pinning",
       "first_seen": "2026-08-20T00:00:00Z",
-      "last_updated": "2026-09-08T00:00:00Z",
+      "last_updated": "2026-10-25T12:05:48Z",
       "key_facts": [
         "Files API now GA: beta header dropped, 1 TB per org, 500 req/min, stable pagination with ids[] filter",
         "Admin API (Enterprise beta): manage org members by email, role changes, invites, group membership via API",
         "Managed Agents: session spend budgets (budget_reached stop reason), advisor models, inference geo-pinning, GitHub-hosted skills",
         "Added session budget controls (cap total tokens per agent session), advisor models (separate smaller model vets agent steps), inference geo pinning (lock compute to region for data-residency), and GitHub-hosted skills (skill source lives in a GitHub repo path)",
         "Sept 2026: Admin API user-management endpoints (members, invites, groups, custom roles) out of beta \u2014 now GA for Claude Enterprise orgs",
-        "Sept 2026: Managed Agents web_search and web_fetch now support per-agent allowed_domains and blocked_domains for server-side domain filtering"
+        "Sept 2026: Managed Agents web_search and web_fetch now support per-agent allowed_domains and blocked_domains for server-side domain filtering",
+        "Oct 22 2026: Anthropic-managed Claude API access via Google Cloud \u2014 GCP IAM authentication, Marketplace billing, Opus 5.5 Fast mode on the platform"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-developer-platform",
         "https://platform.claude.com/docs/en/release-notes/overview"
       ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "anthropic-65b-arr-ipo-prep",
@@ -9095,6 +9105,93 @@
         "https://www.esecurityplanet.com/artificial-intelligence/news-1password-ai-agent-login-password-security/"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-review-ga",
+      "title": "Claude Code Review moves to general availability for Team and Enterprise (Oct 2026)",
+      "first_seen": "2026-10-25T12:05:48Z",
+      "last_updated": "2026-10-25T12:05:48Z",
+      "key_facts": [
+        "Code Review exits research preview and is generally available for Team and Enterprise plans as of October 2026",
+        "No separate pricing announced \u2014 included in plan access",
+        "Was in research preview since mid-2026"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "mcp-tasks-elicitations-claude-code-cli",
+      "title": "MCP Tasks and Elicitations land in Claude Code CLI (Oct 23 2026, narrow rollout)",
+      "first_seen": "2026-10-25T12:05:48Z",
+      "last_updated": "2026-10-25T12:05:48Z",
+      "key_facts": [
+        "MCP Tasks: long-running tool calls return a durable handle immediately and continue in background; callers poll or subscribe rather than blocking",
+        "MCP Elicitations: MCP servers can pause mid-execution to request user input, then resume \u2014 enabling human-in-the-loop workflows inside the MCP protocol",
+        "Rollout currently CLI-only; VS Code extension, desktop app, and Bedrock support on roadmap",
+        "First confirmed Claude surface to implement MCP Tasks (added as experimental in 2026-07-28 spec RC)"
+      ],
+      "sources": [
+        "https://forkast.news/claude-ships-mcp-tasks-and-elicitations-in-claude-code-durable-agent-workflows-narrow-launch/",
+        "https://code.claude.com/docs/en/changelog"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "replit-anthropic-openai-switch-2026",
+      "title": "Replit CEO confirms full switch from Anthropic to OpenAI at TechCrunch Disrupt (Oct 16 2026)",
+      "first_seen": "2026-10-25T12:05:48Z",
+      "last_updated": "2026-10-25T12:05:48Z",
+      "key_facts": [
+        "Replit CEO Amjad Masad said company ended Anthropic relationship; cited cost, partnership terms, and model performance",
+        "Replit Free Mode (launched Aug 18 2026) runs on GPT-5.6 Luna; Core subscribers get ~30x more generation for $20/month",
+        "The Information reported the OpenAI deal is worth $100M+/year \u2014 unconfirmed from primary sources",
+        "Replit raised $400M Series D at $9B valuation in March 2026"
+      ],
+      "sources": [
+        "https://www.unite.ai/vi/replit-ceo-masad-says-company-no-longer-works-with-anthropic/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "ai-cve-discovery-2026-66k-vulncheck",
+      "title": "AI-assisted CVE discovery pushing 2026 count to ~66,000; exploitation window shrinks to 80 days",
+      "first_seen": "2026-10-25T12:05:48Z",
+      "last_updated": "2026-10-25T12:05:48Z",
+      "key_facts": [
+        "FIRST 2026 forecast: ~66,000 CVEs expected, up sharply from prior years, driven by AI scanning tools (Anthropic Project Glasswing, GPT-5.4-Cyber) and expanded cataloging",
+        "VulnCheck 1H 2026: only 1.3% of AI-discovered CVEs (14/1,061) showed real-world exploitation \u2014 same as baseline rate",
+        "Project Glasswing: 23,000+ Anthropic findings, 126 published CVEs, 1 confirmed exploited in the wild",
+        "Median time-to-exploitation fell from 120 days (2025) to 80 days (1H 2026) across all CVEs"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/06/15/first-2026-cve-forecast/",
+        "https://www.vulncheck.com/blog/state-of-exploitation-1h-2026",
+        "https://www.infosecurity-magazine.com/news/one-percent-ai-vulnerabilities/"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "cornell-chatbot-partisan-election-study-2026",
+      "title": "Cornell study: Grok chose Republican 92% / GPT chose Democrat 97% in forced-choice midterm simulation",
+      "first_seen": "2026-10-25T12:05:48Z",
+      "last_updated": "2026-10-25T12:05:48Z",
+      "key_facts": [
+        "Cornell-led study forced chatbots to pick candidates in simulated midterm elections",
+        "Grok chose the Republican candidate in 92% of responses; GPT chose the Democrat in 97%",
+        "Study design forced binary choice \u2014 not representative of typical interaction, but concrete measurable partisan skew",
+        "Not yet peer-reviewed per available reporting"
+      ],
+      "sources": [
+        "https://aiweekly.co/ai-news-today"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
