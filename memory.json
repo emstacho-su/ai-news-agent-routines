@@ -147,7 +147,7 @@
       "id": "microsoft-agent-framework-1-0",
       "title": "Microsoft Agent Framework 1.0: production-ready, MCP-native,",
       "first_seen": "2026-05-08",
-      "last_updated": "2026-09-03T00:00:00+00:00",
+      "last_updated": "2026-10-28T12:10:00Z",
       "key_facts": [
         "Released April 3 2026; open-source, prod",
         "v1.8.0 (June 2026): McpSkillsSource for MCP-based skills discovery (agents enumerate and invoke any MCP server's tools as first-class skills); FunctionInvocationContext for progressive tool exposure; background agent support in harness agent; AgentFileStore and FileAccessProvider for file access; provider updates: Bedrock, Foundry, Mistral, A2A, GitHub Copilot, OpenAI",
@@ -168,19 +168,20 @@
         "Python 1.16.0: configurable first-task wait timeouts (prevents premature timeouts during slow agent bootstrap), richer OpenTelemetry and OTLP setup, safety improvements to core execution, provider metadata and finish-reason preservation fixes",
         ".NET 1.19.0: session-persisted chat client routing; Azure Blob Storage session persistence; hosted agent state in Foundry",
         ".NET 1.19.0: experimental agent-hooks interception (pre/post hooks around agent turns for logging/validation/modification)",
-        ".NET 1.19.0: updated long-running task support for MCP"
+        ".NET 1.19.0: updated long-running task support for MCP",
+        "v1.20.0 (Oct 2 2026): approval-handling primitive \u2014 agents emit ApprovalRequest, pause, resume on external outcome; MCP runtime hardening \u2014 server misconfigurations now return actionable errors instead of silent failures"
       ],
       "sources": [
-        "https://devblogs.microsoft.com/agent-framework/",
-        "https://releasebot.io/updates/microsoft",
-        "https://www.infoq.com/news/2026/08/agent-framework-harness-ga/",
-        "https://nerdleveltech.com/agent-harness-ga-microsoft-agent-framework",
+        "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.19.0",
         "https://devblogs.microsoft.com/agent-framework/the-microsoft-agent-framework-harness-is-now-released/",
+        "https://devblogs.microsoft.com/agent-framework/",
+        "https://www.infoq.com/news/2026/08/agent-framework-harness-ga/",
         "https://github.com/microsoft/agent-framework/releases",
-        "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.19.0"
+        "https://nerdleveltech.com/agent-harness-ga-microsoft-agent-framework",
+        "https://releasebot.io/updates/microsoft"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 11
+      "coverage_count": 12
     },
     {
       "id": "gpt-5-5-instant-chatgpt-default",
@@ -2534,21 +2535,23 @@
       "id": "claude-tag-slack",
       "title": "Claude Tag: persistent Slack AI teammate with ambient mode (June 23 2026)",
       "first_seen": "2026-06-24T12:10:00Z",
-      "last_updated": "2026-06-24T12:10:00Z",
+      "last_updated": "2026-10-28T12:10:00Z",
       "key_facts": [
         "Launched June 23 2026 in beta for Team and Enterprise plans; replaces existing Claude for Slack app (30-day opt-in migration)",
         "Joins Slack channels as named team member with persistent context from channel history and connected tools; supports @-mention delegation",
         "Ambient mode: Claude proactively surfaces relevant info across channels and follows up on stalled threads without explicit prompting",
         "Works with MCP connectors: Jira, GitHub, Google Drive, and others; runs on Opus 4.8 (Fable 5 suspended)",
-        "Anthropic internal: 65% of product-team code is now written by their own Tag deployment"
+        "Anthropic internal: 65% of product-team code is now written by their own Tag deployment",
+        "Oct 20 2026: Claude Tag API in Enterprise beta \u2014 exposes channel-memory and ambient-monitoring primitives programmatically; orgs can embed Tag in custom internal apps beyond Slack"
       ],
       "sources": [
-        "https://www.anthropic.com/news/introducing-claude-tag",
+        "https://releasebot.io/updates/anthropic/claude-developer-platform",
         "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/",
-        "https://thenextweb.com/news/anthropic-claude-tag-slack-always-on-ai-teammate"
+        "https://thenextweb.com/news/anthropic-claude-tag-slack-always-on-ai-teammate",
+        "https://www.anthropic.com/news/introducing-claude-tag"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "oracle-sec-ai-layoffs",
@@ -3122,7 +3125,7 @@
       "id": "claude-cowork-web-mobile",
       "title": "Claude Cowork expands to web and mobile; adds Microsoft 365 write tools (July 2026)",
       "first_seen": "2026-07-08T12:00:00Z",
-      "last_updated": "2026-09-24T00:00:00Z",
+      "last_updated": "2026-10-28T12:10:00Z",
       "key_facts": [
         "Claude Cowork \u2014 agentic workspace with persistent context \u2014 now available on web and mobile in addition to desktop app",
         "Added Microsoft 365 write tools: email drafting, calendar management, OneDrive/SharePoint file creation from within Cowork session",
@@ -3133,15 +3136,18 @@
         "Safety classifiers review actions on external sites; Claude never sees user's personal tabs, bookmarks, or passwords",
         "Available on Pro, Max, Team, and Enterprise plans",
         "Claude Docs and Claude Slides launched in beta September 16 2026 \u2014 Cowork, chat, and Design merged into single interface; Docs exports to Word/Google Docs, Slides to PowerPoint/PDF/Google Slides",
-        "Claude now autonomously picks which tool to use mid-conversation (browse, document, slide deck in one session); Design operates inside conversations"
+        "Claude now autonomously picks which tool to use mid-conversation (browse, document, slide deck in one session); Design operates inside conversations",
+        "Oct 23 2026: Enterprise plans get unified Chat + Cowork with RBAC (viewer/member/admin), per-seat usage management dashboard, and Efficient mode (routes to lighter models for cost governance without user-visible impact)"
       ],
       "sources": [
-        "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/",
+        "https://mlq.ai/news/anthropic-adds-built-in-web-browser-to-claude-code-desktop-app/",
+        "https://www.anthropic.com/news/announcements",
         "https://claude.com/blog/cowork-built-in-browser",
-        "https://mlq.ai/news/anthropic-adds-built-in-web-browser-to-claude-code-desktop-app/"
+        "https://aimaker.substack.com/p/claude-code-updates-october-2026",
+        "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
       ],
       "category": "Anthropic",
-      "coverage_count": 4
+      "coverage_count": 5
     },
     {
       "id": "claude-for-government-desktop-beta",
@@ -9305,6 +9311,42 @@
         "https://investinglive.com/stocks/spacex-seeks-40-billion-in-debt-led-by-apollo-to-fund-nvidia-chip-order-ft-says/"
       ],
       "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "azure-mcp-server-3-0",
+      "title": "Azure MCP Server 3.0 stable: Terraform, SRE Agent toolsets, namespace rename breaking change",
+      "first_seen": "2026-10-28T12:10:00Z",
+      "last_updated": "2026-10-28T12:10:00Z",
+      "key_facts": [
+        "Stable release Oct 12 2026; consolidates ~50 beta iterations",
+        "New toolsets: Azure Backup, Resilience Management, Terraform, Optimization, Azure SRE Agent (55 commands; preview resource provider)",
+        "Terraform integration: pull provider docs + Azure Verified Modules, export resources, validate policy",
+        "--learn flag for dry-run exploration without executing Azure operations",
+        "Structured output opt-in; new Storage accounts disable Shared Key auth by default",
+        "Breaking change: Azure.Mcp.Core.* namespace renamed to Microsoft.Mcp.Core.* \u2014 breaks reflection-based serialization silently on upgrade"
+      ],
+      "sources": [
+        "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-3-0-stable-release/",
+        "https://visualstudiomagazine.com/articles/2026/10/20/azure-mcp-server-3-0-adds-cloud-operations-tools-for-ai-agents.aspx"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "tanstack-ai-1-0",
+      "title": "TanStack AI 1.0 stable: headless AI primitives with MCP, agent, and subagent support",
+      "first_seen": "2026-10-28T12:10:00Z",
+      "last_updated": "2026-10-28T12:10:00Z",
+      "key_facts": [
+        "1.0 stable released Oct 27 2026; 76 packages stabilized",
+        "Supports agents, subagents, MCP server integration, coding-agent workflows, sandboxes, multi-provider adapters",
+        "Framework-agnostic: React, Solid, Vue, Svelte, Angular; semver stable \u2014 no breaking changes without major version"
+      ],
+      "sources": [
+        "https://www.thetoolnerd.com/p/new-ai-tools-this-week-oct-27-2026"
+      ],
+      "category": "Tools & Frameworks",
       "coverage_count": 1
     }
   ]
