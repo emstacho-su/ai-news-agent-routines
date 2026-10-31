@@ -8701,7 +8701,7 @@
       "id": "mistral-large-4-le-chonk",
       "title": "Mistral Large 4 'Le Chonk': 1T-parameter MoE, multimodal, API preview (Oct 6 2026)",
       "first_seen": "2026-10-15T12:08:33Z",
-      "last_updated": "2026-10-30T12:06:36Z",
+      "last_updated": "2026-10-31T12:00:00Z",
       "key_facts": [
         "1 trillion parameters total, 49B active per token; mixture-of-experts architecture",
         "Multimodal: handles documents, charts, images",
@@ -8710,17 +8710,20 @@
         "Built on 4,000 Nvidia chips over two months",
         "Open weights targeting October 31 2026 per Hugging Face listing (Mistral only committed to end of October)",
         "Custom Mistral license (not Apache 2.0 as with Large 3); RL training still ongoing, further gains expected",
-        "Active parameter count discrepancy: 49B in launch post vs 52B on model page \u2014 unresolved"
+        "Active parameter count discrepancy: 49B in launch post vs 52B on model page \u2014 unresolved",
+        "Oct 31 2026: Hugging Face listing confirms weights dropping today under custom Mistral license (not Apache 2.0); RL-updated checkpoint included",
+        "Active parameter discrepancy unresolved: 49B in launch post vs 52B on model page"
       ],
       "sources": [
         "https://alternativeto.net/news/2026/10/mistral-unveils-mistral-large-4-le-chonk--a-new-frontier-in-open-weight-ai-models/",
         "https://www.itpro.com/technology/artificial-intelligence/meet-le-chonk-everything-you-need-to-know-about-mistrals-new-open-weight-ai-model",
         "https://tech.eu/2026/10/06/mistral-unveils-le-chonk-says-outperforms-any-open-weight-model-developed-in-the-us-or-europe/",
         "https://aiweekly.co/alerts/mistrals-1t-parameter-large-4-slated-for-october-31-drop",
-        "https://betanews.com/article/mistral-large-4-preview-open-weights/"
+        "https://betanews.com/article/mistral-large-4-preview-open-weights/",
+        "https://thenewstack.io/mistral-large-4-weights/"
       ],
       "category": "Model Releases",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "snyk-evo-agentic-appsec",
@@ -9458,6 +9461,59 @@
         "https://www.implicator.ai/chinese-hackers-double-attack-volume-deepseek/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "apple-creator-studio-mcp",
+      "title": "Apple Creator Studio: MCP support in Keynote, Pages, Numbers + AI assistants (Oct 27 2026)",
+      "first_seen": "2026-10-31T12:00:00Z",
+      "last_updated": "2026-10-31T12:00:00Z",
+      "key_facts": [
+        "Oct 27 2026: Apple updated Creator Studio; Keynote, Pages, Numbers, Logic Pro get AI assistants built on Apple + OpenAI models",
+        "MCP (beta) added to Keynote, Pages, Numbers on macOS 27; external AI agents can read, edit, and automate iWork documents",
+        "Keynote introduces open JSON-based .keyx file format designed for developer tooling and AI agent access",
+        "US English beta only; ships as free update to Creator Studio subscribers in November 2026; no iOS/iPadOS MCP at launch"
+      ],
+      "sources": [
+        "https://daringfireball.net/linked/2026/10/27/apple-creator-studio-updates",
+        "https://www.ithinkdiff.com/keynote-pages-numbers-mcp-support-keyx/",
+        "https://letsdatascience.com/news/apple-adds-motionvfx-ai-assistants-and-mcp-support-to-creato-61063603"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-30b-round-125t",
+      "title": "OpenAI trims $30B fundraising round valuation target from $1.4T to $1.25T (Oct 23 2026)",
+      "first_seen": "2026-10-31T12:00:00Z",
+      "last_updated": "2026-10-31T12:00:00Z",
+      "key_facts": [
+        "OpenAI lowered valuation target for new $30B round from ~$1.4T to $1.25T after investor pushback; per FT reporting ~Oct 23 2026",
+        "UAE investors and Coatue leading; round still in negotiation, terms subject to change",
+        "Prior closed round (Mar 2026): $122B at $852B post-money valuation; $1.25T would be ~47% step-up in ~7 months"
+      ],
+      "sources": [
+        "https://thenextweb.com/news/openai-funding-round-1-25tn-uae-coatue",
+        "https://www.newsquawk.com/headlines/openai-trims-valuation-target-to-usd125tln-after-previously-pitching-a-higher-price-according-to-ft"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-ai-mode-ads-global",
+      "title": "Google expands AI Mode ads to 10 countries + US multiturn ads (Oct 28 2026)",
+      "first_seen": "2026-10-31T12:00:00Z",
+      "last_updated": "2026-10-31T12:00:00Z",
+      "key_facts": [
+        "Oct 28 2026: Google announced ads in AI Mode expanding to Australia, Canada, India, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, Philippines, Singapore",
+        "Multiturn ads launching in US: sponsored results that persist across follow-up queries in same AI Mode session, labeled 'Sponsored'",
+        "Brazil, Mexico, UK planned for Q4 2026; AI Mode itself available in 200+ countries"
+      ],
+      "sources": [
+        "https://www.seroundtable.com/google-expands-ads-ai-mode-42412.html",
+        "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
