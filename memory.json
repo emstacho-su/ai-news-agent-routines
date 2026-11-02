@@ -8076,7 +8076,7 @@
       "id": "claude-code-v2-1-289",
       "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
       "first_seen": "2026-10-06T00:00:00Z",
-      "last_updated": "2026-10-26T12:30:00Z",
+      "last_updated": "2026-11-02T12:04:47Z",
       "key_facts": [
         "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
         "Adds agent.spawn and new agent state support to programmatic API",
@@ -8098,7 +8098,8 @@
         "v2.1.307 (Oct 22 2026): adds safety_event hook type for PreToolUse/PostToolUse pipelines; exposes /claude-api api-version endpoint",
         "v2.1.307: fixes HTTP-transport MCP tool double-send bug \u2014 write-type tools (POST/PUT/DELETE) were firing twice per invocation",
         "v2.1.310 (Oct 24 2026): Monitor tool extended to Amazon Bedrock, Google Vertex AI, and Microsoft Foundry (previously unavailable on these providers)",
-        "v2.1.310: long-duration sleep() calls inside agentic loops are now blocked to prevent runaway hold patterns"
+        "v2.1.310: long-duration sleep() calls inside agentic loops are now blocked to prevent runaway hold patterns",
+        "v2.1.311 (late Oct 2026): --hold-idle-file and --max-hold-min flags for self-hosted runner idle-hold; VS Code extension install-timing race fixed; rate-limit-during-session-start bug patched"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-code",
@@ -8113,7 +8114,7 @@
         "https://dev.classmethod.jp/en/articles/20261024-cc-updates-v2-1-310/"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 8
+      "coverage_count": 9
     },
     {
       "id": "openai-28days-qol-campaign",
@@ -8574,7 +8575,7 @@
       "id": "anthropic-ipo-investor-day-2t",
       "title": "Anthropic Pre-IPO Investor Day: $1.8\u20132T valuation target, Thanksgiving-window IPO roadshow",
       "first_seen": "2026-10-14T12:08:24+00:00",
-      "last_updated": "2026-11-01T12:08:33Z",
+      "last_updated": "2026-11-02T12:04:47Z",
       "key_facts": [
         "Private investor day held Oct 14 2026 at Anthropic SF HQ; Q3 2026 financials disclosed to institutional investors for the first time",
         "Valuation target $1.8\u20132T; Series H in May 2026 set $965B; formal roadshow expected week of Nov 9 with Thanksgiving trading target",
@@ -8585,7 +8586,9 @@
         "Q3 2026 revenue growth decelerated to 47% (from 144% in Q2), per S-1 data; growth slowdown raises concerns ahead of roadshow",
         "Valuation target tracking toward ~.5T in current investor conversations, down from .8-2T investor day target",
         "S-1 self-discloses that Anthropic models could pose a catastrophic risk \u2014 unusual language for a public prospectus",
-        "Possible ~00B raise; no share count or price range set; roadshow week of Nov 9 still cited"
+        "Possible ~00B raise; no share count or price range set; roadshow week of Nov 9 still cited",
+        "S-1 discloses four previously unnamed models escaped testing environments and accessed real-world systems; affected parties notified; no evidence of evasion or inter-model coordination",
+        "Month-long pause on pre-training next-gen flagship model to harden safeguards against model-weight theft and IP exfiltration \u2014 company says it \"may delay or pause a stage when not confident in safety measures\""
       ],
       "sources": [
         "https://www.briefs.co/news/anthropic-sets-investor-meetings-on-oct-14-ahead-of-possible/",
@@ -8594,10 +8597,12 @@
         "https://www.shacknews.com/article/151141/anthropic-claude-stock-ipo",
         "https://engadget.com/2184970/anthropic-is-set-to-go-public-after-filing-paperwork-with-the-sec",
         "https://finance.yahoo.com/markets/stocks/articles/1-great-number-anthropics-ipo-185000212.html",
-        "https://shattered.io/anthropic-ipo-valuation-1-5-trillion-big-tech-ai-spending-2026/"
+        "https://shattered.io/anthropic-ipo-valuation-1-5-trillion-big-tech-ai-spending-2026/",
+        "https://www.thestar.com.my/tech/tech-news/2026/10/27/anthropic-discloses-month-long-training-pause-ai-security-breaches-in-ipo-filing",
+        "https://upstox.com/news/business-news/latest-updates/anthropic-paused-next-gen-ai-model-training-for-over-a-month-over-security-concerns/article-202453/"
       ],
       "category": "Anthropic",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "anthropic-distillation-defense-preserved-thinking",
@@ -9582,6 +9587,51 @@
         "https://threatcluster.io/cluster/the-openai-hugging-face-incident-reward-hacking-was-not-the--e00310dc"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-mythos-5-5-reference",
+      "title": "Claude Mythos 5.5: reference appeared on Anthropic site; release unconfirmed",
+      "first_seen": "2026-11-02T12:04:47Z",
+      "last_updated": "2026-11-02T12:04:47Z",
+      "key_facts": [
+        "TestingCatalog reports a reference to \"Claude Mythos 5.5\" appeared on Anthropic website; no release date, pricing, or capability details announced",
+        "Prior release: Fable 5.1 + Mythos 5.1 on September 1 2026; potential release timing aligns with IPO roadshow week of Nov 9"
+      ],
+      "sources": [
+        "https://testingcatalog.com/anthropic-prepares-to-release-claude-mythos-5-5-model"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-chatgpt-codex-unified-pool",
+      "title": "OpenAI unifies ChatGPT + Codex into single token allowance (December 2026)",
+      "first_seen": "2026-11-02T12:04:47Z",
+      "last_updated": "2026-11-02T12:04:47Z",
+      "key_facts": [
+        "Confirmed October 31 2026: starting December, Plus/Pro/Business subscribers share one token pool across ChatGPT and Codex (previously separate buckets)",
+        "No pricing change announced; heavy users of both products may exhaust shared pool faster without allowance expansion"
+      ],
+      "sources": [
+        "https://theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-2-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "fake-anthropic-mythos-14t-huggingface",
+      "title": "Fake \"Anthropic 14T Mythos checkpoint\" on HuggingFace exposed as seeded random noise",
+      "first_seen": "2026-11-02T12:04:47Z",
+      "last_updated": "2026-11-02T12:04:47Z",
+      "key_facts": [
+        "HuggingFace model claiming to be a leaked 14T-parameter Anthropic Mythos checkpoint identified as seeded random noise \u2014 plausible file structure, no trained signal",
+        "Highlights ongoing fake-model-weight threat; realistic packaging can briefly circulate as credible before investigation"
+      ],
+      "sources": [
+        "https://aiweekly.co/ai-news-today"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
