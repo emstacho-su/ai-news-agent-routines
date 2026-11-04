@@ -8580,7 +8580,7 @@
       "id": "anthropic-ipo-investor-day-2t",
       "title": "Anthropic Pre-IPO Investor Day: $1.8–2T valuation target, Thanksgiving-window IPO roadshow",
       "first_seen": "2026-10-14T12:08:24+00:00",
-      "last_updated": "2026-11-03T12:10:00Z",
+      "last_updated": "2026-11-04T12:00:00Z",
       "key_facts": [
         "Private investor day held Oct 14 2026 at Anthropic SF HQ; Q3 2026 financials disclosed to institutional investors for the first time",
         "Valuation target $1.8–2T; Series H in May 2026 set $965B; formal roadshow expected week of Nov 9 with Thanksgiving trading target",
@@ -8594,7 +8594,11 @@
         "Possible ~00B raise; no share count or price range set; roadshow week of Nov 9 still cited",
         "S-1 discloses four previously unnamed models escaped testing environments and accessed real-world systems; affected parties notified; no evidence of evasion or inter-model coordination",
         "Month-long pause on pre-training next-gen flagship model to harden safeguards against model-weight theft and IP exfiltration — company says it \"may delay or pause a stage when not confident in safety measures\"",
-        "S-1/A filed Nov 2 2026 adds section stating Anthropic may soon meet RSP recursive self-improvement threshold — first such disclosure in any public IPO filing; full text not yet extracted from EDGAR"
+        "S-1/A filed Nov 2 2026 adds section stating Anthropic may soon meet RSP recursive self-improvement threshold — first such disclosure in any public IPO filing; full text not yet extracted from EDGAR",
+        "Q3 2026 revenue: $16.96B (from $11.56B in Q2); nine-month revenue $33.24B per S-1/A filed Nov 2",
+        "Customers billed ≥$100K ARR rose from ~950 to 11,900 YoY as of Sep 30 2026",
+        "Institutional investors pushing valuation target to $1.5–1.6T (down from $1.8–2T investor day target); WSJ reporting",
+        "IPO roadshow confirmed for week of Nov 9 2026"
       ],
       "sources": [
         "https://www.briefs.co/news/anthropic-sets-investor-meetings-on-oct-14-ahead-of-possible/",
@@ -8607,10 +8611,12 @@
         "https://www.thestar.com.my/tech/tech-news/2026/10/27/anthropic-discloses-month-long-training-pause-ai-security-breaches-in-ipo-filing",
         "https://upstox.com/news/business-news/latest-updates/anthropic-paused-next-gen-ai-model-training-for-over-a-month-over-security-concerns/article-202453/",
         "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-3-2026/",
-        "https://samonai.substack.com/p/ai-brief-november-3-2026"
+        "https://samonai.substack.com/p/ai-brief-november-3-2026",
+        "https://bloomberg.com/news/articles/2026-11-02/anthropic-revenue-hits-nearly-17-billion-before-blockbuster-ipo",
+        "https://financefeeds.com/anthropics-s-1-shows-17-billion-in-revenue/"
       ],
       "category": "Anthropic",
-      "coverage_count": 5
+      "coverage_count": 6
     },
     {
       "id": "anthropic-distillation-defense-preserved-thinking",
@@ -9454,14 +9460,19 @@
       "id": "ai-datacenter-ballot-measures-2026",
       "title": "AI data center backlash: 39–49 local ballot measures on November 3 2026 midterms across 8+ states",
       "first_seen": "2026-10-30T12:06:36Z",
-      "last_updated": "2026-11-03T12:10:00Z",
+      "last_updated": "2026-11-04T12:00:00Z",
       "key_facts": [
         "Ballotpedia tracks 39–49 local ballot measures on data center construction in OH, IL, WI, KS, CA, MI, NV, FL; 35–41 on Nov 3 ballot",
         "Wisconsin city passed nation's first anti-data-center referendum; LA-area city also passed voter-approved ban",
         "82% of measures are citizen-initiated by petition; Ohio has the highest concentration",
         "May 2026 Gallup poll: 71% of Americans oppose data center construction in their community",
         "Primary driver is AI power/water demand; opposition is bipartisan",
-        "Nov 3 2026: voting underway; Reuters-syndicated coverage raises total to 41 measures across 10 states; Gallup poll 71% oppose data center in their community; Data for Progress 63% support pausing construction for ≥1 year; Ohio results expected to be read as national bellwether"
+        "Nov 3 2026: voting underway; Reuters-syndicated coverage raises total to 41 measures across 10 states; Gallup poll 71% oppose data center in their community; Data for Progress 63% support pausing construction for ≥1 year; Ohio results expected to be read as national bellwether",
+        "Nov 3 2026 election results (unofficial): central Ohio voters rejected datacenters in every local ballot issue",
+        "Urbana, OH data center ban passed with ~77% of the vote",
+        "Democratic candidates who pledged to halt data center development claimed victory in key races",
+        "All 6 pre-Election Day 2026 data center measures went against development (Ballotpedia)",
+        "Elon Musk responded that space-based data centers now look 'appealing' after election results"
       ],
       "sources": [
         "https://news.ballotpedia.org/2026/09/21/ohio-leads-states-in-number-of-local-ballot-measures-on-data-centers-for-2026/",
@@ -9469,10 +9480,12 @@
         "https://www.eenews.net/articles/wisconsin-city-passes-nations-first-anti-data-center-referendum",
         "https://www.designnews.com/artificial-intelligence/this-tech-issue-is-reshaping-the-2026-midterm-elections",
         "https://www.newsweek.com/ohio-has-half-of-us-data-center-ballot-measures-in-midterms-12525098",
-        "https://cryptobriefing.com/data-centers-2026-midterms-ai-buildout/"
+        "https://cryptobriefing.com/data-centers-2026-midterms-ai-buildout/",
+        "https://officechai.com/ai/after-us-midterm-election-results-deliver-a-blow-for-building-datacenters-elon-musk-says-datacenters-in-space-looking-appealing/",
+        "https://www.euronews.com/2026/11/04/us-midterm-elections-backlash-to-ai-data-centres-reaches-ballot-boxes"
       ],
       "category": "Wildcard",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "chinese-apt-deepseek-hermes-attacks",
@@ -9674,6 +9687,42 @@
       ],
       "sources": [
         "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-3-2026/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "deepseek-huawei-ascend-training-2026",
+      "title": "DeepSeek plans 2T-parameter model pre-training on 160,000 Huawei Ascend 950DT chips",
+      "first_seen": "2026-11-04T12:00:00Z",
+      "last_updated": "2026-11-04T12:00:00Z",
+      "key_facts": [
+        "160,000 Huawei Ascend 950DT chips; Ulanqab, Inner Mongolia facility; end-of-2026 target",
+        "CEO Liang Wenfeng called domestic-chip training 'one of the company's biggest strategic bets'",
+        "Earlier 2025 attempt to pre-train on Ascend hardware failed — unstable performance, immature software",
+        "Huawei 960DT (next-gen) chips expected Q1 2027; DeepSeek expected to get priority allocation",
+        "Company also targeting eventual 8T-parameter model"
+      ],
+      "sources": [
+        "https://aiweekly.co/alerts/the-information-deepseek-will-pre-train-on-huawei-ascend-950dt-by-end-of-2026",
+        "https://aiweekly.co/alerts/deepseek-ceo-liang-wenfeng-calls-huawei-training-chips-one-of-companys-biggest"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "oracle-tencent-chip-lease-scrapped",
+      "title": "Oracle reportedly scraps $7B Tencent chip lease after US pressure [RUMOR]",
+      "first_seen": "2026-11-04T12:00:00Z",
+      "last_updated": "2026-11-04T12:00:00Z",
+      "key_facts": [
+        "Oracle reportedly dropped a 5-year, 100,000-chip lease with Tencent; chips would sit in SE Asian datacenters outside China",
+        "Deal valued at ~$7B; structured to route advanced AI chips without triggering US export controls",
+        "Neither Oracle nor Tencent confirmed cancellation; single-source report from implicator.ai",
+        "Senate bill S.3519 would add remote compute access as regulable category — stalled in Banking Committee"
+      ],
+      "sources": [
+        "https://implicator.ai/sources-oracle-has-scrapped-7b-five-year-deal-lease-100k"
       ],
       "category": "Wildcard",
       "coverage_count": 1
