@@ -8149,7 +8149,7 @@
       "id": "claude-code-v2-1-289",
       "title": "Claude Code v2.1.289: plugin/shell safety fixes, agent.spawn API, MCP OAuth re-auth",
       "first_seen": "2026-10-06T00:00:00Z",
-      "last_updated": "2026-11-08T12:07:02.324814Z",
+      "last_updated": "2026-11-10T12:08:00Z",
       "key_facts": [
         "Fixes plugin, terminal, and shell-command safety issues; improves large file rendering",
         "Adds agent.spawn and new agent state support to programmatic API",
@@ -8177,7 +8177,10 @@
         "v2.1.317: email check runs before tool actions as privacy guardrail",
         "v2.1.318 (Nov. 3): 'claude auth status' surfaces sign-in expiry time",
         "v2.1.319: MCP tasks run as background processes in the terminal natively (no feature flag needed); CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1 reverts to synchronous wait; CLAUDE_CODE_DISABLE_MCP_TASKS=1 disables Tasks extension entirely",
-        "v2.1.319: fixes MCP servers using older handshake failing to connect or returning empty results"
+        "v2.1.319: fixes MCP servers using older handshake failing to connect or returning empty results",
+        "v2.1.317: MCP URL link card shown in cloud sessions when MCP server requests Claude open a URL; user can open or decline \u2014 closes silent redirect/exfiltration vector",
+        "v2.1.318: admins can block specific Anthropic-provided MCP servers by upstream URL using deniedMcpServers entries in policy, independent of server name",
+        "v2.1.319: permissions.denyInsteadOfPrompting policy flag converts interactive permission prompts to silent denials \u2014 useful in CI/automated Routine runs"
       ],
       "sources": [
         "https://releasebot.io/updates/anthropic/claude-code",
@@ -8190,10 +8193,11 @@
         "https://dev.classmethod.jp/en/articles/20261022-cc-updates-v2-1-307/",
         "https://dev.classmethod.jp/en/articles/20261021-cc-updates-v2-1-306/",
         "https://dev.classmethod.jp/en/articles/20261024-cc-updates-v2-1-310/",
-        "https://claude-world.com/articles/claude-code-november-2026-whats-new/"
+        "https://claude-world.com/articles/claude-code-november-2026-whats-new/",
+        "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-november-8-2026-485k"
       ],
       "category": "Tools & Frameworks",
-      "coverage_count": 11
+      "coverage_count": 12
     },
     {
       "id": "openai-28days-qol-campaign",
@@ -10096,6 +10100,44 @@
         "https://github.com/somewordstoolate/DailyArXiv/issues/361"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-fable-5-2-mythos-5-2",
+      "title": "Claude Fable 5.2 and Mythos 5.2: 30% faster, 20% cheaper API, 1M context (Nov 9 2026)",
+      "first_seen": "2026-11-10T12:08:00Z",
+      "last_updated": "2026-11-10T12:08:00Z",
+      "key_facts": [
+        "Released Nov 9 2026; share one underlying model \u2014 Fable 5.2 public with cybersecurity/biology safeguards; Mythos 5.2 safeguards partially lifted, vetted-org access only via Cyber Verification Program tiers",
+        "API pricing: $8/M input, $40/M output \u2014 20% reduction from Fable/Mythos 5.1 ($10/$50); output up to 30% faster than 5.1",
+        "Fast mode: up to 2.5x token generation speed in Claude Code, Claude Platform, Google Cloud, Microsoft Foundry; 1M-token context; 128K max output tokens",
+        "Mythos 5.2: 89.6% on Anthropic CVE Rediscovery benchmark (up from 78.3% Mythos 5.1); Fable 5.2 ~55% fewer safety blocks than Fable 5.1",
+        "[COMPANY CLAIM, UNVERIFIED] Fable 5.2 reportedly helped formalize part of Fermat's Last Theorem and solved two open problems in black hole physics"
+      ],
+      "sources": [
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/",
+        "https://www.digitaltrends.com/computing/claude-fable-5-2-and-mythos-5-2-are-here-to-raise-the-bar-for-ai-coding-and-scientific-research/",
+        "https://www.datacamp.com/blog/claude-fable-5-2-and-mythos-5-2"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "anthropic-ai-for-science-20-partners",
+      "title": "Anthropic AI for Science expands to 20 institutional partners for Claude credit distribution (Oct 28 2026)",
+      "first_seen": "2026-11-10T12:08:00Z",
+      "last_updated": "2026-11-10T12:08:00Z",
+      "key_facts": [
+        "Oct 28 2026: Anthropic named 20 scientific foundations and research institutions as AI for Science distribution partners; shift from individual applicant grants to institution-mediated model",
+        "Named partners include NSF, Simons Foundation, Schmidt Sciences; researchers apply through partners for up to $50K credits per project",
+        "Program scope expanded beyond biology to all scientific fields (following Aug 2026 expansion to non-biology disciplines)"
+      ],
+      "sources": [
+        "https://aiweekly.co/alerts/anthropic-adds-20-partners-to-its-ai-for-science-program",
+        "https://cryptobriefing.com/anthropic-expands-ai-for-science-program/"
+      ],
+      "category": "Anthropic",
       "coverage_count": 1
     }
   ]
