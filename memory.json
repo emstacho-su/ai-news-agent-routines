@@ -8658,7 +8658,7 @@
       "id": "anthropic-ipo-investor-day-2t",
       "title": "Anthropic Pre-IPO Investor Day: $1.8\u20132T valuation target, Thanksgiving-window IPO roadshow",
       "first_seen": "2026-10-14T12:08:24+00:00",
-      "last_updated": "2026-11-09T12:10:00Z",
+      "last_updated": "2026-11-11T12:06:47Z",
       "key_facts": [
         "Private investor day held Oct 14 2026 at Anthropic SF HQ; Q3 2026 financials disclosed to institutional investors for the first time",
         "Valuation target $1.8\u20132T; Series H in May 2026 set $965B; formal roadshow expected week of Nov 9 with Thanksgiving trading target",
@@ -8688,7 +8688,12 @@
         "Bloomberg (Nov 2026): Anthropic disclosed $895B in supplier spending commitments ahead of IPO \u2014 far above the $517B compute figure from Sept 2026, likely reflecting expanded cloud-infra agreements with Amazon, Google, Microsoft",
         "Nov 9 2026: IPO roadshow marketing live; valuation talk drifted further to $1.2-1.3T (Bloomberg); WSJ: 3 investors eyeing below $1.3T, one near $1T \u2014 ~50% compression from $1.8-2T Oct investor day target",
         "AI-sector selloff context: Nasdaq -5% wk/wk, Nvidia -5% Nov 9 premarket; Kalshi IPO-before-Dec odds held >80% as of Nov 8",
-        "FT: Anthropic targeting $80-100B raise on $1.25-1.75T range; earliest trading est. Nov 16 2026"
+        "FT: Anthropic targeting $80-100B raise on $1.25-1.75T range; earliest trading est. Nov 16 2026",
+        "$70-78/share price range filed in amended S-1 (Nov 10 2026)",
+        "825M Class A shares; underwriters option for 123.75M additional",
+        "Symbol ANT on Nasdaq Global Select Market, 22 underwriters led by Goldman Sachs and Morgan Stanley",
+        "WSJ reports pricing Nov 18, trading commencing Nov 19",
+        "Fully diluted valuation ~$1.3-1.4T at midpoint"
       ],
       "sources": [
         "https://www.briefs.co/news/anthropic-sets-investor-meetings-on-oct-14-ahead-of-possible/",
@@ -8712,10 +8717,13 @@
         "https://www.benzinga.com/markets/private-markets/26/11/62815173/safety-risk-anthropic-warns-ai-could-soon-start-improving-itself-at-dramatically-accelerated-pace-2026-last-normal-year-says-expert",
         "https://www.forbes.com/sites/jonmarkman/2026/11/07/anthropic-ipo-valuation-talk-falls-to-13-trillion-after-the-ai-stock-rout/",
         "https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-valuation-could-fall-162858848.html",
-        "https://en.bloomingbit.io/feed/news/123968"
+        "https://en.bloomingbit.io/feed/news/123968",
+        "https://financefeeds.com/anthropic-ipo-date-price-range-70-78-trading-19-november/",
+        "https://leverageshares.com/us/anthropic-ipo-tracker/",
+        "https://tastytrade.com/learn/markets/industry/anthropic-ipo/"
       ],
       "category": "Anthropic",
-      "coverage_count": 11
+      "coverage_count": 12
     },
     {
       "id": "anthropic-distillation-defense-preserved-thinking",
@@ -10138,6 +10146,76 @@
         "https://cryptobriefing.com/anthropic-expands-ai-for-science-program/"
       ],
       "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "google-tpu-8tx-8i-max",
+      "title": "Google TPU 8tx and 8i Max: confidential-computing inference and large-memory AI chips",
+      "first_seen": "2026-11-11T12:06:47Z",
+      "last_updated": "2026-11-11T12:06:47Z",
+      "key_facts": [
+        "TPU 8tx: first Google Cloud TPU with confidential computing via AMD EPYC 5th-gen; encrypted inference",
+        "TPU 8i Max: two TPU 8i dies on one package for long-context, large-HBM inference workloads",
+        "Announced Nov 9 2026; join TPU 8t/8i (April 2026) \u2014 four TPU systems in one year",
+        "Google AI chip business approaching 100 Cloud TPU customers"
+      ],
+      "sources": [
+        "https://datacenterdynamics.com/en/news/google-expands-eighth-generation-tpu-portfolio-with-two-new-tpu-systems",
+        "https://aiweekly.co/alerts/google-unveils-tpu-8tx-and-8i-max-for-secure-long-context-ai",
+        "https://www.webpronews.com/google-tpu-8tx-8i-max-confidential-computing-amd-epyc/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "fireworks-ai-breach-nov-2026",
+      "title": "Fireworks AI expands breach disclosure: customer secrets and incomplete model weights accessed",
+      "first_seen": "2026-11-11T12:06:47Z",
+      "last_updated": "2026-11-11T12:06:47Z",
+      "key_facts": [
+        "Expanded Nov 9 disclosure of October 2026 incident; initial access via billing/account data",
+        "Attackers pivoted to development machines, ran unauthorized workloads",
+        "Accessed secrets, datasets, incomplete model weights for limited customer subset",
+        "Palo Alto Networks Unit 42 forensics engaged; law enforcement notified"
+      ],
+      "sources": [
+        "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "us-china-ai-safety-november-2026",
+      "title": "US-China AI safety technical talks: November 2026 follow-up ahead of Trump-Xi summit",
+      "first_seen": "2026-11-11T12:06:47Z",
+      "last_updated": "2026-11-11T12:06:47Z",
+      "key_facts": [
+        "September 20 2026 NYC talks: Treasury Sec. Bessent proposed AI incident notification mechanism",
+        "Follow-up technical talks scheduled November 2026 before Trump-Xi summit (Nov 18-19 Shenzhen)",
+        "Scope: triggering criteria and disclosure details unresolved; export controls excluded from this track"
+      ],
+      "sources": [
+        "https://www.voanews.com/a/us-china-plan-ai-incident-channel-as-fierce-competition-tests-room-for-cooperation/8208082.html",
+        "https://thenextweb.com/news/us-china-ai-incident-alert-bessent-he-lifeng",
+        "https://www.adn.com/nation-world/2026/09/21/in-talks-with-china-us-proposes-ai-incident-alert-system/"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
+    },
+    {
+      "id": "ny-australia-ai-oversight-nov-2026",
+      "title": "New York State and Australia announce independent AI oversight programs (Nov 2026)",
+      "first_seen": "2026-11-11T12:06:47Z",
+      "last_updated": "2026-11-11T12:06:47Z",
+      "key_facts": [
+        "NY Governor Hochul introduces state-run independent AI evaluation program \u2014 first state-level AI testing body in US",
+        "Australia government plans dedicated AI safety regulator; companies required to report AI breaches",
+        "No firm launch dates announced for either program"
+      ],
+      "sources": [
+        "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
