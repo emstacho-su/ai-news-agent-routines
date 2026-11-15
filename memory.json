@@ -10353,31 +10353,103 @@
       "id": "inkling-2-small-open-weights",
       "title": "Thinking Machines Lab Inkling 2 Small: 594B MoE, Apache 2.0 open weights (release imminent)",
       "first_seen": "2026-11-14T12:00:00Z",
-      "last_updated": "2026-11-14T12:00:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
       "key_facts": [
         "Launched Nov 5 2026 on Tinker platform with closed weights; 594B-param MoE, 17B active parameters",
         "Apache 2.0 open-weight release planned ~1 week after launch (this week), pending safety review and partner red-teaming",
-        "Founded by Mira Murati; multimodal capabilities; autonomous coding tasks highlighted in benchmarks"
+        "Founded by Mira Murati; multimodal capabilities; autonomous coding tasks highlighted in benchmarks",
+        "Open weights released under Apache 2.0 around Nov 14 2026, confirmed in newsletter roundups"
       ],
       "sources": [
         "https://letsdatascience.com/news/thinking-machines-lab-releases-inkling-2-small-a-594b-moe-mo-2b2a96ce",
-        "https://runtimewire.com/article/thinking-machines-inkling-2-small-open-weights"
+        "https://runtimewire.com/article/thinking-machines-inkling-2-small-open-weights",
+        "https://forkast.news/thinking-machines-ships-inkling-small-open-weights-competition-now-has-a-us-entrant/"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "openai-chatgpt-wallet",
       "title": "OpenAI ChatGPT Wallet: human-in-the-loop agent payment authorization",
       "first_seen": "2026-11-14T12:00:00Z",
-      "last_updated": "2026-11-14T12:00:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
       "key_facts": [
         "Launched Nov 14 2026 for US ChatGPT Pro subscribers; agents prepare transactions but cannot execute without explicit human authorization",
         "Approval gate added between agent transaction preparation and execution; designed to prevent unauthorized agent purchases",
-        "No announced timeline for broader rollout or developer API access"
+        "No announced timeline for broader rollout or developer API access",
+        "Rollout to US ChatGPT Pro subscribers started; spending limits and advance-delegation listed as upcoming"
       ],
       "sources": [
         "https://samonai.substack.com/p/ai-brief-november-14-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 2
+    },
+    {
+      "id": "anthropic-ipo-roadshow-2026",
+      "title": "Anthropic IPO roadshow: $70-78/share, Nasdaq ANT, pricing Nov 18 2026",
+      "first_seen": "2026-11-15T12:10:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
+      "key_facts": [
+        "Roadshow launched Nov 10 2026; 825M Class A shares at $70-78/share",
+        "Basic valuation ~$1.02T at $78; Q3 2026 revenue $16.956B (12x YoY); pricing Nov 18, Nasdaq ANT trading starts Nov 19",
+        "Amended S-1 states Anthropic has determined its AI-research-acceleration policy threshold is met",
+        "PBC governance structure: fiduciary duties to mission coexist with shareholder interests"
+      ],
+      "sources": [
+        "https://www.moomoo.com/community/feed/anthropic-kicks-off-its-roadshow-with-a-valuation-as-high-117595033436169",
+        "https://www.indmoney.com/blog/us-stocks/anthropic-ipo-price-band-valuation-listing-date",
+        "https://www.winzheng.com/en/article/anthropic-ipo-roadshow-class-a-shares-valuation-pbc-governan"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-fable-52-mythos-52",
+      "title": "Anthropic Claude Fable 5.2 and Mythos 5.2: 30% faster, tiered access model (Nov 9 2026)",
+      "first_seen": "2026-11-15T12:10:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
+      "key_facts": [
+        "Same underlying model, two tiers: Fable 5.2 open access; Mythos 5.2 for Cyber/Life Sciences verified orgs only",
+        "30% faster than 5.1 generation; $8/M input, $40/M output, 2x fast mode pricing",
+        "Artificial Analysis Intelligence Index v5: Fable 5.2 ranked #1 at score 65",
+        "Mythos 5.2 claims 10.2% more vulnerabilities found vs Opus 5.5 (vendor benchmark)"
+      ],
+      "sources": [
+        "https://9to5mac.com/2026/11/09/anthropic-upgrades-claude-with-new-fable-5-2-model-details-here/",
+        "https://aiweekly.co/alerts/anthropic-ships-claude-fable-52-and-vetted-tier-mythos-52",
+        "https://letsdatascience.com/news/anthropic-releases-claude-fable-52-and-mythos-52-models-66044607"
+      ],
+      "category": "Anthropic",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-2-1-325",
+      "title": "Claude Code 2.1.325: security hardening, MCP server reconnect fix, fail-closed hooks (Nov 13 2026)",
+      "first_seen": "2026-11-15T12:10:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
+      "key_facts": [
+        "2.1.325 (Nov 13): security/permission hardening across terminal, VS Code, cloud, MCP; fixes MCP server staying disconnected after Agent SDK remove+re-add",
+        "2.1.317 (Nov 3): Agent SDK hook option that blocks action when callback fails (fail-closed); MCP consent prompts made more visible"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://jigarjoshi.in/blog/november-03-claude-code-2-1-317-mcp-security-2026/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "llama-cpp-1-0-0",
+      "title": "llama.cpp v1.0.0: first stable semantic-versioned release, stable C API (Nov 14 2026)",
+      "first_seen": "2026-11-15T12:10:00Z",
+      "last_updated": "2026-11-15T12:10:00Z",
+      "key_facts": [
+        "llama.cpp and ggml tagged v1.0.0 Nov 14; first stable versioned release",
+        "C API is now stable; breaking changes gated to major version bumps"
+      ],
+      "sources": [
+        "https://riorundown.substack.com/p/ai-news-nov-14-2026-local-ai-ecosystem"
       ],
       "category": "Tools & Frameworks",
       "coverage_count": 1
