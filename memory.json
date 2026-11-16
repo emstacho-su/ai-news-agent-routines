@@ -25,7 +25,7 @@
       "id": "nvidia-jensen-huang-spy-probe",
       "title": "Nvidia board probes Jensen Huang over alleged affair with Chinese intelligence asset",
       "first_seen": "2026-11-09T12:10:00Z",
-      "last_updated": "2026-11-13T12:07:35.650321Z",
+      "last_updated": "2026-11-16T12:30:00Z",
       "key_facts": [
         "Huang admitted affair with Alice Huang, affiliated with Megaspeed (cloud co. accused of helping restricted Chinese firms acquire Nvidia AI chips)",
         "U.S. intelligence agencies reportedly found Alice Huang was recruited by China's top intelligence agency",
@@ -39,7 +39,9 @@
         "Democrats introduced AI Overwatch Act in response to Nvidia-China controversy; 18-month review horizon",
         "Huang resigned as president, CEO, and board member Nov 12 (effective immediately), per Nvidia 8-K SEC filing",
         "CFO Colette Kress named interim CEO; board launched permanent CEO search (internal + external)",
-        "Nvidia-dependent neocloud stocks declined; Trump publicly suggested Tim Cook as replacement"
+        "Nvidia-dependent neocloud stocks declined; Trump publicly suggested Tim Cook as replacement",
+        "Nvidia Q3 FY2027 earnings Nov 17 2026 \u2014 first earnings with Kress as interim CEO; analysts expect ~$92B revenue, ~$2.09 adj EPS",
+        "[RUMOR] Multiple aggregators Nov 16 report tech executives and Musk backing push to reinstate Huang \u2014 no primary source found as of Nov 16"
       ],
       "sources": [
         "https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html",
@@ -54,7 +56,7 @@
         "https://variety.com/2026/biz/news/nvidia-ceo-jensen-huang-resigns-affairs-alleged-chinese-spy-1236945653/"
       ],
       "category": "Wildcard",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "goldman-sachs-claude-code-engineering-only",
@@ -9578,7 +9580,7 @@
       "id": "gemini-4-carbon-rumor",
       "title": "Gemini 4 Carbon: unreleased Google checkpoint reportedly spotted on Chatbot Arena [RUMOR]",
       "first_seen": "2026-10-29T12:20:00Z",
-      "last_updated": "2026-11-14T12:00:00Z",
+      "last_updated": "2026-11-16T12:30:00Z",
       "key_facts": [
         "Unreleased Gemini 4 build labeled 'Carbon' reportedly appearing on LMSYS Chatbot Arena for blind evaluation as of late Oct 2026",
         "Internal testers report 'noticeably better than Argon at 3D work'; frontend/UI output still described as weak",
@@ -9590,7 +9592,8 @@
         "Hallucination rate on AA-Omniscience rose from 4% (Argon) to 11% (Carbon); accuracy improved overall",
         "Positioned for multi-day autonomous development workflows; broader rollout timeline not given",
         "Developer API opened ~Nov 10 2026 via Google AI Studio; model ID: gemini-4-carbon",
-        "Intro pricing: $2/$10 per million input/output tokens; rising to $4/$20 from Dec 1 2026"
+        "Intro pricing: $2/$10 per million input/output tokens; rising to $4/$20 from Dec 1 2026",
+        "Rolled out in Google Search AI Mode for Google AI Ultra subscribers Nov ~16 2026"
       ],
       "sources": [
         "https://letsdatascience.com/news/gemini-4-carbon-checkpoint-reportedly-appears-on-chatbot-are-ee165ebf",
@@ -9600,10 +9603,11 @@
         "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/",
         "https://llm-stats.com/models/gemini-4-carbon",
         "https://www.technobezz.com/news/google-gemini-4-carbon-opens-developers",
-        "https://braindetox.kr/en/posts/gemini_4_carbon_general_availability.html"
+        "https://braindetox.kr/en/posts/gemini_4_carbon_general_availability.html",
+        "https://seroundtable.com/gemini-4-carbon-google-search-ai-mode-42502.html"
       ],
       "category": "Model Releases",
-      "coverage_count": 3
+      "coverage_count": 4
     },
     {
       "id": "github-universe-2026",
@@ -10389,20 +10393,24 @@
       "id": "anthropic-ipo-roadshow-2026",
       "title": "Anthropic IPO roadshow: $70-78/share, Nasdaq ANT, pricing Nov 18 2026",
       "first_seen": "2026-11-15T12:10:00Z",
-      "last_updated": "2026-11-15T12:10:00Z",
+      "last_updated": "2026-11-16T12:30:00Z",
       "key_facts": [
         "Roadshow launched Nov 10 2026; 825M Class A shares at $70-78/share",
         "Basic valuation ~$1.02T at $78; Q3 2026 revenue $16.956B (12x YoY); pricing Nov 18, Nasdaq ANT trading starts Nov 19",
         "Amended S-1 states Anthropic has determined its AI-research-acceleration policy threshold is met",
-        "PBC governance structure: fiduciary duties to mission coexist with shareholder interests"
+        "PBC governance structure: fiduciary duties to mission coexist with shareholder interests",
+        "FT: bankers weighing pricing above the $78/share ceiling on strong institutional demand; above-range pricing would push fully-diluted valuation above ~$1.5T",
+        "Nvidia and Google each committed ~$10B of the $26B concurrent private placement \u2014 the two largest individual commitments"
       ],
       "sources": [
         "https://www.moomoo.com/community/feed/anthropic-kicks-off-its-roadshow-with-a-valuation-as-high-117595033436169",
         "https://www.indmoney.com/blog/us-stocks/anthropic-ipo-price-band-valuation-listing-date",
-        "https://www.winzheng.com/en/article/anthropic-ipo-roadshow-class-a-shares-valuation-pbc-governan"
+        "https://www.winzheng.com/en/article/anthropic-ipo-roadshow-class-a-shares-valuation-pbc-governan",
+        "https://finimize.com/content/anthropics-bankers-weigh-pricing-its-ipo-above-range",
+        "https://aiweekly.co/alerts/anthropic-ipo-oversubscribed-bankers-weigh-15t-valuation-nvidia-and-google-each"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "claude-fable-52-mythos-52",
@@ -10452,6 +10460,48 @@
         "https://riorundown.substack.com/p/ai-news-nov-14-2026-local-ai-ecosystem"
       ],
       "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "stanford-ai100-2026",
+      "title": "Stanford AI100 third five-year report: scaling is running into data/compute limits",
+      "first_seen": "2026-11-16T12:30:00Z",
+      "last_updated": "2026-11-16T12:30:00Z",
+      "key_facts": [
+        "Published Nov 10 2026: 'AI Goes Mainstream: The Scaling Era and the Rise of Generative AI'",
+        "Core finding: scaling (more compute + data) drove generative AI gains but is hitting scarce high-quality data and prohibitive frontier-training costs",
+        "Chaired by Oxford's Michael Wooldridge; covers 12 standing questions + deep dives on AI geopolitics and scaling",
+        "AI Index 2026 also from Stanford HAI: generative AI hit 53% global adoption in 3 years \u2014 faster than PC or internet",
+        "Panel used AI to help write and review the report; disclosed this explicitly"
+      ],
+      "sources": [
+        "https://thenextweb.com/news/stanford-ai100-report-2026-ai-goes-mainstream",
+        "https://letsdatascience.com/news/stanfords-ai100-panel-publishes-third-five-year-report-on-ai-15954eba",
+        "https://hai.stanford.edu/assets/files/ai%5Findex%5Freport%5F2026.pdf"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "mit-weight-space-programming",
+      "title": "MIT CSAIL 'Sparks of Weight-Space Programming': LLMs edit model weights without gradient descent",
+      "first_seen": "2026-11-16T12:30:00Z",
+      "last_updated": "2026-11-16T12:30:00Z",
+      "key_facts": [
+        "arXiv preprint, Nov 2 2026; Takehi, Teoh, Zhang, Khattab (MIT CSAIL)",
+        "Method: frontier LLM (GPT-6 Astra) given a goal + raw weights; edits weights directly with no optimizer or training data",
+        "Headline result: edited 0.016% of Qwen3.5-0.8B weights; MATH-500 from 7.9% to 48.1%; GSM8K from 13.8% to 67.1%",
+        "Side effect: IFEval improved ~3\u00d7 without being targeted",
+        "Separate experiment: Astra wrote weights for 3 game-playing nets from source code; all beat PPO trained for 100M steps",
+        "Limitation: can unlock latent abilities, cannot add capabilities the model fundamentally lacks; not peer-reviewed",
+        "Code reportedly public on GitHub"
+      ],
+      "sources": [
+        "https://blog.gopenai.com/weight-space-programming-explained-llms-that-edit-weights-35ef19e10290",
+        "https://letsdatascience.com/blog/gpt-6-astra-edited-0-016-percent-qwen-weights-math-sixfold",
+        "https://xenospectrum.com/en/sparks-of-weight-space-programming-mit-csail/"
+      ],
+      "category": "Research & Technical",
       "coverage_count": 1
     }
   ]
