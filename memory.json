@@ -9921,17 +9921,21 @@
       "id": "openai-gpt-6-2-astra-sol-rumor",
       "title": "OpenAI GPT-6.2 Astra and Sol: leaked Google Cloud pages suggest imminent launch [RUMOR]",
       "first_seen": "2026-11-05T06:30:00Z",
-      "last_updated": "2026-11-05T06:30:00Z",
+      "last_updated": "2026-11-18T12:07:48Z",
       "key_facts": [
         "GPT-6.2 Astra and GPT-6.2 Sol spotted on Google Cloud catalog pages Nov. 4-5, 2026",
         "Report citing The Information suggests OpenAI may also launch a Cyber model for security use cases",
-        "No official confirmation; benchmark scores, context window, pricing not disclosed"
+        "No official confirmation; benchmark scores, context window, pricing not disclosed",
+        "Digest sources report GPT-6.2 Astra and GPT-6.2 Sol released Nov 17 2026 (not confirmed at OpenAI primary source as of briefing time)",
+        "GPT-6.2 Astra described as first publicly-released model to reach OpenAI's 'High' AI self-improvement threshold (can autonomously accelerate AI R&D)"
       ],
       "sources": [
-        "https://www.chaincatcher.com/en/article/2301899"
+        "https://www.chaincatcher.com/en/article/2301899",
+        "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-18-2026/",
+        "https://www.aiimpacthub.com/ai-news/2026-11-18"
       ],
       "category": "Model Releases",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "us-data-center-ballot-measures-nov-2026",
@@ -10393,24 +10397,29 @@
       "id": "anthropic-ipo-roadshow-2026",
       "title": "Anthropic IPO roadshow: $70-78/share, Nasdaq ANT, pricing Nov 18 2026",
       "first_seen": "2026-11-15T12:10:00Z",
-      "last_updated": "2026-11-16T12:30:00Z",
+      "last_updated": "2026-11-18T12:07:48Z",
       "key_facts": [
         "Roadshow launched Nov 10 2026; 825M Class A shares at $70-78/share",
         "Basic valuation ~$1.02T at $78; Q3 2026 revenue $16.956B (12x YoY); pricing Nov 18, Nasdaq ANT trading starts Nov 19",
         "Amended S-1 states Anthropic has determined its AI-research-acceleration policy threshold is met",
         "PBC governance structure: fiduciary duties to mission coexist with shareholder interests",
         "FT: bankers weighing pricing above the $78/share ceiling on strong institutional demand; above-range pricing would push fully-diluted valuation above ~$1.5T",
-        "Nvidia and Google each committed ~$10B of the $26B concurrent private placement \u2014 the two largest individual commitments"
+        "Nvidia and Google each committed ~$10B of the $26B concurrent private placement \u2014 the two largest individual commitments",
+        "Nov 18 pricing day confirmed; above-range institutional demand across multiple reports; Renaissance Capital set terms at $61B IPO targeting $1.2T market cap",
+        "Final pricing expected tonight (EST); 424B4 prospectus filing will confirm; above-range pricing implies >$1.5T fully-diluted valuation"
       ],
       "sources": [
         "https://www.moomoo.com/community/feed/anthropic-kicks-off-its-roadshow-with-a-valuation-as-high-117595033436169",
         "https://www.indmoney.com/blog/us-stocks/anthropic-ipo-price-band-valuation-listing-date",
         "https://www.winzheng.com/en/article/anthropic-ipo-roadshow-class-a-shares-valuation-pbc-governan",
         "https://finimize.com/content/anthropics-bankers-weigh-pricing-its-ipo-above-range",
-        "https://aiweekly.co/alerts/anthropic-ipo-oversubscribed-bankers-weigh-15t-valuation-nvidia-and-google-each"
+        "https://aiweekly.co/alerts/anthropic-ipo-oversubscribed-bankers-weigh-15t-valuation-nvidia-and-google-each",
+        "https://www.renaissancecapital.com/IPO-Center/News/122657/anthropic-sets-terms-for-61-billion-ipo-targeting-a-1-2-trillion-market-cap",
+        "https://cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut",
+        "https://fourweekmba.com/anthropic-stock/"
       ],
       "category": "Anthropic",
-      "coverage_count": 2
+      "coverage_count": 3
     },
     {
       "id": "claude-fable-52-mythos-52",
@@ -10502,6 +10511,43 @@
         "https://xenospectrum.com/en/sparks-of-weight-space-programming-mit-csail/"
       ],
       "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "claude-code-2-1-326",
+      "title": "Claude Code 2.1.326: Code Mode for agent teams, extended MCP reconnect (Nov 17 2026)",
+      "first_seen": "2026-11-18T12:07:48Z",
+      "last_updated": "2026-11-18T12:07:48Z",
+      "key_facts": [
+        "v2.1.326 (Nov 17 2026): Code Mode (experimental JS tool-call mode) now usable while agent teams are enabled, with sandbox protections applied",
+        "Agent SDK extends background reconnect for remote HTTPS MCP servers from ~27 min to ~1 day",
+        "Breaking change in this SDK window: hook options must now be arrays"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://www.developersdigest.tech/blog/claude-agent-sdk-whats-new-2026"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "us-bis-ai-chip-overseas-controls-nov-2026",
+      "title": "US BIS interim final rule: AI chip export controls extended to overseas data-center remote access (Nov 2026)",
+      "first_seen": "2026-11-18T12:07:48Z",
+      "last_updated": "2026-11-18T12:07:48Z",
+      "key_facts": [
+        "BIS issued interim final rule ~Nov 15-16 2026 applying AI chip export controls to remote compute access via overseas data centers",
+        "Threshold: data centers above 12M aggregate total processing performance (TPP); applies to companies in Singapore, Thailand, Malaysia, Indonesia, Brazil",
+        "Existing remote-access arrangements have 90-day compliance window; exporters must run know-your-customer checks on ownership chains",
+        "Commerce cited 2018 Export Control Reform Act authority; issued without prior notice-and-comment"
+      ],
+      "sources": [
+        "https://www.wunc.org/2026-11-16/u-s-tightens-controls-on-remote-access-to-ai-technology-amid-nvidia-fallout",
+        "https://www.scmp.com/tech/article/3374639/us-tightens-ai-chip-export-curbs-close-chinas-overseas-data-centre-loophole",
+        "https://btw.media/en/us-closes-nvidia-ai-chip-overseas-loophole",
+        "https://cyberscoop.com/commerce-ai-chip-export-restrictions/"
+      ],
+      "category": "Wildcard",
       "coverage_count": 1
     }
   ]
