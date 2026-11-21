@@ -10217,22 +10217,24 @@
       "id": "claude-fable-5-2-mythos-5-2",
       "title": "Claude Fable 5.2 and Mythos 5.2: 30% faster, 20% cheaper API, 1M context (Nov 9 2026)",
       "first_seen": "2026-11-10T12:08:00Z",
-      "last_updated": "2026-11-10T12:08:00Z",
+      "last_updated": "2026-11-21T12:05:54Z",
       "key_facts": [
         "Released Nov 9 2026; share one underlying model — Fable 5.2 public with cybersecurity/biology safeguards; Mythos 5.2 safeguards partially lifted, vetted-org access only via Cyber Verification Program tiers",
         "API pricing: $8/M input, $40/M output — 20% reduction from Fable/Mythos 5.1 ($10/$50); output up to 30% faster than 5.1",
         "Fast mode: up to 2.5x token generation speed in Claude Code, Claude Platform, Google Cloud, Microsoft Foundry; 1M-token context; 128K max output tokens",
         "Mythos 5.2: 89.6% on Anthropic CVE Rediscovery benchmark (up from 78.3% Mythos 5.1); Fable 5.2 ~55% fewer safety blocks than Fable 5.1",
-        "[COMPANY CLAIM, UNVERIFIED] Fable 5.2 reportedly helped formalize part of Fermat's Last Theorem and solved two open problems in black hole physics"
+        "[COMPANY CLAIM, UNVERIFIED] Fable 5.2 reportedly helped formalize part of Fermat's Last Theorem and solved two open problems in black hole physics",
+        "Nov 9 2026: Anthropic researchers reported autoformalization time dropped from 11 days (Fermat proof, September) to ~30 hours with Fable 5.2 (per Quanta Magazine); ~9x speedup attributed to faster token generation and improved formal-math reasoning"
       ],
       "sources": [
         "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/",
         "https://www.digitaltrends.com/computing/claude-fable-5-2-and-mythos-5-2-are-here-to-raise-the-bar-for-ai-coding-and-scientific-research/",
-        "https://www.datacamp.com/blog/claude-fable-5-2-and-mythos-5-2"
+        "https://www.datacamp.com/blog/claude-fable-5-2-and-mythos-5-2",
+        "https://www.quantamagazine.org/update/169537/"
       ],
       "category": "Anthropic",
-      "coverage_count": 1
+      "coverage_count": 2
     },
     {
       "id": "anthropic-ai-for-science-20-partners",
@@ -10688,6 +10690,64 @@
       ],
       "category": "Model Releases",
       "coverage_count": 2
+    },
+    {
+      "id": "claude-code-2-1-329",
+      "title": "Claude Code 2.1.329: /tasks lists scheduled tasks, forks, and loop wakeups (Nov 19 2026)",
+      "first_seen": "2026-11-21T12:05:54Z",
+      "last_updated": "2026-11-21T12:05:54Z",
+      "key_facts": [
+        "v2.1.329 (~Nov 19 2026): `/tasks` command now shows all scheduled tasks, /loop wakeups, and running forks in one place",
+        "`/status` flags marketplace installations that lack auto-update support, surfacing stale plugin versions",
+        "Fixes: self-hosted runner sessions shown as stopped while still starting; Code Mode retaining oversized text files; /teleport and sign-out edge cases",
+        "Official Anthropic changelog not yet updated at briefing time; details from Havoptic third-party tracker"
+      ],
+      "sources": [
+        "https://www.havoptic.com/r/claude-code-2.1.329",
+        "https://www.gradually.ai/en/changelogs/claude-code/"
+      ],
+      "category": "Tools & Frameworks",
+      "coverage_count": 1
+    },
+    {
+      "id": "openai-amd-gpu-circuit-design-2026",
+      "title": "OpenAI + AMD: AI-redesigned GPU circuits achieve up to 14% PPA gains on individual blocks (Nov 18 2026)",
+      "first_seen": "2026-11-21T12:05:54Z",
+      "last_updated": "2026-11-21T12:05:54Z",
+      "key_facts": [
+        "Announced Nov 18 2026; OpenAI models rewrote AMD SystemVerilog RTL code for GPU circuitry; Synopsys EDA tools used to verify behavioral equivalence at each rewrite step",
+        "Up to 14% power-performance-area (PPA) improvement on individual GPU circuit blocks vs. already-optimized designs; completed in under five months",
+        "14% is per-block, not whole-GPU end-to-end; PPA split not disclosed; results self-reported by OpenAI",
+        "AMD incorporated some changes into a design already sent for manufacturing; others added to future production files; no independent audit or public design files released",
+        "Single-digit PPA gains claimed separately on a next-gen AMD CPU block; no specific GPU or CPU model identified publicly"
+      ],
+      "sources": [
+        "https://thenextweb.com/news/openai-models-amd-gpu-chip-design-14-percent",
+        "https://analyticsindiamag.com/ai-news/openai-and-amd-achieve-a-year-of-chip-design-progress-in-under-five-months",
+        "https://alphasignal.ai/news/openai-s-models-rewrote-amd-s-gpu-circuits-and-gained-14-in-five-months"
+      ],
+      "category": "Research & Technical",
+      "coverage_count": 1
+    },
+    {
+      "id": "us-house-china-chip-approvals-2026",
+      "title": "House FA Committee: Commerce approved ~879K Nvidia/AMD AI chips for Alibaba, Tencent, Baidu (Dec 2025-May 2026)",
+      "first_seen": "2026-11-21T12:05:54Z",
+      "last_updated": "2026-11-21T12:05:54Z",
+      "key_facts": [
+        "Chair Brian Mast (House Foreign Affairs) disclosed Nov 19 2026 using ECRA authority that Commerce approved ~879K Nvidia H200 and equivalent AMD chip export licenses to Chinese firms out of 3.4M requested (Dec 2025-May 2026)",
+        "Named recipients: Alibaba (~75K), Tencent (~150K), Baidu (~43K), BYD (~4K); all four on Pentagon list of alleged Chinese military-backed companies",
+        "Two firms flagged as suspected smuggling fronts: Maginfra and New Matrix (empty offices)",
+        "Disclosure covers license approvals, not confirmed shipments — unclear how many chips physically reached China",
+        "Distinct from: BIS overseas remote-access export controls (Nov 18) and ~600K H200 stockpile in Hong Kong blocked by Beijing import hold (Nov 20)"
+      ],
+      "sources": [
+        "https://www.thestandard.com.hk/world/article/349075/US-signed-off-on-sales-of-nearly-900000-AI-chips-to-China-in-six-months-committee-says",
+        "https://aiweekly.co/alerts/house-foreign-affairs-chair-mast-discloses-commerce-approved-879000-nvidia-and",
+        "https://news.bloomberglaw.com/artificial-intelligence/china-gets-restricted-ai-chips-via-smuggling-house-panel-says"
+      ],
+      "category": "Wildcard",
+      "coverage_count": 1
     }
   ]
 }
